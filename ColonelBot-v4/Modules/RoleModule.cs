@@ -77,9 +77,16 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("", false, EmbedTool.ChannelMessage("You have been granted the Deckmaster role. This role is pingable.", Context.Client.CurrentUser));
             }
         }
+           
+        private void ToggleRole(IGuildUser caller, SocketRole role)
+        {
+            //TODO: Move the code for toggling roles in individual methods here, also build the Embed here and
+            //      change this to return type Embed instead of being a Void. See Feature 12 in VSO. 
+        }
 
         private SocketRole GetRole(string RoleName, SocketGuild guild)
         {
+            
             var role = guild.Roles.SingleOrDefault(r => r.Name.ToUpper() == RoleName.ToUpper());
             return role;
         }
