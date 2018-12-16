@@ -20,6 +20,7 @@ namespace ColonelBot_v4.Tools
             LeaveJoinEnabled,
             ReportingChannel,
             HamachiServer,
+            OrganizerRoleName,
             HamachiPassword
         }
 
@@ -39,6 +40,9 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.ReportingChannel:
                     Result = BotConfiguration.ReportingChannel;
+                    break;
+                case ConfigurationEntries.OrganizerRoleName:
+                    Result = BotConfiguration.OrganizerRoleName;
                     break;
                 case ConfigurationEntries.HamachiServer:
                     Result = BotConfiguration.HamachiServer;
