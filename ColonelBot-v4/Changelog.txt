@@ -1,0 +1,42 @@
+﻿ColonelBot v4.0 
+===================
+
+**Feature Overview**
+This version of ColonelBot is retargeting .NET Core 2.1 designed to be more portable and runnable on 
+more reliable hardware, such as microcomputers running Linux.  
+
+This rewrite also aims to fix the bad practices of the previous versions in an effort to maintain
+a cleaner style for easier future work.
+
+**New Features**
+- !hostflip: Determines who should host based on essentially a coin flip.  (ADD A CALLBACK TO WHO REQUESTED IT)
+- !lookup <Game> <Chip or Code>: This feature now contains chips from MMBN1 through 6. If a user simply
+does !lookup 5 S, the command will look up the chip codes without the need for the /code/ suffix. If the
+user doesn't specify a game, the command will default to MMBN6.
+- !deckmaster: Toggles the Deckmaster role - a pingable role used for matchmaking for the MM NT Warrior TCG.
+
+**Changed Features**
+- !quote: This system has been revamped to move to JSON rather than the former NoSQL solution.  Quote Adding
+and removal is now re-enabled. Thank you for your patience while we worked on identifying a proper solution for 
+this essential community feature.
+- !help: The !help articles have been rewritten to be clearer and provide more information.  The normal !help
+command has been formatted to be more readable as well.  
+- !event <>: The event tools have been rewritten to be a bit more stable and rely on JSON following the removal of
+NoSQL.  This will allow organizers to rest easier that their entries and information is safer and handles drops 
+and joins more gracefully.   
+!event info: A Rule Set field has been added. A Schedule field has also been added. A Character Limit has been 
+imposed on the event description in order to keep the output from ColonelBot manageable.
+
+**Behind-The-Scenes**
+- A lot of redundant code has been cleaned up.  The ATB Module and Help Module have been rewritten.  
+- The Community Calendar module has been removed.
+- The Twitch Module has been removed.
+- The Macros Module has been removed - It was intended for quote migration but never used.
+- ModeratorModule has been renamed to DeleteModule.
+- The CommandService has been rewritten.
+- The Logging Service has been rewritten.
+- A ServerGuardService has been added that performs sanitization and raid mitigation actively and asynchronously.
+- Models have been implemented for clean JSON integration. 
+- The Quotes Module has been shifted to JSON as stated in Changed Features which will allow greater control over 
+sanitizing the quotes for an HTTP List function similar to the one that was in early v3.  If the HTTP generation 
+system proves problematic, it will simply be removed.  
