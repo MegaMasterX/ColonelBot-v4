@@ -59,18 +59,27 @@ namespace ColonelBot_v4.Services
         //    return Task.CompletedTask;
         //}
 
+
+        /// <summary>
+        /// Creates and sends an embed for a user Joining the Discord server.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         private async Task LogJoin(SocketGuildUser user)
         {
-            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
-            ulong ReportChanID = BotConfiguration.ReportChannel;
-            var ReportChannel = _discord.GetChannel(ReportChanID) as SocketTextChannel;
-            await ReportChannel.SendMessageAsync("User Joined:", embed:EmbedTool.UserJoinLog(user));
+            //v4: Moved redundant code to BotTools.   
+            await BotTools.GetReportingChannel(_discord).SendMessageAsync("User Joined:", embed:EmbedTool.UserJoinLog(user));
 
         }
 
+        /// <summary>
+        /// Creates and sends an embed for a user Leaving the Discord server.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         private async Task LogLeave(SocketGuildUser user)
         {
+            //TODO: Switch over to BotTools.GetReportingChannel.
             string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
             dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
             ulong ReportChanID = BotConfiguration.ReportChannel;

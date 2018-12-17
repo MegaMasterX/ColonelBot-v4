@@ -16,11 +16,6 @@ namespace ColonelBot_v4.Tools
         {
             var embed = new EmbedBuilder
             {
-                //Author = new EmbedAuthorBuilder
-                //{
-                //    Name = user.ToString(),
-                //    IconUrl = user.GetAvatarUrl()
-                //},
                 Color = new Color(0xffcf39)
             };
 
@@ -51,6 +46,22 @@ namespace ColonelBot_v4.Tools
             embed.ThumbnailUrl = user.GetAvatarUrl();
             if (user.Nickname != null)
                 embed.AddField("Nickname", user.Nickname);
+            return embed.Build();
+        }
+
+        public static Embed UserHamachiRequest(SocketGuildUser user)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Title = "Hamachi Request",
+                Color = new Color(0x0097FF)
+            };
+            embed.AddField("Account Name", user.Username);
+            embed.AddField("User ID", user.Id.ToString());
+            embed.ThumbnailUrl = user.GetAvatarUrl();
+            if (user.Nickname != null)
+                embed.AddField("Nickname", user.Nickname);
+            embed.AddField("Date/Time Requested", DateTime.Now);
             return embed.Build();
         }
 

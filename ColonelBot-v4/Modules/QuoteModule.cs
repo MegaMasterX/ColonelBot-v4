@@ -13,13 +13,13 @@ namespace ColonelBot_v4.Modules
     [Group("quote")] // !quote...
     public class QuoteModule : ModuleBase<SocketCommandContext>
     {
-        [Command, Alias("random")]
-        public async Task QuoteRandomAsync()
-        {
+        //[Command, Alias("random")]
+        //public async Task QuoteRandomAsync()
+        //{
 
-        }
+        //}
 
 
-        public async Task RecacheQuotes()
+        //public async Task RecacheQuotes()
     }
 }

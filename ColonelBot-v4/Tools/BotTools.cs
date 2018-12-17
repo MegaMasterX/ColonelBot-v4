@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
-using Discord.Commands;
 using Discord;
+using Discord.Commands;
+using Discord.WebSocket;
 using ColonelBot_v4.Tools;
 using System.Threading.Tasks;
 using System.IO;
@@ -24,9 +25,34 @@ namespace ColonelBot_v4.Tools
             HamachiPassword
         }
 
+        /// <summary>
+        /// Gets the SocketTextChannel of the configured Reporting Channel.
+        /// </summary>
+        /// <returns></returns>
+        public static SocketTextChannel GetReportingChannel(DiscordSocketClient discord)
+        {
+            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
+            ulong ReportChanID = BotConfiguration.ReportChannel;
+            var ReportChannel = discord.GetChannel(ReportChanID) as SocketTextChannel;
+            return ReportChannel;
+        }
+
+        public static ulong GetReportingChannelUlong()
+        {
+            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
+            ulong ReportChanID = BotConfiguration.ReportChannel;
+            return ReportChanID;
+        }
+
+        /// <summary>
+        /// Returns the Setting from the Configuration and throws an error if it's not found.
+        /// </summary>
+        /// <param name="SettingToRetreive"></param>
+        /// <returns></returns>
         public static string GetSettingString(ConfigurationEntries SettingToRetreive)
         {
-            //Returns the setting from the Configuration and throws if it's not found.
             string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
             dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
             string Result = "";

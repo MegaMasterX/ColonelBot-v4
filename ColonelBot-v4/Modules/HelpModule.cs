@@ -37,6 +37,22 @@ namespace ColonelBot_v4.Modules
             }
         }
 
+        [Group("event")]
+        public class EventHelpBase : ModuleBase<SocketCommandContext>
+        {
+            [Command("join")] //!help event join
+            public async Task EventJoinHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event join <Netbattler Name>", "Joins the event with the netbattler name specified. Example: !event join MidniteW"));
+            }
+            //TODO: Finish writing the help articles for Event Tools based on the Wiki
+            [Group("admin")]
+            public class EventAdminHelpBase : ModuleBase<SocketCommandContext>
+            {
+
+            }
+        }
+
         [Command("hamachi")]
         public async Task HamachiHelp()
         {

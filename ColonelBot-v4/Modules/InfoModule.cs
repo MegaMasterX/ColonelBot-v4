@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using System.Text;
 using Discord;
 using Discord.Commands;
+using Discord.WebSocket;
 using System.Threading;
 using System.Threading.Tasks;
+
+using ColonelBot_v4.Tools;
 
 namespace ColonelBot_v4.Modules
 {
     public class InfoModule : ModuleBase<SocketCommandContext>
     {
         [Command("hamachi")]
+        [RequireContext(ContextType.Guild)] //Cannot be requested via DM. 
         public async Task GiveHamachiAsync()
         {
             //Log the caller.
             string LogEntry = DateTime.Now.ToString() + " requested by " + Context.User.Id + " - " + Context.User.Username;
-            //TODO: Write a threadsafe logging method for adding the entry to the existing log.
-
+            var ReportChannel = Context.Guild.GetTextChannel(BotTools.GetReportingChannelUlong());
+            var Requestor = Context.User as SocketGuildUser;
             //Check to see if the user can accept DMs.
             try
             {
-                await Context.User.SendMessageAsync("Test Hamachi");
-                
+                string HamachiServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiServer);
+                string HamachiPass = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiPassword);
+
+                await Context.User.SendMessageAsync("**N1 Grand Prix Hamachi Server**\n```\nServer: " + HamachiServer + "\nPassword: " + HamachiPass + "\n```");
+                await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
             }
             catch (Exception)
             {
