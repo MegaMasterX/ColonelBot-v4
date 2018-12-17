@@ -20,14 +20,7 @@ namespace ColonelBot_v4.Modules
         {
             var caller = Context.User as IGuildUser;
             var role = GetRole("Available to Battle", Context.Guild);
-            if (!caller.RoleIds.Contains(role.Id))
-            {//The user does not currently have the ATB Role.
-                await caller.AddRoleAsync(role, null);
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("You are now Available to Battle.", Context.Client.CurrentUser));
-            } else
-            {//The user did !atb and already has the role.
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("You are already Available to Battle.", Context.Client.CurrentUser));
-            }
+            await ToggleRole(caller, role);
         }
 
         [Command("unavailable"), Alias("unav"), RequireContext(ContextType.Guild)]
@@ -35,14 +28,7 @@ namespace ColonelBot_v4.Modules
         {
             var caller = Context.User as IGuildUser;
             var role = GetRole("AVAILABLE TO BATTLE", Context.Guild);
-            if (caller.RoleIds.Contains(role.Id))
-            {//The user has called Unavailable and has the ATB Role
-                await caller.RemoveRoleAsync(role, null);
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("You are no longer Available to Battle.", Context.Client.CurrentUser));
-            }else
-            {//The user called Unavailable but does not have the ATB role.
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("You are not Available to Battle.", Context.Client.CurrentUser));
-            }
+            await ToggleRole(caller, role);
         }
 
         [Command("license")]
@@ -50,15 +36,7 @@ namespace ColonelBot_v4.Modules
         {//Toggles the Netbattler role when called - adding it if it's not present or removing it if it is.
             var caller = Context.User as IGuildUser;
             var role = GetRole("Netbattler", Context.Guild);
-            if (caller.RoleIds.Contains(role.Id))
-            {//The caller already has the License role, remove it.
-                await caller.RemoveRoleAsync(role, null);
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("Your Netbattler role has been removed.", Context.Client.CurrentUser));
-            }else
-            {//The caller does not have the License role, add it.
-                await caller.AddRoleAsync(role, null);
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("You have been granted the Netbattler role.", Context.Client.CurrentUser));
-            }
+            await ToggleRole(caller, role);
         }
 
         [Command("deckmaster")]
@@ -66,22 +44,39 @@ namespace ColonelBot_v4.Modules
         {//Toggles the Deckmaster Role
             var caller = Context.User as IGuildUser;
             var role = GetRole("Deckmaster", Context.Guild);
-            if (caller.RoleIds.Contains(role.Id))
-            {//The caller already has the Deckmaster role, remove it.
-                await caller.RemoveRoleAsync(role, null);
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("Your Deckmaster role has been removed.", Context.Client.CurrentUser));
-            }
-            else
-            {//The caller does not have the Deckmaster role, add it.
-                await caller.AddRoleAsync(role, null);
-                await ReplyAsync("", false, EmbedTool.ChannelMessage("You have been granted the Deckmaster role. This role is pingable.", Context.Client.CurrentUser));
-            }
+            await ToggleRole(caller, role);
         }
            
-        private void ToggleRole(IGuildUser caller, SocketRole role)
+        private async Task<Embed> ToggleRole(IGuildUser caller, SocketRole role)
         {
-            //TODO: Move the code for toggling roles in individual methods here, also build the Embed here and
-            //      change this to return type Embed instead of being a Void. See Feature 12 in VSO. 
+            string RoleResponseText = "";
+            
+            if (caller.RoleIds.Contains(role.Id))
+            {//The caller already has the role, remove it.
+                await caller.RemoveRoleAsync(role, null);
+                if (role.Name == "Available to Battle")
+                {//Specific wording for ATB.
+                    RoleResponseText = "You are no longer Available to Battle.";
+                }else
+                    RoleResponseText = "The " + role.Name + " role has been removed.";
+            }
+            else
+            {//The caller does not have the role, add it.
+                await caller.AddRoleAsync(role, null);
+                if (role.Name == "Available to Battle")
+                {//Specific wording for ATB.
+                    RoleResponseText = "You are now Available to Battle.";
+                }else
+                    RoleResponseText = "The " + role.Name + " role has been added.";
+            }
+            var embed = new EmbedBuilder
+            {
+                Color = new Color(0xffcf39)
+            };
+
+            embed.AddField("Role Updated", RoleResponseText);
+            await ReplyAsync("", embed: embed.Build());
+            return embed.Build();
         }
 
         private SocketRole GetRole(string RoleName, SocketGuild guild)

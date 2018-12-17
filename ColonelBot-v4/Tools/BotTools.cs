@@ -9,7 +9,7 @@ using ColonelBot_v4.Tools;
 using System.Threading.Tasks;
 using System.IO;
 
-//This class is for completing menial tasks like obtaining the bot's current directory.
+//This class is for completing menial tasks like obtaining the bot's current directory and quickly accessing settings.
 
 namespace ColonelBot_v4.Tools
 {
@@ -37,7 +37,10 @@ namespace ColonelBot_v4.Tools
             var ReportChannel = discord.GetChannel(ReportChanID) as SocketTextChannel;
             return ReportChannel;
         }
-
+        /// <summary>
+        /// Gets the ULong Channel ID from the configuration for the Reporting Channel. 
+        /// </summary>
+        /// <returns></returns>
         public static ulong GetReportingChannelUlong()
         {
             string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();

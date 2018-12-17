@@ -12,6 +12,12 @@ namespace ColonelBot_v4.Tools
 {
     public class EmbedTool
     {
+        /// <summary>
+        /// Builds a stock Channel Message embed for responding to user requests.
+        /// </summary>
+        /// <param name="Message"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static Embed ChannelMessage(string Message, SocketSelfUser user)
         {
             var embed = new EmbedBuilder
@@ -24,7 +30,12 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
-
+        /// <summary>
+        /// Builds a stock Help Message embed.
+        /// </summary>
+        /// <param name="CommandTitle"></param>
+        /// <param name="Contents"></param>
+        /// <returns></returns>
         public static Embed HelpMessage(string CommandTitle, string Contents)
         {
             EmbedBuilder embed = new EmbedBuilder
@@ -35,6 +46,11 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
+        /// <summary>
+        /// Builds an embed detailing a user that's joined the Discord.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static Embed UserJoinLog(SocketGuildUser user)
         {
             EmbedBuilder embed = new EmbedBuilder
@@ -49,6 +65,11 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
+        /// <summary>
+        /// Builds an embed detailing a Discord user that's requested Hamachi credentials. 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static Embed UserHamachiRequest(SocketGuildUser user)
         {
             EmbedBuilder embed = new EmbedBuilder
@@ -65,6 +86,11 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
+        /// <summary>
+        /// Builds an embed detailing a user that's left the Discord.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>Embed</returns>
         public static Embed UserLeaveLog(SocketGuildUser user)
         {
             EmbedBuilder embed = new EmbedBuilder
