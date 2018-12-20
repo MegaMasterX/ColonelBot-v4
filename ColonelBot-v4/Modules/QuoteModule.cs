@@ -25,20 +25,7 @@ namespace ColonelBot_v4.Modules
 
         //}
 
-        [Command("initial")]
-        public async Task AddFirstQuoteAsync([Remainder] string quote)
-        {
-            List<Quote> MasterQuotesList = new List<Quote>();
-            Quote newQuote = new Quote(Context.User.Id, 1, quote);
-
-            //4. Add the quote to the list.
-            MasterQuotesList.Add(newQuote);
-
-            //5. Reserialize the JSON, writing it to a file.
-            File.WriteAllText(QuoteConfigurationFile(), JsonConvert.SerializeObject(MasterQuotesList));
-
-            await ReplyAsync("Done");
-        }
+        
 
         [Command("add")]
         [RequireContext(ContextType.Guild)] //Quotes cannot be added via DM.
@@ -51,13 +38,16 @@ namespace ColonelBot_v4.Modules
             //2. Identify the ID of the last quote in the list
             int LastID = MasterQuotesList[MasterQuotesList.Count - 1].QuoteID;
 
-            //3. Generate a new Quote to be added to the list.
+            //3. Sanitize the quote to remove @ tags and add escape characters for anything that would need it.
+            //TODO: Build a regex to sanitize the quote before adding it to the list. 
+
+            //4. Generate a new Quote to be added to the list.
             Quote newQuote = new Quote(Context.User.Id, LastID++, quote);
 
-            //4. Add the quote to the list.
+            //5. Add the quote to the list.
             MasterQuotesList.Add(newQuote);
 
-            //5. Reserialize the JSON, writing it to a file.
+            //6. Reserialize the JSON, writing it to a file.
             File.WriteAllText(QuoteConfigurationFile(), JsonConvert.SerializeObject(MasterQuotesList));
 
             await ReplyAsync("Added quote " + (LastID + 1).ToString() + " to the Quote Library.");
