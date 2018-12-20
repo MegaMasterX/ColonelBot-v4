@@ -68,7 +68,7 @@ namespace ColonelBot_v4.Services
         private async Task LogJoin(SocketGuildUser user)
         {
             //v4: Moved redundant code to BotTools.   
-            await BotTools.GetReportingChannel(_discord).SendMessageAsync("User Joined:", embed:EmbedTool.UserJoinLog(user));
+            await BotTools.GetReportingChannel(_discord).SendMessageAsync("", embed:EmbedTool.UserJoinLog(user));
 
         }
 
@@ -78,13 +78,8 @@ namespace ColonelBot_v4.Services
         /// <param name="user"></param>
         /// <returns></returns>
         private async Task LogLeave(SocketGuildUser user)
-        {
-            //TODO: Switch over to BotTools.GetReportingChannel.
-            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
-            ulong ReportChanID = BotConfiguration.ReportChannel;
-            var ReportChannel = _discord.GetChannel(ReportChanID) as SocketTextChannel;
-            await ReportChannel.SendMessageAsync("User Left:", embed: EmbedTool.UserLeaveLog(user));
+        { 
+            await BotTools.GetReportingChannel(_discord).SendMessageAsync("", embed: EmbedTool.UserLeaveLog(user));
         }
 
         private Task LogDiscord(LogMessage message)

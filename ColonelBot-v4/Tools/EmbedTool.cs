@@ -55,6 +55,7 @@ namespace ColonelBot_v4.Tools
         {
             EmbedBuilder embed = new EmbedBuilder
             {
+                Title = "User Joined",
                 Color = new Color(0x00ff00)
             };
             embed.AddField("Account Name", user.Username);
@@ -95,6 +96,7 @@ namespace ColonelBot_v4.Tools
         {
             EmbedBuilder embed = new EmbedBuilder
             {
+                Title = "User Left", 
                 Color = new Color(0xff0000)
             };
             embed.AddField("Account Name", user.Username);

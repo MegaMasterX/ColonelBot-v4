@@ -49,6 +49,10 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("Uninstall removes the following programs and nothing more: SuperArmor, AirShoes, FloatShoes, Shield, Reflect, and AntiDamage.");
         }
 
-
+        [Command("guides")]
+        public async Task ReplyGuides()
+        {
+            //await Context.User.SendMessageAsync()
+        }
     }
 }
