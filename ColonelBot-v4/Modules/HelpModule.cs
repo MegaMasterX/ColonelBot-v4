@@ -23,7 +23,7 @@ namespace ColonelBot_v4.Modules
             public async Task ATBHelpAsync()
             {
                 await ReplyAsync("",false, EmbedTool.HelpMessage("!atb, !available", "Grants you the Available to Battle role, setting you apart from other users and letting them know you are available to Netbattle. This role is pingable and can be removed with !unav/!unavailable."));
-
+                
             }
         }
 
@@ -34,6 +34,40 @@ namespace ColonelBot_v4.Modules
             public async Task UnavHelpAsync()
             {
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!unav, !unavailable", "Removes the Available to Battle role from you."));
+            }
+        }
+
+        [Group("quote")]
+        public class QuoteHelpBase : ModuleBase<SocketCommandContext>
+        {
+            [Command]
+            public async Task QuoteHelpAsync()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!quote", "Calls a random quote from the library.\n**Additional Commands:** *!quote add <text>, !quote remove <quote number>, !quote library*"));
+            }
+
+            [Command("add")]
+            public async Task QuoteAddHelpAsync()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!quote add <quote contents>", "Adds a quote to the library. For disclosure, this records your Discord ID as well as the date/time the quote was added"));
+            }
+
+            [Command("remove")]
+            public async Task QuoteRemoveHelpAsync()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!quote remove <Quote ID>", "If you are the author of a quote, remove it from the library."));
+            }
+
+            [Command("admin"), RequireUserPermission(GuildPermission.Administrator)]
+            public async Task QuoteAdminHelpAsync()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!quote admin <Edit/Remove> <Quote ID>", "Moderator-only command. Removes or edits a quote regardless of the quote author."));
+            }
+
+            [Command("library")]
+            public async Task QuoteLibraryHelpAsync()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!quote library", "Replys with a HTML file containing the quotes library."));
             }
         }
 

@@ -54,5 +54,33 @@ namespace ColonelBot_v4.Modules
         {
             //await Context.User.SendMessageAsync()
         }
+
+        [Command("onedrive")]
+        public async Task OneDriveAsync()
+        {
+            await ReplyAsync("This folder contains all of the saves, patches, and extra info you will need to Netbattle.\n\n<https://1drv.ms/f/s!AlnkPup_z_U0tZUD-gZeNJ6BsSnkuA>");
+        }
+
+        [Command("victors")]
+        public async Task ReplyVictors()
+        {
+            await ReplyAsync("The previous event winners' setups can be found here.  \n\nhttps://goo.gl/dM8UQQ ");
+        }
+
+        [Group("welcome")]
+        public class WelcomeModule : ModuleBase <SocketCommandContext>
+        {
+            [Command]
+            public async Task SelfWelcome()
+            {//Untargeted Welcome
+                await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
+            }
+
+            [Command]
+            public async Task TargetedWelcome(IUser user)
+            {
+                await user.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
+            }
+        }
     }
 }
