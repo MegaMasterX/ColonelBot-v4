@@ -18,7 +18,7 @@ namespace ColonelBot_v4.Tools
         /// <param name="Message"></param>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static Embed ChannelMessage(string Message, SocketSelfUser user)
+        public static Embed ChannelMessage(string Message)
         {
             var embed = new EmbedBuilder
             {
