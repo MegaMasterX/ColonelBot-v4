@@ -29,7 +29,7 @@ namespace ColonelBot_v4.Tools
             
             return embed.Build();
         }
-
+        
         /// <summary>
         /// Builds a stock Help Message embed.
         /// </summary>
@@ -66,16 +66,6 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
-        public static Embed CommandError(string ErrorMessage)
-        {
-            EmbedBuilder embed = new EmbedBuilder
-            {
-                ThumbnailUrl = "https://cdn.discordapp.com/emojis/447132734763302931.png?v=1",
-                Color = new Color(0xff0000)
-            };
-            embed.AddField("Sorry, but...", ErrorMessage);
-            return embed.Build();
-        }
 
         /// <summary>
         /// Builds an embed detailing a Discord user that's requested Hamachi credentials. 

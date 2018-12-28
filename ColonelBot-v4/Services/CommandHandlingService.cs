@@ -75,9 +75,9 @@ namespace ColonelBot_v4.Services
             {
                 if (result.Error == CommandError.ParseFailed)
                     
-                    await context.Channel.SendMessageAsync("", false, embed: EmbedTool.CommandError($"Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`.")); //thanks trez
+                    await context.Channel.SendMessageAsync($"<:NO:528279619699212300> Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`."); //thanks trez
                 else if (result.Error == CommandError.BadArgCount)
-                    await context.Channel.SendMessageAsync("", false, embed: EmbedTool.CommandError($"Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`.")); //thanks trez
+                    await context.Channel.SendMessageAsync($"<:NO:528279619699212300> Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`."); //thanks trez
                 else
                     await context.Channel.SendMessageAsync("<:BarylMeh:297934727682326540>"); //thanks trez
             }
