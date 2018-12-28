@@ -35,6 +35,7 @@ namespace ColonelBot_v4.Tools
             dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
             ulong ReportChanID = BotConfiguration.ReportChannel;
             var ReportChannel = discord.GetChannel(ReportChanID) as SocketTextChannel;
+            
             return ReportChannel;
         }
         /// <summary>

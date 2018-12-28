@@ -23,22 +23,24 @@ namespace ColonelBot_v4
         static void Main(string[] args)
             => new Program().MainAsync().GetAwaiter().GetResult();
 
-
+        DiscordSocketClient _discord;
 
         public async Task MainAsync()
         {
             using (var services = ConfigureServices())
             {
                 var client = services.GetRequiredService<DiscordSocketClient>();
-
+                _discord = client;
                 client.Log += LogAsync;
                 services.GetRequiredService<CommandService>().Log += LogAsync;
-
+                client.UserJoined += LogJoin;
+                client.UserLeft += LogLeave;
                 //Token up
                 await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
                 await client.StartAsync();
                                
                 await services.GetRequiredService<CommandHandlingService>().InitializeAsync();
+                
                 await Task.Delay(-1);
             }
 
@@ -52,7 +54,6 @@ namespace ColonelBot_v4
                 .AddSingleton<DiscordSocketClient>()
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandlingService>()
-                .AddSingleton<LoggingService>()
                 .AddSingleton<HttpClient>()
                 .AddSingleton<ImageService>()
                 .BuildServiceProvider();
@@ -65,7 +66,22 @@ namespace ColonelBot_v4
             return Task.CompletedTask;
         }
 
+        private async Task LogJoin(SocketGuildUser user)
+        {
+            //v4: Moved redundant code to BotTools.   
+            await BotTools.GetReportingChannel(_discord).SendMessageAsync("", embed: EmbedTool.UserJoinLog(user));
 
+        }
+
+        /// <summary>
+        /// Creates and sends an embed for a user Leaving the Discord server.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        private async Task LogLeave(SocketGuildUser user)
+        {
+            await BotTools.GetReportingChannel(_discord).SendMessageAsync("", embed: EmbedTool.UserLeaveLog(user));
+        }
 
     }
 }
