@@ -7,6 +7,8 @@ using Discord.WebSocket;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
+using ColonelBot_v4.Tools;  
+
 namespace ColonelBot_v4.Services
 {
     public class CommandHandlingService
@@ -49,7 +51,11 @@ namespace ColonelBot_v4.Services
             if (!(message.HasMentionPrefix(_discord.CurrentUser, ref argPos) || message.HasStringPrefix("!", ref argPos))) return;
 
             var context = new SocketCommandContext(_discord, message);
-            await _commands.ExecuteAsync(context, argPos, _services); // we will handle the result in CommandExecutedAsync
+            var result = await _commands.ExecuteAsync(context, argPos, _services);
+            if (result.IsSuccess == false)
+            {//The command failed?
+                
+            }
         }
 
 
@@ -60,11 +66,24 @@ namespace ColonelBot_v4.Services
                 return;
 
             // the command was succesful, we don't care about this result, unless we want to log that a command succeeded.
+            
+
+
             if (result.IsSuccess)
                 return;
-
-            // the command failed, let's notify the user that something happened.
-            await context.Channel.SendMessageAsync($"error: {result.ToString()}");
+            else
+            {
+                if (result.Error == CommandError.ParseFailed)
+                    
+                    await context.Channel.SendMessageAsync("", false, embed: EmbedTool.CommandError($"Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`.")); //thanks trez
+                else if (result.Error == CommandError.BadArgCount)
+                    await context.Channel.SendMessageAsync("", false, embed: EmbedTool.CommandError($"Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`.")); //thanks trez
+                else
+                    await context.Channel.SendMessageAsync("<:BarylMeh:297934727682326540>"); //thanks trez
+            }
+                
+            
+            
         }
     }
 }
