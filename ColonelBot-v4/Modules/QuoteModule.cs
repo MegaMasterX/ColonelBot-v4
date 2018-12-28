@@ -168,7 +168,6 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         private void ResyncQuotesList()
         {
-            MasterQuoteList.Clear(); //I can't believe this wasn't done previously. Added to prevent a balooning memory footprint
             MasterQuoteList = JsonConvert.DeserializeObject<List<Quote>>(File.ReadAllText(QuoteConfigurationFile()));
         }
         /// <summary>
