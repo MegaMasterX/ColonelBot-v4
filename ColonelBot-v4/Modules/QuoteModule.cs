@@ -47,7 +47,7 @@ namespace ColonelBot_v4.Modules
                 if (selectedQuote.QuoteAuthorNickname == null)
                     await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by Library Export: {selectedQuote.QuoteContents}");
                 else
-                    await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {Context.Guild.GetUser(selectedQuote.QuoteAuthor).Nickname}: {selectedQuote.QuoteContents}");
+                    await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
             else
                 await ReplyAsync("", embed: EmbedTool.ChannelMessage("The quote you specified is not in the library."));
         }
@@ -62,7 +62,7 @@ namespace ColonelBot_v4.Modules
             Quote selectedQuote = MasterQuoteList[rnd.Next(0, MasterQuoteList.Count)];
 
             //3. Respond with said quote.
-            await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {Context.Guild.GetUser(selectedQuote.QuoteAuthor).Nickname}: {selectedQuote.QuoteContents}");
+            await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {Context.Guild.GetUser(selectedQuote.QuoteAuthor).Nickname.Replace('@', ' ')}: {selectedQuote.QuoteContents}");
 
         }
 
@@ -85,7 +85,7 @@ namespace ColonelBot_v4.Modules
     
 
 
-    [Command("remove")]
+    [Command("remove"), Alias("delete")]
         [RequireContext(ContextType.Guild)]
         public async Task RemoveQuoteAsync([Remainder]int quoteid)
         {
@@ -136,7 +136,7 @@ namespace ColonelBot_v4.Modules
             //TODO: Build a regex to sanitize the quote before adding it to the list. 
 
             //4. Generate a new Quote to be added to the list.
-            Quote newQuote = new Quote(Context.User.Id, Context.User.Username, LastID, quote);
+            Quote newQuote = new Quote(Context.User.Id, Context.User.Username.Replace('@', ' '), LastID, quote);
             Console.WriteLine($"Attempting to add {newQuote.QuoteID.ToString()} to the library.");
 
             //5. Add the quote to the list.
@@ -168,6 +168,7 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         private void ResyncQuotesList()
         {
+            MasterQuoteList.Clear(); //I can't believe this wasn't done previously. Added to prevent a balooning memory footprint
             MasterQuoteList = JsonConvert.DeserializeObject<List<Quote>>(File.ReadAllText(QuoteConfigurationFile()));
         }
         /// <summary>

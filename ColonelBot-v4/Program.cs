@@ -52,6 +52,7 @@ namespace ColonelBot_v4
                 .AddSingleton<DiscordSocketClient>()
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandlingService>()
+                .AddSingleton<LoggingService>()
                 .AddSingleton<HttpClient>()
                 .AddSingleton<ImageService>()
                 .BuildServiceProvider();

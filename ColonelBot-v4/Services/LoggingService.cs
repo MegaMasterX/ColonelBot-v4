@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.IO;
 using ColonelBot_v4.Tools;
 
+//TODO: Rewrite this.
 
 namespace ColonelBot_v4.Services
 {
