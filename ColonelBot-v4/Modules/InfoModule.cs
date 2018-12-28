@@ -69,6 +69,26 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("The previous event winners' setups can be found here.  \n\nhttps://goo.gl/dM8UQQ ");
         }
 
+        Random rnd = new Random(DateTime.Now.Second);
+
+        [Command("hostflip")]
+        public async Task HostflipAsync()
+        {//Untargeted hostflip
+            if (rnd.Next(0, 2) == 1)
+                await ReplyAsync("You are hosting.");
+            else
+                await ReplyAsync("Your opponent is hosting.");
+        }
+
+        [Command("hostflip")]
+        public async Task TargetedHostflipAsync(IUser user)
+        {//Targeted hostflip.
+            if (rnd.Next(0, 2) == 1)
+                await ReplyAsync($"You are hosting, {user.Mention}");
+            else
+                await ReplyAsync($"You are hosting, {Context.User.Mention}");
+        }
+
         [Group("welcome")]
         public class WelcomeModule : ModuleBase <SocketCommandContext>
         {
