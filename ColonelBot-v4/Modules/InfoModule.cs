@@ -29,6 +29,7 @@ namespace ColonelBot_v4.Modules
 
                 await Context.User.SendMessageAsync("**N1 Grand Prix Hamachi Server**\n```\nServer: " + HamachiServer + "\nPassword: " + HamachiPass + "\n```");
                 await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
+                await ReplyAsync("You have e-mail.");
             }
             catch (Exception)
             {
@@ -52,7 +53,8 @@ namespace ColonelBot_v4.Modules
         [Command("guides")]
         public async Task ReplyGuides()
         {
-            //await Context.User.SendMessageAsync()
+            await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
+            await ReplyAsync($"You have e-mail, {Context.User.Username}");
         }
 
         [Command("onedrive")]
@@ -74,12 +76,14 @@ namespace ColonelBot_v4.Modules
             public async Task SelfWelcome()
             {//Untargeted Welcome
                 await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
+                await ReplyAsync("You have e-mail. Welcome to the N1 Grand Prix!");
             }
 
             [Command]
             public async Task TargetedWelcome(IUser user)
             {
                 await user.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
+                await ReplyAsync("E-mail sent. Welcome to the N1 Grand Prix!");
             }
         }
     }
