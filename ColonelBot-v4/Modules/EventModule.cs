@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+
 using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
-
+using System.IO.Compression;
+using System.Text;
 using Discord.Commands;
 using Discord;
 using Discord.WebSocket;
@@ -19,7 +20,7 @@ namespace ColonelBot_v4.Modules
     public class EventModule : ModuleBase<SocketCommandContext>
     {
 
-        List<EventParticipant> ParticipantList = new List<EventParticipant>();
+        static List<EventParticipant> ParticipantList = new List<EventParticipant>();
 
         /// <summary>
         /// Checks to see if the user has already registered and, if not, adds them to the active event.
@@ -81,7 +82,6 @@ namespace ColonelBot_v4.Modules
             SyncParticipantList();
             if (IsEventActive())
             {
-
                 //We don't need to check for open registration to drop.
                 var caller = Context.User as IGuildUser;
                 if (IsParticipantRegistered(Context.User.Id) == true)
@@ -118,6 +118,7 @@ namespace ColonelBot_v4.Modules
             {
                 File.Delete($"{Directory.GetCurrentDirectory()}\\Data\\Event.json");
                 File.Delete($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json");
+                Directory.Delete($"{Directory.GetCurrentDirectory()}\\Setups");
                 await ReplyAsync("", embed: EmbedTool.ChannelMessage("The Event has concluded."));
             }
         }
@@ -125,13 +126,24 @@ namespace ColonelBot_v4.Modules
         [Command("event admin getsetups")]
         public async Task ObtainSetupsAsync()
         {
-            //TODO: Complete this. 
+            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+            {
+
+                string SourcePath = $"{Directory.GetCurrentDirectory()}\\Setups";
+                string ZipTarget = $"{Directory.GetCurrentDirectory()}\\Cache\\ParticipantSetups.zip";
+                ZipFile.CreateFromDirectory(SourcePath, ZipTarget);
+
+                await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}\\Cache\\ParticipantSetups.zip", "");
+                await ReplyAsync("You have e-mail.");
+                File.Delete($"{Directory.GetCurrentDirectory()}\\Cache\\ParticipantSetups.zip");
+            }
+            
         }
 
         [Command("event admin remind")]
         public async Task RemindPlayersAsync()
         {
-            //TODO: Complete this.
+            
         }
 
         [Command("event admin list")]
@@ -177,7 +189,7 @@ namespace ColonelBot_v4.Modules
                     // 4. Serialize the event into a JSON.
                     File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Event.json", JsonConvert.SerializeObject(newEvent));
                     File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json", JsonConvert.SerializeObject(ParticipantList));
-
+                    Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\Setups");
                     // 5. Confirm.
                     await ReplyAsync($"The event, {EventName}, has been created.");
                 }
@@ -331,7 +343,7 @@ namespace ColonelBot_v4.Modules
         /// Using LINQ, Check to see if a user is registered.
         /// </summary>
         /// <param name="user"></param>
-        private bool IsParticipantRegistered(ulong userID)
+        public static bool IsParticipantRegistered(ulong userID)
         {
             bool result = false;
             for (int i = 0; i < ParticipantList.Count; i++)
@@ -352,7 +364,7 @@ namespace ColonelBot_v4.Modules
             ParticipantList = JsonConvert.DeserializeObject<List<EventParticipant>>(File.ReadAllText($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json"));
         }
 
-        private void WriteParticipantList()
+        public static void WriteParticipantList()
         {
             File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json", JsonConvert.SerializeObject(ParticipantList));
 
@@ -380,9 +392,16 @@ namespace ColonelBot_v4.Modules
             return JsonConvert.DeserializeObject<Event>(File.ReadAllText($"{Directory.GetCurrentDirectory()}\\Data\\Event.json"));
         }
 
-        private EventParticipant GetParticipant(IUser user)
+        public static EventParticipant GetParticipant(IUser user)
         {
             return ParticipantList.Find(x => x.UserID == user.Id);
+        }
+
+        public static void MarkAsSubmitted(IUser user)
+        {
+            EventParticipant target = GetParticipant(user);
+            target.SetupSubmitted = true;
+            WriteParticipantList();
         }
     }
 }

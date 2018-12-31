@@ -1,13 +1,19 @@
 ﻿using System;
-
 using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
+using System.Net;
+using System.Linq;
+
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-using System.Reflection;
+
+
 using Microsoft.Extensions.DependencyInjection;
 
-using ColonelBot_v4.Tools;  
+using ColonelBot_v4.Tools;
+using ColonelBot_v4.Modules;
 
 namespace ColonelBot_v4.Services
 {
@@ -45,12 +51,47 @@ namespace ColonelBot_v4.Services
             // Ignore system messages, or messages from other bots
             if (!(rawMessage is SocketUserMessage message)) return;
             if (message.Source != MessageSource.User) return;
+            var context = new SocketCommandContext(_discord, message);
+
+
+            //Save Game Importing
+            if (message.Attachments.Count == 1) //The message contains an attachment.
+            {
+                if (IsEventActive())
+                {//An event is active.
+                    if (EventModule.IsParticipantRegistered(message.Author.Id))
+                    {//Check to see if the user is registered.
+                        if (rawMessage.Attachments.FirstOrDefault<Attachment>().Filename.ToUpper().Contains("SA1"))
+                        {//The message contains a save file. Download and process it. 
+                            string url = rawMessage.Attachments.FirstOrDefault<Attachment>().Url;
+                            string CacheDirectory = $"{Directory.GetCurrentDirectory()}\\Cache\\";
+                            var Client = new WebClient();
+                            Client.DownloadFile(new Uri(url), $"{CacheDirectory}{rawMessage.Author.Id}{rawMessage.Attachments.FirstOrDefault<Attachment>().Filename}");
+                            Tools.BN6.SaveTool.ProcessSave($"{CacheDirectory}{rawMessage.Author.Id}{rawMessage.Attachments.FirstOrDefault<Attachment>().Filename}", rawMessage.Author.Id, EventModule.GetParticipant(rawMessage.Author).NetbattlerName);
+                            EventModule.MarkAsSubmitted(rawMessage.Author);
+                            await rawMessage.DeleteAsync();                            
+                            await context.Channel.SendMessageAsync("Save file accepted.");
+                        }
+                        else if (rawMessage.Attachments.FirstOrDefault<Attachment>().Filename.ToUpper().Contains("SAV") || rawMessage.Attachments.FirstOrDefault<Attachment>().Filename.ToUpper().Contains(".SG"))
+                        {
+                            await rawMessage.DeleteAsync();
+                            await context.Channel.SendMessageAsync("", false, EmbedTool.CommandError("I can only accept Save Files that are *.SA1 format. Please upload the correct save file."));
+                        }
+                    }
+                    else
+                    {
+                        await rawMessage.DeleteAsync();
+                        await context.Channel.SendMessageAsync("", false, EmbedTool.CommandError("You are not registered for the current active event."));
+                    }
+                }
+            }
+
 
             // This value holds the offset where the prefix ends
             var argPos = 0;
             if (!(message.HasMentionPrefix(_discord.CurrentUser, ref argPos) || message.HasStringPrefix("!", ref argPos))) return;
 
-            var context = new SocketCommandContext(_discord, message);
+            
             var result = await _commands.ExecuteAsync(context, argPos, _services);
             if (result.IsSuccess == false)
             {//The command failed?
@@ -81,9 +122,17 @@ namespace ColonelBot_v4.Services
                 else
                     await context.Channel.SendMessageAsync("<:BarylMeh:297934727682326540>"); //thanks trez
             }
-                
-            
-            
         }
+
+        //Helper methods
+        private static bool IsEventActive()
+        {
+            if (File.Exists($"{Directory.GetCurrentDirectory()}\\Data\\Event.json"))
+                return true;
+            else
+                return false;
+        }
+
+        
     }
 }

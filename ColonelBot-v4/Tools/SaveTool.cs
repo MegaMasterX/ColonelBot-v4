@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.IO;
 using ColonelBot_v4.Tools.BN6.BN6SaveData;
 
 //This tool is for accepting user's Save Files if an event is active and generating a text-file entry for that user's Folder 1, Folder 2, and NaviCust setups.
@@ -13,7 +14,7 @@ using ColonelBot_v4.Tools.BN6.BN6SaveData;
 
 namespace ColonelBot_v4.Tools.BN6
 {
-    class SaveTool
+    public static class SaveTool
     {
         struct ChipEntry
         {
@@ -34,7 +35,7 @@ namespace ColonelBot_v4.Tools.BN6
 
         }
 
-        public static bool ProcessSave(string FileLocation, string FilePath, ulong SubmitterUserID)
+        public static bool ProcessSave(string FileLocation, ulong SubmitterUserID, string NetbattlerName)
         {
             //This method returns True if the save file is accepted and applied, False if there is an error or it's not accepted
 
@@ -100,7 +101,7 @@ namespace ColonelBot_v4.Tools.BN6
                 //Check to see if the user has a folder in Setups.
 
                 //If so, write the Setup.txt file - overwriting any previous file that may exist. 
-                System.IO.File.WriteAllText(FilePath + "Setup.txt", outString.ToString());
+                System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Setups\\{NetbattlerName}({SubmitterUserID.ToString()}).txt", outString.ToString());
                 return true; //We're done - setup accepted.
             }
             return false; //There was an error somewhere and we didn't reach the end of the extraction.
