@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Discord;
 using Discord.WebSocket;
+using ColonelBot_v4.Models;
 
 //This class is for quickly constructing an embed with a default setup for quick responses.
 //TODO: Update this to mirror ChannelMessages' build.
@@ -47,6 +48,25 @@ namespace ColonelBot_v4.Tools
         }
 
         /// <summary>
+        /// Returns a pre-built event for !event info, assuming the event has been verified as active.
+        /// </summary>
+        /// <param name="targetEvent"></param>
+        /// <returns></returns>
+        public static Embed EventInfoEmbed(Event targetEvent)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Color = new Color(0xffcf39),
+                Title = targetEvent.EventName
+            };
+            embed.AddField("Description", targetEvent.Description);
+            embed.AddField("Rules & Format", targetEvent.RulesURL);
+            embed.AddField("Registration Open", targetEvent.RegistrationOpen.ToString(), true);
+            embed.AddField("Event Start Date", targetEvent.StartDate, true);
+            return embed.Build();
+        }
+
+        /// <summary>
         /// Builds an embed detailing a user that's joined the Discord.
         /// </summary>
         /// <param name="user"></param>
@@ -66,6 +86,21 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
+        /// <summary>
+        /// Builds an embed detailing an error.
+        /// </summary>
+        /// <param name="ErrorMessage">Text to be displayed.</param>
+        /// <returns></returns>
+        public static Embed CommandError(string ErrorMessage)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                ThumbnailUrl = "https://cdn.discordapp.com/emojis/447132734763302931.png?v=1",
+                Color = new Color(0xff0000)
+            };
+            embed.AddField("Sorry, but...", ErrorMessage);
+            return embed.Build();
+        }
 
         /// <summary>
         /// Builds an embed detailing a Discord user that's requested Hamachi credentials. 

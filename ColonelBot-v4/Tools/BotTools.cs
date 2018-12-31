@@ -8,6 +8,7 @@ using Discord.WebSocket;
 using ColonelBot_v4.Tools;
 using System.Threading.Tasks;
 using System.IO;
+using System.Linq;
 
 //This class is for completing menial tasks like obtaining the bot's current directory and quickly accessing settings.
 
@@ -85,6 +86,18 @@ namespace ColonelBot_v4.Tools
                     break;
             }
             return Result;
+        }
+
+        /// <summary>
+        /// Returns the Role of a specified RoleName in the specified guild.
+        /// </summary>
+        /// <param name="RoleName">Plaintext Name of the Role. CASE SENSITIVE.</param>
+        /// <param name="guild">SocketGuild of the Guild in which to check.</param>
+        /// <returns></returns>
+        public static SocketRole GetRole(string RoleName, SocketGuild guild)
+        {
+            var role = guild.Roles.SingleOrDefault(r => r.Name.ToUpper() == RoleName.ToUpper());
+            return role;
         }
 
     }

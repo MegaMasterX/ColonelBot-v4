@@ -7,12 +7,18 @@ using System.Text;
 
 namespace ColonelBot_v4.Models
 {
-    class EventParticipant
+    public class EventParticipant
     {
         public string NetbattlerName { get; set; }          //The user-specified Netbattler Name.
-        public long UserID { get; set; }                    //Discord ID of the user.
+        public ulong UserID { get; set; }                    //Discord ID of the user.
         public string SetupLocation { get; set; }           //The on-disk folder location of the user's submitted setup.
         public bool SetupSubmitted { get; set; }            //Has the user's setup been submitted? For use with organizer notification tools.
 
+        public EventParticipant(string netbattlerName, ulong DiscordID)
+        {
+            SetupSubmitted = false;
+            NetbattlerName = netbattlerName;
+            UserID = DiscordID;
+        }
     }
 }

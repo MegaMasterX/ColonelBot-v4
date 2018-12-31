@@ -71,19 +71,99 @@ namespace ColonelBot_v4.Modules
             }
         }
 
+        
+
         [Group("event")]
         public class EventHelpBase : ModuleBase<SocketCommandContext>
         {
+            [Command]
+            public async Task EventHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event <join/drop/update/admin>", "Event commands.  Only usable when there is an active event."));
+            }
+
             [Command("join")] //!help event join
             public async Task EventJoinHelp()
             {
-                await ReplyAsync("", false, EmbedTool.HelpMessage("!event join <Netbattler Name>", "Joins the event with the netbattler name specified. Example: !event join MidniteW"));
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event join <Netbattler Name>", "Joins the event with the netbattler name specified if the event is accepting registrations. Example: !event join MidniteW"));
             }
-            //TODO: Finish writing the help articles for Event Tools based on the Wiki
-            [Group("admin")]
-            public class EventAdminHelpBase : ModuleBase<SocketCommandContext>
-            {
 
+            [Command("drop")]
+            public async Task EventDropHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event drop", "Removes you from the current active event. This can be done even if the event is not accepting registration."));
+            }
+
+            [Command("update")]
+            public async Task EventUpdateHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event update <New Netbattler Name>", "If you've registered for the event, update your Netbattler Name to the one specified."));
+            }
+
+            [Command("create")]
+            public async Task EventCreateHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event create <Event Name>", "Creates an event with the specified title. You must be an Event Organizer to perform this. For more information on becoming an Event Organizer, please contact MegaMasterX."));
+            }
+
+            [Command("admin")]
+            public async Task EventAdminOverviewHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin <title/rules/startdate/list/openreg/closereg/remind/end", "Event Organizer tools."));
+            }
+
+            [Command("admin title")]
+            public async Task EventAdminTitleHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin title <New Title>", "Updates the event title to the one you specify."));
+            }
+
+            [Command("admin rules")]
+            public async Task EventAdminRulesHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin rules <Rule URL>", "Updates the Event Rules URL for participants to refer to."));
+            }
+
+            [Command("admin startdate")]
+            public async Task EventAdminStartdateHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin startdate <New Date>", "Updates the Event Start Date."));
+            }
+
+            [Command ("admin openreg")]
+            public async Task EventAdminOpenregHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin openreg", "Opens registration for participants. This must be open in order to accept setups.")); 
+            }
+
+            [Command("admin list")]
+            public async Task EventListHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin list", "DMs the organizer a list of participants, their Discord IDs, and if they've submitted a setup or not."));
+            }
+
+            [Command("admin closereg")]
+            public async Task EventAdminCloseregHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin closereg", "Closes registration and disables the ability for participants to upload their save files.  Save files uploaded (As Discord messages) when the registration is closed and an event is active will be deleted."));
+            }
+
+            [Command("admin end")]
+            public async Task EventEndHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin end", "Concludes the event, deleting the event config, participant list, and all participant setups."));
+            }
+
+            [Command("admin remind")]
+            public async Task EventRemindHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin remind", "DMs all registered users who have not yet provided setups to do so and how to do so."));
+            }
+       
+            [Command("admin getsetups")]
+            public async Task EventGetSetupsHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event admin getsetups", "Provides the Event Organizer a ZIP File containing all participant submitted setups."));
             }
         }
 
