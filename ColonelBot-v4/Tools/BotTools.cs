@@ -32,8 +32,7 @@ namespace ColonelBot_v4.Tools
         /// <returns></returns>
         public static SocketTextChannel GetReportingChannel(DiscordSocketClient discord)
         {
-            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
             ulong ReportChanID = BotConfiguration.ReportChannel;
             var ReportChannel = discord.GetChannel(ReportChanID) as SocketTextChannel;
             
@@ -45,8 +44,8 @@ namespace ColonelBot_v4.Tools
         /// <returns></returns>
         public static ulong GetReportingChannelUlong()
         {
-            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
+            
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
             ulong ReportChanID = BotConfiguration.ReportChannel;
             return ReportChanID;
         }
@@ -58,8 +57,8 @@ namespace ColonelBot_v4.Tools
         /// <returns></returns>
         public static string GetSettingString(ConfigurationEntries SettingToRetreive)
         {
-            string BotDirectory = new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Directory.ToString();
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText(BotDirectory + "\\config.json"));
+            
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
             string Result = "";
             switch (SettingToRetreive)
             {

@@ -152,12 +152,12 @@ namespace ColonelBot_v4.Modules
         {
             //1. Verify the Quote file exists.
             string path = Directory.GetCurrentDirectory();
-            if (File.Exists(path + "\\Data\\Quotes.json"))
-                path += "\\Data\\Quotes.json";
+            if (File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Quotes.json"))
+                path = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Quotes.json";
             else
             {//The Quotes file doesn't exist. Create it.
-                File.WriteAllText(path + "\\Data\\Quotes.json", "");
-                path += "\\Data\\Quotes.json";
+                File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Quotes.json", "");
+                path = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Quotes.json";
             }
 
             return path;
