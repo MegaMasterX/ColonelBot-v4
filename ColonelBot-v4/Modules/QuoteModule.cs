@@ -59,7 +59,7 @@ namespace ColonelBot_v4.Modules
             ResyncQuotesList();
 
             //2. Reseed RNG and Select a quote that exists in the library.
-            rnd = new Random(Context.Message.Id);
+            
             Quote selectedQuote = MasterQuoteList[rnd.Next(0, MasterQuoteList.Count)];
 
             //3. Respond with said quote.
