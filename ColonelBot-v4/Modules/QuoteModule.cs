@@ -21,7 +21,7 @@ namespace ColonelBot_v4.Modules
     public class QuoteModule : ModuleBase<SocketCommandContext>
     {
         List<Quote> MasterQuoteList;
-        Random rnd = new Random(DateTime.Now.Second);
+        Random rnd = new Random();
 
         [Command]
         public async Task QuoteSpecificAsync([Remainder] uint quoteID)
@@ -58,7 +58,8 @@ namespace ColonelBot_v4.Modules
             //1. Update the local list for Quotes.
             ResyncQuotesList();
 
-            //2. Select a quote that exists in the library.
+            //2. Reseed RNG and Select a quote that exists in the library.
+            rnd = new Random(Context.Message.Id);
             Quote selectedQuote = MasterQuoteList[rnd.Next(0, MasterQuoteList.Count)];
 
             //3. Respond with said quote.
