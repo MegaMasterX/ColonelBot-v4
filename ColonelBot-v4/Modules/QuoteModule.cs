@@ -62,7 +62,7 @@ namespace ColonelBot_v4.Modules
             Quote selectedQuote = MasterQuoteList[rnd.Next(0, MasterQuoteList.Count)];
 
             //3. Respond with said quote.
-            await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {Context.Guild.GetUser(selectedQuote.QuoteAuthor).Nickname.Replace('@', ' ')}: {selectedQuote.QuoteContents}");
+            await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
 
         }
 
