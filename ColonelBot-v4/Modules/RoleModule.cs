@@ -46,7 +46,7 @@ namespace ColonelBot_v4.Modules
             var role = GetRole("Deckmaster", Context.Guild);
             await ToggleRole(caller, role);
         }
-           
+        
         private async Task<Embed> ToggleRole(IGuildUser caller, SocketRole role)
         {
             string RoleResponseText = "";

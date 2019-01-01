@@ -7,6 +7,7 @@
     <Authors>MegaMasterX</Authors>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <FileVersion>4.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +17,6 @@
     <PackageReference Include="Discord.Net.Commands" Version="2.0.0-beta2-01039" />
     <PackageReference Include="Discord.Net.Core" Version="2.0.0-beta2-01039" />
     <PackageReference Include="Discord.Net.WebSocket" Version="2.0.0-beta2-01039" />
-    <PackageReference Include="DotNetZip.Reduced" Version="1.9.1.8" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0-preview.18572.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview.18572.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0-preview.18572.1" />

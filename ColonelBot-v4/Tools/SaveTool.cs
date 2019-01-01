@@ -62,6 +62,7 @@ namespace ColonelBot_v4.Tools.BN6
 
                 //Set up the StringBuilder to extract the data. 
                 StringBuilder outString = new StringBuilder();
+                
                 outString.AppendLine($"Folder1:");
                 for (int i = 0; i < 30; i++)
                 {

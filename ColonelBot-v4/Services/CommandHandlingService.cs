@@ -64,7 +64,7 @@ namespace ColonelBot_v4.Services
                         if (rawMessage.Attachments.FirstOrDefault<Attachment>().Filename.ToUpper().Contains("SA1"))
                         {//The message contains a save file. Download and process it. 
                             string url = rawMessage.Attachments.FirstOrDefault<Attachment>().Url;
-                            string CacheDirectory = $"{Directory.GetCurrentDirectory()}\\Cache\\";
+                            string CacheDirectory = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}";
                             var Client = new WebClient();
                             Client.DownloadFile(new Uri(url), $"{CacheDirectory}{rawMessage.Author.Id}{rawMessage.Attachments.FirstOrDefault<Attachment>().Filename}");
                             Tools.BN6.SaveTool.ProcessSave($"{CacheDirectory}{rawMessage.Author.Id}{rawMessage.Attachments.FirstOrDefault<Attachment>().Filename}", rawMessage.Author.Id, EventModule.GetParticipant(rawMessage.Author).NetbattlerName);
@@ -78,11 +78,7 @@ namespace ColonelBot_v4.Services
                             await context.Channel.SendMessageAsync("", false, EmbedTool.CommandError("I can only accept Save Files that are *.SA1 format. Please upload the correct save file."));
                         }
                     }
-                    else
-                    {
-                        await rawMessage.DeleteAsync();
-                        await context.Channel.SendMessageAsync("", false, EmbedTool.CommandError("You are not registered for the current active event."));
-                    }
+                    
                 }
             }
 
@@ -127,7 +123,7 @@ namespace ColonelBot_v4.Services
         //Helper methods
         private static bool IsEventActive()
         {
-            if (File.Exists($"{Directory.GetCurrentDirectory()}\\Data\\Event.json"))
+            if (File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json"))
                 return true;
             else
                 return false;

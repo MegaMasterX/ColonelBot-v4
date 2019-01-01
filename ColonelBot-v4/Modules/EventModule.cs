@@ -64,7 +64,7 @@ namespace ColonelBot_v4.Modules
             {
                 if (IsParticipantRegistered(caller.Id))
                 {
-                    GetParticipant(caller).NetbattlerName = NewName;
+                    GetParticipant(caller).NetbattlerName = NewName.Replace('@', ' ');
                     WriteParticipantList();
                     await ReplyAsync("Updated your Netbattler Name successfully.");
                 }
@@ -116,9 +116,9 @@ namespace ColonelBot_v4.Modules
         {//Closes the event and delets the Participant JSON and the Event JSON. 
             if (IsEventActive())
             {
-                File.Delete($"{Directory.GetCurrentDirectory()}\\Data\\Event.json");
-                File.Delete($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json");
-                Directory.Delete($"{Directory.GetCurrentDirectory()}\\Setups");
+                File.Delete($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json");
+                File.Delete($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Registration.json");
+                Directory.Delete($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Setups");
                 await ReplyAsync("", embed: EmbedTool.ChannelMessage("The Event has concluded."));
             }
         }
@@ -129,13 +129,13 @@ namespace ColonelBot_v4.Modules
             if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
             {
 
-                string SourcePath = $"{Directory.GetCurrentDirectory()}\\Setups";
-                string ZipTarget = $"{Directory.GetCurrentDirectory()}\\Cache\\ParticipantSetups.zip";
+                string SourcePath = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Setups";
+                string ZipTarget = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}ParticipantSetups.zip";
                 ZipFile.CreateFromDirectory(SourcePath, ZipTarget);
 
-                await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}\\Cache\\ParticipantSetups.zip", "");
+                await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}ParticipantSetups.zip", "");
                 await ReplyAsync("You have e-mail.");
-                File.Delete($"{Directory.GetCurrentDirectory()}\\Cache\\ParticipantSetups.zip");
+                File.Delete($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}ParticipantSetups.zip");
             }
             
         }
@@ -187,9 +187,9 @@ namespace ColonelBot_v4.Modules
                     newEvent.AcceptingSetups = false;
 
                     // 4. Serialize the event into a JSON.
-                    File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Event.json", JsonConvert.SerializeObject(newEvent));
-                    File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json", JsonConvert.SerializeObject(ParticipantList));
-                    Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\Setups");
+                    File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json", JsonConvert.SerializeObject(newEvent));
+                    File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Registration.json", JsonConvert.SerializeObject(ParticipantList));
+                    Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Setups");
                     // 5. Confirm.
                     await ReplyAsync($"The event, {EventName}, has been created.");
                 }
@@ -308,7 +308,7 @@ namespace ColonelBot_v4.Modules
         /// <param name="UpdatedInfo">Data to replace the field with</param>
         private void UpdateEventData(EventFields targetUpdate, string UpdatedInfo)
         {
-            Event targetEvent = JsonConvert.DeserializeObject<Event>(File.ReadAllText($"{Directory.GetCurrentDirectory()}\\Data\\Event.json"));
+            Event targetEvent = JsonConvert.DeserializeObject<Event>(File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json"));
 
             switch (targetUpdate)
             {
@@ -334,7 +334,7 @@ namespace ColonelBot_v4.Modules
                     break;
             }
 
-            File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Event.json", JsonConvert.SerializeObject(targetEvent));
+            File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json", JsonConvert.SerializeObject(targetEvent));
 
 
         }
@@ -361,18 +361,18 @@ namespace ColonelBot_v4.Modules
 
         private void SyncParticipantList()
         {
-            ParticipantList = JsonConvert.DeserializeObject<List<EventParticipant>>(File.ReadAllText($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json"));
+            ParticipantList = JsonConvert.DeserializeObject<List<EventParticipant>>(File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Registration.json"));
         }
 
         public static void WriteParticipantList()
         {
-            File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Data\\Registration.json", JsonConvert.SerializeObject(ParticipantList));
+            File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Registration.json", JsonConvert.SerializeObject(ParticipantList));
 
         }
 
         private bool IsEventActive()
         {
-            if (File.Exists($"{Directory.GetCurrentDirectory()}\\Data\\Event.json"))
+            if (File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json"))
                 return true;
             else
                 return false;
@@ -389,7 +389,7 @@ namespace ColonelBot_v4.Modules
 
         private Event GetActiveEvent()
         {
-            return JsonConvert.DeserializeObject<Event>(File.ReadAllText($"{Directory.GetCurrentDirectory()}\\Data\\Event.json"));
+            return JsonConvert.DeserializeObject<Event>(File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}Event.json"));
         }
 
         public static EventParticipant GetParticipant(IUser user)
