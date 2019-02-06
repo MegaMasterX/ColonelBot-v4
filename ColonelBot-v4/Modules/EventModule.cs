@@ -44,6 +44,7 @@ namespace ColonelBot_v4.Modules
                         EventParticipant newParticipant = new EventParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id);
                         ParticipantList.Add(newParticipant);
                         WriteParticipantList();
+                        await ToggleRole(Context.User as IGuildUser, RoleModule.GetRole("Official Netbattler", Context.Guild));//Add the Official Netbattler role to the user.
                         await ReplyAsync("", embed: EmbedTool.ChannelMessage($"You have registered for the event {GetActiveEvent().EventName} sucessfully!"));
                     }
                 }
@@ -88,6 +89,7 @@ namespace ColonelBot_v4.Modules
                 {//The user is already registered.
                     ParticipantList.Remove(GetParticipant(caller));
                     WriteParticipantList();
+                    await ToggleRole(Context.User as IGuildUser, RoleModule.GetRole("Official Netbattler", Context.Guild)); //Remove the Official Netbattler role.
                     await ReplyAsync("", embed: EmbedTool.ChannelMessage($"You have dropped from {GetActiveEvent().EventName}"));
                 }
                 else
@@ -109,7 +111,7 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("", embed: EmbedTool.EventInfoEmbed(GetActiveEvent()));
         }
 
-        //Event Adminisration
+        //Event Administration
 
         [Command("event admin end")]
         public async Task CloseEventAsync()
@@ -402,6 +404,30 @@ namespace ColonelBot_v4.Modules
             EventParticipant target = GetParticipant(user);
             target.SetupSubmitted = true;
             WriteParticipantList();
+        }
+
+        public async Task<Embed> ToggleRole(IGuildUser caller, SocketRole role)
+        {
+            string RoleResponseText = "";
+
+            if (caller.RoleIds.Contains(role.Id))
+            {//The caller already has the role, remove it.
+                await caller.RemoveRoleAsync(role, null);
+                RoleResponseText = "The " + role.Name + " role has been removed.";
+            }
+            else
+            {//The caller does not have the role, add it.
+                await caller.AddRoleAsync(role, null);
+                RoleResponseText = "The " + role.Name + " role has been added.";
+            }
+            var embed = new EmbedBuilder
+            {
+                Color = new Color(0xffcf39)
+            };
+
+            embed.AddField("Role Updated", RoleResponseText);
+            await ReplyAsync("", embed: embed.Build());
+            return embed.Build();
         }
     }
 }

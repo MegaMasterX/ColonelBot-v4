@@ -102,7 +102,7 @@ namespace ColonelBot_v4.Tools.BN6
                 //Check to see if the user has a folder in Setups.
 
                 //If so, write the Setup.txt file - overwriting any previous file that may exist. 
-                System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}\\Setups\\{NetbattlerName}({SubmitterUserID.ToString()}).txt", outString.ToString());
+                System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Setups{Path.DirectorySeparatorChar}{NetbattlerName}({SubmitterUserID.ToString()}).txt", outString.ToString());
                 return true; //We're done - setup accepted.
             }
             return false; //There was an error somewhere and we didn't reach the end of the extraction.

@@ -23,6 +23,7 @@ namespace ColonelBot_v4.Tools
             ReportingChannel,
             HamachiServer,
             OrganizerRoleName,
+            ChallongeApiKey,
             HamachiPassword
         }
 
@@ -51,6 +52,16 @@ namespace ColonelBot_v4.Tools
         }
 
         /// <summary>
+        /// Gets the Challonge API key.
+        /// </summary>
+        /// <returns></returns>
+        public static string GetChallongeAPIKey()
+        {
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+            return BotConfiguration.ChallongeApiKey;
+        }
+
+        /// <summary>
         /// Returns the Setting from the Configuration and throws an error if it's not found.
         /// </summary>
         /// <param name="SettingToRetreive"></param>
@@ -73,6 +84,9 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.OrganizerRoleName:
                     Result = BotConfiguration.OrganizerRoleName;
+                    break;
+                case ConfigurationEntries.ChallongeApiKey:
+                    Result = BotConfiguration.ChallongeApiKey;
                     break;
                 case ConfigurationEntries.HamachiServer:
                     Result = BotConfiguration.HamachiServer;
