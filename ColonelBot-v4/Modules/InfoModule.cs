@@ -6,6 +6,8 @@ using Discord.Commands;
 using Discord.WebSocket;
 using System.Threading;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 using ColonelBot_v4.Tools;
 
@@ -36,6 +38,17 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("You currently have DMs disabled. Please enable DMs from users on the server to obtain the Hamachi credentials.");
                 throw;
             }
+        }
+
+        [Command("hamachi update")]
+        [RequireUserPermission(GuildPermission.Administrator)] //Admin-only.
+        public async Task UpdateHamachiPWAsync([Remainder] string NewHamachiPW)
+        {
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+            BotConfiguration.HamachiPassword = NewHamachiPW;
+            System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
+            await ReplyAsync("The Hamachi password has been updated.");
+
         }
 
         [Command("faq")]
