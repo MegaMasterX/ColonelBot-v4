@@ -103,6 +103,10 @@ namespace ColonelBot_v4.Tools.BN6
 
                 //If so, write the Setup.txt file - overwriting any previous file that may exist. 
                 System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Setups{Path.DirectorySeparatorChar}{NetbattlerName}({SubmitterUserID.ToString()}).txt", outString.ToString());
+
+                //Delete the cache in its entirety.
+                System.IO.File.Delete(FileLocation);
+
                 return true; //We're done - setup accepted.
             }
             return false; //There was an error somewhere and we didn't reach the end of the extraction.

@@ -23,12 +23,29 @@ namespace ColonelBot_v4.Modules
             await AddATB(caller, role);
         }
 
+        
         [Command("unavailable"), Alias("unav"), RequireContext(ContextType.Guild)]
         public async Task RemoveATB()
         {
             var caller = Context.User as IGuildUser;
             var role = GetRole("AVAILABLE TO BATTLE", Context.Guild);
             await RemoveATB(caller, role);
+        }
+
+        [Command("legacy"), Alias("legacybattler")]
+        public async Task ToggleLegacy()
+        {
+            var caller = Context.User as IGuildUser;
+            var role = GetRole("Legacy Battler", Context.Guild);
+            await ToggleRole(caller, role);
+        }
+
+        [Command("wave"), Alias("wavebattler")]
+        public async Task ToggleWaveBattler()
+        {
+            var caller = Context.User as IGuildUser;
+            var role = GetRole("Wave Battler", Context.Guild);
+            await ToggleRole(caller, role);
         }
 
         [Command("license")]
