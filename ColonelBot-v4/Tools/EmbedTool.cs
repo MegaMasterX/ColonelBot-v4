@@ -159,5 +159,53 @@ namespace ColonelBot_v4.Tools
             embed.AddField("VirtualDub Audio Syncing", "This guide will assist you in syncing your audio and video when recording matches with VBA\nhttp://bit.ly/2vAgmrt");
             return embed.Build();
         }
+
+        /// <summary>
+        /// Builds a Embed for Battlechips.
+        /// </summary>
+        /// <param name="chipName">Name of the Battlechip</param>
+        /// <param name="chipElement">Element of the Battlechip</param>
+        /// <param name="chipMB">Megabyte value of the Battlechip</param>
+        /// <param name="chipATK">Attack value of the Battlechip</param>
+        /// <param name="chipCodes">Available Chip Codes for the Battlechip</param>
+        /// <param name="chipDescription">In-Game Description for the Battlechip</param>
+        /// <param name="chipURL">URL of the Image for the thumbnail for the Battlechip.</param>
+        /// <param name="MoreInfoURL">Link to the Netbattle 101 Location, if applicable. If "", this will be omitted from the embed.</param>
+        /// <returns></returns>
+        public static Embed ChipEmbed(string chipName, string chipElement, string chipMB, string chipATK, string chipCodes, string chipDescription, string chipURL, string MoreInfoURL)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Color = new Color(0xffcf39), //ColonelBot's Default Yellow
+                ThumbnailUrl = chipURL //The ChipURL should always be in the library.
+            };
+            embed.AddField("Chip Name", chipName, true);
+            embed.AddField("Element", chipElement, true);
+            embed.AddField("MB", chipMB, true);
+            embed.AddField("Attack", chipATK, true);
+            embed.AddField("Codes", chipCodes, true);
+            embed.AddField("Description", chipDescription, true);
+            if (MoreInfoURL != "") //Add the More Information URL if there is anything specified.
+                embed.AddField("More Information", MoreInfoURL, false);
+
+            return embed.Build();
+        }
+
+        /// <summary>
+        /// Returns a embed catered to search results from a failed or errored lookup.
+        /// </summary>
+        /// <param name="Results">Search results string returned by the lookup method.</param>
+        /// <returns></returns>
+        public static Embed ChipSearchResultsEmbed(string Results)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Color = new Color(0xffcf39)
+            };
+
+            embed.AddField("Lookup Recommendations", Results, false);
+
+            return embed.Build();
+        }
     }
 }

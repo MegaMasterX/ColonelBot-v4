@@ -15,8 +15,7 @@ namespace ColonelBot_v4.Models
         public string Codes { get; set; }       //Codes that the chip is available in.
         public string Description { get; set; } //In-game description of the chip.
         public string Image { get; set; }       //URL for the chip image (N1GP Hosting?)
-        public string SourceGame { get; set; }  //Which installment this chip is available in.
         public string MoreDetails { get; set; } //The Wiki URL or guide link to obtain more infomration (UNINSTALL PLEASE?)
-
+        public string Alias { get; set; }
     }
 }

@@ -30,22 +30,32 @@ namespace ColonelBot_v4.Modules
         [Command("event join")]
         public async Task JoinEventAsync([Remainder] string NetbattlerName)
         {
+            
             SyncParticipantList();
             if (IsEventActive())
             {//Is the event active?
                 if (GetActiveEvent().RegistrationOpen == true)
                 {//Is registration open?
+                    
                     if (IsParticipantRegistered(Context.User.Id) == true)
                     {//The user is already registered.
                         await ReplyAsync("", embed: EmbedTool.CommandError($"You are already registered for the {GetActiveEvent().EventName} event."));
                     }
                     else
                     {
-                        EventParticipant newParticipant = new EventParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id);
-                        ParticipantList.Add(newParticipant);
-                        WriteParticipantList();
-                        await ToggleRole(Context.User as IGuildUser, RoleModule.GetRole("Official Netbattler", Context.Guild));//Add the Official Netbattler role to the user.
-                        await ReplyAsync("", embed: EmbedTool.ChannelMessage($"You have registered for the event {GetActiveEvent().EventName} sucessfully!"));
+                        if (VerifyNetbattlerName(NetbattlerName) == true)
+                        { //Completing Task 56
+                            //The Netbattler Name the user is attempting to use is already registered.
+                            await ReplyAsync("The Netbattler Name you've selected is already in use. Please register with a different name.");
+                        }
+                        else
+                        {  //The Netbattler Name is not registered. 
+                            EventParticipant newParticipant = new EventParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id);
+                            ParticipantList.Add(newParticipant);
+                            WriteParticipantList();
+                            await ToggleRole(Context.User as IGuildUser, RoleModule.GetRole("Official Netbattler", Context.Guild));//Add the Official Netbattler role to the user.
+                            await ReplyAsync("", embed: EmbedTool.ChannelMessage($"You have registered for the event {GetActiveEvent().EventName} sucessfully!"));
+                        }
                     }
                 }
                 else //registration is closed.
@@ -145,7 +155,7 @@ namespace ColonelBot_v4.Modules
         [Command("event admin remind")]
         public async Task RemindPlayersAsync()
         {
-            
+            //TODO: Complete this
         }
 
         [Command("event admin list")]
@@ -170,7 +180,7 @@ namespace ColonelBot_v4.Modules
         [Command("event create")]
         [RequireContext(ContextType.Guild)]
         public async Task CreateEventAsync([Remainder] string EventName)
-        {
+        {//TODO: Add an Alias for additional commands, add this to HelpModule.
             // 1. Check to see if an event is already active.
             if (IsEventActive())
                 await ReplyAsync("", embed: EmbedTool.CommandError("An event is already active and a new one cannot be created."));
@@ -301,6 +311,27 @@ namespace ColonelBot_v4.Modules
             Description,
             StartDate,
             RegistrationOpen
+        }
+
+        /// <summary>
+        /// Checks the current active participants list for the specified netbattler name and returns true if it matches. 
+        /// </summary>
+        /// <param name="NetbattlerNameToVerify"></param>
+        /// <returns></returns>
+        private bool VerifyNetbattlerName(string NetbattlerNameToVerify)
+        {
+            bool result = false;
+            for (int i = 0; i < ParticipantList.Count; i++)
+            {
+                if (ParticipantList[i].NetbattlerName.ToUpper() == NetbattlerNameToVerify.ToUpper())
+                {
+                    result = true;
+                    Console.WriteLine("Found. Netbattler name: " + ParticipantList[i].NetbattlerName);
+                }
+
+            }
+
+            return result;
         }
 
         /// <summary>

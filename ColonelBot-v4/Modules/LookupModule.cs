@@ -13,47 +13,45 @@ namespace ColonelBot_v4.Modules
         [Group("lookup")]
         public class LookupSpecificGame
         {
-            [Command("1")]
-            public async Task LookupBN1Async([Remainder] string rndr)
-            {//!lookup 1 <chip name>
-
-            }
-
-            [Command("2")]
-            public async Task LookupBN2Async([Remainder] string rndr)
-            {//!lookup 2 <chip name>
-
-            }
-
-            [Command("3")]
-            public async Task LookupBN3Async([Remainder] string rndr)
-            {//!lookup 3 <chip name>
-
-            }
-
-            [Command("4")]
-            public async Task LookupBN4Async([Remainder] string rndr)
-            {//!lookup 4 <chip name>
-
-            }
-
-            [Command("5")]
-            public async Task LookupBN5Async([Remainder] string rndr)
-            {//!lookup 5 <chip name>
-
-            }
-
-            [Command("6")]
-            public async Task LookupBN6Async([Remainder] string rndr)
-            {//!lookup 6 <chip name>
-
-            }
-
             [Command]
             public async Task LookupDefaultAsync([Remainder] string rndr)
-            {//!lookup <chipname> - Defaults to MMBN6.
+            {//!lookup <chipname> - 
 
             }
+
+            [Command("code")] //!lookup code <specified>
+            public async Task LookupChipsByCode([Remainder] string remainder)
+            {
+
+            }
+        }
+
+
+        /// <summary>
+        /// This method will return a built list of all chips matching the Lookup string criteria.  
+        /// 
+        /// Lookups, if not found, will obtain a list of chips containing the first 4 characters. It will also look up the 
+        /// Aliases (Assnswrd for AssassinSword, for example.)
+        /// </summary>
+        /// <param name="lookupString"></param>
+        /// <returns></returns>
+        private string ObtainSuggestions(string lookupString)
+        {
+            string result = "";
+
+            return result;
+        }
+
+        /// <summary>
+        /// Returns all chips that contain the specified chip code. 
+        /// </summary>
+        /// <param name="CodeLookup"></param>
+        /// <returns></returns>
+        private string ObtainCodeResults(string CodeLookup)
+        {
+            string result = "";
+
+            return result;
         }
     }
 }

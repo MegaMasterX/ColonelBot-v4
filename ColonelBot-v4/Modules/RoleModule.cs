@@ -21,6 +21,7 @@ namespace ColonelBot_v4.Modules
             var caller = Context.User as IGuildUser;
             var role = GetRole("Available to Battle", Context.Guild);
             await AddATB(caller, role);
+            //TODO: Task 60: Remove the Embed and replace it with a graceful message only. 
         }
 
         
@@ -88,7 +89,7 @@ namespace ColonelBot_v4.Modules
             return embed.Build();
         }
 
-        private async Task<Embed> AddATB(IGuildUser caller, SocketRole role)
+        private async Task<string> AddATB(IGuildUser caller, SocketRole role)
         {
             string ResponseText = "";
             if (caller.RoleIds.Contains(role.Id))
@@ -99,19 +100,13 @@ namespace ColonelBot_v4.Modules
                 await caller.AddRoleAsync(role, null);
                 ResponseText = "You are now Available to Battle.";
             }
-
-            var embed = new EmbedBuilder
-            {
-                Color = new Color(0xffcf39)
-            };
-
-            embed.AddField("Update", ResponseText);
-            await ReplyAsync("", embed:embed.Build());
-            return embed.Build();
+            
+            return ResponseText; //Task 60
+            
             
         }
 
-        private async Task<Embed> RemoveATB(IGuildUser caller, SocketRole role)
+        private async Task<string> RemoveATB(IGuildUser caller, SocketRole role)
         {
             string ResponseText = "";
             if (caller.RoleIds.Contains(role.Id))
@@ -123,14 +118,7 @@ namespace ColonelBot_v4.Modules
                 ResponseText = "You are not Available to Battle.";
             }
 
-            var embed = new EmbedBuilder
-            {
-                Color = new Color(0xffcf39)
-            };
-
-            embed.AddField("Update", ResponseText);
-            await ReplyAsync("", embed:embed.Build());
-            return embed.Build();
+            return ResponseText; //Task 60
             
         }
 

@@ -79,7 +79,13 @@ namespace ColonelBot_v4.Modules
             [Command]
             public async Task EventHelp()
             {
-                await ReplyAsync("", false, EmbedTool.HelpMessage("!event <join/drop/update/admin>", "Event commands.  Only usable when there is an active event."));
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event <join/drop/update/admin/create>", "Event commands.  Only usable when there is an active event."));
+            }
+
+            [Command("create")]
+            public async Task EventCreateHelp()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!event create <Event Name>", "Creates an event with the specified name."));
             }
 
             [Command("join")] //!help event join
