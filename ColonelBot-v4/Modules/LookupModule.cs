@@ -28,7 +28,7 @@ namespace ColonelBot_v4.Modules
                     if (SearchAliases(rndr) == false)
                     {
                         //Perform a fuzzy search and provide recommendations based on the user's input.
-
+                        await ReplyAsync(ObtainSuggestions(rndr));
                     }
                     else
                     {
@@ -45,8 +45,9 @@ namespace ColonelBot_v4.Modules
             [Command("code"), Priority(1)] //!lookup code <specified>
             public async Task LookupChipsByCode([Remainder] string remainder)
             {
-                await ReplyAsync("Code Lookup Implementation Test");
+                await ReplyAsync(ObtainCodeResults(remainder)); //You don't have to worry about trimming here, the lookup method only gets the first char.
             }
+
         }
 
         /// <summary>
@@ -117,11 +118,16 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="lookupString">The string specified by the user to use for lookup.</param>
         /// <returns></returns>
-        private string ObtainSuggestions(string lookupString)
+        private static string ObtainSuggestions(string lookupString)
         {
-            string result = "";
-            StringBuilder builtResult;
-            //TODO: Finish this and implement it into the command. 
+            string result = "Chip not found. Perhaps you meant: ";
+            string Criteria = lookupString.Remove(3);
+            
+            List<Chip> FindResults = ChipLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
+            foreach (Chip chp in FindResults)
+            {
+                result += $"{chp.Name}   ";
+            }
             return result;
         }
 
@@ -130,10 +136,18 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="CodeLookup"></param>
         /// <returns></returns>
-        private string ObtainCodeResults(string CodeLookup)
+        private static string ObtainCodeResults(string CodeLookup)
         {
             string result = "";
-
+            StringBuilder Results = new StringBuilder();
+            List<Chip> CodeResults = new List<Chip>();
+            CodeResults = ChipLibrary.FindAll(x => x.Codes.Contains(CodeLookup.ToUpper().ToCharArray()[0]));
+            foreach (Chip item in CodeResults)
+            {
+                result += $"{item.Name}   ";
+            }
+            if (result == "")
+                result = "No chips could be found with the specified code. Please try again with a proper letter.";
             return result;
         }
         /// <summary>
