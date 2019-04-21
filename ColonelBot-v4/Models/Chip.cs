@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ColonelBot_v4.Models
 {
-    class Chip
+    public class Chip
     {
         public string Name { get; set; }        //This chip's name.
         public string Element { get; set; }     //Element of the chip.

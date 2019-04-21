@@ -172,21 +172,21 @@ namespace ColonelBot_v4.Tools
         /// <param name="chipURL">URL of the Image for the thumbnail for the Battlechip.</param>
         /// <param name="MoreInfoURL">Link to the Netbattle 101 Location, if applicable. If "", this will be omitted from the embed.</param>
         /// <returns></returns>
-        public static Embed ChipEmbed(string chipName, string chipElement, string chipMB, string chipATK, string chipCodes, string chipDescription, string chipURL, string MoreInfoURL)
+        public static Embed ChipEmbed(Chip sourceChip)
         {
             EmbedBuilder embed = new EmbedBuilder
             {
                 Color = new Color(0xffcf39), //ColonelBot's Default Yellow
-                ThumbnailUrl = chipURL //The ChipURL should always be in the library.
+                ThumbnailUrl = sourceChip.Image //The ChipURL should always be in the library.
             };
-            embed.AddField("Chip Name", chipName, true);
-            embed.AddField("Element", chipElement, true);
-            embed.AddField("MB", chipMB, true);
-            embed.AddField("Attack", chipATK, true);
-            embed.AddField("Codes", chipCodes, true);
-            embed.AddField("Description", chipDescription, true);
-            if (MoreInfoURL != "") //Add the More Information URL if there is anything specified.
-                embed.AddField("More Information", MoreInfoURL, false);
+            embed.AddField("Chip Name", sourceChip.Name, true);
+            embed.AddField("Element", sourceChip.Element, true);
+            embed.AddField("MB", sourceChip.MB, true);
+            embed.AddField("Attack", sourceChip.ATK, true);
+            embed.AddField("Codes", sourceChip.Codes, true);
+            embed.AddField("Description", sourceChip.Description, true);
+            if (sourceChip.MoreDetails != "") //Add the More Information URL if there is anything specified.
+                embed.AddField("More Information", sourceChip.MoreDetails, false);
 
             return embed.Build();
         }

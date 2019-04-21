@@ -107,7 +107,7 @@ namespace ColonelBot_v4.Modules
             }
 
             [Command("create")]
-            public async Task EventCreateHelp()
+            public async Task EventCreateHelpFull()
             {
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!event create <Event Name>", "Creates an event with the specified title. You must be an Event Organizer to perform this. For more information on becoming an Event Organizer, please contact MegaMasterX."));
             }

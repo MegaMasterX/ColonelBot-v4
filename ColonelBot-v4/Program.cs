@@ -35,6 +35,8 @@ namespace ColonelBot_v4
                 services.GetRequiredService<CommandService>().Log += LogAsync;
                 client.UserJoined += LogJoin;
                 client.UserLeft += LogLeave;
+                Modules.LookupModule.InitialCache();
+                
                 //Token up
                 await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
                 await client.StartAsync();

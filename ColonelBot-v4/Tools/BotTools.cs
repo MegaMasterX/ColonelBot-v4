@@ -24,7 +24,8 @@ namespace ColonelBot_v4.Tools
             HamachiServer,
             OrganizerRoleName,
             ChallongeApiKey,
-            HamachiPassword
+            HamachiPassword,
+            ChipLibraryFileLocation
         }
 
         /// <summary>
@@ -93,6 +94,9 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.HamachiPassword:
                     Result = BotConfiguration.HamachiPassword;
+                    break;
+                case ConfigurationEntries.ChipLibraryFileLocation:
+                    Result = BotConfiguration.ChipLibraryFileLocation;
                     break;
                 default:
                     Result = null;
