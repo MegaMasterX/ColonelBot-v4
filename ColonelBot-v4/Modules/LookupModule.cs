@@ -122,11 +122,27 @@ namespace ColonelBot_v4.Modules
         {
             string result = "Chip not found. Perhaps you meant: ";
             string Criteria = lookupString.Remove(3);
+            string verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
             
             List<Chip> FindResults = ChipLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
             foreach (Chip chp in FindResults)
             {
                 result += $"{chp.Name}   ";
+            }
+
+            if (result == "Chip not found.Perhaps you meant: ")
+            {// The fuzzy search did not return a result, check the aliases.
+                List<Chip> AliasResults = ChipLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
+                foreach (Chip item in AliasResults)
+                {
+                    //The chips' aliases will be seperated with ", "
+                    string[] Aliases = item.Alias.Split(',');
+                    for (int i = 0; i < Aliases.Length; i++)
+                    {
+                        if (Aliases[i].StartsWith(Criteria.ToUpper()))
+                            result += $"{item.Name}   ";
+                    }
+                }
             }
             return result;
         }

@@ -31,6 +31,7 @@ namespace ColonelBot_v4.Modules
 
                 await Context.User.SendMessageAsync("**N1 Grand Prix Hamachi Server**\n```\nServer: " + HamachiServer + "\nPassword: " + HamachiPass + "\n```");
                 await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
+                //TODO: Perform AuthenticationCheck.
                 await ReplyAsync("You have e-mail.");
             }
             catch (Exception)
@@ -108,6 +109,7 @@ namespace ColonelBot_v4.Modules
             [Command]
             public async Task SelfWelcome()
             {//Untargeted Welcome
+                //TODO: Include an AuthenticateUser call.
                 await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
                 await ReplyAsync("You have e-mail. Welcome to the N1 Grand Prix!");
             }
@@ -115,9 +117,19 @@ namespace ColonelBot_v4.Modules
             [Command]
             public async Task TargetedWelcome(IUser user)
             {
+                //TODO: Include an authenticateuser flag
                 await user.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
                 await ReplyAsync("E-mail sent. Welcome to the N1 Grand Prix!");
             }
+        }
+
+        /// <summary>
+        /// Authenticates the user (if not already done) so they are allowed to use !hamachi and !atb.
+        /// </summary>
+        /// <param name="user"></param>
+        private void AuthenticateUser(IGuildUser user)
+        {
+
         }
     }
 }

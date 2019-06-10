@@ -91,7 +91,7 @@ namespace ColonelBot_v4.Tools.BN6
                     outString.AppendLine($"{tag} {Globals.chipNames[ce.ID]} {Globals.chipCodes[ce.Code]}");
                 }
 
-                outString.AppendLine($"\r\nNaviCust:");
+                outString.AppendLine($"\r{Environment.NewLine}NaviCust:");
                 for (int i = 0; i < 30; i++)
                 {
                     ushort ncpID = (ushort)(BitConverter.ToUInt16(bn6Save.Data, naviCustProgsOffset + i * 8) >> 2);
