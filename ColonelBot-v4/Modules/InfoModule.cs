@@ -20,7 +20,7 @@ namespace ColonelBot_v4.Modules
         public async Task GiveHamachiAsync()
         {
             //Log the caller.
-            string LogEntry = DateTime.Now.ToString() + " requested by " + Context.User.Id + " - " + Context.User.Username;
+            string LogEntry = $"{DateTime.Now.ToString()} requested by {Context.User.Id} - {Context.User.Username}";
             var ReportChannel = Context.Guild.GetTextChannel(BotTools.GetReportingChannelUlong());
             var Requestor = Context.User as SocketGuildUser;
             //Check to see if the user can accept DMs.
@@ -29,7 +29,7 @@ namespace ColonelBot_v4.Modules
                 string HamachiServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiServer);
                 string HamachiPass = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiPassword);
 
-                await Context.User.SendMessageAsync("**N1 Grand Prix Hamachi Server**\n```\nServer: " + HamachiServer + "\nPassword: " + HamachiPass + "\n```");
+                await Context.User.SendMessageAsync($"**N1 Grand Prix Hamachi Server**\n```\nServer: {HamachiServer}\nPassword: {HamachiPass}\n```\n\nPlease ensure that your PC name on Hamachi matches your Nickname on the N1GP Discord to help make matchmaking easier.\n\n**DO NOT provide the N1 Grand Prix Hamachi server credentials to anyone outside the N1GP.**");
                 await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
                 //TODO: Perform AuthenticationCheck.
                 await ReplyAsync("You have e-mail.");
@@ -74,7 +74,18 @@ namespace ColonelBot_v4.Modules
         [Command("onedrive")]
         public async Task OneDriveAsync()
         {
-            await ReplyAsync("This folder contains all of the saves, patches, and extra info you will need to Netbattle.\n\n<https://1drv.ms/f/s!AlnkPup_z_U0tZUD-gZeNJ6BsSnkuA>");
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+            await ReplyAsync($"This folder contains all of the saves, patches, and extra info you will need to Netbattle.\n\n<{BotConfiguration.OneDriveLink}>");
+        }
+
+        [Command("onedrive update")]
+        [RequireUserPermission(GuildPermission.Administrator)] //Admin-Only.
+        public async Task UpdateOnedriveAsync([Remainder] string newOnedriveLink)
+        {
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+            BotConfiguration.OneDriveLink = newOnedriveLink;
+            System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
+            await ReplyAsync("The Onedrive Link has been updated.");
         }
 
         [Command("victors")]

@@ -41,14 +41,6 @@ namespace ColonelBot_v4.Modules
             await ToggleRole(caller, role);
         }
 
-        [Command("wave"), Alias("wavebattler")]
-        public async Task ToggleWaveBattler()
-        {
-            var caller = Context.User as IGuildUser;
-            var role = GetRole("Wave Battler", Context.Guild);
-            await ToggleRole(caller, role);
-        }
-
         [Command("license")]
         public async Task ToggleLicenseRole()
         {//Toggles the Netbattler role when called - adding it if it's not present or removing it if it is.
