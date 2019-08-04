@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace ColonelBot_v4.Models
 {
@@ -17,6 +18,17 @@ namespace ColonelBot_v4.Models
             CurrentCycle = cycle;
             NetbattlerName = netbattlerName;
             UserID = discordID;
+            if (cycle == 1)
+            {
+                SetupLocation = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Cycle 1{Path.DirectorySeparatorChar}{UserID}.txt";
+                File.WriteAllText(SetupLocation, "");
+            }
+            else
+            {
+                SetupLocation = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Cycle 2{Path.DirectorySeparatorChar}{UserID}.txt";
+                File.WriteAllText(SetupLocation, "");
+            }
+                
         }
 
     }

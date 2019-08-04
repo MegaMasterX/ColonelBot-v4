@@ -61,6 +61,17 @@ namespace ColonelBot_v4.Modules
             }
         }
 
+        [Command("newmoon close 1")]
+        public async Task CloseCycle1Async()
+        {
+            dynamic EventConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
+            EventConfiguration.Cycle1OpenReg = false;
+            File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json", JsonConvert.SerializeObject(EventConfiguration, Formatting.Indented));
+            await ReplyAsync("Cycle 1 registration has been closed.");
+        }
+
+        //TODO: Implement Newmoon close 2, open 1, open 2. Update Save acceptance to see if Newmoon is active and implement setups accordingly. Implement registratnt listing.
+
         /// <summary>
         /// DMs the caller the New Moon registrations with the following spec:
         /// 
@@ -84,10 +95,32 @@ namespace ColonelBot_v4.Modules
         /// <summary>
         /// Registers the caller for the New Moon cycle that's currently active.
         /// </summary>
-        [Command("newmoon register")]
+        [Command("newmoon join")]
         public async Task RegisterNewMoonAsync([Remainder]string NetbattlerName)
         {
+            
+            if (IsNewMoonActive == true) //Is Newmoon Active?
+            {
+                if (Cycle1Open) //Is the current cycle open?
+                {
+                    await AddNewMoonRoleAsync(Context.User as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild)); //Add the MOON BATTLER role.
+                    NewMoonParticipant newParticipant = new NewMoonParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id, 1); //Create the Participant Entry based on the model. The Model creation automatically sets the location based on the cycle.
+                    Cycle1Participants.Add(newParticipant);
+                    WriteParticipantList();
+                    await ReplyAsync("You have registered for NEW MOON. Your Cycle is the current one. !awoo");
+                }
+                else //The registration needs to go to the next upcoming cycle.
+                {
+                    await AddNewMoonRoleAsync(Context.User as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild)); //Add the MOON BATTLER role.
+                    NewMoonParticipant newParticipant = new NewMoonParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id, 2); //Create the Participant Entry based on the model. The Model creation automatically sets the location based on the cycle.
+                    Cycle2Participants.Add(newParticipant);
+                    WriteParticipantList();
+                    await ReplyAsync("You have registered for NEW MOON. Your Cycle is the upcoming one. !awoo");
+                }
 
+                SyncParticipantList();
+            }
+            
         }
 
         [Command("newmoon advance")]
@@ -107,6 +140,57 @@ namespace ColonelBot_v4.Modules
                 return false; //The user is not an event organizer.
         }
 
+        private bool IsNewMoonActive
+        {
+            get
+            {
+                dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+                if (BotConfiguration.NewMoonActive = true)
+                    return true;
+                else
+                    return false;
+
+            }
+        }
+
+        private bool Cycle1Open
+        {
+            get
+            {
+                dynamic EventConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
+                if (EventConfiguration.Cycle1OpenReg == true)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        /// <summary>
+        /// Obtains the Setup location on-disk for the specified user.
+        /// </summary>
+        /// <param name="DiscordID"></param>
+        /// <returns></returns>
+        public string GetSetupLocation(ulong DiscordID)
+        {
+            string result = "";
+            if (ActiveCycle == 1)
+            {
+                for (int i = 0; i < Cycle1Participants.Count; i++)
+                {
+                    if (Cycle1Participants[i].UserID == DiscordID)
+                        result = Cycle1Participants[i].SetupLocation;
+                }
+            }else
+            {
+                for (int i = 0; i < Cycle2Participants.Count; i++)
+                {
+                    if (Cycle2Participants[i].UserID == DiscordID)
+                        result = Cycle2Participants[i].SetupLocation;
+                }
+            }
+                
+            return result;
+        }
 
         public static bool IsParticipantRegistered(ulong userID, int CycleToCheck)
         {
@@ -152,6 +236,12 @@ namespace ColonelBot_v4.Modules
 
         }
 
+        private async Task AddNewMoonRoleAsync(IGuildUser caller, SocketRole role)
+        {
+            if (caller.RoleIds.Contains(role.Id) == false)
+                await caller.AddRoleAsync(role);
+        }
+
         /// <summary>
         /// Fully backs up the current NewMoon configuration and setups for reversion.
         /// </summary>
@@ -168,15 +258,18 @@ namespace ColonelBot_v4.Modules
             
         }
 
-        public int GetActiveCycle()
+        public int ActiveCycle
         {
-            int result = 0;
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
-            if (BotConfiguration.CurrentCycleOpen = false) //The active cycle should be 2.
-                result = 2;
-            else
-                result = 1; //The active cycle is 1.
-            return result;
+            get
+            {
+                int result = 0;
+                dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
+                if (BotConfiguration.CurrentCycleOpen = false) //The active cycle should be 2.
+                    result = 2;
+                else
+                    result = 1; //The active cycle is 1.
+                return result;
+            }
         }
 
         //==!newmoon drop==
