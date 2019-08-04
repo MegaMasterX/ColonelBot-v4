@@ -21,7 +21,7 @@ using Newtonsoft.Json;
 
 namespace ColonelBot_v4.Modules
 {
-    class WeeklyEventModule : ModuleBase<SocketCommandContext>
+    public class NewMoonModule : ModuleBase<SocketCommandContext>
     {
         //NewMoon will operate logically with 2 cycles. The cycles can be opened and closed by a TO.
         //If a user registers, it should be done with one command.
@@ -30,7 +30,36 @@ namespace ColonelBot_v4.Modules
         //      Otherwise, place the registration in Cycle 2.
 
 
+        private bool NewMoonEnabled = false; //NewMoon is Disabled by default.
 
+        static List<NewMoonParticipant> Cycle1Participants = new List<NewMoonParticipant>();
+        static List<NewMoonParticipant> Cycle2Participants = new List<NewMoonParticipant>();
+
+        /// <summary>
+        /// Enables the NewMoon module.
+        /// </summary>
+        /// <returns></returns>
+        [Command("newmoon open")]
+        public async Task EnableNewMoonAsync()
+        {
+            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// Temporarily halts the NewMoon module.
+        /// </summary>
+        /// <returns></returns>
+        [Command("newmoon close")]
+        public async Task DisableNewMoonAsync()
+        {
+            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+            {
+
+            }
+        }
 
         /// <summary>
         /// DMs the caller the New Moon registrations with the following spec:
@@ -61,6 +90,95 @@ namespace ColonelBot_v4.Modules
 
         }
 
+        [Command("newmoon advance")]
+        public async Task AdvanceNewmoonAsync()
+        {
+
+        }
+
+        //========================Support Functions=====================
+
+        private bool IsEventOrganizer(IGuildUser caller, SocketGuild TargetServer)
+        {
+            SocketRole role = BotTools.GetRole("Event Organizer", TargetServer);
+            if (caller.RoleIds.Contains(role.Id))
+                return true; //The user is an event organizer.
+            else
+                return false; //The user is not an event organizer.
+        }
+
+
+        public static bool IsParticipantRegistered(ulong userID, int CycleToCheck)
+        {
+            List<NewMoonParticipant> ParticipantList = new List<NewMoonParticipant>();
+
+            switch (CycleToCheck)
+            {
+                case 1:
+                    ParticipantList = Cycle1Participants;
+                    break;
+                case 2:
+                    ParticipantList = Cycle2Participants;
+                    break;
+                default:
+                    ParticipantList = Cycle1Participants; //Get the current active cycle
+                    break;
+            }
+
+            bool result = false;
+            for (int i = 0; i < ParticipantList.Count; i++)
+            {
+                if (ParticipantList[i].UserID == userID)
+                {
+                    result = true;
+                    Console.WriteLine("Found. Netbattler name: " + ParticipantList[i].NetbattlerName);
+                }
+
+            }
+
+            return result;
+        }
+
+        private void SyncParticipantList()
+        {
+            Cycle1Participants = JsonConvert.DeserializeObject<List<NewMoonParticipant>>(File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Cycle1Registration.json"));
+            Cycle2Participants = JsonConvert.DeserializeObject<List<NewMoonParticipant>>(File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Cycle2Registration.json"));
+        }
+
+        public static void WriteParticipantList()
+        {
+            File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Cycle1Registration.json", JsonConvert.SerializeObject(Cycle1Participants, Formatting.Indented));
+            File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Cycle2Registration.json", JsonConvert.SerializeObject(Cycle2Participants,Formatting.Indented));
+
+        }
+
+        /// <summary>
+        /// Fully backs up the current NewMoon configuration and setups for reversion.
+        /// </summary>
+        public static void BackupNewMoonConfiguration()
+        {
+
+        }
+
+        /// <summary>
+        /// Restores the configuration stored in backup, OVERWRITING THE CURRENT LIVE CONFIGURATION
+        /// </summary>
+        public static void RestoreNewMoonConfig()
+        {
+            
+        }
+
+        public int GetActiveCycle()
+        {
+            int result = 0;
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
+            if (BotConfiguration.CurrentCycleOpen = false) //The active cycle should be 2.
+                result = 2;
+            else
+                result = 1; //The active cycle is 1.
+            return result;
+        }
+
         //==!newmoon drop==
         //  If the current cycle is still open (Cycle Slot 1), drop. Otherwise, check to see if the caller is an event admin,
         //      otherwise, disallow the drop.
@@ -69,6 +187,8 @@ namespace ColonelBot_v4.Modules
         //  Check to see if the user is already in Cycle 1 or 2. If so, respond with which one they're in.
         //  If in neither,  grant them the NEW MOON role from NewMoonConfig.json
 
+        //==!newmoon check==
+        //  DM the user their currently registered cycle and their setup that's currently submitted, if any.
 
         //==!newmoon info==
         //  Replies with the current cycle's information.

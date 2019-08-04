@@ -19,9 +19,15 @@ namespace ColonelBot_v4.Modules
         public async Task GoATB()
         {
             var caller = Context.User as IGuildUser;
-            var role = GetRole("Available to Battle", Context.Guild);
-            await AddATB(caller, role);
-            //TODO: Task 60: Remove the Embed and replace it with a graceful message only. 
+            if (caller.RoleIds.Contains(GetRole("Netbattler", Context.Guild).Id) || caller.RoleIds.Contains(GetRole("Legacy Netbattler", Context.Guild).Id)) 
+            {
+                var role = GetRole("Available to Battle", Context.Guild);
+                await AddATB(caller, role);
+                //TODO: Task 60: Remove the Embed and replace it with a graceful message only. 
+            }
+            else
+                await ReplyAsync("You are not authorized to use Available to Battle. Use `!license` before attempting to use this command.");
+
         }
 
         

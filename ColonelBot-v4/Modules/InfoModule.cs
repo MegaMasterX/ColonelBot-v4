@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
+using System.Linq;
 
 using ColonelBot_v4.Tools;
 
@@ -23,6 +24,9 @@ namespace ColonelBot_v4.Modules
             string LogEntry = $"{DateTime.Now.ToString()} requested by {Context.User.Id} - {Context.User.Username}";
             var ReportChannel = Context.Guild.GetTextChannel(BotTools.GetReportingChannelUlong());
             var Requestor = Context.User as SocketGuildUser;
+            //Force-grant the user @Netbattler.
+            var NetbattlerRole = GetRole("Netbattler", Context.Guild);
+            await AddRole(Context.User as IGuildUser, NetbattlerRole);
             //Check to see if the user can accept DMs.
             try
             {
@@ -134,13 +138,16 @@ namespace ColonelBot_v4.Modules
             }
         }
 
-        /// <summary>
-        /// Authenticates the user (if not already done) so they are allowed to use !hamachi and !atb.
-        /// </summary>
-        /// <param name="user"></param>
-        private void AuthenticateUser(IGuildUser user)
+        public async Task AddRole(IGuildUser caller, SocketRole role)
         {
+            if (caller.RoleIds.Contains(role.Id) == false)
+                await caller.AddRoleAsync(role, null);
+        }
 
+        public static SocketRole GetRole(string RoleName, SocketGuild guild)
+        {
+            var role = guild.Roles.SingleOrDefault(r => r.Name.ToUpper() == RoleName.ToUpper());
+            return role;
         }
     }
 }

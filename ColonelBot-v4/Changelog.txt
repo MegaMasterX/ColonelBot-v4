@@ -1,4 +1,22 @@
-﻿ColonelBot v4.0 
+﻿ColonelBot v4.2
+===================
+**Update Details**
+This update contains a module for supporting the NewMoon weekly revolving tournament format as well as
+enabling Chip Lookup.
+
+**Chip Lookup**
+This feature is returning with some new features. Lookup now features alias lookups and fuzzy lookup to 
+ensure users are getting the results they're looking for without having to conform to exactly how chip names
+are spelled.  The features should, functionally, remain the same.  Additional Details field has been added
+so users can refer to the N1GP Community Guides for a specific chip without having to dig for them.
+
+**Bug Fixes**
+There were a lot of bugs. Now, there are less bugs.  See the VSO Task List for more information on what's been
+resolved in 4.2.
+
+
+
+ColonelBot v4.0 
 ===================
 
 **Feature Overview**
