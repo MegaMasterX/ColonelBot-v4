@@ -153,10 +153,10 @@ namespace ColonelBot_v4.Tools
             embed.AddField("Warning", "The N1 Grand Prix cannot provide ROMs. We strongly suggest ripping your own ROM from a physical cart provided that it complies with your country's copyright laws. The N1GP Discord Community and its administrators are not responsible for any action taken by you as a result of participation.");
             embed.AddField("How To Netbattle Online [Video Guides]", "These will show you how to import your save file, netbattle as a host, and netbattle as a Client.  \nhttp://bit.ly/2htNN8W");
             embed.AddField("Netbattle 101 Guide", "This guide, written by the community, will give you everything you need to get started.\nhttp://bit.ly/1Rr14oN");
-            embed.AddField("Participant OneDrive", "This folder contains all the saves, patches, and extra info you will need to Netbattle. \nhttps://1drv.ms/f/s!AlnkPup_z_U0tZUD-gZeNJ6BsSnkuA");
+            embed.AddField("Participant OneDrive", "This folder contains all the saves, patches, and extra info you will need to Netbattle. \nhttps://1drv.ms/u/s!AsVzcQCn7iRWd3YdJxLEwq1HhjM?e=L3Ev96");
             embed.AddField("Netbattle 101 EX", "A comprehensive set of guides for more advanced techniques and information.\nhttp://bit.ly/1RszYzG");
             embed.AddField("Rockman.EXE 6 ModCard Guide", "Comprehensive guide on ModCards, their effects, and other information.\nhttps://goo.gl/XWHdNS");
-            embed.AddField("VirtualDub Audio Syncing", "This guide will assist you in syncing your audio and video when recording matches with VBA\nhttp://bit.ly/2vAgmrt");
+            embed.AddField("VirtualDub Audio Syncing", "This guide will assist you in syncing your audio and video when recording matches with VBA\nhttps://bit.ly/32eTSsa");
             return embed.Build();
         }
 

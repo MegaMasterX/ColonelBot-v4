@@ -24,25 +24,31 @@ namespace ColonelBot_v4.Modules
             string LogEntry = $"{DateTime.Now.ToString()} requested by {Context.User.Id} - {Context.User.Username}";
             var ReportChannel = Context.Guild.GetTextChannel(BotTools.GetReportingChannelUlong());
             var Requestor = Context.User as SocketGuildUser;
-            //Force-grant the user @Netbattler.
-            var NetbattlerRole = GetRole("Netbattler", Context.Guild);
-            await AddRole(Context.User as IGuildUser, NetbattlerRole);
-            //Check to see if the user can accept DMs.
-            try
+            var caller = Context.User as IGuildUser;
+            //Check the Netbattler Role.
+            if (caller.RoleIds.Contains(RoleModule.GetRole("Netbattler", Context.Guild).Id) || caller.RoleIds.Contains(RoleModule.GetRole("Legacy Netbattler", Context.Guild).Id))
             {
-                string HamachiServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiServer);
-                string HamachiPass = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiPassword);
+                //Check to see if the user can accept DMs.
+                try
+                {
+                    string HamachiServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiServer);
+                    string HamachiPass = BotTools.GetSettingString(BotTools.ConfigurationEntries.HamachiPassword);
 
-                await Context.User.SendMessageAsync($"**N1 Grand Prix Hamachi Server**\n```\nServer: {HamachiServer}\nPassword: {HamachiPass}\n```\n\nPlease ensure that your PC name on Hamachi matches your Nickname on the N1GP Discord to help make matchmaking easier.\n\n**DO NOT provide the N1 Grand Prix Hamachi server credentials to anyone outside the N1GP.**");
-                await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
-                //TODO: Perform AuthenticationCheck.
-                await ReplyAsync("You have e-mail.");
+                    await Context.User.SendMessageAsync($"**N1 Grand Prix Hamachi Server**\n```\nServer: {HamachiServer}\nPassword: {HamachiPass}\n```\n\nPlease ensure that your PC name on Hamachi matches your Nickname on the N1GP Discord to help make matchmaking easier.\n\n**DO NOT provide the N1 Grand Prix Hamachi server credentials to anyone outside the N1GP.**");
+                    await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
+                    
+                    await ReplyAsync("You have e-mail.");
+                }
+                catch (Exception)
+                {
+                    await ReplyAsync("You currently have DMs disabled. Please enable DMs from users on the server to obtain the Hamachi credentials.");
+                    throw;
+                }
             }
-            catch (Exception)
-            {
-                await ReplyAsync("You currently have DMs disabled. Please enable DMs from users on the server to obtain the Hamachi credentials.");
-                throw;
-            }
+            else
+                await ReplyAsync("You are not authorized to obtain Hamachi credentials. Use `!license` before attempting to use this command.");
+            
+          
         }
 
         [Command("hamachi update")]

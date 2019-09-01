@@ -21,6 +21,7 @@ using Newtonsoft.Json;
 
 namespace ColonelBot_v4.Modules
 {
+    /*
     public class NewMoonModule : ModuleBase<SocketCommandContext>
     {
         //NewMoon will operate logically with 2 cycles. The cycles can be opened and closed by a TO.
@@ -316,5 +317,5 @@ namespace ColonelBot_v4.Modules
         //==!newmoon info==
 
         //TODO: Split out Registration open/close and Setup acceptance open/close in EventModule
-    }
+    } */
 }
