@@ -26,7 +26,7 @@ namespace ColonelBot_v4.Modules
             var Requestor = Context.User as SocketGuildUser;
             var caller = Context.User as IGuildUser;
             //Check the Netbattler Role.
-            if (caller.RoleIds.Contains(RoleModule.GetRole("Netbattler", Context.Guild).Id) || caller.RoleIds.Contains(RoleModule.GetRole("Legacy Netbattler", Context.Guild).Id))
+            if (caller.RoleIds.Contains(RoleModule.GetRole("Netbattler", Context.Guild).Id) || caller.RoleIds.Contains(RoleModule.GetRole("Legacy Battler", Context.Guild).Id))
             {
                 //Check to see if the user can accept DMs.
                 try
