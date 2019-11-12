@@ -19,11 +19,11 @@ namespace ColonelBot_v4.Modules
         public async Task GoATB()
         {
             var caller = Context.User as IGuildUser;
-            
-                var role = GetRole("Available to Battle", Context.Guild);
-                await AddATB(caller, role);
-            
-            await ReplyAsync($"You are now Available to Battle, {caller.Nickname}");
+            //filter @ to prevent @Everyone calls and use Nickname, if available.
+            var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
+            var role = GetRole("Available to Battle", Context.Guild);
+            await AddATB(caller, role);
+            await ReplyAsync($"You are now Available to Battle, {username}");
         }
 
         
@@ -31,9 +31,11 @@ namespace ColonelBot_v4.Modules
         public async Task RemoveATB()
         {
             var caller = Context.User as IGuildUser;
+            //filter @ to prevent @Everyone calls and use Nickname, if available.
+            var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); // prepare username
             var role = GetRole("AVAILABLE TO BATTLE", Context.Guild);
             await RemoveATB(caller, role);
-            await ReplyAsync($"You are no longer Available to Battle, {caller.Nickname}");
+            await ReplyAsync($"You are no longer Available to Battle, {username}");
         }
 
         [Command("legacy"), Alias("legacybattler")]
