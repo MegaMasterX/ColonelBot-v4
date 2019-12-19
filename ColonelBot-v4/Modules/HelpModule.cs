@@ -16,8 +16,9 @@ namespace ColonelBot_v4.Modules
     [Group("help")]
     public class HelpModule : ModuleBase<SocketCommandContext>
     {//!help base
-       [Group("available")][Alias("atb")]
-       public class ATBHelp : ModuleBase<SocketCommandContext>
+	//TODO Add Summary of all commands
+	[Group("available")][Alias("atb")]
+	public class ATBHelp : ModuleBase<SocketCommandContext>
         {
             [Command]
             public async Task ATBHelpAsync()
@@ -185,10 +186,10 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("", false, EmbedTool.HelpMessage("!victors", "DMs you a link to a document containing the setups for N1GP Event Winners."));
         }
 
-        [Command("onedrive")]
+        [Command("drive")]
         public async Task OneDriveHelp()
         {
-            await ReplyAsync("", false, EmbedTool.HelpMessage("!onedrive", "Provides a link to the Community OneDrive containing saves, patches, and the VBA Link Emulator."));
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!drive", "Provides a link to the community drive containing saves, patches, and the VBA Link Emulator."));
         }
 
         [Command("help")]
@@ -200,7 +201,7 @@ namespace ColonelBot_v4.Modules
         [Command("guides")]
         public async Task GuidesHelp()
         {
-            await ReplyAsync("", false, EmbedTool.HelpMessage("!guides", "DMs you the community guides. Please ping @MidniteW for any corrections or errors."));
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!guides", "DMs you the community guides. Please mention any corrections or errors in <#554311759079407638>."));
         }
 
         [Command("welcome")]

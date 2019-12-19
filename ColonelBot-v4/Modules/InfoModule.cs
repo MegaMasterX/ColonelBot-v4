@@ -46,8 +46,6 @@ namespace ColonelBot_v4.Modules
             }
             else
                 await ReplyAsync("You are not authorized to obtain Hamachi credentials. Use `!license` before attempting to use this command.");
-            
-          
         }
 
         [Command("hamachi update")]
@@ -61,12 +59,6 @@ namespace ColonelBot_v4.Modules
 
         }
 
-        [Command("faq")]
-        public async Task ReplyFAQAsync()
-        {
-            await ReplyAsync("The answers to some of the most commonly asked community questions are located at <https://pastebin.com/vbt9i23q>!");
-        }
-
         [Command("uninstall")]
         public async Task UninstallInformAsync()
         {
@@ -76,26 +68,33 @@ namespace ColonelBot_v4.Modules
         [Command("guides")]
         public async Task ReplyGuides()
         {
-            await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
-            await ReplyAsync($"You have e-mail, {Context.User.Username}");
+	    dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+	    String drivelink = BotConfiguration.DriveLink;
+            await Context.User.SendMessageAsync("", false, EmbedTool.GuidesEmbed(drivelink));
+            if(!Context.IsPrivate)
+		await ReplyAsync($"You have e-mail, {Context.User.Username}");
         }
+	
+	[Group("drive")]
+	public class DriveModule : ModuleBase <SocketCommandContext>
+	{
+	    [Command]
+	    public async Task OneDriveAsync()
+	    {
+		dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+		await ReplyAsync($"This folder contains all of the saves, patches, and extra info you will need to netbattle.\n\n<{BotConfiguration.DriveLink}>");
+	    }
 
-        [Command("onedrive")]
-        public async Task OneDriveAsync()
-        {
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
-            await ReplyAsync($"This folder contains all of the saves, patches, and extra info you will need to Netbattle.\n\n<{BotConfiguration.OneDriveLink}>");
-        }
-
-        [Command("onedrive update")]
-        [RequireUserPermission(GuildPermission.Administrator)] //Admin-Only.
-        public async Task UpdateOnedriveAsync([Remainder] string newOnedriveLink)
-        {
-            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
-            BotConfiguration.OneDriveLink = newOnedriveLink;
-            System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
-            await ReplyAsync("The Onedrive Link has been updated.");
-        }
+	    [Command("update")]
+	    [RequireUserPermission(GuildPermission.Administrator)] //Admin-Only.
+	    public async Task UpdateOnedriveAsync([Remainder] string newOnedriveLink)
+	    {
+		dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+		BotConfiguration.OneDriveLink = newOnedriveLink;
+		System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
+		await ReplyAsync("The drive Link has been updated.");
+	    }
+	}
 
         [Command("victors")]
         public async Task ReplyVictors()
@@ -123,7 +122,7 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync($"You are hosting, {Context.User.Mention}");
         }
 
-        [Group("welcome")]
+        [Group("welcome")] [Alias("faq")]
         public class WelcomeModule : ModuleBase <SocketCommandContext>
         {
             [Command]
@@ -131,6 +130,7 @@ namespace ColonelBot_v4.Modules
             {//Untargeted Welcome
                 //TODO: Include an AuthenticateUser call.
                 await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
+            if(!Context.IsPrivate)
                 await ReplyAsync("You have e-mail. Welcome to the N1 Grand Prix!");
             }
 
