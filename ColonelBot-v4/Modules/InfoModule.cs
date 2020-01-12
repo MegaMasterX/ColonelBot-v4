@@ -122,25 +122,11 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync($"You are hosting, {Context.User.Mention}");
         }
 
-        [Group("welcome")] [Alias("faq")]
-        public class WelcomeModule : ModuleBase <SocketCommandContext>
+	[Command("welcome")] [Alias("faq")]
+        public async Task Welcome()
         {
-            [Command]
-            public async Task SelfWelcome()
-            {//Untargeted Welcome
-                //TODO: Include an AuthenticateUser call.
-                await Context.User.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
-            if(!Context.IsPrivate)
-                await ReplyAsync("You have e-mail. Welcome to the N1 Grand Prix!");
-            }
-
-            [Command]
-            public async Task TargetedWelcome(IUser user)
-            {
-                //TODO: Include an authenticateuser flag
-                await user.SendMessageAsync("", false, EmbedTool.WelcomeEmbed());
-                await ReplyAsync("E-mail sent. Welcome to the N1 Grand Prix!");
-            }
+	    //TODO: Include an AuthenticateUser call.
+	    await ReplyAsync("", embed: EmbedTool.WelcomeEmbed());
         }
 
         public async Task AddRole(IGuildUser caller, SocketRole role)
