@@ -207,7 +207,7 @@ namespace ColonelBot_v4.Modules
         [Command("welcome")]
         public async Task WelcomeHelp()
         {
-            await ReplyAsync("", false, EmbedTool.HelpMessage("!welcome / !welcome @User", "If done by itself, DMs the requestor all of the information needed to get started with Netbattling. If used with an @ User tag, ColonelBot will DM the tagged user with the information."));
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!welcome", "Provides a link to all information needed to get started with Netbattling."));
         }
 
         [Command("hostflip")]
