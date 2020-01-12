@@ -126,7 +126,7 @@ namespace ColonelBot_v4.Modules
         public async Task Welcome()
         {
 	    //TODO: Include an AuthenticateUser call.
-	    await ReplyAsync("", embed: EmbedTool.WelcomeEmbed());
+	    await ReplyAsync("Welcome to the N1GP! Get started by reading our FAQ!\n<https://tinyurl.com/n1gpfaq>\n(This guide requires the Google Sheets app in order to be viewed on mobile phones.)");
         }
 
         public async Task AddRole(IGuildUser caller, SocketRole role)

@@ -1,4 +1,4 @@
-﻿using System;
+﻿uing System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -158,19 +158,6 @@ namespace ColonelBot_v4.Tools
 	    embed.AddField("Overview of all BN6 Guides", "This is a comprehensive list of all the guides dedicated to explaining BN6. \nhttp://bit.ly/1Rr14oN");
 	    return embed.Build();
         }
-
-	/// <summary>
-	/// Build a Embed for Welcome
-	/// </summary>
-        public static Embed WelcomeEmbed()
-        {//The logic for targeting vs self should be handled in InfoModule, not here.
-	    EmbedBuilder embed = new EmbedBuilder
-	    {
-		Color = new Color(0xffcf39) //ColonelBot's Default Yellow
-	    };
-	    embed.AddField("General Information", "A complete collection of all our community's guides and resources including introductory material can be found under https://tinyurl.com/n1gpfaq \n*(This guide requires the Google Sheets app in order to be viewed on mobile phones.)*");
-	    return embed.Build();
-	}
 
         /// <summary>
         /// Builds a Embed for Battlechips.
