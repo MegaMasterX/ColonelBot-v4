@@ -59,7 +59,8 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!quote remove <Quote ID>", "If you are the author of a quote, remove it from the library."));
             }
 
-            [Command("admin"), RequireUserPermission(GuildPermission.Administrator)]
+            [Command("admin")]
+	    [RequireUserPermission(GuildPermission.ViewAuditLog)]
             public async Task QuoteAdminHelpAsync()
             {
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!quote admin <Edit/Remove> <Quote ID>", "Moderator-only command. Removes or edits a quote regardless of the quote author."));

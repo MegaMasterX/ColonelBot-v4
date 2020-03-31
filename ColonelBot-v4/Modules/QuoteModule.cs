@@ -68,7 +68,7 @@ namespace ColonelBot_v4.Modules
         }
 
        [Command("admin remove"), Alias("admin delete")]
-       [RequireUserPermission(GuildPermission.Administrator)] //Admin-only.
+       [RequireUserPermission(GuildPermission.ViewAuditLog)] //Admin-only.
        public async Task AdminQuoteRemove([Remainder]int QuoteID)
        {
             ResyncQuotesList();

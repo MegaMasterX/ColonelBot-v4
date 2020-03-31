@@ -49,7 +49,7 @@ namespace ColonelBot_v4.Modules
         }
 
         [Command("hamachi update")]
-        [RequireUserPermission(GuildPermission.Administrator)] //Admin-only.
+        [RequireUserPermission(GuildPermission.ViewAuditLog)] //Admin-only.
         public async Task UpdateHamachiPWAsync([Remainder] string NewHamachiPW)
         {
             dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
@@ -86,7 +86,7 @@ namespace ColonelBot_v4.Modules
 	    }
 
 	    [Command("update")]
-	    [RequireUserPermission(GuildPermission.Administrator)] //Admin-Only.
+	    [RequireUserPermission(GuildPermission.ViewAuditLog)] //Admin-Only.
 	    public async Task UpdateOnedriveAsync([Remainder] string newOnedriveLink)
 	    {
 		dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
