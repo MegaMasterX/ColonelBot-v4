@@ -222,7 +222,21 @@ namespace ColonelBot_v4.Modules
         {
             await ReplyAsync("", false, EmbedTool.HelpMessage("!servericon","returns the URL of the server icon."));
         }
-        
+	
+	[Group("newmoon")]
+	public class NewMoonHelp : ModuleBase<SocketCommandContext>
+	{
+	    [Command]
+	    public async Task NewMoonInfoHelp()
+	    {
+		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon","DMs a user information about the current New Moon tournament.\n Can be @ targeted."));
+	    }
+	    [Command("update")]
+	    public async Task NewMoonInfoUpdate()
+	    {
+		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon update <text>","Supporter+ command.\n Sets New Moon information to <text>."));
+	    }
+	}
 	[Command("license")]
         public async Task LicenseHelp()
         {

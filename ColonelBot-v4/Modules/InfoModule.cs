@@ -11,6 +11,8 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
 
+
+
 using ColonelBot_v4.Tools;
 
 namespace ColonelBot_v4.Modules
@@ -143,6 +145,46 @@ namespace ColonelBot_v4.Modules
 	    }
 	}
 
+	[Group("newmoon")]
+	public class NewMoonInfo : ModuleBase<SocketCommandContext>
+	{
+	    [Command]
+	    public async Task NewMoonInfoAsync()
+	    {
+		
+		if (!File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText"))
+		{ 
+		    await ReplyAsync("No New Moon Information was set up");
+		}
+		else
+		{
+		string infotext = System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText");
+		    await Context.User.SendMessageAsync(infotext);
+		    await ReplyAsync("Newmoon is a weekly tournament series by the N1GP. For more Info check your DMs");
+		}    
+	}
+	    [Command]
+	    public async Task NewMoonTargetInfoAsync(IUser user)
+	    {
+		if (!File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText"))
+		{ 
+		    await ReplyAsync("No New Moon Information was set up");
+		}
+		else
+		{
+		    string infotext = System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText");
+		    await user.SendMessageAsync(infotext);
+		    await ReplyAsync("New Moon is a weekly tournament series by the N1GP. For more Info check your DMs");
+		}
+	    }
+	    [Command("update")]
+	    [RequireUserPermission(GuildPermission.ManageGuild)] //Supporter+ only.
+	    public async Task UpdateNewmoonAsync([Remainder] string NewmoonInfo)
+	    {
+		System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText",NewmoonInfo);
+		await ReplyAsync("The NewMoon information has been updated.");
+            }
+	}
 
 	[Command("welcome")] [Alias("faq")]
         public async Task Welcome()
