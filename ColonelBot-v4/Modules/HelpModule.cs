@@ -217,7 +217,13 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("", false, EmbedTool.HelpMessage("!hostflip", "Selects whether or not you or your opponent should host for a Netbattle."));
         }
 
-        [Command("license")]
+        [Command("servericon")]
+        public async Task ServerIconHelp()
+        {
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!servericon","returns the URL of the server icon."));
+        }
+        
+	[Command("license")]
         public async Task LicenseHelp()
         {
             await ReplyAsync("", false, EmbedTool.HelpMessage("!license", "Adds a pingable role so you can get pertinent announcements and important updates. Call the command once again to remove the role."));

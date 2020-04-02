@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -121,6 +122,27 @@ namespace ColonelBot_v4.Modules
             else
                 await ReplyAsync($"You are hosting, {Context.User.Mention}");
         }
+
+	
+	[Command("servericon")]
+	public async Task ServerIcon()
+	{
+	    string url = Context.Guild.IconUrl;
+
+	    if (url is null)
+		await ReplyAsync("There is no server icon");
+	    else
+	    {
+		//checks if icon is animated aka last path of url starts with "a_"
+		if (Regex.IsMatch(url,@"\ba_(?!\/)(?:.(?!\/))+$"))
+		{
+		   //replaces all possible file extensions with gif
+		   url = Regex.Replace(url,@"\..{3,4}$",".gif");
+		}
+		await ReplyAsync(url);
+	    }
+	}
+
 
 	[Command("welcome")] [Alias("faq")]
         public async Task Welcome()
