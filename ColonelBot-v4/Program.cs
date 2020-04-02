@@ -27,7 +27,7 @@ namespace ColonelBot_v4
 
         public async Task MainAsync()
         {
-            SetupDirectories();
+            await SetupDirectories();
             using (var services = ConfigureServices())
             {
                 var client = services.GetRequiredService<DiscordSocketClient>();
@@ -64,8 +64,8 @@ namespace ColonelBot_v4
 
 	private async Task SetupDirectories()
 	{
-	    Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon");
-	    Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data");
+	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon"));
+	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data"));
 	}
 
         private Task LogAsync(LogMessage log)
