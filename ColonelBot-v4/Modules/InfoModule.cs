@@ -154,13 +154,13 @@ namespace ColonelBot_v4.Modules
 		
 		if (!File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText"))
 		{ 
-		    await ReplyAsync("No New Moon Information was set up");
+		    await ReplyAsync("No NEW MOON information was set up");
 		}
 		else
 		{
 		string infotext = System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText");
 		    await Context.User.SendMessageAsync(infotext);
-		    await ReplyAsync("Newmoon is a weekly tournament series by the N1GP. For more Info check your DMs");
+		    await ReplyAsync("NEW MOON is a community-focused weekly roundrobin tournament series by the N1GP. Up to date information has been sent to you.");
 		}    
 	}
 	    [Command]
@@ -168,13 +168,13 @@ namespace ColonelBot_v4.Modules
 	    {
 		if (!File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText"))
 		{ 
-		    await ReplyAsync("No New Moon Information was set up");
+		    await ReplyAsync("No New Moon Information was set up.");
 		}
 		else
 		{
 		    string infotext = System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText");
 		    await user.SendMessageAsync(infotext);
-		    await ReplyAsync("New Moon is a weekly tournament series by the N1GP. For more Info check your DMs");
+		    await ReplyAsync("NEW MOON is a community-focused weekly roundrobin tournament series by the N1GP. Up to date information has been sent to you.");
 		}
 	    }
 	    [Command("update")]
