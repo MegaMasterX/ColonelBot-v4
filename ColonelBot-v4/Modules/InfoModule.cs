@@ -93,7 +93,7 @@ namespace ColonelBot_v4.Modules
 	    public async Task OneDriveAsync()
 	    {
 		dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
-		await ReplyAsync($"This folder contains all of the saves, patches, and extra info you will need to netbattle.\n\n<{BotConfiguration.DriveLink}>");
+		await ReplyAsync("", false, EmbedTool.ChannelMessage($"This folder contains all of the saves, patches, and extra info you will need to netbattle.\n<{BotConfiguration.DriveLink}>"));
 	    }
 
 	    [Command("update")]
@@ -103,7 +103,7 @@ namespace ColonelBot_v4.Modules
 		dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
 		BotConfiguration.OneDriveLink = newOnedriveLink;
 		System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
-		await ReplyAsync("The drive Link has been updated.");
+		await ReplyAsync("", false, EmbedTool.ChannelMessage("The drive Link has been updated."));
 	    }
 	}
 
