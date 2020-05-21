@@ -229,12 +229,12 @@ namespace ColonelBot_v4.Modules
 	    [Command]
 	    public async Task NewMoonInfoHelp()
 	    {
-		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon","DMs a user information about the current New Moon tournament.\n Can be @ targeted."));
+		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon","Messages up to date information on the NEW MOON tournament series.\n Can be @ targeted."));
 	    }
 	    [Command("update")]
 	    public async Task NewMoonInfoUpdate()
 	    {
-		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon update <text>","Supporter+ command.\n Sets New Moon information to <text>."));
+		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon update <text>","Supporter+ command.\nSets NEW MOON information to <text>."));
 	    }
 	}
 	[Command("license")]
