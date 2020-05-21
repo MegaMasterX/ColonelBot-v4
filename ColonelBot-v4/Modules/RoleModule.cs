@@ -38,7 +38,7 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync($"You are no longer Available to Battle, {username}");
         }
 
-        [Command("legacy"), Alias("legacybattler")]
+        [Command("linkcable"), Alias("legacybattler")]
         public async Task ToggleLegacy()
         {
             var caller = Context.User as IGuildUser;

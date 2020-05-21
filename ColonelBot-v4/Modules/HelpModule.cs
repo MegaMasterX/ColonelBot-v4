@@ -242,6 +242,12 @@ namespace ColonelBot_v4.Modules
         {
             await ReplyAsync("", false, EmbedTool.HelpMessage("!license", "Adds a pingable role so you can get pertinent announcements and important updates. Call the command once again to remove the role."));
         }
+	
+	[Command("linkcable")][Alias("legacy battler")]
+        public async Task LegacyHelp()
+        {
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!linkcable", "Adds a pingable role so active players of BBN3 and other pre-BN6 Megaman Battle Network games can matchmake. Call the command once again to remove the role."));
+        }
 
         [Command("deckmaster")]
         public async Task DeckmasterHelp()

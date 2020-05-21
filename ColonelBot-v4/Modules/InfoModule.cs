@@ -77,6 +77,14 @@ namespace ColonelBot_v4.Modules
             if(!Context.IsPrivate)
 		await ReplyAsync($"You have e-mail, {Context.User.Username}");
         }
+        
+	[Command("legacy")]
+        public async Task LegacyGuides()
+        {
+            await ReplyAsync("", false, EmbedTool.ChannelMessage("Complete guide for how to play BBN3 and other pre-BN6 games online!\n<https://tinyurl.com/legacybn>"));
+        }
+
+
 	
 	[Group("drive")]
 	public class DriveModule : ModuleBase <SocketCommandContext>
