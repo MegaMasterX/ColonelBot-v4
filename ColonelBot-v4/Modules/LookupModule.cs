@@ -22,23 +22,18 @@ namespace ColonelBot_v4.Modules
             [Command]
             public async Task LookupDefaultAsync([Remainder] string rndr)
             {//!lookup <chipname> - 
-                if (SearchChip(rndr) == false)
+                Chip locatedChip;
+
+                if (TryFindChipByName(rndr, out locatedChip))
                 {
-                    //Perform an Alias Search
-                    if (SearchAliases(rndr) == false)
-                    {
-                        //Perform a fuzzy search and provide recommendations based on the user's input.
-                        await ReplyAsync(ObtainSuggestions(rndr));
-                    }
-                    else
-                    {
-                        await ReplyAsync("", embed: EmbedTool.ChipEmbed(GetChipByAlias(rndr)));
-                    }
-                }
-                else
+                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
+                }else if (TryFindChipByAlias(rndr, out locatedChip))
                 {
-                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(GetChipByName(rndr)));
-                }
+                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
+                }else
+                    await ReplyAsync(ObtainSuggestions(rndr));
+
+
 
             }
 
@@ -50,6 +45,12 @@ namespace ColonelBot_v4.Modules
 
         }
 
+         public static bool TryFindChipByName(string chipName, out Chip selectedChip)
+         {
+            selectedChip = ChipLibrary.Find(x => x.Name.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
+            return selectedChip != null;
+         }
+
         /// <summary>
         /// Returns the Chip type of the specified chip, assuming it's been verified and found with SearchChip.
         /// </summary>
@@ -57,6 +58,7 @@ namespace ColonelBot_v4.Modules
         /// <returns>Returns a Chip model instance that matches the chip that was located in the Library.</returns>
         public static Chip GetChipByName(string ChipName)
         {
+           
             Chip selectedChip = null;
             selectedChip = ChipLibrary.Find(x => x.Name.ToUpper() == ChipName.ToUpper());
             if (selectedChip == null)
@@ -70,14 +72,10 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="AliasName"></param>
         /// <returns>Returns a Chip model of the instance that matches the chip found in the Library.</returns>
-        public static Chip GetChipByAlias(string AliasName)
+        public static bool TryFindChipByAlias(string chipName, out Chip selectedChip)
         {
-            Chip selectedChip = null;
-            selectedChip = ChipLibrary.Find(x => x.Alias.ToUpper().Contains(AliasName.ToUpper()));
-            if (selectedChip == null)
-                return null;
-            else
-                return selectedChip;
+            selectedChip = ChipLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
+            return selectedChip != null;
         }
 
         /// <summary>

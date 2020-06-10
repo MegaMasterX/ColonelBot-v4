@@ -16,8 +16,9 @@ namespace ColonelBot_v4.Modules
     [Group("help")]
     public class HelpModule : ModuleBase<SocketCommandContext>
     {//!help base
-       [Group("available")][Alias("atb")]
-       public class ATBHelp : ModuleBase<SocketCommandContext>
+	//TODO Add Summary of all commands
+	[Group("available")][Alias("atb")]
+	public class ATBHelp : ModuleBase<SocketCommandContext>
         {
             [Command]
             public async Task ATBHelpAsync()
@@ -58,7 +59,8 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!quote remove <Quote ID>", "If you are the author of a quote, remove it from the library."));
             }
 
-            [Command("admin"), RequireUserPermission(GuildPermission.Administrator)]
+            [Command("admin")]
+	    [RequireUserPermission(GuildPermission.ViewAuditLog)]
             public async Task QuoteAdminHelpAsync()
             {
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!quote admin <Edit/Remove> <Quote ID>", "Moderator-only command. Removes or edits a quote regardless of the quote author."));
@@ -185,10 +187,10 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("", false, EmbedTool.HelpMessage("!victors", "DMs you a link to a document containing the setups for N1GP Event Winners."));
         }
 
-        [Command("onedrive")]
+        [Command("drive")]
         public async Task OneDriveHelp()
         {
-            await ReplyAsync("", false, EmbedTool.HelpMessage("!onedrive", "Provides a link to the Community OneDrive containing saves, patches, and the VBA Link Emulator."));
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!drive", "Provides a link to the community drive containing saves, patches, and the VBA Link Emulator."));
         }
 
         [Command("help")]
@@ -200,13 +202,13 @@ namespace ColonelBot_v4.Modules
         [Command("guides")]
         public async Task GuidesHelp()
         {
-            await ReplyAsync("", false, EmbedTool.HelpMessage("!guides", "DMs you the community guides. Please ping @MidniteW for any corrections or errors."));
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!guides", "DMs you the community guides. Please mention any corrections or errors in <#554311759079407638>."));
         }
 
         [Command("welcome")]
         public async Task WelcomeHelp()
         {
-            await ReplyAsync("", false, EmbedTool.HelpMessage("!welcome / !welcome @User", "If done by itself, DMs the requestor all of the information needed to get started with Netbattling. If used with an @ User tag, ColonelBot will DM the tagged user with the information."));
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!welcome", "Provides a link to all information needed to get started with Netbattling."));
         }
 
         [Command("hostflip")]
@@ -215,10 +217,36 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("", false, EmbedTool.HelpMessage("!hostflip", "Selects whether or not you or your opponent should host for a Netbattle."));
         }
 
-        [Command("license")]
+        [Command("servericon")]
+        public async Task ServerIconHelp()
+        {
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!servericon","returns the URL of the server icon."));
+        }
+	
+	[Group("newmoon")]
+	public class NewMoonHelp : ModuleBase<SocketCommandContext>
+	{
+	    [Command]
+	    public async Task NewMoonInfoHelp()
+	    {
+		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon","Messages up to date information on the NEW MOON tournament series.\n Can be @ targeted."));
+	    }
+	    [Command("update")]
+	    public async Task NewMoonInfoUpdate()
+	    {
+		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon update <text>","Supporter+ command.\nSets NEW MOON information to <text>."));
+	    }
+	}
+	[Command("license")]
         public async Task LicenseHelp()
         {
             await ReplyAsync("", false, EmbedTool.HelpMessage("!license", "Adds a pingable role so you can get pertinent announcements and important updates. Call the command once again to remove the role."));
+        }
+	
+	[Command("linkcable")][Alias("legacy battler")]
+        public async Task LegacyHelp()
+        {
+            await ReplyAsync("", false, EmbedTool.HelpMessage("!linkcable", "Adds a pingable role so active players of BBN3 and other pre-BN6 Megaman Battle Network games can matchmake. Call the command once again to remove the role."));
         }
 
         [Command("deckmaster")]

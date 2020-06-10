@@ -110,13 +110,16 @@ namespace ColonelBot_v4.Services
                 return;
             else
             {
-                if (result.Error == CommandError.ParseFailed)
-                    
-                    await context.Channel.SendMessageAsync($"<:NO:528279619699212300> Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`."); //thanks trez
-                else if (result.Error == CommandError.BadArgCount)
-                    await context.Channel.SendMessageAsync($"<:NO:528279619699212300> Please ensure you are calling commands correctly. For more information, do `!help {command.Value.Aliases[0]}`."); //thanks trez
-                else
-                    await context.Channel.SendMessageAsync("<:BarylMeh:297934727682326540>"); //thanks trez
+		if (result.Error == CommandError.UnmetPrecondition)
+		    await context.Channel.SendMessageAsync("<:NO:528279619699212300> You currently don't have the permissions to execute this command");
+		else if (result.Error == CommandError.ParseFailed)	
+                    await context.Channel.SendMessageAsync("<:NO:528279619699212300> The command could not be parsed. Please ensure you are calling commands correctly.");
+		else if (result.Error == CommandError.BadArgCount)
+                    await context.Channel.SendMessageAsync($"<:NO:528279619699212300> You are not calling the command with the right amount of arguments. Try using `!help <your command>`");
+                else if (result.Error == CommandError.Exception)
+		    await context.Channel.SendMessageAsync($"Command Execution failed due to an uncaught exception: {result.ErrorReason}");
+		else 
+		    await context.Channel.SendMessageAsync($"<:BarylMeh:297934727682326540> Command Execution failed with following error: {result.ErrorReason}"); //thanks trez
             }
         }
 
