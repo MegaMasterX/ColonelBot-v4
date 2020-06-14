@@ -66,6 +66,7 @@ namespace ColonelBot_v4
 	{
 	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon"));
 	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data"));
+	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}EuRandom"));
 	}
 
         private Task LogAsync(LogMessage log)
