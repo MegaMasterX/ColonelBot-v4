@@ -33,7 +33,7 @@ namespace ColonelBot_v4.Modules
             else {
                 string[] lines = File.ReadAllLines(eurandomPath);
                 Random r = new Random();
-                int randomLineNumber = r.Next(0, lines.Length - 1);
+                int randomLineNumber = r.Next(0, lines.Length);
                 string setupLink = lines[randomLineNumber];
                 await ReplyAsync($"You will be battling using the following setup: {setupLink}");
             }
