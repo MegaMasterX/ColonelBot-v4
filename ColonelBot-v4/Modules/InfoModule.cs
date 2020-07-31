@@ -81,7 +81,7 @@ namespace ColonelBot_v4.Modules
 	[Command("legacy")]
         public async Task LegacyGuides()
         {
-            await ReplyAsync("", false, EmbedTool.ChannelMessage("Complete guide for how to play BBN3 and other pre-BN6 games online!\n<https://tinyurl.com/legacybn>"));
+            await ReplyAsync("", false, EmbedTool.ChannelMessage("Complete guide for how to play BBN3 and other pre-BN6 games online!\n<http://legacy.n1gp.net/>"));
         }
 
 
