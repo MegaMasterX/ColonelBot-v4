@@ -15,6 +15,7 @@ using ColonelBot_v4.Tools;
 
 //ColonelBot v4 
 //Developed by MegaMasterX for the N1 Grand Prix MMBN Community
+// Please learn to code better, thanks.
 
 namespace ColonelBot_v4
 {
