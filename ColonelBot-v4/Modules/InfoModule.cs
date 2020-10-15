@@ -83,13 +83,10 @@ namespace ColonelBot_v4.Modules
                             $@"
                             > N1 Grand Prix Radmin Server
                             > Server: {RadminServer}
-                            > Password: {RadminPass}
-
+                            > Password: {RadminPass}{"\n"}
                             > Use this link to download Radmin: https://www.radmin-vpn.com/
-                            > To help make matchmaking easier, please change your name on Radmin so that it matches your nickname on Discord. 
-
-                            > Please note that moderators may remove Radmin accounts that appear to be duplicates or dud accounts.
-                            > If you get removed by mistake, simply rejoin and make sure we can recognize your name on Radmin."
+                            > To help make matchmaking easier, please change your name on Radmin so that it matches your nickname on Discord.{"\n"}
+                            > Please note that moderators may remove Radmin accounts that appear to be duplicates or dud accounts. If you get removed by mistake, simply rejoin and make sure we can recognize your name on Radmin."
                             );
                     await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserRadminRequest(Requestor));
                     await ReplyAsync("You have e-mail.");
