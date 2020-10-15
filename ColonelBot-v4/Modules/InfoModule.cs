@@ -61,6 +61,59 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("The Hamachi password has been updated.");
 
         }
+        
+        [Command("radmin")] [Alias("server")]
+        [RequireContext(ContextType.Guild)] //Cannot be requested via DM. 
+        public async Task GiveRadminAsync()
+        {
+            //Log the caller.
+            string LogEntry = $"{DateTime.Now.ToString()} requested by {Context.User.Id} - {Context.User.Username}";
+            var ReportChannel = Context.Guild.GetTextChannel(BotTools.GetReportingChannelUlong());
+            var Requestor = Context.User as SocketGuildUser;
+            var caller = Context.User as IGuildUser;
+            //Check the Netbattler Role.
+            if (caller.RoleIds.Contains(RoleModule.GetRole("Netbattler", Context.Guild).Id))             {
+                //Check to see if the user can accept DMs.
+                try
+                {
+                    string RadminServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.RadminServer);
+                    string RadminPass = BotTools.GetSettingString(BotTools.ConfigurationEntries.RadminPassword);
+
+                    await Context.User.SendMessageAsync(
+                            $@"
+                            > N1 Grand Prix Radmin Server
+                            > Server: {RadminServer}
+                            > Password: {RadminPass}
+
+                            > Use this link to download Radmin: https://www.radmin-vpn.com/
+                            > To help make matchmaking easier, please change your name on Radmin so that it matches your nickname on Discord. 
+
+                            > Please note that moderators may remove Radmin accounts that appear to be duplicates or dud accounts.
+                            > If you get removed by mistake, simply rejoin and make sure we can recognize your name on Radmin."
+                            );
+                    await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserRadminRequest(Requestor));
+                    await ReplyAsync("You have e-mail.");
+                }
+                catch (Exception)
+                {
+                    await ReplyAsync("You currently have DMs disabled. Please enable DMs from users on the server to obtain the Radmin credentials.");
+                    throw;
+                }
+            }
+            else
+                await ReplyAsync("You are not authorized to obtain Radmin credentials. Use `!license` before attempting to use this command.");
+        }
+
+        [Command("radmin update")] [Alias("server update")]
+        [RequireUserPermission(GuildPermission.ViewAuditLog)] //Admin-only.
+        public async Task UpdateRadminPWAsync([Remainder] string NewRadminPW)
+        {
+            dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+            BotConfiguration.RadminPassword = NewRadminPW;
+            System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
+            await ReplyAsync("The Radmin password has been updated.");
+
+        }
 
         [Command("uninstall")]
         public async Task UninstallInformAsync()

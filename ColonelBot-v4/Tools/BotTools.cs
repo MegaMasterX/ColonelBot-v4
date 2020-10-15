@@ -22,9 +22,11 @@ namespace ColonelBot_v4.Tools
             LeaveJoinEnabled,
             ReportingChannel,
             HamachiServer,
+            RadminServer,
             OrganizerRoleName,
             ChallongeApiKey,
             HamachiPassword,
+            RadminPassword,
             ChipLibraryFileLocation
         }
 
@@ -91,6 +93,12 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.HamachiServer:
                     Result = BotConfiguration.HamachiServer;
+                    break;
+                case ConfigurationEntries.RadminServer:
+                    Result = BotConfiguration.RadminServer;
+                    break;
+                case ConfigurationEntries.RadminPassword:
+                    Result = BotConfiguration.RadminPassword;
                     break;
                 case ConfigurationEntries.HamachiPassword:
                     Result = BotConfiguration.HamachiPassword;

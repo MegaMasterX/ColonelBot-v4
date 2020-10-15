@@ -123,6 +123,28 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
+
+        /// <summary>
+        /// Builds an embed detailing a Discord user that's requested Radmin credentials. 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public static Embed UserRadminRequest(SocketGuildUser user)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Title = "Radmin Request",
+                Color = new Color(0x65EEEE)
+            };
+            embed.AddField("Account Name", user.Username);
+            embed.AddField("User ID", user.Id.ToString());
+            embed.ThumbnailUrl = user.GetAvatarUrl();
+            if (user.Nickname != null)
+                embed.AddField("Nickname", user.Nickname);
+            embed.AddField("Date/Time Requested", DateTime.Now);
+            return embed.Build();
+        }
+
         /// <summary>
         /// Builds an embed detailing a user that's left the Discord.
         /// </summary>
