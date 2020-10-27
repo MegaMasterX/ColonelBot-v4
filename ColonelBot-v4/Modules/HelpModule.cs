@@ -237,6 +237,35 @@ namespace ColonelBot_v4.Modules
 		await ReplyAsync("",false,EmbedTool.HelpMessage("!newmoon update <text>","Supporter+ command.\nSets NEW MOON information to <text>."));
 	    }
 	}
+
+	[Group("eurandom")]
+	public class EuRandomHelp : ModuleBase<SocketCommandContext>
+	{
+	    [Command]
+	    public async Task EuRandomBaseHelp()
+	    {
+		    await ReplyAsync("",false,EmbedTool.HelpMessage("!eurandom","Provides a link to a random EuRandom savestate. \n Available subcommands: add, clear all, list"));
+	    }
+	    
+        [Command("add")]
+	    public async Task EuRandomAddHelp()
+	    {
+	    	await ReplyAsync("",false,EmbedTool.HelpMessage("!eurandom add <text> (Supporter+ command)","Adds new link savestates.\n Duplicate links won't be added. Every link has to be provided in an extra line"));
+	    }
+	    
+        [Command("clear all")]
+	    public async Task EuRandomClearAllHelp()
+	    {
+    		await ReplyAsync("",false,EmbedTool.HelpMessage("!eurandom clear all (Supporter+ command)", "Removes all saved links."));
+	    }
+        
+        [Command("list")]
+	    public async Task EuRandomListAllHelp()
+	    {
+		    await ReplyAsync("",false,EmbedTool.HelpMessage("!eurandom list (Supporter+ command)", " Lists all saved links."));
+	    }
+	}
+
 	[Command("license")]
         public async Task LicenseHelp()
         {
