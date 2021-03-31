@@ -47,6 +47,12 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("", false, EmbedTool.HelpMessage("!quote", "Calls a random quote from the library.\n**Additional Commands:** *!quote add <text>, !quote remove <quote number>, !quote library*"));
             }
 
+            [Command("setcooldown")]
+            public async Task QuoteSetCDHelpAsync()
+            {
+                await ReplyAsync("", false, EmbedTool.HelpMessage("!quote setcooldown <new cooldown>", "Sets the cooldown for users to call !quote to <new cooldown>. Existing users who have a cooldown will still count down normally from the value that was set before it was changed."));
+            }
+
             [Command("add")]
             public async Task QuoteAddHelpAsync()
             {

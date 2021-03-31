@@ -27,7 +27,9 @@ namespace ColonelBot_v4.Tools
             ChallongeApiKey,
             HamachiPassword,
             RadminPassword,
-            ChipLibraryFileLocation
+            ChipLibraryFileLocation,
+            QuotesCooldownInSeconds,
+            QuotesLimit
         }
 
         /// <summary>
@@ -52,6 +54,24 @@ namespace ColonelBot_v4.Tools
             dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
             ulong ReportChanID = BotConfiguration.ReportChannel;
             return ReportChanID;
+        }
+
+        /// <summary>
+        /// Gets the Quotes Cooldown, specified in Seconds.
+        /// </summary>
+        /// <returns>[int] Number of seconds the quote cooldown should be.</returns>
+        public static int GetQuotesCooldown()
+        {
+            return Convert.ToInt16(GetSettingString(ConfigurationEntries.QuotesCooldownInSeconds));
+        }
+
+        /// <summary>
+        /// Gets the currently configured quote cooldown - the limit before a user is no longer able to call !quote until their cooldown expires.
+        /// </summary>
+        /// <returns>[int] Number of quotes in the quote tolerance.</returns>
+        public static int GetQuoteLimit()
+        {
+            return Convert.ToInt16(GetSettingString(ConfigurationEntries.QuotesLimit));
         }
 
         /// <summary>
@@ -105,6 +125,12 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.ChipLibraryFileLocation:
                     Result = BotConfiguration.ChipLibraryFileLocation;
+                    break;
+                case ConfigurationEntries.QuotesCooldownInSeconds:
+                    Result = BotConfiguration.QuotesCooldownInSeconds;
+                    break;
+                case ConfigurationEntries.QuotesLimit:
+                    Result = BotConfiguration.QuotesLimit;
                     break;
                 default:
                     Result = null;

@@ -67,6 +67,17 @@ namespace ColonelBot_v4.Modules
 
         }
 
+        [Command("setcooldown")]
+        [RequireContext(ContextType.Guild)]
+        [RequireUserPermission(GuildPermission.ViewAuditLog)]
+        public async Task AdminUpdateQuoteCooldown([Remainder]int NewCooldown)
+        {
+            //PSUEDO: Update the cooldown. 
+            await ReplyAsync("", embed: EmbedTool.ChannelMessage($"The Quotes cooldown period has been changed to {NewCooldown.ToString() } Seconds."));
+        }
+
+
+
        [Command("admin remove"), Alias("admin delete")]
        [RequireUserPermission(GuildPermission.ViewAuditLog)] //Admin-only.
        public async Task AdminQuoteRemove([Remainder]int QuoteID)
