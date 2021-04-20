@@ -21,6 +21,63 @@ using Newtonsoft.Json;
 
 namespace ColonelBot_v4.Modules
 {
+    public class NewMoonModule : ModuleBase<SocketCommandContext>
+    {
+        /// <summary>
+        /// This command will add MOON BATTLER to the users that are listed. 
+        /// </summary>
+        /// <param name="ParticipantList"></param>
+        /// <returns></returns>
+        [Command("cycle on")]
+        public async Task CycleUpdateAsync([Remainder] string ParticipantList)
+        {
+            string[] UsersByDiscordID = ParticipantList.Split("\n");
+            for (int i = 0; i < UsersByDiscordID.Length; i++)
+            {
+                await ToggleRole(Context.Guild.Users.Where(u => u.Username == UsersByDiscordID[i]) as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild));
+            }
+            await ReplyAsync("Updated the users you listed.");
+        }
+
+        [Command("cycle on")]
+        public async Task CycleRemoveAsync([Remainder] string ParticipantList)
+        {
+            string[] UsersByDiscordID = ParticipantList.Split("\n");
+            for (int i = 0; i < UsersByDiscordID.Length; i++)
+            {
+                await ToggleRole(Context.Guild.Users.Where(u => u.Username == UsersByDiscordID[i]) as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild));
+            }
+            await ReplyAsync("Updated the users you listed.");
+        }
+
+
+        public async Task<Embed> ToggleRole(IGuildUser caller, SocketRole role)
+        {
+            string RoleResponseText = "";
+
+            if (caller.RoleIds.Contains(role.Id))
+            {//The caller already has the role, remove it.
+                await caller.RemoveRoleAsync(role, null);
+                RoleResponseText = $"The {role.Name} role has been removed from you, {caller.Username} ({caller.Nickname}).";
+            }
+            else
+            {//The caller does not have the role, add it.
+                await caller.AddRoleAsync(role, null);
+                RoleResponseText = $"The {role.Name} role has been added to you, {caller.Username} ({caller.Nickname}).";
+            }
+            var embed = new EmbedBuilder
+            {
+                Color = new Color(0xffcf39)
+            };
+
+            embed.AddField("Role Updated", RoleResponseText);
+            await ReplyAsync("", embed: embed.Build());
+            return embed.Build();
+        }
+    }
+
+
+
     /*
     public class NewMoonModule : ModuleBase<SocketCommandContext>
     {
