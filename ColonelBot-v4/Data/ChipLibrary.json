@@ -52,7 +52,7 @@
     "Description": "3-shot to pierce 1 panel!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/e/e4/BN6Chip005.png",
     "MoreDetails": "https://bit.ly/2IxfRET",
-    "Alias": ""
+    "Alias": "Vulcan 1"
   },
   {
     "Name": "Vulcan2",
@@ -63,7 +63,7 @@
     "Description": "4-shot to pierce 1 panel!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/9/98/BN6Chip006.png",
     "MoreDetails": "https://bit.ly/2IxfRET",
-    "Alias": ""
+    "Alias": "Vulcan 2"
   },
   {
     "Name": "Vulcan3",
@@ -74,7 +74,7 @@
     "Description": "5-shot to pierce 1 panel!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/e/e2/BN6Chip007.png",
     "MoreDetails": "https://bit.ly/2IxfRET",
-    "Alias": ""
+    "Alias": "Vulcan 3"
   },
   {
     "Name": "SuprVulc",
@@ -85,7 +85,7 @@
     "Description": "10-shot Vulcan Cannon!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/9/90/BN6Chip008.png",
     "MoreDetails": "https://bit.ly/2IxfRET",
-    "Alias": "SuperVulcan,Super Vulcan"
+    "Alias": "SuperVulcan,Super Vulcan,SuperVulc,Super Vulc"
   },
   {
     "Name": "Spreadr1",
@@ -96,7 +96,7 @@
     "Description": "Spreads damg to adj panels",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/fe/BN6Chip009.png",
     "MoreDetails": "https://bit.ly/2TcU3RB",
-    "Alias": "Spreader1"
+    "Alias": "Spreader1,Spreader 1,Spreadr 1"
   },
   {
     "Name": "Spreadr2",
@@ -107,7 +107,7 @@
     "Description": "Spreads damg to adj panels",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/d/df/BN6Chip010.png",
     "MoreDetails": "https://bit.ly/2TcU3RB",
-    "Alias": "Spreader2"
+    "Alias": "Spreader2,Spreader 2,Spreadr 2"
   },
   {
     "Name": "Spreadr3",
@@ -118,7 +118,7 @@
     "Description": "Spreads damg to adj panels",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c2/BN6Chip011.png",
     "MoreDetails": "https://bit.ly/2TcU3RB",
-    "Alias": "Spreader3"
+    "Alias": "Spreader3,Spreader 3,Spreadr 3"
   },
   {
     "Name": "TankCan1",
@@ -129,7 +129,7 @@
     "Description": "3sqr blst if hits end row",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/15/BN6Chip012.png",
     "MoreDetails": "https://bit.ly/2ZL4z5b",
-    "Alias": "TankCannon1"
+    "Alias": "TankCannon1,TankCannon 1,TankCan 1"
   },
   {
     "Name": "TankCan2",
@@ -140,7 +140,7 @@
     "Description": "3sqr blst if hits end row",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/88/BN6Chip013.png",
     "MoreDetails": "https://bit.ly/2ZL4z5b",
-    "Alias": "TankCannon2"
+    "Alias": "TankCannon2,TankCannon 2,TankCan 2"
   },
   {
     "Name": "TankCan3",
@@ -151,7 +151,7 @@
     "Description": "3sqr blst if hits end row",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/e5/BN6Chip014.png",
     "MoreDetails": "https://bit.ly/2ZL4z5b",
-    "Alias": "TankCannon3"
+    "Alias": "TankCannon3,TankCannon 3,TankCan 3"
   },
   {
     "Name": "GunDelS1",
@@ -162,7 +162,7 @@
     "Description": "Hits row 2pnl ahd w/sunshne",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/26/BN6Chip015.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
-    "Alias": "GunDelSol1"
+    "Alias": "GunDelSol1,GunDelSun 1,TAIYOH 1,TAIYOH1,GunDelSol 1"
   },
   {
     "Name": "GunDelSl2",
@@ -173,7 +173,7 @@
     "Description": "Hits row 2pnl ahd w/sunshne",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/2a/BN6Chip016.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
-    "Alias": "GunDelSol2"
+    "Alias": "GunDelSol2,GunDelSun 2,TAIYOH 2,TAIYOH2,GunDelSol 2"
   },
   {
     "Name": "GunDelS3",
@@ -184,7 +184,7 @@
     "Description": "Hits row 2pnl ahd w/sunshne",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0e/BN6Chip017.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
-    "Alias": "GunDelSol3"
+    "Alias": "GunDelSol3,GunDelSun 3,TAIYOH 3,TAIYOH3,GunDelSol 3"
   },
   {
     "Name": "YoYo",
@@ -195,7 +195,7 @@
     "Description": "YoYo atk reaches 3sq ahead",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/67/BN6Chip018.png",
     "MoreDetails": "https://bit.ly/2Gws0qu",
-    "Alias": "Yo Yo,Yo-Yo"
+    "Alias": "Yo Yo,Yo-Yo,YoYoYoYoYoYoYoYoYoYoYoYo"
   },
   {
     "Name": "FireBrn1",
@@ -206,7 +206,7 @@
     "Description": "Crcks 3 sqrs ahd with fire",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b7/BN6Chip019.png",
     "MoreDetails": "https://bit.ly/2yFqheM",
-    "Alias": "FireBurn1,FireBurner1"
+    "Alias": "FireBurn1,FireBurner1,FireBurn 1,FireBurner 1"
   },
   {
     "Name": "FireBrn2",
@@ -217,7 +217,7 @@
     "Description": "Crcks 3 sqrs ahd with fire",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/21/BN6Chip020.png",
     "MoreDetails": "https://bit.ly/2yFqheM",
-    "Alias": "FireBurn2,FireBurner2"
+    "Alias": "FireBurn2,FireBurner2,FireBurn 2,FireBurner 2"
   },
   {
     "Name": "FireBrn3",
@@ -228,7 +228,7 @@
     "Description": "Crcks 3 sqrs ahd with fire",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/c1/BN6Chip021.png",
     "MoreDetails": "https://bit.ly/2yFqheM",
-    "Alias": "FireBurn3,FireBurner3"
+    "Alias": "FireBurn3,FireBurner3,FireBurn 3,FireBurner 3"
   },
   {
     "Name": "WideSht",
@@ -250,7 +250,7 @@
     "Description": "Hits enmy w/ arrow use dstnc",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/d/d1/BN6Chip023.png",
     "MoreDetails": "https://bit.ly/2Dpy6Id",
-    "Alias": "TrainArrow1,TurnArrow1"
+    "Alias": "TrainArrow1,TurnArrow1,TrainArrow 1,TrnArrw 1"
   },
   {
     "Name": "TrnArrw2",
@@ -261,7 +261,7 @@
     "Description": "Hits enmy w/ arrow. Use dstnc",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/31/BN6Chip024.png",
     "MoreDetails": "https://bit.ly/2Dpy6Id",
-    "Alias": "TrainArrow2,TurnArrow2"
+    "Alias": "TrainArrow2,TurnArrow2,TrainArrow 2,TrnArrw 2"
   },
   {
     "Name": "TrnArrw3",
@@ -272,7 +272,7 @@
     "Description": "Hits enmy w/arrow. Use dstnc",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/c/c5/BN6Chip025.png",
     "MoreDetails": "https://bit.ly/2Dpy6Id",
-    "Alias": "TrainArrow3,TurnArrow3"
+    "Alias": "TrainArrow3,TurnArrow3,TrainArrow 3,TrnArrw 3"
   },
   {
     "Name": "BblStar1",
@@ -316,7 +316,7 @@
     "Description": "Pralyzing electric attack!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f5/BN6Chip029.png",
     "MoreDetails": "https://bit.ly/2KjDBMH",
-    "Alias": "Billy"
+    "Alias": "Billy,ThunderBall,BugDudThunder"
   },
   {
     "Name": "DolThdr1",
@@ -327,7 +327,7 @@
     "Description": "A piercng thunder attack!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/d/de/BN6Chip030.png",
     "MoreDetails": "https://bit.ly/338cATA",
-    "Alias": "DolThunder1"
+    "Alias": "DolThunder1,Thunder1,Thunder 1"
   },
   {
     "Name": "DolThdr2",
@@ -338,7 +338,7 @@
     "Description": "A piercng thunder attack!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/6/6d/BN6Chip031.png",
     "MoreDetails": "https://bit.ly/338cATA",
-    "Alias": "DolThunder2"
+    "Alias": "DolThunder2,Thunder2,Thunder 2"
   },
   {
     "Name": "DolThdr3",
@@ -349,7 +349,7 @@
     "Description": "A piercng thunder attack!",
     "Image": "https://bit.ly/338cATA",
     "MoreDetails": "https://vignette2.wikia.nocookie.net/megaman/images/5/5f/BN6Chip032.png",
-    "Alias": "DolThunder3"
+    "Alias": "DolThunder3,Thunder3,Thunder 3"
   },
   {
     "Name": "ElcPuls1",
@@ -360,7 +360,7 @@
     "Description": "Sprd elec puls that paralyzes",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/6/6d/BN6Chip033.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
-    "Alias": "ElecPulse1,ElecPuls1,ElcPulse1"
+    "Alias": "ElecPulse1,ElecPuls1,ElcPulse1,Pulse1,Puls1,ElcPuls 1,ElecPulse 1"
   },
   {
     "Name": "ElcPuls2",
@@ -371,7 +371,7 @@
     "Description": "Sprd elec pulse. Pul enemy in.",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bc/BN6Chip034.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
-    "Alias": "ElecPulse2,ElecPuls2,ElcPulse2"
+    "Alias": "ElecPulse2,ElecPuls2,ElcPulse2,Pulse2,Puls2,ElcPuls 2,ElecPulse 2"
   },
   {
     "Name": "ElcPuls3",
@@ -382,7 +382,7 @@
     "Description": "Sprd elec puls. Hit w/HP bug.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/13/BN6Chip035.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
-    "Alias": "ElecPulse3,ElecPuls3,ElcPulse3"
+    "Alias": "ElecPulse3,ElecPuls3,ElcPulse3,Pulse3,Puls3,ElcPuls 3,ElecPulse 3"
   },
   {
     "Name": "CornSht1",
@@ -393,7 +393,7 @@
     "Description": "Damages enemies w/corn",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a9/BN6Chip036.png",
     "MoreDetails": "https://bit.ly/2W30Az2",
-    "Alias": "CornShot1"
+    "Alias": "CornShot1,CornShot 1,Cob1,Corn1"
   },
   {
     "Name": "CornSht2",
@@ -404,7 +404,7 @@
     "Description": "Damages enemies w/corn",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0d/BN6Chip037.png",
     "MoreDetails": "https://bit.ly/2W30Az2",
-    "Alias": "CornShot2"
+    "Alias": "CornShot2,CornShot 2,Cob2,Corn2"
   },
   {
     "Name": "CornSht3",
@@ -415,7 +415,7 @@
     "Description": "Damages enemies w/corn",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/53/BN6Chip038.png",
     "MoreDetails": "https://bit.ly/2W30Az2",
-    "Alias": "CornShot3"
+    "Alias": "CornShot3,CornShot 3,Cob3,Corn3"
   },
   {
     "Name": "RskyHny1",
@@ -426,7 +426,7 @@
     "Description": "Bees attk whle hive defending.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c3/BN6Chip039.png",
     "MoreDetails": "https://bit.ly/2IvIEr2",
-    "Alias": "RiskyHoney1, RskyHoney1"
+    "Alias": "RiskyHoney1,RskyHoney1,Bee1,Bees1"
   },
   {
     "Name": "RskyHny2",
@@ -437,7 +437,7 @@
     "Description": "Bees attk whle hive defending",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/4/49/BN6Chip040.png",
     "MoreDetails": "https://bit.ly/2IvIEr2",
-    "Alias": "RiskyHoney2, RskyHoney2"
+    "Alias": "RiskyHoney2,RskyHoney2,Bee2,Bees2"
   },
   {
     "Name": "RskyHny3",
@@ -448,7 +448,7 @@
     "Description": "Bees attk whle hive defending",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e3/BN6Chip041.png",
     "MoreDetails": "https://bit.ly/2IvIEr2",
-    "Alias": "RiskyHoney3, RskyHoney3"
+    "Alias": "RiskyHoney3,RskyHoney3,Bee3,Bees3"
   },
   {
     "Name": "RlngLog1",
@@ -459,7 +459,7 @@
     "Description": "Send out 2 logs 2pnl fwd",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/39/BN6Chip042.png",
     "MoreDetails": "https://bit.ly/31T62rm",
-    "Alias": "RollingLog1, RollLog1"
+    "Alias": "RollingLog1,RollLog1,RollLog 1,RollingLog 1"
   },
   {
     "Name": "RlngLog2",
@@ -470,7 +470,7 @@
     "Description": "Send out 2 logs 2pnl fwd",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f1/BN6Chip043.png",
     "MoreDetails": "https://bit.ly/31T62rm",
-    "Alias": "RollingLog2, RollLog2"
+    "Alias": "RollingLog2,RollLog2,RollLog 2,RollingLog 2"
   },
   {
     "Name": "RlngLog3",
@@ -481,7 +481,7 @@
     "Description": "Send out 2 logs 2pnl fwd",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/17/BN6Chip044.png",
     "MoreDetails": "https://bit.ly/31T62rm",
-    "Alias": "RollingLog3, RollLog3"
+    "Alias": "RollingLog3,RollLog3,RollLog 3,RollingLog 3"
   },
   {
     "Name": "IronShl1",
@@ -492,7 +492,7 @@
     "Description": "Fire off piercing shell.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/7/79/BN6Chip045.png",
     "MoreDetails": "https://bit.ly/2XQZ3jB",
-    "Alias": "IronShell1, Iron Shell 1"
+    "Alias": "IronShell1,Iron Shell 1"
   },
   {
     "Name": "IronShl2",
@@ -503,7 +503,7 @@
     "Description": "Fire off piercing shell.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/f/fc/BN6Chip046.png",
     "MoreDetails": "https://bit.ly/2XQZ3jB",
-    "Alias": "IronShell2, Iron Shell 2"
+    "Alias": "IronShell2,Iron Shell 2"
   },
   {
     "Name": "IronShl3",
@@ -514,7 +514,7 @@
     "Description": "Fire off piercing shell.",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/e/ee/BN6Chip047.png",
     "MoreDetails": "https://bit.ly/2XQZ3jB",
-    "Alias": "IronShell3, Iron Shell 3"
+    "Alias": "IronShell3,Iron Shell 3"
   },
   {
     "Name": "AuraHed1",
@@ -525,7 +525,7 @@
     "Description": "A flying head with 2spc tail",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/d/d2/BN6Chip048.png",
     "MoreDetails": "https://bit.ly/30ewUQQ",
-    "Alias": "AuraHead1"
+    "Alias": "AuraHead1,AuraHead 1"
   },
   {
     "Name": "AuraHed2",
@@ -536,7 +536,7 @@
     "Description": "A flying head with 2spc tail",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/ce/BN6Chip049.png",
     "MoreDetails": "https://bit.ly/30ewUQQ",
-    "Alias": "AuraHead2"
+    "Alias": "AuraHead2,AuraHead 2"
   },
   {
     "Name": "AuraHed3",
@@ -547,7 +547,7 @@
     "Description": "A flying head with 2spc tail",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/5/54/BN6Chip050.png",
     "MoreDetails": "https://bit.ly/30ewUQQ",
-    "Alias": "AuraHead3"
+    "Alias": "AuraHead3,AuraHead 3"
   },
   {
     "Name": "AirHocky",
@@ -558,7 +558,7 @@
     "Description": "Bounce the puck off walls",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/9/90/BN6Chip051.png",
     "MoreDetails": "https://bit.ly/2G05ZRn",
-    "Alias": "AirHockey"
+    "Alias": "AirHockey,AirHoc,Hockey,Hocky"
   },
   {
     "Name": "DrilArm",
@@ -569,7 +569,7 @@
     "Description": "Knocks enmy 2sq away",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/7/7d/BN6Chip052.png",
     "MoreDetails": "https://bit.ly/2JkHpwE",
-    "Alias": ""
+    "Alias": "DrillArm"
   },
   {
     "Name": "Tornado",
@@ -580,7 +580,7 @@
     "Description": "8hit strm 2 squares ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/3/34/BN6Chip053.png",
     "MoreDetails": "https://bit.ly/2XOLMYW",
-    "Alias": ""
+    "Alias": "Cornado"
   },
   {
     "Name": "Static",
@@ -591,7 +591,7 @@
     "Description": "A static blast 2sq ahead",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2d/BN6Chip054.png",
     "MoreDetails": "https://bit.ly/30ifz9Q",
-    "Alias": ""
+    "Alias": "ksshhhh"
   },
   {
     "Name": "MachGun1",
@@ -602,7 +602,7 @@
     "Description": "Fire 9sts at row w/clst enmy",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/10/BN6Chip055.png",
     "MoreDetails": "https://bit.ly/30fLFmH",
-    "Alias": "MachineGun1"
+    "Alias": "MachineGun1,MachineGun 1,MachGun 1"
   },
   {
     "Name": "MachGun2",
@@ -613,7 +613,7 @@
     "Description": "Fire 9sts at row w/clst enmy",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/1e/BN6Chip056.png",
     "MoreDetails": "https://bit.ly/30fLFmH",
-    "Alias": "MachineGun2"
+    "Alias": "MachineGun2,MachineGun 2,MachGun 2"
   },
   {
     "Name": "MachGun3",
@@ -624,7 +624,7 @@
     "Description": "Fire 9sts at row w/clst enmy",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a1/BN6Chip057.png",
     "MoreDetails": "https://bit.ly/30fLFmH",
-    "Alias": "MachineGun3"
+    "Alias": "MachineGun3,MachineGun 3,MachGun 3"
   },
   {
     "Name": "MiniBomb",
@@ -679,7 +679,7 @@
     "Description": "Thrw dlyd stun bomb 3sq fwd",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/7/78/BN6Chip062.png",
     "MoreDetails": "https://bit.ly/2L9dk5g",
-    "Alias": "FlashBomb1,FlashBom1"
+    "Alias": "FlashBomb1,FlashBom1,FlashBom 1,FlashBomb 1"
   },
   {
     "Name": "FlshBom2",
@@ -690,7 +690,7 @@
     "Description": "Thrw dlyd stun bomb 3sq fwd",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/e/eb/BN6Chip063.png",
     "MoreDetails": "https://bit.ly/2L9dk5g",
-    "Alias": "FlashBomb2,FlashBom2"
+    "Alias": "FlashBomb2,FlashBom2,FlashBom 2,FlashBomb 2"
   },
   {
     "Name": "FlshBom3",
@@ -701,7 +701,7 @@
     "Description": "Thrw dlyd stun bomb 3sq fwd",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/8a/BN6Chip064.png",
     "MoreDetails": "https://bit.ly/2L9dk5g",
-    "Alias": "FlashBomb3, FlashBom3"
+    "Alias": "FlashBomb3, FlashBom3,FlashBom 3,FlashBomb 3"
   },
   {
     "Name": "BlkBomb",
@@ -712,7 +712,7 @@
     "Description": "Thrw shel 3sqr fwd. Fire attk",
     "Image": "https://vignette.wikia.nocookie.net/megaman/images/f/fc/BN6Chip065.png",
     "MoreDetails": "https://bit.ly/2XBDww8",
-    "Alias": "BlackBomb"
+    "Alias": "BlackBomb,Black Bomb"
   },
   {
     "Name": "BugBomb",
@@ -721,7 +721,7 @@
     "ATK": "0",
     "Codes": "G S V",
     "Description": "Throws a BugBomb 3sq ahead",
-    "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/fc/BN6Chip065.png",
+    "Image": "https://vignette2.wikia.nocookie.net/megaman/images/9/9c/BN6Chip066.png",
     "MoreDetails": "https://bit.ly/2XykeHR",
     "Alias": "Bug Bomb"
   },
@@ -767,7 +767,7 @@
     "Description": "Cuts enmy in front! Range: 1",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/7/70/BN6Chip070.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
-    "Alias": "CyberSword"
+    "Alias": "CyberSword,Swrd"
   },
   {
     "Name": "WideSwrd",
@@ -778,7 +778,7 @@
     "Description": "Cuts enmy in front! Range: 3",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a6/BN6Chip071.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
-    "Alias": "WideSword"
+    "Alias": "WideSword,wide sword"
   },
   {
     "Name": "LongSwrd",
@@ -789,7 +789,7 @@
     "Description": "Cuts enmy in front! Range: 2",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/60/BN6Chip072.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
-    "Alias": "LongSword"
+    "Alias": "LongSword,long sword"
   },
   {
     "Name": "WideBlde",
@@ -800,7 +800,7 @@
     "Description": "Cuts enmy in front! Range: 3",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/13/BN6Chip073.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
-    "Alias": "WideBlade"
+    "Alias": "WideBlade,wide blade"
   },
   {
     "Name": "LongBlde",
@@ -811,7 +811,7 @@
     "Description": "Cuts enmy in front! Range: 2",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/3/37/BN6Chip074.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
-    "Alias": "LongBlade"
+    "Alias": "LongBlade,long blade"
   },
   {
     "Name": "FireSwrd",
@@ -822,7 +822,7 @@
     "Description": "Cut enmy 3sq fwrd w/fire",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bd/BN6Chip075.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
-    "Alias": "FireSword"
+    "Alias": "FireSword,Fire Sword"
   },
   {
     "Name": "AquaSwrd",
@@ -833,7 +833,7 @@
     "Description": "Cut enmy 3sq fwrd w/aqua",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/3/32/BN6Chip076.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
-    "Alias": "AquaSword"
+    "Alias": "AquaSword,Aqua Sword"
   },
   {
     "Name": "ElecSwrd",
@@ -844,7 +844,7 @@
     "Description": "Cut enmy 3sq fwrd w/elec",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/4/44/BN6Chip077.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
-    "Alias": "ElecSword"
+    "Alias": "ElecSword,Elec Sword"
   },
   {
     "Name": "BambSwrd",
@@ -855,7 +855,7 @@
     "Description": "Cut enmy 3sq fwrd w/wood",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/d/d7/BN6Chip078.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
-    "Alias": "BambooSword, BambSword"
+    "Alias": "BambooSword,BambSword,Bamb Sword,Bamboo Sword"
   },
   {
     "Name": "Wind",
@@ -888,7 +888,7 @@
     "Description": "Use WideSwrd 2sq ahead",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/b/b5/BN6Chip080.png",
     "MoreDetails": "https://bit.ly/2YN8e0E",
-    "Alias": "StepSword"
+    "Alias": "StepSword,Step Sword"
   },
   {
     "Name": "VarSwrd",
@@ -899,7 +899,7 @@
     "Description": "A magical shifting sword.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/3/37/BN6Chip081.png",
     "MoreDetails": "https://bit.ly/2T8hP0Q",
-    "Alias": "VarSword,VariableSword,"
+    "Alias": "VarSword,VariableSword,Var"
   },
   {
     "Name": "NeoVari",
@@ -910,7 +910,7 @@
     "Description": "A magical shifting sword.",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/d/de/BN6Chip082.png",
     "MoreDetails": "https://bit.ly/2YQCtba",
-    "Alias": "NeoVariable,NeoVariSword,NeoVariableSword"
+    "Alias": "NeoVariable,NeoVariSword,NeoVariableSword,NeoVar"
   },
   {
     "Name": "MoonBld",
@@ -932,7 +932,7 @@
     "Description": "Atk power equals amt of lostHP",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bf/BN6Chip084.png",
     "MoreDetails": "https://bit.ly/2YGBdYg",
-    "Alias": ""
+    "Alias": "no u"
   },
   {
     "Name": "MchnSwrd",
@@ -942,8 +942,8 @@
     "Codes": "H L Q",
     "Description": "Search and hit stund enemies.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/8/88/BN6Chip085.png",
-    "MoreDetails": "MachineSword,MchnSword",
-    "Alias": "https://bit.ly/2YN9gK4"
+    "MoreDetails": "https://bit.ly/2YN9gK4",
+    "Alias": "MachineSword,MchnSword,MachSword"
   },
   {
     "Name": "ElemSwrd",
@@ -954,7 +954,7 @@
     "Description": "Cuts enmy on grass, ice, fire",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f2/BN6Chip086.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
-    "Alias": "ElementSword,ElementalSword,ElemSword"
+    "Alias": "ElementSword,ElementalSword,ElemSword,Elem Sword"
   },
   {
     "Name": "AssnSwrd",
@@ -965,7 +965,7 @@
     "Description": "When plyz cut enemy spec panl",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/59/BN6Chip087.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
-    "Alias": "AssassinSword,AssSword,AssnSword"
+    "Alias": "AssassinSword,AssSword,AssnSword,Ass"
   },
   {
     "Name": "CrakShot",
@@ -976,7 +976,7 @@
     "Description": "Shoot a panel at an enemy!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2d/BN6Chip088.png",
     "MoreDetails": "https://bit.ly/2MRNgf9",
-    "Alias": "CrackShot,CrackShoot,"
+    "Alias": "CrackShot,CrackShoot"
   },
   {
     "Name": "DublShot",
@@ -1009,7 +1009,7 @@
     "Description": "Bounce an attk back at them!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/0/01/BN6Chip091.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
-    "Alias": "Reflector1"
+    "Alias": "Reflector1,Reflect1,Reflect 1,Reflector 1"
   },
   {
     "Name": "Reflectr2",
@@ -1020,7 +1020,7 @@
     "Description": "Bounce an attk back at them!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/c/c0/BN6Chip092.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
-    "Alias": "Reflector2"
+    "Alias": "Reflector2,Reflect2,Reflect 2,Reflector 2"
   },
   {
     "Name": "Reflectr3",
@@ -1031,7 +1031,7 @@
     "Description": "Bounce an attk back at them!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/d/d9/BN6Chip093.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
-    "Alias": "Reflector3"
+    "Alias": "Reflector3,Reflect3,Reflect 3,Reflector 3"
   },
   {
     "Name": "WaveArm1",
@@ -1042,7 +1042,7 @@
     "Description": "Fllw enemy and fire trap wave",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/2f/BN6Chip094.png",
     "MoreDetails": "https://bit.ly/2TblkE8",
-    "Alias": ""
+    "Alias": "WaveArm 1"
   },
   {
     "Name": "WaveArm2",
@@ -1053,7 +1053,7 @@
     "Description": "llw enemy and fire trap wave",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/20/BN6Chip095.png",
     "MoreDetails": "https://bit.ly/2TblkE8",
-    "Alias": ""
+    "Alias": "WaveArm 2"
   },
   {
     "Name": "WaveArm3",
@@ -1064,7 +1064,7 @@
     "Description": "Fllw enemy and fire trap wave",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/a/a9/BN6Chip096.png",
     "MoreDetails": "https://bit.ly/2TblkE8",
-    "Alias": ""
+    "Alias": "WaveArm 3"
   },
   {
     "Name": "SandWrm1",
@@ -1075,7 +1075,7 @@
     "Description": "Attk enmy from rear w/snakarm",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a8/BN6Chip097.png",
     "MoreDetails": "https://bit.ly/2OEPnoX",
-    "Alias": "SandWorm1"
+    "Alias": "SandWorm1,SandWorm 1"
   },
   {
     "Name": "SandWrm2",
@@ -1086,7 +1086,7 @@
     "Description": "Attk enmy from rear w/snakearm",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/2/2c/BN6Chip098.png",
     "MoreDetails": "https://bit.ly/2OEPnoX",
-    "Alias": "SandWorm2"
+    "Alias": "SandWorm2,SandWorm 2"
   },
   {
     "Name": "SandWrm3",
@@ -1097,7 +1097,7 @@
     "Description": "Attk enmy from rear w/snakearm",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/f2/BN6Chip099.png",
     "MoreDetails": "https://bit.ly/2OEPnoX",
-    "Alias": "SandWorm3"
+    "Alias": "SandWorm3,SandWorm 3"
   },
   {
     "Name": "SumnBlk1",
@@ -1108,7 +1108,7 @@
     "Description": "Summon a Nghtmare attack!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/82/BN6Chip100.png",
     "MoreDetails": "https://bit.ly/2ZCUtmJ",
-    "Alias": "SummonBlack1,SummnBlack1,SummonBlk1"
+    "Alias": "SummonBlack1,SummnBlack1,SummonBlk1,SumnBlk 1,SummonBlack 1"
   },
   {
     "Name": "SumnBlk2",
@@ -1119,7 +1119,7 @@
     "Description": "Summon a Nghtmare attack!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/28/BN6Chip101.png",
     "MoreDetails": "https://bit.ly/2ZCUtmJ",
-    "Alias": "SummonBlack2,SummnBlack2,SummonBlk2"
+    "Alias": "SummonBlack2,SummnBlack2,SummonBlk2,SumnBlk 2,SummonBlack 2"
   },
   {
     "Name": "SumnBlk3",
@@ -1130,7 +1130,7 @@
     "Description": "Summon a Nghtmare attack!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a6/BN6Chip102.png",
     "MoreDetails": "https://bit.ly/2ZCUtmJ",
-    "Alias": "SummonBlack3,SummnBlack3,SummonBlk3"
+    "Alias": "SummonBlack3,SummnBlack3,SummonBlk3,SumnBlk 3,SummonBlack 3"
   },
   {
     "Name": "Snake",
@@ -1141,7 +1141,7 @@
     "Description": "Call snke from hole in area.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/84/BN6Chip103.png",
     "MoreDetails": "https://bit.ly/2KoGoTi",
-    "Alias": "snek"
+    "Alias": "snek,snack"
   },
   {
     "Name": "NumbrBl",
@@ -1152,7 +1152,7 @@
     "Description": "Last 2 HP digits = atk pwr",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/3/31/BN6Chip104.png",
     "MoreDetails": "https://bit.ly/2TaOzqD",
-    "Alias": "NumbrBall,NumberBall,NumberBlade,NumberBl"
+    "Alias": "NumbrBall,NumberBall,NumberBlade,NumberBl,NumberBlumber"
   },
   {
     "Name": "FireHit1",
@@ -1163,7 +1163,7 @@
     "Description": "Slams closest enemy",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/9/95/BN6Chip105.png",
     "MoreDetails": "https://bit.ly/2M3y7HJ",
-    "Alias": "FirePunch1"
+    "Alias": "FirePunch1,FireHit 1"
   },
   {
     "Name": "FireHit2",
@@ -1174,7 +1174,7 @@
     "Description": "Slams closest enemy",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/e/e4/BN6Chip106.png",
     "MoreDetails": "https://bit.ly/2M3y7HJ",
-    "Alias": "FirePunch2"
+    "Alias": "FirePunch2,FireHit 2"
   },
   {
     "Name": "FireHit3",
@@ -1185,7 +1185,7 @@
     "Description": "Slams closest enemy",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/f8/BN6Chip107.png",
     "MoreDetails": "https://bit.ly/2M3y7HJ",
-    "Alias": "FirePunch3"
+    "Alias": "FirePunch3,FireHit 3"
   },
   {
     "Name": "BurnSqr1",
@@ -1196,7 +1196,7 @@
     "Description": "Press A to burn a 4pnl sqr",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/a/a7/BN6Chip108.png",
     "MoreDetails": "https://bit.ly/33bg87L",
-    "Alias": "BurnSquare1"
+    "Alias": "BurnSquare1,BurnSqr 1,BurnSquare 1,BurnerSquare1,BurnerSquare 1"
   },
   {
     "Name": "BurnSqr2",
@@ -1207,7 +1207,7 @@
     "Description": "Press A to burn a 4pnl sqr",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/b/bb/BN6Chip109.png",
     "MoreDetails": "https://bit.ly/33bg87L",
-    "Alias": "BurnSquare2"
+    "Alias": "BurnSquare2,BurnSqr 2,BurnSquare 2,BurnerSquare2,BurnerSquare 2"
   },
   {
     "Name": "BurnSqr3",
@@ -1218,7 +1218,7 @@
     "Description": "Press A to burn a 4pnl sqr",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bf/BN6Chip110.png",
     "MoreDetails": "https://bit.ly/33bg87L",
-    "Alias": "BurnSquare3"
+    "Alias": "BurnSquare3,BurnSqr 3,BurnSquare 3,BurnerSquare3,BurnerSquare 3"
   },
   {
     "Name": "Meteors",
@@ -1229,7 +1229,7 @@
     "Description": "Drop many meteor on enmy area",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/f/fe/BN6Chip111.png",
     "MoreDetails": "https://bit.ly/2MJJgwP",
-    "Alias": "ShotStar,ShootingStar,Meteor"
+    "Alias": "ShotStar,ShootingStar,Meteor,Meter"
   },
   {
     "Name": "AquaNdl1",
@@ -1240,7 +1240,7 @@
     "Description": "Target 3 needles at enemy!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/9a/BN6Chip112.png",
     "MoreDetails": "https://bit.ly/2ODkb9p",
-    "Alias": "AquaNeedle1"
+    "Alias": "AquaNeedle1,AquaNeedle 1,Needle1"
   },
   {
     "Name": "AquaNdl2",
@@ -1251,7 +1251,7 @@
     "Description": "Target 3 needles at enemy!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/1/18/BN6Chip113.png",
     "MoreDetails": "https://bit.ly/2ODkb9p",
-    "Alias": "AquaNeedle2"
+    "Alias": "AquaNeedle2,AquaNeedle 2,Needle2"
   },
   {
     "Name": "AquaNdl3",
@@ -1262,7 +1262,7 @@
     "Description": "Target 3 needles at enemy!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/80/BN6Chip114.png",
     "MoreDetails": "https://bit.ly/2ODkb9p",
-    "Alias": "AquaNeedle3"
+    "Alias": "AquaNeedle3,AquaNeedle 3,Needle3"
   },
   {
     "Name": "BlzrdBal",
@@ -1273,7 +1273,7 @@
     "Description": "Launch a giant snowball",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/c0/BN6Chip115.png",
     "MoreDetails": "https://bit.ly/338yDtk",
-    "Alias": "BlizzardBal,BlzrdBall,BlizzardBall"
+    "Alias": "BlizzardBal,BlzrdBall,BlizzardBall,BlizBall,BlizzBall"
   },
   {
     "Name": "Sensor1",
@@ -1284,7 +1284,7 @@
     "Description": "Hit enmy with beam from snsr",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/f1/BN6Chip116.png",
     "MoreDetails": "https://bit.ly/33dnGqu",
-    "Alias": "Killereye1,Killereye"
+    "Alias": "Killereye1,Killereye,Sensor 1"
   },
   {
     "Name": "Sensor2",
@@ -1295,7 +1295,7 @@
     "Description": "Hit enmy with beam from snsr",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0d/BN6Chip117.png",
     "MoreDetails": "https://bit.ly/33dnGqu",
-    "Alias": "Killereye2,DemonEye"
+    "Alias": "Killereye2,DemonEye,Sensor 2"
   },
   {
     "Name": "Sensor3",
@@ -1306,7 +1306,7 @@
     "Description": "Hit enmy with beam from snsr",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/ab/BN6Chip118.png",
     "MoreDetails": "https://bit.ly/33dnGqu",
-    "Alias": "Killereye3,Jokereye"
+    "Alias": "Killereye3,Jokereye,Sensor 3"
   },
   {
     "Name": "Boomer",
@@ -1317,7 +1317,7 @@
     "Description": "Boomerang that circ btl field",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/14/BN6Chip119.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
-    "Alias": ""
+    "Alias": "boom,ok"
   },
   {
     "Name": "HiBoomer",
@@ -1328,7 +1328,7 @@
     "Description": "Boomerang that circ btl field",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/99/BN6Chip120.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
-    "Alias": ""
+    "Alias": "HiBoom"
   },
   {
     "Name": "M-Boomer",
@@ -1339,7 +1339,7 @@
     "Description": "Boomerang that circ btl field",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/67/BN6Chip121.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
-    "Alias": "MBoomer,MegaBoomer"
+    "Alias": "MBoomer,MegaBoomer,MBoom"
   },
   {
     "Name": "Lance",
@@ -1372,7 +1372,7 @@
     "Description": "Drgn near clst enmy Hit 2 rows",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/28/BN6Chip124.png",
     "MoreDetails": "https://bit.ly/2ME0oUZ",
-    "Alias": "ElecDragon,ElectricDragon"
+    "Alias": "ElecDragon,ElectricDragon,ElecDrgb"
   },
   {
     "Name": "AquaDrgn",
@@ -1405,7 +1405,7 @@
     "Description": "Hit 3pnl area arnd clst enmy",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/5/51/BN6Chip127.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
-    "Alias": "GolemHit1"
+    "Alias": "GolemHit1,GolmHit 1,GolemHit 1"
   },
   {
     "Name": "GolmHit2",
@@ -1416,7 +1416,7 @@
     "Description": "Hit 3pnl area arnd clst enmy",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/33/BN6Chip128.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
-    "Alias": "GolemHit2"
+    "Alias": "GolemHit2,GolmHit 2,GolemHit 2"
   },
   {
     "Name": "GolmHit3",
@@ -1427,7 +1427,7 @@
     "Description": "Hit 3pnl area arnd clst enmy",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/3/3c/BN6Chip129.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
-    "Alias": "GolemHit3"
+    "Alias": "GolemHit3,GolmHit 3,GolemHit 3"
   },
   {
     "Name": "JustcOne",
@@ -1438,7 +1438,7 @@
     "Description": "Fist Atk on center panel",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/ff/BN6Chip130.png",
     "MoreDetails": "https://bit.ly/2MHvknh",
-    "Alias": "JusticeOne,JusticeCone,JustOne"
+    "Alias": "JusticeOne,JusticeCone,JustOne,Justice"
   },
   {
     "Name": "AirSpin1",
@@ -1449,7 +1449,7 @@
     "Description": "Spits out hurricane attack",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/7/74/BN6Chip131.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
-    "Alias": "AirWheel1"
+    "Alias": "AirWheel1,AirSpin 1,AirWheel 1"
   },
   {
     "Name": "AirSpin2",
@@ -1460,7 +1460,7 @@
     "Description": "Spits out hurricane attack",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/32/BN6Chip132.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
-    "Alias": "AirWheel2"
+    "Alias": "AirWheel2,AirSpin 2,AirWheel 2"
   },
   {
     "Name": "AirSpin3",
@@ -1471,7 +1471,7 @@
     "Description": "Spits out hurricane attack",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/24/BN6Chip133.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
-    "Alias": "AirWheel3"
+    "Alias": "AirWheel3,AirSpin 3,AirWheel 3"
   },
   {
     "Name": "Fan",
@@ -1515,7 +1515,7 @@
     "Description": "Place a RockCube in front",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/0b/BN6Chip138.png",
     "MoreDetails": "http://bit.ly/2OILr6M",
-    "Alias": "StoneCube"
+    "Alias": "StoneCube,Cube"
   },
   {
     "Name": "LilBolr1",
@@ -1526,7 +1526,7 @@
     "Description": "3pnl fwd Kttl attk Attack+",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c9/BN6Chip139.png",
     "MoreDetails": "http://bit.ly/2TalDio",
-    "Alias": "LilBoiler1,LittleBoiler1"
+    "Alias": "LilBoiler1,LittleBoiler1,LilBoiler 1"
   },
   {
     "Name": "LilBolr2",
@@ -1537,7 +1537,7 @@
     "Description": "3pnl fwd Kttl attk Attack+",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/f5/BN6Chip140.png",
     "MoreDetails": "http://bit.ly/2TalDio",
-    "Alias": "LilBoiler2,LittleBoiler2"
+    "Alias": "LilBoiler2,LittleBoiler2,LilBoiler 2"
   },
   {
     "Name": "LilBolr3",
@@ -1548,7 +1548,7 @@
     "Description": "3pnl fwd Kttl attk Attack+",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/19/BN6Chip141.png",
     "MoreDetails": "http://bit.ly/2TalDio",
-    "Alias": "LilBoiler3,LittleBoiler3"
+    "Alias": "LilBoiler3,LittleBoiler3,LilBoiler 3"
   },
   {
     "Name": "AirRaid1",
@@ -1559,7 +1559,7 @@
     "Description": "Attk enmy w/flying FgtrPlne.",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/0d/BN6Chip142.png",
     "MoreDetails": "http://bit.ly/2GLwMBh",
-    "Alias": ""
+    "Alias": "AirRaid 1"
   },
   {
     "Name": "AirRaid2",
@@ -1570,7 +1570,7 @@
     "Description": "Attk enmy w/flying FgtrPlne.",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/57/BN6Chip143.png",
     "MoreDetails": "http://bit.ly/2GLwMBh",
-    "Alias": ""
+    "Alias": "AirRaid 2"
   },
   {
     "Name": "AirRaid3",
@@ -1581,7 +1581,7 @@
     "Description": "Attk enmy w/flying FgtrPlne.",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/5/53/BN6Chip144.png",
     "MoreDetails": "http://bit.ly/2GLwMBh",
-    "Alias": ""
+    "Alias": "AirRaid 3"
   },
   {
     "Name": "TimeBom1",
@@ -1592,7 +1592,7 @@
     "Description": "Explodes 3 seconds later",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/3/3e/BN6Chip145.png",
     "MoreDetails": "http://bit.ly/2M3FZsZ",
-    "Alias": "TimeBomb1"
+    "Alias": "TimeBomb1,TimeBomb 1"
   },
   {
     "Name": "TimeBom2",
@@ -1603,7 +1603,7 @@
     "Description": "Explodes 3 seconds later",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/15/BN6Chip146.png",
     "MoreDetails": "http://bit.ly/2M3FZsZ",
-    "Alias": "TimeBomb2"
+    "Alias": "TimeBomb2,TimeBomb 2"
   },
   {
     "Name": "TimeBom3",
@@ -1614,7 +1614,7 @@
     "Description": "Explodes 3 seconds later",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/a/ae/BN6Chip147.png",
     "MoreDetails": "http://bit.ly/2M3FZsZ",
-    "Alias": "TimeBomb3"
+    "Alias": "TimeBomb3,TimeBomb 3"
   },
   {
     "Name": "Mine",
@@ -1625,7 +1625,7 @@
     "Description": "Place a mine in enmy area",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e4/BN6Chip148.png",
     "MoreDetails": "http://bit.ly/2M3rXHG",
-    "Alias": ""
+    "Alias": "Yours"
   },
   {
     "Name": "Fanfare",
@@ -1647,7 +1647,7 @@
     "Description": "Confuses enemies w/music",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/20/BN6Chip150.png",
     "MoreDetails": "http://bit.ly/31kgffj",
-    "Alias": "Tuby"
+    "Alias": "Tuby,N1GP"
   },
   {
     "Name": "Timpani",
@@ -1691,7 +1691,7 @@
     "Description": "Statue punishes when hit",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a7/BN6Chip154.png",
     "MoreDetails": "http://bit.ly/2KvqeaT",
-    "Alias": "http://bit.ly/31pXUOb"
+    "Alias": ""
   },
   {
     "Name": "Anubis",
@@ -1713,7 +1713,7 @@
     "Description": "Recovers 10HP",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/0/04/BN6Chip156.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery10"
+    "Alias": "Recovery10,Recov 10"
   },
   {
     "Name": "Recov30",
@@ -1724,7 +1724,7 @@
     "Description": "Recovers 30HP",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/fb/BN6Chip157.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery30"
+    "Alias": "Recovery30,Recov 30"
   },
   {
     "Name": "Recov50",
@@ -1735,7 +1735,7 @@
     "Description": "Recovers 50HP",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/4/4f/BN6Chip158.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery50"
+    "Alias": "Recovery50,Recov 50"
   },
   {
     "Name": "Recov80",
@@ -1746,7 +1746,7 @@
     "Description": "Recovers 80HP",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/9/93/BN6Chip159.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery80"
+    "Alias": "Recovery80,Recov 80"
   },
   {
     "Name": "Recov120",
@@ -1757,7 +1757,7 @@
     "Description": "Recovers 120HP",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/12/BN6Chip160.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery120"
+    "Alias": "Recovery120,Recov 120"
   },
   {
     "Name": "Recov150",
@@ -1768,7 +1768,7 @@
     "Description": "Recovers 150HP",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/fa/BN6Chip161.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery150"
+    "Alias": "Recovery150,Recov 150"
   },
   {
     "Name": "Recov200",
@@ -1779,7 +1779,7 @@
     "Description": "Recovers 150HP",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/9/9a/BN6Chip162.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery200"
+    "Alias": "Recovery200,Recov 200"
   },
   {
     "Name": "Recov300",
@@ -1790,7 +1790,7 @@
     "Description": "Recovers 300HP",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/2/21/BN6Chip163.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
-    "Alias": "Recovery300"
+    "Alias": "Recovery300,Recov 300"
   },
   {
     "Name": "PanlGrab",
@@ -1823,7 +1823,7 @@
     "Description": "20 damage for every stolen sq",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2b/BN6Chip166.png",
     "MoreDetails": "http://bit.ly/2Tb05lw",
-    "Alias": "GrabBanish"
+    "Alias": "GrabBanish,GrabPunish"
   },
   {
     "Name": "GrabRvng",
@@ -1988,7 +1988,7 @@
     "Description": "Nullifies 100 HP of damage",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bb/BN6Chip181.png",
     "MoreDetails": "http://bit.ly/31mwtVe",
-    "Alias": "Barrier100"
+    "Alias": "Barrier100,Barr100"
   },
   {
     "Name": "Barr200",
@@ -1999,7 +1999,7 @@
     "Description": "Nullifies 200 HP of damage",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/4/4b/BN6Chip182.png",
     "MoreDetails": "http://bit.ly/31mwtVe",
-    "Alias": "Barrier200"
+    "Alias": "Barrier200,Barr200"
   },
   {
     "Name": "BblWrap",
@@ -2010,7 +2010,7 @@
     "Description": "Weak against elec atk",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b9/BN6Chip183.png",
     "MoreDetails": "http://bit.ly/2YMnxqL",
-    "Alias": "BubbleWrap"
+    "Alias": "BubbleWrap,Wrap"
   },
   {
     "Name": "LifeAur",
@@ -2021,7 +2021,7 @@
     "Description": "Repel all attacks under200",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/ba/BN6Chip184.png",
     "MoreDetails": "http://bit.ly/2YNwGiF",
-    "Alias": "LifeAura,DreamAura"
+    "Alias": "LifeAura,DreamAura,Aura200"
   },
   {
     "Name": "MagCoil",
@@ -2054,7 +2054,7 @@
     "Description": "Trap enmy and attk with elem",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/b/b9/BN6Chip187.png",
     "MoreDetails": "http://bit.ly/2T9AxFz",
-    "Alias": "ElementTrap,ElementalTrap,ElmTrap"
+    "Alias": "ElementTrap,ElementalTrap,ElmTrap,AntiElem,AntiElement"
   },
   {
     "Name": "AntiNavi",
@@ -2098,7 +2098,7 @@
     "Description": "Damages enemy in recovery",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/8c/BN6Chip191.png",
     "MoreDetails": "http://bit.ly/33h7V1O",
-    "Alias": "AntiRecovery"
+    "Alias": "AntiRecovery,AntiHeal,BadMedicine"
   },
   {
     "Name": "WhiCapsl",
@@ -2109,7 +2109,7 @@
     "Description": "Add an effect: Paralyze",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/0/03/BN6Chip192.png",
     "MoreDetails": "http://bit.ly/2yJ4XFi",
-    "Alias": "WhitePill,WhiteCapsule,Pill,WhiteCapsl,WhiCapsule"
+    "Alias": "WhitePill,WhiteCapsule,Pill,WhiteCapsl,WhiCapsule,WhiteCap"
   },
   {
     "Name": "Uninstll",
@@ -2117,10 +2117,10 @@
     "MB": "60 MB",
     "ATK": "--",
     "Codes": "G L R",
-    "Description": "Attach to NoDim Chp NavCusOff",
+    "Description": "Attach to NoDim Chip. Remove target's SuperArmor, Air/FloatShoes, any B← power from Custmzr or ModCard",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/96/BN6Chip193.png",
     "MoreDetails": "http://bit.ly/2ZBVTOb",
-    "Alias": "Uninstall"
+    "Alias": "Uninstall,Delete"
   },
   {
     "Name": "CopyDmg",
@@ -2153,7 +2153,7 @@
     "Description": "+10 for selected atk chip",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/1f/BN6Chip196.png",
     "MoreDetails": "http://bit.ly/2ZInoG8",
-    "Alias": "Attack+10"
+    "Alias": "Attack+10,Atk10"
   },
   {
     "Name": "Atk+30",
@@ -2164,7 +2164,7 @@
     "Description": "+30 for selected atk chip",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/f5/BN6Chip197.png",
     "MoreDetails": "http://bit.ly/2ZInoG8",
-    "Alias": "Attack+30"
+    "Alias": "Attack+30,Atk30"
   },
   {
     "Name": "Navi+20",
@@ -2175,7 +2175,7 @@
     "Description": "+20 for selected Navi chip",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/6/6a/BN6Chip198.png",
     "MoreDetails": "http://bit.ly/2yTrPlH",
-    "Alias": ""
+    "Alias": "Navi20"
   },
   {
     "Name": "ColorPt",
@@ -2241,7 +2241,7 @@
     "Description": "Move in and slice the enemy. The worse BN5 version.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/7/7a/BN6MChip004.png",
     "MoreDetails": "http://bit.ly/33iaEYX",
-    "Alias": "BrotoMan"
+    "Alias": "BrotoMan,Blues"
   },
   {
     "Name": "ProtoMnEX",
@@ -2252,7 +2252,7 @@
     "Description": "Move in and slice the enemy.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/6/60/BN6MChip005.png",
     "MoreDetails": "http://bit.ly/33iaEYX",
-    "Alias": "ProtoManEX"
+    "Alias": "ProtoManEX,BrotoManEX,BluesEX"
   },
   {
     "Name": "ProtoMnSP",
@@ -2263,7 +2263,7 @@
     "Description": "Move in and slice the enemy.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/19/BN6MChip006.png",
     "MoreDetails": "http://bit.ly/33iaEYX",
-    "Alias": "ProtoManSP"
+    "Alias": "ProtoManSP,BrotoManSP,BluesSP"
   },
   {
     "Name": "SpoutMan",
@@ -2285,7 +2285,7 @@
     "Description": "Watr atk! Bhnd 2row power-up",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/17/BN6FMChip008.png",
     "MoreDetails": "http://bit.ly/2MJ63cs",
-    "Alias": "SpoutManEx,AquaManEx"
+    "Alias": "SpoutManEX,AquaManEX"
   },
   {
     "Name": "SpoutMnSP",
@@ -2307,7 +2307,7 @@
     "Description": "Slice 2sq side, 3sq vertical",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/27/BN6FMChip010.png",
     "MoreDetails": "http://bit.ly/2Ku3Df1",
-    "Alias": "TomahawkMan"
+    "Alias": "TomahawkMan,ThawkMan,Thawk"
   },
   {
     "Name": "TmhkManEX",
@@ -2318,7 +2318,7 @@
     "Description": "Slice 2sq side, 3sq vertical",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/80/BN6FMChip011.png",
     "MoreDetails": "http://bit.ly/2Ku3Df1",
-    "Alias": "TomahawkManEX"
+    "Alias": "TomahawkManEX,ThawkManEX,ThawkEX"
   },
   {
     "Name": "TmhkManSP",
@@ -2329,7 +2329,7 @@
     "Description": "Slice 2sq side, 3sq vertical",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/7/7c/BN6FMChip012.png",
     "MoreDetails": "http://bit.ly/2Ku3Df1",
-    "Alias": "TomahawkManSP"
+    "Alias": "TomahawkManSP,ThawkManSP,ThawkSP"
   },
   {
     "Name": "TenguMan",
@@ -2340,7 +2340,7 @@
     "Description": "Attk 2row from air, then side",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/8/83/BN6FMChip013.png",
     "MoreDetails": "http://bit.ly/33gpCPa",
-    "Alias": ""
+    "Alias": "Tengu"
   },
   {
     "Name": "TenguMnEX",
@@ -2351,7 +2351,7 @@
     "Description": "Attk 2row from air, then side",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/b3/BN6FMChip014.png",
     "MoreDetails": "http://bit.ly/33gpCPa",
-    "Alias": "TenguManEX"
+    "Alias": "TenguManEX,TenguEX"
   },
   {
     "Name": "TenguMnSP",
@@ -2362,7 +2362,7 @@
     "Description": "Attk 2row from air, then side",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/fe/BN6FMChip015.png",
     "MoreDetails": "http://bit.ly/33gpCPa",
-    "Alias": "TenguManSP"
+    "Alias": "TenguManSP,TenguSP"
   },
   {
     "Name": "GrndMan",
@@ -2538,7 +2538,7 @@
     "Description": "Press (A) for 3panl beam attk",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/8b/BN6GMChip016.png",
     "MoreDetails": "http://bit.ly/2YpJ2Ce",
-    "Alias": "EraserMan"
+    "Alias": "EraserMan,KillerMan"
   },
   {
     "Name": "EraseMnEX",
@@ -2549,7 +2549,7 @@
     "Description": "Press (A) for 3panl beam attk",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/1f/BN6GMChip017.png",
     "MoreDetails": "http://bit.ly/2YpJ2Ce",
-    "Alias": "EraseManEX,EraserManEX"
+    "Alias": "EraseManEX,EraserManEX,KillerManEX"
   },
   {
     "Name": "EraseMnSP",
@@ -2560,7 +2560,7 @@
     "Description": "Press (A) for 3panl beam attk",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/c/c8/BN6GMChip018.png",
     "MoreDetails": "http://bit.ly/2YpJ2Ce",
-    "Alias": "EraseManSP,EraserManSP"
+    "Alias": "EraseManSP,EraserManSP,KillerManSP"
   },
   {
     "Name": "ChrgeMan",
@@ -2736,7 +2736,7 @@
     "Description": "Hit (A) whn col chges elem attk",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/83/BN6MChip034.png",
     "MoreDetails": "http://bit.ly/2YuyPEs",
-    "Alias": "ElementMan,ElementalMan"
+    "Alias": "ElementMan,ElementalMan,ElemMan"
   },
   {
     "Name": "ElmntMnEX",
@@ -2747,7 +2747,7 @@
     "Description": "Hit (A) whn col chges elem attk",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/5/54/BN6MChip035.png",
     "MoreDetails": "http://bit.ly/2YuyPEs",
-    "Alias": "ElementManEX,ElementalManEX"
+    "Alias": "ElementManEX,ElementalManEX,ElemManEX"
   },
   {
     "Name": "ElmntMnSP",
@@ -2758,7 +2758,7 @@
     "Description": "Hit (A) whn col chges elem attk",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/18/BN6MChip036.png",
     "MoreDetails": "http://bit.ly/2YuyPEs",
-    "Alias": "ElementManSP,ElementalManSP"
+    "Alias": "ElementManSP,ElementalManSP,ElemManSP"
   },
   {
     "Name": "Colonel",
@@ -2769,7 +2769,7 @@
     "Description": "Arguably the best chip. Cut enmy lines in Z shape",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/ee/BN6MChip037.png",
     "MoreDetails": "http://bit.ly/2M482rY",
-    "Alias": ""
+    "Alias": "Qnel"
   },
   {
     "Name": "ColonelEX",
@@ -2780,7 +2780,7 @@
     "Description": "Arguably the bestest chip. Cut enmy lines in Z shape",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/0b/BN6MChip038.png",
     "MoreDetails": "http://bit.ly/2M482rY",
-    "Alias": ""
+    "Alias": "QnelEX"
   },
   {
     "Name": "ColonelSP",
@@ -2791,7 +2791,7 @@
     "Description": "Arguably the bestestest chip. Cut enmy lines in Z shape",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/4/49/BN6MChip039.png",
     "MoreDetails": "http://bit.ly/2M482rY",
-    "Alias": ""
+    "Alias": "QnelSP"
   },
   {
     "Name": "Count",
@@ -2967,7 +2967,7 @@
     "Description": "Gregar Only. Use Bug Frag with DrkSword!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/7/75/BN6GGChip005.png",
     "MoreDetails": "http://bit.ly/2YL3kp1",
-    "Alias": "BugRiserSword,BugRiseSword,BugDeathSword"
+    "Alias": "BugRiserSword,BugRiseSword,BugDeathSword,BRS"
   },
   {
     "Name": "BassAnly",
@@ -2989,7 +2989,7 @@
     "Description": "Falzar Only. Meteors bombard from sky",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/7/7a/BN6FGChip002.png",
     "MoreDetails": "http://bit.ly/2H4i0G3",
-    "Alias": "MeteorKnuckle"
+    "Alias": "MeteorKnuckle,MetKnuckle,MetKnuk"
   },
   {
     "Name": "CrossDiv",
@@ -3008,7 +3008,7 @@
     "MB": "99 MB",
     "ATK": "--",
     "Codes": "J",
-    "Description": "Falzar Only. Blend Hub DNA Data w/MegaMan",
+    "Description": "Falzar Only. Gain Shield, AirShoes, FloatShoes, Custom8, BusterMax, & UnderShirt.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/f/f9/BN6FGChip004.png",
     "MoreDetails": "http://bit.ly/2GR76D4",
     "Alias": "HubBatch,HubBat"
@@ -3022,7 +3022,7 @@
     "Description": "Falzar Only. Use Bug Frag with DarkThnd!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e5/BN6FGChip005.png",
     "MoreDetails": "http://bit.ly/2MOcdHY",
-    "Alias": "BugDeathThunder,BDT,BugRiserThunder"
+    "Alias": "BugDeathThunder,BDT,BugRiserThunder,BugDeadThud"
   }
 
 ]
