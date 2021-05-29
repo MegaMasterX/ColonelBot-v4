@@ -347,8 +347,8 @@
     "ATK": "180",
     "Codes": "B R V",
     "Description": "A piercng thunder attack!",
-    "Image": "https://bit.ly/338cATA",
-    "MoreDetails": "https://vignette2.wikia.nocookie.net/megaman/images/5/5f/BN6Chip032.png",
+    "Image": "https://vignette2.wikia.nocookie.net/megaman/images/5/5f/BN6Chip032.png",
+    "MoreDetails": "https://bit.ly/338cATA",
     "Alias": "DolThunder3,Thunder3,Thunder 3"
   },
   {
@@ -965,7 +965,7 @@
     "Description": "When plyz cut enemy spec panl",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/59/BN6Chip087.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
-    "Alias": "AssassinSword,AssSword,AssnSword,Ass"
+    "Alias": "AssassinSword,AssSword,AssnSword"
   },
   {
     "Name": "CrakShot",
@@ -1317,7 +1317,7 @@
     "Description": "Boomerang that circ btl field",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/14/BN6Chip119.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
-    "Alias": "boom,ok"
+    "Alias": "boom,okay"
   },
   {
     "Name": "HiBoomer",
@@ -2117,7 +2117,7 @@
     "MB": "60 MB",
     "ATK": "--",
     "Codes": "G L R",
-    "Description": "Attach to NoDim Chip. Remove target's SuperArmor, Air/FloatShoes, any B← power from Custmzr or ModCard",
+    "Description": "Attach to NoDim Chip. Remove target's SuperArmor, AirShoes, FloatShoes, any B← power from Customizer or ModCard",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/96/BN6Chip193.png",
     "MoreDetails": "http://bit.ly/2ZBVTOb",
     "Alias": "Uninstall,Delete"
@@ -2769,7 +2769,7 @@
     "Description": "Arguably the best chip. Cut enmy lines in Z shape",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/ee/BN6MChip037.png",
     "MoreDetails": "http://bit.ly/2M482rY",
-    "Alias": "Qnel"
+    "Alias": "Qnel,Kernel"
   },
   {
     "Name": "ColonelEX",
@@ -2780,7 +2780,7 @@
     "Description": "Arguably the bestest chip. Cut enmy lines in Z shape",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/0b/BN6MChip038.png",
     "MoreDetails": "http://bit.ly/2M482rY",
-    "Alias": "QnelEX"
+    "Alias": "QnelEX,KernelEX"
   },
   {
     "Name": "ColonelSP",
@@ -2791,7 +2791,7 @@
     "Description": "Arguably the bestestest chip. Cut enmy lines in Z shape",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/4/49/BN6MChip039.png",
     "MoreDetails": "http://bit.ly/2M482rY",
-    "Alias": "QnelSP"
+    "Alias": "QnelSP,KernelSP"
   },
   {
     "Name": "Count",
