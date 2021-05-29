@@ -371,10 +371,10 @@
     "Description": "Sprd elec pulse. Pul enemy in.",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bc/BN6Chip034.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
-    "Alias": "ElecPulse2,ElecPuls2,ElcPulse3"
+    "Alias": "ElecPulse2,ElecPuls2,ElcPulse2"
   },
   {
-    "Name": "ElcPuls2",
+    "Name": "ElcPuls3",
     "Element": "Elec",
     "MB": "40 MB",
     "ATK": "140",
@@ -1006,7 +1006,7 @@
     "MB": "16 MB",
     "ATK": "120",
     "Codes": "B G Y *",
-    "Description": ""Bounce an attk back at them!,
+    "Description": "Bounce an attk back at them!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/c/c0/BN6Chip092.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
     "Alias": "Reflector2"
@@ -1903,7 +1903,7 @@
     "Alias": "GoingRoad"
   },
   {
-    "Name": SloGauge"",
+    "Name": "SloGauge",
     "Element": "Null",
     "MB": "42 MB",
     "ATK": "--",
