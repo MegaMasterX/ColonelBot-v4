@@ -858,6 +858,17 @@
     "Alias": "BambooSword, BambSword"
   },
   {
+    "Name": "Wind",
+    "Element": "Wind",
+    "MB": "10 MB",
+    "ATK": "--",
+    "Codes": "*",
+    "Description": "Windbox blows at enmy area",
+    "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/12/BN6Chip134.png",
+    "MoreDetails": "https://bit.ly/2MJknSf",
+    "Alias": "WindBox"
+  },
+  {
     "Name": "WindRack",
     "Element": "Wind",
     "MB": "19 MB",
@@ -1461,17 +1472,6 @@
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/24/BN6Chip133.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
     "Alias": "AirWheel3"
-  },
-  {
-    "Name": "Wind",
-    "Element": "Wind",
-    "MB": "10 MB",
-    "ATK": "--",
-    "Codes": "*",
-    "Description": "Windbox blows at enmy area",
-    "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/12/BN6Chip134.png",
-    "MoreDetails": "https://bit.ly/2MJknSf",
-    "Alias": "WindBox"
   },
   {
     "Name": "Fan",
