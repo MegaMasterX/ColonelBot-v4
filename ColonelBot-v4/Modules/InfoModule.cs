@@ -20,7 +20,8 @@ namespace ColonelBot_v4.Modules
     public class InfoModule : ModuleBase<SocketCommandContext>
     {
         [Command("userinfo")]
-        [Summary"Returns info about the current user, or the user parameter, if one passed.")]
+	[Summary
+	("Returns info about the current user, or the user parameter, if one passed.")]	
         [Alias("user", "whois")]
         public async Task UserInfoAsync(
             [Summary("The (optional) user to get info from")]
