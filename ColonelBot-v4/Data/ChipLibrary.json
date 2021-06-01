@@ -3031,7 +3031,7 @@
     "ATK": "300",
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
-    "Image": "",
+    "Image": "https://www.sprites-inc.co.uk/files/EXE/MMBCC/Chips/menu/no_data.gif",
     "MoreDetails": "Cannon A-B-C",
     "Alias": "GigaCan 1,GigaCannon1,GigaCannon 1"
   },
@@ -3042,7 +3042,7 @@
     "ATK": "400",
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
-    "Image": "",
+    "Image": "https://cdn.discordapp.com/attachments/454395568584654859/849132946002411550/Chips_Small_PA.png",
     "MoreDetails": "HiCannon L-M-N",
     "Alias": "GigaCan 2,GigaCannon2,GigaCannon 2"
   },
