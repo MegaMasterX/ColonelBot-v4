@@ -3031,7 +3031,7 @@
     "ATK": "300",
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
-    "Image": "https://www.sprites-inc.co.uk/files/EXE/MMBCC/Chips/menu/no_data.gif",
+    "Image": "",
     "MoreDetails": "Cannon A-B-C",
     "Alias": "GigaCan 1,GigaCannon1,GigaCannon 1"
   },
@@ -3042,7 +3042,7 @@
     "ATK": "400",
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
-    "Image": "https://cdn.discordapp.com/attachments/454395568584654859/849132946002411550/Chips_Small_PA.png",
+    "Image": "",
     "MoreDetails": "HiCannon L-M-N",
     "Alias": "GigaCan 2,GigaCannon2,GigaCannon 2"
   },
@@ -3164,7 +3164,7 @@
     "Codes": "--",
     "Description": "Explosive corn 3x3 in front! Targets random panels",
     "Image": "",
-    "MoreDetails": "CornSht1 J-K-L || CornSht2 C-D-E || CornSht3 P-Q-R",
+    "MoreDetails": "CornSht1 J-K-L | CornSht2 C-D-E | CornSht3 P-Q-R",
     "Alias": "CornFiesta,Fiesta,CornParty,CobFiesta,:Cornfetti:"
   },
   {
@@ -3175,7 +3175,7 @@
     "Codes": "--",
     "Description": "Shell atk on 5 right grid rows",
     "Image": "",
-    "MoreDetails": "IronShl1 J-K-L ||IronShl2 C-D-E ||IronShl3 L-M-N ",
+    "MoreDetails": "IronShl1 J-K-L | IronShl2 C-D-E | IronShl3 L-M-N ",
     "Alias": "ParaShell,ParallelShell,Parallel Shell"
   },
   {
@@ -3197,7 +3197,7 @@
     "Codes": "--",
     "Description": "Set TimeBomb+ in enemy area! Has 200HP",
     "Image": "",
-    "MoreDetails": "TimeBom1 F-G-H || TimeBom2 C-D-E || TimeBom3 L-M-N",
+    "MoreDetails": "TimeBom1 F-G-H | TimeBom2 C-D-E | TimeBom3 L-M-N",
     "Alias": "TimeBomb +,TimeBomb+,TimeBomb +,TimeBombPlus,TimeBomb Plus,TimeBomb++,TimeBomb Plus Ultra"
   },
   {
@@ -3208,7 +3208,7 @@
     "Codes": "--",
     "Description": "Fire a stream of 5 AuraHeads",
     "Image": "",
-    "MoreDetails": "AuraHed1 B-C-D ||AuraHed2 D-E-F ||AuraHed3 F-G-H",
+    "MoreDetails": "AuraHed1 B-C-D | AuraHed2 D-E-F | AuraHed3 F-G-H",
     "Alias": "StreamHead,StreamerHead,StrimHead"
   },
   {
@@ -3230,7 +3230,7 @@
     "Codes": "--",
     "Description": "Secondary explosion after hit (can hit up to 10x)",
     "Image": "",
-    "MoreDetails": "Spreader1 L-M-N || Spreader2 A-B-C || Spreader3 Q-R-S",
+    "MoreDetails": "Spreader1 L-M-N | Spreader2 A-B-C | Spreader3 Q-R-S",
     "Alias": "HBurst,H_Burst,HyperBurst,Hyper Burst,Hyper-Burst,HypeBurst"
   },
   {
@@ -3241,7 +3241,7 @@
     "Codes": "--",
     "Description": "Slices 2sq wide & 3sq vertical!",
     "Image": "",
-    "MoreDetails": "Sword, WideSwrd, LongSwrd || Sword *, WideBlde B, LongBlde B",
+    "MoreDetails": "Sword, WideSwrd, LongSwrd | Sword *, WideBlde B, LongBlde B",
     "Alias": "LifeSword,DreamSword,DreamSrd,LifeSlice"
   },
   {
@@ -3340,7 +3340,7 @@
     "Codes": "--",
     "Description": "Double attack with BN5's Colonel and ProtoMan! Can hit up to 3x when in same row.",
     "Image": "",
-    "MoreDetails": "ProtoMnSP B, AntiNavi *, Colonel * || ColonelSP C, AntiNavi *, ProtoMan *",
+    "MoreDetails": "ProtoMnSP B, AntiNavi *, Colonel * | ColonelSP C, AntiNavi *, ProtoMan *",
     "Alias": "TwinLeaders,Twin Leaders,BN5 PA"
   },
   {
