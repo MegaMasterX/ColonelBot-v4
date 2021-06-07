@@ -162,7 +162,7 @@
     "Description": "Hits row 2pnl ahd w/sunshne",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/26/BN6Chip015.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
-    "Alias": "GunDelSol1,GunDelSun 1,TAIYOH 1,TAIYOH1,GunDelSol 1"
+    "Alias": "GunDelSol1,GunDelSun1,TAIYOH 1,TAIYOH1,GunDelSol 1,GDS1"
   },
   {
     "Name": "GunDelSl2",
@@ -173,7 +173,7 @@
     "Description": "Hits row 2pnl ahd w/sunshne",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/2a/BN6Chip016.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
-    "Alias": "GunDelSol2,GunDelSun 2,TAIYOH 2,TAIYOH2,GunDelSol 2"
+    "Alias": "GunDelSol2,GunDelSun2,TAIYOH 2,TAIYOH2,GunDelSol 2,GDS2"
   },
   {
     "Name": "GunDelS3",
@@ -184,7 +184,7 @@
     "Description": "Hits row 2pnl ahd w/sunshne",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0e/BN6Chip017.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
-    "Alias": "GunDelSol3,GunDelSun 3,TAIYOH 3,TAIYOH3,GunDelSol 3"
+    "Alias": "GunDelSol3,GunDelSun3,TAIYOH 3,TAIYOH3,GunDelSol 3,GDS3"
   },
   {
     "Name": "YoYo",
@@ -855,7 +855,7 @@
     "Description": "Cut enmy 3sq fwrd w/wood",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/d/d7/BN6Chip078.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
-    "Alias": "BambooSword,BambSword,Bamb Sword,Bamboo Sword"
+    "Alias": "BambooSword,BambSword,Bamb Sword,Bamboo Sword,WoodSword,WoodSwrd"
   },
   {
     "Name": "Wind",
@@ -940,7 +940,7 @@
     "MB": "37 MB",
     "ATK": "200",
     "Codes": "H L Q",
-    "Description": "Search and hit stund enemies.",
+    "Description": "Cuts paralyzed enemy. Does not work with Frozen/Bubbled.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/8/88/BN6Chip085.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
     "Alias": "MachineSword,MchnSword,MachSword"
@@ -951,7 +951,7 @@
     "MB": "43 MB",
     "ATK": "220",
     "Codes": "J M U",
-    "Description": "Cuts enmy on grass, ice, fire",
+    "Description": "Cuts enemy on grass, ice, or volcano panels",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f2/BN6Chip086.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
     "Alias": "ElementSword,ElementalSword,ElemSword,Elem Sword"
@@ -962,7 +962,7 @@
     "MB": "50 MB",
     "ATK": "240",
     "Codes": "N R Y",
-    "Description": "When plyz cut enemy spec panl",
+    "Description": "Cuts paralyzed enemy or enemy on grass, ice, or volcano panels",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/59/BN6Chip087.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
     "Alias": "AssassinSword,AssSword,AssnSword"
@@ -2868,7 +2868,7 @@
     "Description": "EXE6 Only. Fires a spread sunbeam",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/e/e9/BN5TCSChip020.png",
     "MoreDetails": "http://bit.ly/2GQYJHU",
-    "Alias": "GunDelSolEX"
+    "Alias": "GunDelSolEX,GunDelSunEX,GDEX,GDS4"
   },
   {
     "Name": "Otenko",
