@@ -27,7 +27,8 @@ namespace ColonelBot_v4.Tools
             ChallongeApiKey,
             HamachiPassword,
             RadminPassword,
-            ChipLibraryFileLocation
+            ChipLibraryFileLocation,
+            RadminCredentialString               //Added per Mars' request to collapse Radmin to a single mod-editable string. -MMX 6/18/21
         }
 
         /// <summary>
@@ -105,6 +106,9 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.ChipLibraryFileLocation:
                     Result = BotConfiguration.ChipLibraryFileLocation;
+                    break;
+                case ConfigurationEntries.RadminCredentialString:
+                    Result = BotConfiguration.RadminCredentialString;               //Added per Mars' request to collapse Radmin to a single mod-editable string. -MMX 6/18/21
                     break;
                 default:
                     Result = null;

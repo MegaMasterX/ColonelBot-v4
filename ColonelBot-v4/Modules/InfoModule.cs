@@ -88,18 +88,12 @@ namespace ColonelBot_v4.Modules
                 //Check to see if the user can accept DMs.
                 try
                 {
-                    string RadminServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.RadminServer);
-                    string RadminPass = BotTools.GetSettingString(BotTools.ConfigurationEntries.RadminPassword);
+                    //Pivoting this to a complete message rather than 
 
-                    await Context.User.SendMessageAsync(
-                            $@"
-                            > N1 Grand Prix Radmin Server
-                            > Server: {RadminServer}
-                            > Password: {RadminPass}{"\n"}
-                            > Use this link to download Radmin: https://www.radmin-vpn.com/
-                            > To help make matchmaking easier, please change your name on Radmin so that it matches your nickname on Discord.{"\n"}
-                            > Please note that moderators may remove Radmin accounts that appear to be duplicates or dud accounts. If you get removed by mistake, simply rejoin and make sure we can recognize your name on Radmin."
-                            );
+
+                    string RadminServer = BotTools.GetSettingString(BotTools.ConfigurationEntries.RadminCredentialString);
+
+                    await Context.User.SendMessageAsync(RadminServer);              //Updated this to, instead of using a template, use a moderator-specified string in its entirety. -MMX 6/18/2021
                     await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserRadminRequest(Requestor));
                     await ReplyAsync("You have e-mail.");
                 }
