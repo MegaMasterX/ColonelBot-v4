@@ -112,9 +112,9 @@ namespace ColonelBot_v4.Modules
         public async Task UpdateRadminPWAsync([Remainder] string NewRadminPW)
         {
             dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
-            BotConfiguration.RadminPassword = NewRadminPW;
+            BotConfiguration.RadminCredentialString = NewRadminPW;                     //Updating this to the new single mod-specified string -MMX 6/18/2021
             System.IO.File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json", JsonConvert.SerializeObject(BotConfiguration, Formatting.Indented));
-            await ReplyAsync("The Radmin password has been updated.");
+            await ReplyAsync("The Radmin credential string has been updated.");        //Updating this to the new single mod-specified string -MMX 6/18/2021
 
         }
 
