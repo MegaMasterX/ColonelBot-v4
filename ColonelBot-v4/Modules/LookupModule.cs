@@ -23,8 +23,10 @@ namespace ColonelBot_v4.Modules
             public async Task LookupDefaultAsync([Remainder] string rndr)
             {//!lookup <chipname> - 
                 Chip locatedChip;
-
-                if (TryFindChipByName(rndr, out locatedChip))
+		
+		if (rndr.Length == 1) {
+		    await ReplyAsync(ObtainCodeResults(rndr));
+		}else if (TryFindChipByName(rndr, out locatedChip))
                 {
                     await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
                 }else if (TryFindChipByAlias(rndr, out locatedChip))
@@ -32,9 +34,6 @@ namespace ColonelBot_v4.Modules
                     await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
                 }else
                     await ReplyAsync(ObtainSuggestions(rndr));
-
-
-
             }
 
             [Command("code"), Priority(1)] //!lookup code <specified>

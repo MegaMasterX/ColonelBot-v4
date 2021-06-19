@@ -19,6 +19,18 @@ namespace ColonelBot_v4.Modules
 {
     public class InfoModule : ModuleBase<SocketCommandContext>
     {
+        [Command("userinfo")]
+	[Summary
+	("Returns info about the current user, or the user parameter, if one passed.")]	
+        [Alias("user", "whois")]
+        public async Task UserInfoAsync(
+            [Summary("The (optional) user to get info from")]
+            SocketUser user = null)
+        {
+            var userInfo = user ?? Context.Client.CurrentUser;
+            await ReplyAsync($"{userInfo.Username}#{userInfo.Discriminator}");
+        }
+
         [Command("hamachi")]
         [RequireContext(ContextType.Guild)] //Cannot be requested via DM. 
         public async Task GiveHamachiAsync()
@@ -38,7 +50,7 @@ namespace ColonelBot_v4.Modules
 
                     await Context.User.SendMessageAsync($"**N1 Grand Prix Hamachi Server**\n```\nServer: {HamachiServer}\nPassword: {HamachiPass}\n```\n\nPlease ensure that your PC name on Hamachi matches your Nickname on the N1GP Discord to help make matchmaking easier.\n\n**DO NOT provide the N1 Grand Prix Hamachi server credentials to anyone outside the N1GP.**");
                     await ReportChannel.SendMessageAsync("", embed: EmbedTool.UserHamachiRequest(Requestor));
-                    
+
                     await ReplyAsync("You have e-mail.");
                 }
                 catch (Exception)
@@ -61,9 +73,9 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("The Hamachi password has been updated.");
 
         }
-        
+
         [Command("radmin")] [Alias("server")]
-        [RequireContext(ContextType.Guild)] //Cannot be requested via DM. 
+        [RequireContext(ContextType.Guild)] //Cannot be requested via DM.
         public async Task GiveRadminAsync()
         {
             //Log the caller.
@@ -127,7 +139,7 @@ namespace ColonelBot_v4.Modules
             if(!Context.IsPrivate)
 		await ReplyAsync($"You have e-mail, {Context.User.Username}");
         }
-        
+
 	[Command("legacy")]
         public async Task LegacyGuides()
         {
@@ -135,7 +147,7 @@ namespace ColonelBot_v4.Modules
         }
 
 
-	
+
 	[Group("drive")]
 	public class DriveModule : ModuleBase <SocketCommandContext>
 	{
@@ -183,7 +195,7 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync($"You are hosting, {Context.User.Mention}");
         }
 
-	
+
 	[Command("servericon")]
 	public async Task ServerIcon()
 	{
@@ -209,9 +221,9 @@ namespace ColonelBot_v4.Modules
 	    [Command]
 	    public async Task NewMoonInfoAsync()
 	    {
-		
+
 		if (!File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText"))
-		{ 
+		{
 		    await ReplyAsync("No NEW MOON information was set up");
 		}
 		else
@@ -219,13 +231,13 @@ namespace ColonelBot_v4.Modules
 		string infotext = System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText");
 		    await Context.User.SendMessageAsync(infotext);
 		    await ReplyAsync("NEW MOON is a community-focused weekly roundrobin tournament series by the N1GP. Up to date information has been sent to you.");
-		}    
+		}
 	}
 	    [Command]
 	    public async Task NewMoonTargetInfoAsync(IUser user)
 	    {
 		if (!File.Exists($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}InfoText"))
-		{ 
+		{
 		    await ReplyAsync("No New Moon Information was set up.");
 		}
 		else
