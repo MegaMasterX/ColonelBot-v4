@@ -685,7 +685,7 @@
     "Name": "FlshBom2",
     "Element": "Null",
     "MB": "30 MB",
-    "ATK": "40",
+    "ATK": "70",
     "Codes": "G K R",
     "Description": "Thrw dlyd stun bomb 3sq fwd",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/e/eb/BN6Chip063.png",
@@ -1314,7 +1314,7 @@
     "MB": "16 MB",
     "ATK": "100",
     "Codes": "J K T",
-    "Description": "Boomerang that circ btl field",
+    "Description": "Boomerang circles the field and spawns Grass panels",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/14/BN6Chip119.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
     "Alias": "boom,okay"
@@ -1325,7 +1325,7 @@
     "MB": "26 MB",
     "ATK": "140",
     "Codes": "B L V",
-    "Description": "Boomerang that circ btl field",
+    "Description": "Boomerang circles the field and spawns Grass panels",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/99/BN6Chip120.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
     "Alias": "HiBoom"
@@ -1336,7 +1336,7 @@
     "MB": "36 MB",
     "ATK": "170",
     "Codes": "I M W",
-    "Description": "Boomerang that circ btl field",
+    "Description": "Boomerang circles the field and spawns Grass panels",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/67/BN6Chip121.png",
     "MoreDetails": "https://bit.ly/33dkXgI",
     "Alias": "MBoomer,MegaBoomer,MBoom"
@@ -1358,7 +1358,7 @@
     "MB": "40 MB",
     "ATK": "140",
     "Codes": "G R T",
-    "Description": "Drgn near clst enmy Hit 2 rows",
+    "Description": "Dragon near closest enemy, Hits 2 rows",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a5/BN6Chip123.png",
     "MoreDetails": "https://bit.ly/2ME0oUZ",
     "Alias": "HeatDragon"
@@ -1369,7 +1369,7 @@
     "MB": "40 MB",
     "ATK": "150",
     "Codes": "A L V",
-    "Description": "Drgn near clst enmy Hit 2 rows",
+    "Description": "Dragon near closest enemy, Hits 2 rows and cracks panels",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/28/BN6Chip124.png",
     "MoreDetails": "https://bit.ly/2ME0oUZ",
     "Alias": "ElecDragon,ElectricDragon,ElecDrgb"
@@ -1380,7 +1380,7 @@
     "MB": "44 MB",
     "ATK": "120",
     "Codes": "H P S",
-    "Description": "Drgn near clst enmy Hit 2 rows",
+    "Description": "Dragon near closest enemy, Hits 2 rows and spawns Ice panels",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/a/a3/BN6Chip125.png",
     "MoreDetails": "https://bit.ly/2ME0oUZ",
     "Alias": "AquaDragon,IceDragon"
@@ -1391,7 +1391,7 @@
     "MB": "48 MB",
     "ATK": "130",
     "Codes": "G T V",
-    "Description": "Drgn near clst enmy Hit 2 rows",
+    "Description": "Dragon near closest enemy, Hits 2 rows and spawns Grass panels",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a4/BN6Chip126.png",
     "MoreDetails": "https://bit.ly/2ME0oUZ",
     "Alias": "WoodDragon"
@@ -1402,7 +1402,7 @@
     "MB": "17 MB",
     "ATK": "140",
     "Codes": "I K Y",
-    "Description": "Hit 3pnl area arnd clst enmy",
+    "Description": "Hit 3pnl wide in closest enemy area",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/5/51/BN6Chip127.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
     "Alias": "GolemHit1,GolmHit 1,GolemHit 1"
@@ -1413,7 +1413,7 @@
     "MB": "27 MB",
     "ATK": "190",
     "Codes": "D P U",
-    "Description": "Hit 3pnl area arnd clst enmy",
+    "Description": "Hit 3pnl wide in closest enemy area",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/33/BN6Chip128.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
     "Alias": "GolemHit2,GolmHit 2,GolemHit 2"
@@ -1424,7 +1424,7 @@
     "MB": "37 MB",
     "ATK": "250",
     "Codes": "H M V",
-    "Description": "Hit 3pnl area arnd clst enmy",
+    "Description": "Hit 3pnl wide in closest enemy area",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/3/3c/BN6Chip129.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
     "Alias": "GolemHit3,GolmHit 3,GolemHit 3"
@@ -1776,7 +1776,7 @@
     "MB": "42 MB",
     "ATK": "--",
     "Codes": "I Q Z",
-    "Description": "Recovers 150HP",
+    "Description": "Recovers 200HP",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/9/9a/BN6Chip162.png",
     "MoreDetails": "http://bit.ly/2KIvNTJ",
     "Alias": "Recovery200,Recov 200"
