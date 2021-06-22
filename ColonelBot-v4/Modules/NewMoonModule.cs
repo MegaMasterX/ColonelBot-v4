@@ -45,6 +45,7 @@ namespace ColonelBot_v4.Modules
             if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
             {
                 //pain peko -mmx
+                CleanupCache();
                 await Context.Guild.DownloadUsersAsync();
                 List<SocketGuildUser> users = Context.Guild.Users.ToList<SocketGuildUser>();
                 List<string> MoonbattlerAvatarURLs = new List<string>();
@@ -75,6 +76,16 @@ namespace ColonelBot_v4.Modules
                 //string ThumbnailURL = usr.GetAvatarUrl();
 
             }
+        }
+
+        private void CleanupCache()
+        {
+            string Zipfolder = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip";
+            string CacheDir = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache";
+            if (File.Exists(Zipfolder))
+                File.Delete(Zipfolder);
+            Directory.Delete(CacheDir,true);
+            Directory.CreateDirectory(CacheDir); //lol prof's gonna fuckin' kill meeeeeeee -MMX
         }
 
         /// <summary>
