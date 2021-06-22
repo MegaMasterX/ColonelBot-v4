@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Discord;
 using Discord.WebSocket;
 using Discord.Commands;
+using Discord.API;
 
 using ColonelBot_v4.Services;
 using ColonelBot_v4.Tools;
@@ -32,10 +33,17 @@ namespace ColonelBot_v4
             using (var services = ConfigureServices())
             {
                 var client = services.GetRequiredService<DiscordSocketClient>();
+                var config = new DiscordSocketConfig
+                {
+                    AlwaysDownloadUsers = true,
+                    MessageCacheSize = 200
+                };
+                
                 _discord = client;
                 client.Log += LogAsync;
                 services.GetRequiredService<CommandService>().Log += LogAsync;
                 client.UserJoined += LogJoin;
+                
                 client.UserLeft += LogLeave;
                 Modules.LookupModule.InitialCache();
                 
@@ -60,6 +68,7 @@ namespace ColonelBot_v4
                 .AddSingleton<CommandHandlingService>()
                 .AddSingleton<HttpClient>()
                 .AddSingleton<ImageService>()
+                .AddSingleton(new DiscordSocketConfig { AlwaysDownloadUsers = true })
                 .BuildServiceProvider();
         }
 
@@ -68,7 +77,8 @@ namespace ColonelBot_v4
 	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon"));
 	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data"));
 	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}EuRandom"));
-	}
+        await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache"));
+    }
 
         private Task LogAsync(LogMessage log)
         {
