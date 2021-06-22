@@ -63,7 +63,17 @@ namespace ColonelBot_v4.Modules
                 }
                 for (int i = 0; i < MoonbattlerAvatarURLs.Count; i++)
                 {
-                    await client.DownloadFileTaskAsync(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
+                    await ReplyAsync($"Downloading {MoonbattlerAvatarURLs[i]}");
+                    try
+                    {
+                        await client.DownloadFileTaskAsync(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        await ReplyAsync($"{ex.Message}");
+                    }
+                    
                 }
                 
 
