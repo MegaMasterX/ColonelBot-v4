@@ -15,7 +15,7 @@ namespace ColonelBot_v4.Modules
     public class RoleModule : ModuleBase<SocketCommandContext>
     {
 
-        [Command("available"), Alias("atb"), RequireContext(ContextType.Guild)]
+        [Command("available"), Alias("atb","🦞"), RequireContext(ContextType.Guild)]
         public async Task GoATB()
         {
             var caller = Context.User as IGuildUser;
@@ -27,7 +27,7 @@ namespace ColonelBot_v4.Modules
         }
 
         
-        [Command("unavailable"), Alias("unav"), RequireContext(ContextType.Guild)]
+        [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail"), RequireContext(ContextType.Guild)]
         public async Task RemoveATB()
         {
             var caller = Context.User as IGuildUser;
@@ -46,7 +46,7 @@ namespace ColonelBot_v4.Modules
             await ToggleRole(caller, role);
         }
 
-        [Command("license")]
+        [Command("license"), Alias("licence")]
         public async Task ToggleLicenseRole()
         {//Toggles the Netbattler role when called - adding it if it's not present or removing it if it is.
             var caller = Context.User as IGuildUser;
