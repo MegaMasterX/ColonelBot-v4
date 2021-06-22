@@ -27,7 +27,7 @@ namespace ColonelBot_v4.Modules
         }
 
         
-        [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail"), RequireContext(ContextType.Guild)]
+        [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail", "<:shrimpy:595465516286738463>"), RequireContext(ContextType.Guild)]
         public async Task RemoveATB()
         {
             var caller = Context.User as IGuildUser;
