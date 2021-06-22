@@ -15,13 +15,15 @@ using ColonelBot_v4.Models;
 
 using Newtonsoft.Json;
 
+using System.Net;
+
 /// <summary>
 /// This Module supplements the Event Module.
 /// </summary>
 
 namespace ColonelBot_v4.Modules
 {
-    /*
+    
     public class NewMoonModule : ModuleBase<SocketCommandContext>
     {
         //NewMoon will operate logically with 2 cycles. The cycles can be opened and closed by a TO.
@@ -35,6 +37,45 @@ namespace ColonelBot_v4.Modules
 
         static List<NewMoonParticipant> Cycle1Participants = new List<NewMoonParticipant>();
         static List<NewMoonParticipant> Cycle2Participants = new List<NewMoonParticipant>();
+
+        [Command("newmoon getavatars")]
+        [RequireContext(ContextType.Guild)]
+        public async Task GetAllNewMoonParticipantAvatarsAsync()
+        {
+            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+            {
+                //pain peko -mmx
+                await Context.Guild.DownloadUsersAsync();
+                List<SocketGuildUser> users = Context.Guild.Users.ToList<SocketGuildUser>();
+                List<string> MoonbattlerAvatarURLs = new List<string>();
+                List<string> MoonbattlerUsernames = new List<string>();
+                WebClient client = new WebClient();
+                foreach (var item in users)
+                {
+                    if (item.Roles.Contains(RoleModule.GetRole("MOON BATTLER", Context.Guild)))
+                    {
+                        MoonbattlerAvatarURLs.Add(item.GetAvatarUrl());
+                        MoonbattlerUsernames.Add($"{item.Username} - {item.Nickname}");
+                        
+                    }
+
+                }
+                for (int i = 0; i < MoonbattlerAvatarURLs.Count; i++)
+                {
+                    await client.DownloadFileTaskAsync(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
+                }
+                
+
+                string ZIPTarget = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}MoonBattlerMugshots.zip";
+
+                ZipFile.CreateFromDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache", $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip");
+
+                await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip", "");
+
+                //string ThumbnailURL = usr.GetAvatarUrl();
+
+            }
+        }
 
         /// <summary>
         /// Enables the NewMoon module.
@@ -317,5 +358,5 @@ namespace ColonelBot_v4.Modules
         //==!newmoon info==
 
         //TODO: Split out Registration open/close and Setup acceptance open/close in EventModule
-    } */
+    } 
 }
