@@ -26,6 +26,28 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync($"You are now Available to Battle, {username}");
         }
 
+        [Command("atm"), Alias("lmb","legs","moontime","🌙","🌑","🌕"), RequireContext(ContextType.Guild)]
+        public async Task ItsMoonTimeAsync()
+        {
+            //Method to moon-up the caller.
+            var caller = Context.User as IGuildUser;
+            var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
+            var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
+            await AddMoonBattle(caller, role);
+            await ReplyAsync($"You are now ready to MOON BATTLE, {username}!");
+
+        }
+
+        [Command("unmoon"), Alias("unm"), RequireContext(ContextType.Guild)]
+        public async Task UnmoonAsync()
+        {
+            var caller = Context.User as IGuildUser;
+            var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
+            var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
+            await RemoveMoonbattle(caller, role);
+            await ReplyAsync("You are no longer available to MOON BATTLE.");
+        }
+
         
         [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail", "<:shrimpy:595465516286738463>"), RequireContext(ContextType.Guild)]
         public async Task RemoveATB()
@@ -86,6 +108,20 @@ namespace ColonelBot_v4.Modules
             return embed.Build();
         }
 
+        private async Task<string> AddMoonBattle(IGuildUser caller, SocketRole role)
+        {
+            string ResponseText = "";
+            if (caller.RoleIds.Contains(role.Id))
+                ResponseText = "You are already ready to MOON BATTLE.";
+            else
+            {
+                await caller.AddRoleAsync(role, null);
+                ResponseText = "You are now ready to MOON BATTLE.";
+            }
+            return ResponseText;
+        }
+
+
         private async Task<string> AddATB(IGuildUser caller, SocketRole role)
         {
             string ResponseText = "";
@@ -101,6 +137,21 @@ namespace ColonelBot_v4.Modules
             return ResponseText; //Task 60
             
             
+        }
+
+        private async Task<string> RemoveMoonbattle(IGuildUser caller, SocketRole role)
+        {
+            string ResponseText = "";
+            if (caller.RoleIds.Contains(role.Id))
+            { 
+                await caller.RemoveRoleAsync(role, null);
+                ResponseText = "You are no longer ready to MOON BATTLE.";   
+            }else
+            {//The user isn't ATB and it can't be removed.
+                ResponseText = "You are not available to MOOON BATTLE.";
+            }
+
+            return ResponseText; //Task 60
         }
 
         private async Task<string> RemoveATB(IGuildUser caller, SocketRole role)
