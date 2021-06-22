@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 
 using System.Linq;
@@ -38,7 +39,7 @@ namespace ColonelBot_v4.Modules
         static List<NewMoonParticipant> Cycle1Participants = new List<NewMoonParticipant>();
         static List<NewMoonParticipant> Cycle2Participants = new List<NewMoonParticipant>();
 
-        [Command("newmoon getavatars")]
+        [Command("newmoon getavatars", RunMode=RunMode.Async)]
         [RequireContext(ContextType.Guild)]
         public async Task GetAllNewMoonParticipantAvatarsAsync()
         {
@@ -64,16 +65,28 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("Downloading user avatars. This may take a moment.");
                 for (int i = 0; i < MoonbattlerAvatarURLs.Count; i++)
                 {
-                    //await ReplyAsync($"Downloading {MoonbattlerAvatarURLs[i]}");
-                    try
-                    {
-                        await client.DownloadFileTaskAsync(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
+		     bool retry = false;
+		     int counter = 3;
+		     do{
+                     // Try to catch all failures
+			    retry = false;
+			    try
+			    {
+				client.DownloadFile(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
 
-                    }
-                    catch (Exception ex)
-                    {
-                        await ReplyAsync($"{ex.Message}");
-                    }
+			    }
+			    catch (Exception ex)
+			    {
+				counter--;
+				retry = true;
+				await ReplyAsync($"{ex.Message} On Image {MoonbattlerAvatarURLs[i]} by user{MoonbattlerUsernames[i]}. {counter} Attempts left.");
+				Thread.Sleep(1000);
+				if(counter == 0) {
+					retry = false;
+					counter =3;
+				}
+			    }
+		     }while(retry);
                     
                 }
 

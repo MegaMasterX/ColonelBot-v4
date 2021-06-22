@@ -171,8 +171,8 @@ namespace ColonelBot_v4.Modules
 
         Random rnd = new Random(DateTime.Now.Second);
 
-        [Command("hostflip")]
-        public async Task HostflipAsync()
+        [Command("hostflip"), Alias("🪙")]
+	public async Task HostflipAsync()
         {//Untargeted hostflip
             if (rnd.Next(0, 2) == 1)
                 await ReplyAsync("You are hosting.");
@@ -180,8 +180,8 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("Your opponent is hosting.");
         }
 
-        [Command("hostflip")]
-        public async Task TargetedHostflipAsync(IUser user)
+        [Command("hostflip"), Alias("🪙")]
+	public async Task TargetedHostflipAsync(IUser user)
         {//Targeted hostflip.
             if (rnd.Next(0, 2) == 1)
                 await ReplyAsync($"You are hosting, {user.Mention}");

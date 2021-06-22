@@ -74,7 +74,7 @@ namespace ColonelBot_v4.Tools.BN6
                         tag = "[TAG1]";
                     if (i == folder1Tag2)
                         tag = "[TAG2]";
-                    outString.AppendLine($"{tag} {Globals.chipNames[ce.ID]} {Globals.chipCodes[ce.Code]}");
+                    outString.AppendLine($"{Globals.chipNames[ce.ID]} {Globals.chipCodes[ce.Code]} {tag}");
                 }
 
                 outString.AppendLine($"\r\nFolder2:");
@@ -88,7 +88,7 @@ namespace ColonelBot_v4.Tools.BN6
                         tag = "[TAG1]";
                     if (i == folder2Tag2)
                         tag = "[TAG1]";
-                    outString.AppendLine($"{tag} {Globals.chipNames[ce.ID]} {Globals.chipCodes[ce.Code]}");
+                    outString.AppendLine($"{Globals.chipNames[ce.ID]} {Globals.chipCodes[ce.Code]} {tag}");
                 }
 
                 outString.AppendLine($"\r{Environment.NewLine}NaviCust:");
