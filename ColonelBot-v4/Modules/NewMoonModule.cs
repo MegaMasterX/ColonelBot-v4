@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 
 using System.Linq;
@@ -15,13 +16,15 @@ using ColonelBot_v4.Models;
 
 using Newtonsoft.Json;
 
+using System.Net;
+
 /// <summary>
 /// This Module supplements the Event Module.
 /// </summary>
 
 namespace ColonelBot_v4.Modules
 {
-    /*
+    
     public class NewMoonModule : ModuleBase<SocketCommandContext>
     {
         //NewMoon will operate logically with 2 cycles. The cycles can be opened and closed by a TO.
@@ -36,40 +39,113 @@ namespace ColonelBot_v4.Modules
         static List<NewMoonParticipant> Cycle1Participants = new List<NewMoonParticipant>();
         static List<NewMoonParticipant> Cycle2Participants = new List<NewMoonParticipant>();
 
-        /// <summary>
-        /// Enables the NewMoon module.
-        /// </summary>
-        /// <returns></returns>
-        [Command("newmoon open")]
-        public async Task EnableNewMoonAsync()
+        [Command("newmoon getavatars", RunMode=RunMode.Async)]
+        [RequireContext(ContextType.Guild)]
+        public async Task GetAllNewMoonParticipantAvatarsAsync()
         {
             if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
             {
+                //pain peko -mmx
+                CleanupCache();
+                await Context.Guild.DownloadUsersAsync();
+                List<SocketGuildUser> users = Context.Guild.Users.ToList<SocketGuildUser>();
+                List<string> MoonbattlerAvatarURLs = new List<string>();
+                List<string> MoonbattlerUsernames = new List<string>();
+                WebClient client = new WebClient();
+                foreach (var item in users)
+                {
+                    if (item.Roles.Contains(RoleModule.GetRole("MOON BATTLER", Context.Guild)))
+                    {
+                        MoonbattlerAvatarURLs.Add(item.GetAvatarUrl());
+                        MoonbattlerUsernames.Add($"{item.Username} - {item.Nickname}");
+                        
+                    }
+
+                }
+                await ReplyAsync("Downloading user avatars. This may take a moment.");
+                for (int i = 0; i < MoonbattlerAvatarURLs.Count; i++)
+                {
+		     bool retry = false;
+		     int counter = 3;
+		     do{
+                     // Try to catch all failures
+			    retry = false;
+			    try
+			    {
+				client.DownloadFile(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
+
+			    }
+			    catch (Exception ex)
+			    {
+				counter--;
+				retry = true;
+				await ReplyAsync($"{ex.Message} On Image {MoonbattlerAvatarURLs[i]} by user{MoonbattlerUsernames[i]}. {counter} Attempts left.");
+				Thread.Sleep(1000);
+				if(counter == 0) {
+					retry = false;
+					counter =3;
+				}
+			    }
+		     }while(retry);
+                    
+                }
+
+                await ReplyAsync("Download completed. You have email.");
+                string ZIPTarget = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}MoonBattlerMugshots.zip";
+
+                ZipFile.CreateFromDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache", $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip");
+
+                await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip", "");
+
+                //string ThumbnailURL = usr.GetAvatarUrl();
 
             }
         }
 
-        /// <summary>
-        /// Temporarily halts the NewMoon module.
-        /// </summary>
-        /// <returns></returns>
-        [Command("newmoon close")]
-        public async Task DisableNewMoonAsync()
+        private void CleanupCache()
         {
-            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
-            {
-
-            }
+            string Zipfolder = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip";
+            string CacheDir = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache";
+            if (File.Exists(Zipfolder))
+                File.Delete(Zipfolder);
+            Directory.Delete(CacheDir,true);
+            Directory.CreateDirectory(CacheDir); //lol prof's gonna fuckin' kill meeeeeeee -MMX
         }
 
-        [Command("newmoon close 1")]
-        public async Task CloseCycle1Async()
-        {
-            dynamic EventConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
-            EventConfiguration.Cycle1OpenReg = false;
-            File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json", JsonConvert.SerializeObject(EventConfiguration, Formatting.Indented));
-            await ReplyAsync("Cycle 1 registration has been closed.");
-        }
+        ///// <summary>
+        ///// Enables the NewMoon module.
+        ///// </summary>
+        ///// <returns></returns>
+        //[Command("newmoon open")]
+        //public async Task EnableNewMoonAsync()
+        //{
+        //    if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+        //    {
+
+        //    }
+        //}
+
+        ///// <summary>
+        ///// Temporarily halts the NewMoon module.
+        ///// </summary>
+        ///// <returns></returns>
+        //[Command("newmoon close")]
+        //public async Task DisableNewMoonAsync()
+        //{
+        //    if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+        //    {
+
+        //    }
+        //}
+
+        //[Command("newmoon close 1")]
+        //public async Task CloseCycle1Async()
+        //{
+        //    dynamic EventConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json"));
+        //    EventConfiguration.Cycle1OpenReg = false;
+        //    File.WriteAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon{Path.DirectorySeparatorChar}Config.json", JsonConvert.SerializeObject(EventConfiguration, Formatting.Indented));
+        //    await ReplyAsync("Cycle 1 registration has been closed.");
+        //}
 
         //TODO: Implement Newmoon close 2, open 1, open 2. Update Save acceptance to see if Newmoon is active and implement setups accordingly. Implement registratnt listing.
 
@@ -84,51 +160,51 @@ namespace ColonelBot_v4.Modules
         /// This method compiles all active registrations into a singular text file for easy parsing.
         /// </summary>
         /// <returns></returns>
-        [Command("newmoon setups")]
-        public async Task GetNewMoonRegistrantsAsync()
-        {
-            //PSUEDO:
-            // obtain a list of setup files from the setups folder.
-            // substring out the Discord ID for lookup
-            // 
-        }
+        //[Command("newmoon setups")]
+        //public async Task GetNewMoonRegistrantsAsync()
+        //{
+        //    //PSUEDO:
+        //    // obtain a list of setup files from the setups folder.
+        //    // substring out the Discord ID for lookup
+        //    // 
+        //}
 
         /// <summary>
         /// Registers the caller for the New Moon cycle that's currently active.
         /// </summary>
-        [Command("newmoon join")]
-        public async Task RegisterNewMoonAsync([Remainder]string NetbattlerName)
-        {
+        //[Command("newmoon join")]
+        //public async Task RegisterNewMoonAsync([Remainder]string NetbattlerName)
+        //{
             
-            if (IsNewMoonActive == true) //Is Newmoon Active?
-            {
-                if (Cycle1Open) //Is the current cycle open?
-                {
-                    await AddNewMoonRoleAsync(Context.User as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild)); //Add the MOON BATTLER role.
-                    NewMoonParticipant newParticipant = new NewMoonParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id, 1); //Create the Participant Entry based on the model. The Model creation automatically sets the location based on the cycle.
-                    Cycle1Participants.Add(newParticipant);
-                    WriteParticipantList();
-                    await ReplyAsync("You have registered for NEW MOON. Your Cycle is the current one. !awoo");
-                }
-                else //The registration needs to go to the next upcoming cycle.
-                {
-                    await AddNewMoonRoleAsync(Context.User as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild)); //Add the MOON BATTLER role.
-                    NewMoonParticipant newParticipant = new NewMoonParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id, 2); //Create the Participant Entry based on the model. The Model creation automatically sets the location based on the cycle.
-                    Cycle2Participants.Add(newParticipant);
-                    WriteParticipantList();
-                    await ReplyAsync("You have registered for NEW MOON. Your Cycle is the upcoming one. !awoo");
-                }
+        //    if (IsNewMoonActive == true) //Is Newmoon Active?
+        //    {
+        //        if (Cycle1Open) //Is the current cycle open?
+        //        {
+        //            await AddNewMoonRoleAsync(Context.User as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild)); //Add the MOON BATTLER role.
+        //            NewMoonParticipant newParticipant = new NewMoonParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id, 1); //Create the Participant Entry based on the model. The Model creation automatically sets the location based on the cycle.
+        //            Cycle1Participants.Add(newParticipant);
+        //            WriteParticipantList();
+        //            await ReplyAsync("You have registered for NEW MOON. Your Cycle is the current one. !awoo");
+        //        }
+        //        else //The registration needs to go to the next upcoming cycle.
+        //        {
+        //            await AddNewMoonRoleAsync(Context.User as IGuildUser, RoleModule.GetRole("MOON BATTLER", Context.Guild)); //Add the MOON BATTLER role.
+        //            NewMoonParticipant newParticipant = new NewMoonParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id, 2); //Create the Participant Entry based on the model. The Model creation automatically sets the location based on the cycle.
+        //            Cycle2Participants.Add(newParticipant);
+        //            WriteParticipantList();
+        //            await ReplyAsync("You have registered for NEW MOON. Your Cycle is the upcoming one. !awoo");
+        //        }
 
-                SyncParticipantList();
-            }
+        //        SyncParticipantList();
+        //    }
             
-        }
+        //}
 
-        [Command("newmoon advance")]
-        public async Task AdvanceNewmoonAsync()
-        {
+        //[Command("newmoon advance")]
+        //public async Task AdvanceNewmoonAsync()
+        //{
 
-        }
+        //}
 
         //========================Support Functions=====================
 
@@ -141,18 +217,18 @@ namespace ColonelBot_v4.Modules
                 return false; //The user is not an event organizer.
         }
 
-        private bool IsNewMoonActive
-        {
-            get
-            {
-                dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
-                if (BotConfiguration.NewMoonActive = true)
-                    return true;
-                else
-                    return false;
+        //private bool IsNewMoonActive
+        //{
+        //    get
+        //    {
+        //        dynamic BotConfiguration = JsonConvert.DeserializeObject(System.IO.File.ReadAllText($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}config.json"));
+        //        if (BotConfiguration.NewMoonActive = true)
+        //            return true;
+        //        else
+        //            return false;
 
-            }
-        }
+        //    }
+        //}
 
         private bool Cycle1Open
         {
@@ -317,5 +393,5 @@ namespace ColonelBot_v4.Modules
         //==!newmoon info==
 
         //TODO: Split out Registration open/close and Setup acceptance open/close in EventModule
-    } */
+    } 
 }

@@ -9,17 +9,23 @@
     <FileVersion>4.0.0.0</FileVersion>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Discord.Addons.SimplePermissions.JsonProvider" Version="0.3.9-rc" />
-    <PackageReference Include="Discord.Net" Version="2.1.1" />
-    <PackageReference Include="Discord.Net.Commands" Version="2.1.1" />
-    <PackageReference Include="Discord.Net.Core" Version="2.1.1" />
-    <PackageReference Include="Discord.Net.WebSocket" Version="2.1.1" />
+    <PackageReference Include="Discord.Net" Version="2.4.0" />
+    <PackageReference Include="Discord.Net.Commands" Version="2.4.0" />
+    <PackageReference Include="Discord.Net.Core" Version="2.4.0" />
+    <PackageReference Include="Discord.Net.Providers.WS4Net" Version="2.4.0" />
+    <PackageReference Include="Discord.Net.WebSocket" Version="2.4.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0-preview.18572.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0-preview.18572.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.0-preview.18572.1" />
+  </ItemGroup>
+  <ItemGroup>
+      <Content Include=".\Data\ChipLibrary.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
