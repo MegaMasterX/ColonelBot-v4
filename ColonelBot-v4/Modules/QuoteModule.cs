@@ -12,6 +12,7 @@ using ColonelBot_v4.Models;
 using ColonelBot_v4.Tools;  
 
 using Newtonsoft.Json;
+using Discord.WebSocket;
 
 //This version of the Quotes Module utilizes JSON instead of the other unmaintainable methods.
 
@@ -22,6 +23,7 @@ namespace ColonelBot_v4.Modules
     {
         List<Quote> MasterQuoteList;
         Random rnd = new Random();
+        public List<IUser> BannedQuoteUsers;
 
         [Command]
         public async Task QuoteSpecificAsync([Remainder] uint quoteID)
@@ -118,6 +120,25 @@ namespace ColonelBot_v4.Modules
             
         }
 
+        [Command("ban")]
+        [RequireContext(ContextType.Guild)]
+        public async Task BanQuoteUserAsync([Remainder]IUser User)
+        {
+            //Add the user to the banned list for quote add.
+            BannedQuoteUsers.Add(User);
+            await ReplyAsync($"{User.Username}({User.Id.ToString()}) is now disallowed from using Quote Add.");
+            //PSUEDO: Update the Banned user json.
+        }
+
+        [Command("unban")]
+        [RequireContext(ContextType.Guild)]
+        public async Task UnbanQuoteUserAsync([Remainder]IUser User)
+        {
+            BannedQuoteUsers.Remove(User);
+            await ReplyAsync($"{User.Username}({User.Id.ToString()}) is now allowed to use Quote Add.");
+            //PSUEDO: Updated the Banned user json.
+        }
+
         [Command("add")]
         [RequireContext(ContextType.Guild)] //Quotes cannot be added via DM.
         public async Task AddQuoteAsync([Remainder] string quote)
@@ -145,6 +166,13 @@ namespace ColonelBot_v4.Modules
 
             //6. Reserialize the JSON, writing it to a file.
             WriteQuoteList();
+
+            //7. Add a Moderator Log entry with the quote, caller, and quote contents.
+            //PSUEDO: Get the Reporting Channel
+            SocketTextChannel reportChan = Context.Guild.GetTextChannel(BotTools.GetReportingChannelUlong());
+            await reportChan.SendMessageAsync("", embed: EmbedTool.QuoteAddLog(Context.User as SocketGuildUser, quote, LastID.ToString()));
+
+            //await BotTools.GetReportingChannel).SendMessageAsync("", embed: EmbedTool.UserJoinLog(user));
 
             await ReplyAsync("Added quote " + (LastID).ToString() + " to the Quote Library.");
         }
