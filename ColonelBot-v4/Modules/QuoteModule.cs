@@ -153,7 +153,7 @@ namespace ColonelBot_v4.Modules
 
 
             //4. [Rewrite] Reply with a message informing the caller that its been sent for moderator review and approval.
-            await ReplyAsync("Your e-mail has been sent! :");                                                                           //Reply to the caller letting them know the quote was sent off for approval.
+            await ReplyAsync("Your e-mail has been sent!");                                                                           //Reply to the caller letting them know the quote was sent off for approval.
             QuotesPendingApproval.Add(new Quote(Context.User.Id, Context.User.Username.Replace('@', ' '), LastID, quote));             //Place the quote in the approval queue.
                                                                                                                                        //5. Send a mesage to the channel and request that it be added
 
