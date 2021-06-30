@@ -13,6 +13,7 @@ using Discord.API;
 
 using ColonelBot_v4.Services;
 using ColonelBot_v4.Tools;
+using ColonelBot_v4.Modules;
 
 //ColonelBot v4 
 //Developed by MegaMasterX for the N1 Grand Prix MMBN Community
@@ -20,12 +21,12 @@ using ColonelBot_v4.Tools;
 
 namespace ColonelBot_v4
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
             => new Program().MainAsync().GetAwaiter().GetResult();
 
-        DiscordSocketClient _discord;
+        public DiscordSocketClient _discord;
 
         public async Task MainAsync()
         {
@@ -42,15 +43,18 @@ namespace ColonelBot_v4
                 _discord = client;
                 client.Log += LogAsync;
                 services.GetRequiredService<CommandService>().Log += LogAsync;
-                client.UserJoined += LogJoin;
                 
+                client.UserJoined += LogJoin;
                 client.UserLeft += LogLeave;
+                
+
+
                 Modules.LookupModule.InitialCache();
                 
                 //Token up
                 await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
                 await client.StartAsync();
-                               
+                //await services.GetRequiredService<ServerGuardService>().InitializeAsync();
                 await services.GetRequiredService<CommandHandlingService>().InitializeAsync();
                 
                 await Task.Delay(-1);
@@ -58,6 +62,8 @@ namespace ColonelBot_v4
 
                 
         }
+
+        
 
         private ServiceProvider ConfigureServices()
         {
@@ -67,6 +73,7 @@ namespace ColonelBot_v4
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandlingService>()
                 .AddSingleton<HttpClient>()
+                //.AddSingleton<ServerGuardService>()
                 .AddSingleton<ImageService>()
                 .AddSingleton(new DiscordSocketConfig { AlwaysDownloadUsers = true })
                 .BuildServiceProvider();

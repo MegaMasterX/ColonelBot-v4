@@ -28,7 +28,9 @@ namespace ColonelBot_v4.Tools
             HamachiPassword,
             RadminPassword,
             ChipLibraryFileLocation,
-            RadminCredentialString               //Added per Mars' request to collapse Radmin to a single mod-editable string. -MMX 6/18/21
+            RadminCredentialString,               //Added per Mars' request to collapse Radmin to a single mod-editable string. -MMX 6/18/21
+            AutomodFilterFileLocation,            //Added to support automod. -MMX 6/24/21
+            QuoteReportChannelID,                 //Added per popular request. -MMX 6/25/21
         }
 
         /// <summary>
@@ -109,6 +111,12 @@ namespace ColonelBot_v4.Tools
                     break;
                 case ConfigurationEntries.RadminCredentialString:
                     Result = BotConfiguration.RadminCredentialString;               //Added per Mars' request to collapse Radmin to a single mod-editable string. -MMX 6/18/21
+                    break;
+                case ConfigurationEntries.AutomodFilterFileLocation:                //Added with the automod implementation - MMX 6/24/21
+                    Result = BotConfiguration.AutomodFilterFileLocation;
+                    break;
+                case ConfigurationEntries.QuoteReportChannelID:
+                    Result = BotConfiguration.QuoteReportChannelID;
                     break;
                 default:
                     Result = null;

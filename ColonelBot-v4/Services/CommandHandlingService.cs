@@ -53,6 +53,9 @@ namespace ColonelBot_v4.Services
             if (message.Source != MessageSource.User) return;
             var context = new SocketCommandContext(_discord, message);
 
+            
+
+            
 
             //Save Game Importing
             if (message.Attachments.Count == 1) //The message contains an attachment.
