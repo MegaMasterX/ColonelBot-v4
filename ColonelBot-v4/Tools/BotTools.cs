@@ -68,6 +68,15 @@ namespace ColonelBot_v4.Tools
         }
 
         /// <summary>
+        /// Obtains the current Banned User List.
+        /// </summary>
+        /// <returns></returns>
+        public List<IUser> GetBannedUserList()
+        {
+            return null; //Not Yet Implemented.
+        }
+
+        /// <summary>
         /// Returns the Setting from the Configuration and throws an error if it's not found.
         /// </summary>
         /// <param name="SettingToRetreive"></param>

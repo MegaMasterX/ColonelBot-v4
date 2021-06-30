@@ -87,6 +87,28 @@ namespace ColonelBot_v4.Tools
         }
 
         /// <summary>
+        /// Builds an embed meant to assist with logging new quote adds.
+        /// </summary>
+        /// <param name="user">The SocketGuildUser of the quote author.</param>
+        /// <param name="QuoteText">String containing the quotes contents.</param>
+        /// <param name="QuoteID">String containing the Quote ID in the Library.</param>
+        /// <returns></returns>
+        public static Embed QuoteAddLog(SocketGuildUser user, string QuoteText, string QuoteID)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Title = "Quote Added",
+                Color = new Color(0xffc0cb)
+            };
+            embed.AddField("Quote Author", user.Username);
+            embed.AddField("User ID", user.Id.ToString());
+            embed.AddField("Quote ID", QuoteID);
+            embed.AddField("Quote Contents", QuoteText);
+            return embed.Build();
+
+        }
+
+        /// <summary>
         /// Builds an embed detailing an error.
         /// </summary>
         /// <param name="ErrorMessage">Text to be displayed.</param>
