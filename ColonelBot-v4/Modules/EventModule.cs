@@ -30,13 +30,13 @@ namespace ColonelBot_v4.Modules
         [Command("event join")]
         public async Task JoinEventAsync([Remainder] string NetbattlerName)
         {
-            
+
             SyncParticipantList();
             if (IsEventActive())
             {//Is the event active?
                 if (GetActiveEvent().RegistrationOpen == true)
                 {//Is registration open?
-                    
+
                     if (IsParticipantRegistered(Context.User.Id) == true)
                     {//The user is already registered.
                         await ReplyAsync("", embed: EmbedTool.CommandError($"You are already registered for the {GetActiveEvent().EventName} event."));
@@ -49,7 +49,7 @@ namespace ColonelBot_v4.Modules
                             await ReplyAsync("The Netbattler Name you've selected is already in use. Please register with a different name.");
                         }
                         else
-                        {  //The Netbattler Name is not registered. 
+                        {  //The Netbattler Name is not registered.
                             EventParticipant newParticipant = new EventParticipant(NetbattlerName.Replace('@', ' '), Context.User.Id);
                             ParticipantList.Add(newParticipant);
                             WriteParticipantList();
@@ -60,7 +60,7 @@ namespace ColonelBot_v4.Modules
                 }
                 else //registration is closed.
                     await ReplyAsync("", embed: EmbedTool.CommandError($"{GetActiveEvent().EventName} is currently not accepting registrations."));
-             
+
             }
             else
                 await ReplyAsync("", embed: EmbedTool.CommandError("There currently isn't an active event."));
@@ -84,7 +84,7 @@ namespace ColonelBot_v4.Modules
             }
             else
                 await ReplyAsync("", embed: EmbedTool.CommandError("There currently isn't an active event."));
-            
+
         }
 
         [Command("event drop")]
@@ -149,14 +149,15 @@ namespace ColonelBot_v4.Modules
                 await ReplyAsync("You have e-mail.");
                 File.Delete($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}ParticipantSetups.zip");
             }
-            
+
         }
 
-        [Command("event admin remind")]
-        public async Task RemindPlayersAsync()
-        {
-            //TODO: Complete this
-        }
+        //TODO: Complete this
+
+        // [Command("event admin remind")]
+        //  public async Task RemindPlayersAsync()
+        // {
+        // }
 
         [Command("event admin list")]
         public async Task EventListAsync()
@@ -174,7 +175,7 @@ namespace ColonelBot_v4.Modules
                 await Context.User.SendMessageAsync(Result);
             } else
                 await ReplyAsync("", embed: EmbedTool.CommandError("You are not authorized to obtain the participant list."));
-           
+
         }
 
         [Command("event create")]
@@ -248,7 +249,7 @@ namespace ColonelBot_v4.Modules
             }
             else
                 await ReplyAsync("", embed: EmbedTool.CommandError("There is not an active event or you are not authorized to make changes to the event."));
-            
+
         }
 
         [Command("event admin startdate")]
@@ -386,7 +387,7 @@ namespace ColonelBot_v4.Modules
                     result = true;
                     Console.WriteLine("Found. Netbattler name: " + ParticipantList[i].NetbattlerName);
                 }
-                    
+
             }
 
             return result;

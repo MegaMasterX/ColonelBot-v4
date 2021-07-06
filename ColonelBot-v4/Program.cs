@@ -39,36 +39,36 @@ namespace ColonelBot_v4
                     AlwaysDownloadUsers = true,
                     MessageCacheSize = 200
                 };
-                
+
                 _discord = client;
                 client.Log += LogAsync;
                 services.GetRequiredService<CommandService>().Log += LogAsync;
-                
+
                 client.UserJoined += LogJoin;
                 client.UserLeft += LogLeave;
-                
+
 
 
                 Modules.LookupModule.InitialCache();
-                
+
                 //Token up
                 await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
                 await client.StartAsync();
                 //await services.GetRequiredService<ServerGuardService>().InitializeAsync();
                 await services.GetRequiredService<CommandHandlingService>().InitializeAsync();
-                
+
                 await Task.Delay(-1);
             }
 
-                
         }
 
-        
+
 
         private ServiceProvider ConfigureServices()
         {
             return new ServiceCollection()
                 // Base
+                // First two are part of discord.net
                 .AddSingleton<DiscordSocketClient>()
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandlingService>()
