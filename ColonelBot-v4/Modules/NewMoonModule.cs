@@ -34,7 +34,7 @@ namespace ColonelBot_v4.Modules
         //      Otherwise, place the registration in Cycle 2.
 
 
-        private bool NewMoonEnabled = false; //NewMoon is Disabled by default.
+        // private bool NewMoonEnabled = false; //NewMoon is Disabled by default.
 
         static List<NewMoonParticipant> Cycle1Participants = new List<NewMoonParticipant>();
         static List<NewMoonParticipant> Cycle2Participants = new List<NewMoonParticipant>();

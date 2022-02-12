@@ -19,7 +19,7 @@
     "Description": "Cannon to attack 1 enemy",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/7/73/BN6Chip002.png",
     "MoreDetails": "https://bit.ly/2ZL5nad",
-    "Alias": ""
+    "Alias": "Hi Cannon,Hi-Cannon"
   },
   {
     "Name": "M-Cannon",
@@ -38,7 +38,7 @@
     "MB": "4 MB",
     "ATK": "20",
     "Codes": "*",
-    "Description": "Knock enmy back 1 square",
+    "Description": "Knock enemy back 1 square",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/83/BN6Chip004.png",
     "MoreDetails": "https://bit.ly/2IxfRET",
     "Alias": "Air Shot"
@@ -93,7 +93,7 @@
     "MB": "10 MB",
     "ATK": "30",
     "Codes": "L M N *",
-    "Description": "Spreads damg to adj panels",
+    "Description": "Spreads damage to adjacent panels",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/fe/BN6Chip009.png",
     "MoreDetails": "https://bit.ly/2TcU3RB",
     "Alias": "Spreader1,Spreader 1,Spreadr 1"
@@ -104,7 +104,7 @@
     "MB": "18 MB",
     "ATK": "60",
     "Codes": "A B C *",
-    "Description": "Spreads damg to adj panels",
+    "Description": "Spreads damage to adjacent panels",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/d/df/BN6Chip010.png",
     "MoreDetails": "https://bit.ly/2TcU3RB",
     "Alias": "Spreader2,Spreader 2,Spreadr 2"
@@ -115,7 +115,7 @@
     "MB": "26 MB",
     "ATK": "90",
     "Codes": "Q R S *",
-    "Description": "Spreads damg to adj panels",
+    "Description": "Spreads damage to adjacent panels",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c2/BN6Chip011.png",
     "MoreDetails": "https://bit.ly/2TcU3RB",
     "Alias": "Spreader3,Spreader 3,Spreadr 3"
@@ -126,7 +126,7 @@
     "MB": "17 MB",
     "ATK": "120",
     "Codes": "A G R",
-    "Description": "3sqr blst if hits end row",
+    "Description": "3 square blast if hits end row",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/15/BN6Chip012.png",
     "MoreDetails": "https://bit.ly/2ZL4z5b",
     "Alias": "TankCannon1,TankCannon 1,TankCan 1"
@@ -137,7 +137,7 @@
     "MB": "28 MB",
     "ATK": "160",
     "Codes": "L S V",
-    "Description": "3sqr blst if hits end row",
+    "Description": "3 square blast if hits end row",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/88/BN6Chip013.png",
     "MoreDetails": "https://bit.ly/2ZL4z5b",
     "Alias": "TankCannon2,TankCannon 2,TankCan 2"
@@ -148,7 +148,7 @@
     "MB": "39 MB",
     "ATK": "200",
     "Codes": "B M P",
-    "Description": "3sqr blst if hits end row",
+    "Description": "3 square blast if hits end row",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/e5/BN6Chip014.png",
     "MoreDetails": "https://bit.ly/2ZL4z5b",
     "Alias": "TankCannon3,TankCannon 3,TankCan 3"
@@ -157,9 +157,9 @@
     "Name": "GunDelS1",
     "Element": "Null",
     "MB": "15 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "C M T *",
-    "Description": "Hits row 2pnl ahd w/sunshne",
+    "Description": "Hits row 2 panels ahead with sunshine",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/26/BN6Chip015.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
     "Alias": "GunDelSol1,GunDelSun1,TAIYOH 1,TAIYOH1,GunDelSol 1,GDS1"
@@ -168,9 +168,9 @@
     "Name": "GunDelSl2",
     "Element": "Null",
     "MB": "30 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "B E R",
-    "Description": "Hits row 2pnl ahd w/sunshne",
+    "Description": "Hits row 2 panels ahead with sunshine",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/2a/BN6Chip016.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
     "Alias": "GunDelSol2,GunDelSun2,TAIYOH 2,TAIYOH2,GunDelSol 2,GDS2"
@@ -179,9 +179,9 @@
     "Name": "GunDelS3",
     "Element": "Null",
     "MB": "38 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "N Q W",
-    "Description": "Hits row 2pnl ahd w/sunshne",
+    "Description": "Hits row 2 panels ahead with sunshine",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0e/BN6Chip017.png",
     "MoreDetails": "https://bit.ly/2VXrpEL",
     "Alias": "GunDelSol3,GunDelSun3,TAIYOH 3,TAIYOH3,GunDelSol 3,GDS3"
@@ -192,7 +192,7 @@
     "MB": "32 MB",
     "ATK": "50",
     "Codes": "L M N *",
-    "Description": "YoYo atk reaches 3sq ahead",
+    "Description": "YoYo attack reaches 3 squares ahead",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/67/BN6Chip018.png",
     "MoreDetails": "https://bit.ly/2Gws0qu",
     "Alias": "Yo Yo,Yo-Yo,YoYoYoYoYoYoYoYoYoYoYoYo"
@@ -203,7 +203,7 @@
     "MB": "8 MB",
     "ATK": "70",
     "Codes": "F G H *",
-    "Description": "Crcks 3 sqrs ahd with fire",
+    "Description": "Cracks 3 squares ahead with fire",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b7/BN6Chip019.png",
     "MoreDetails": "https://bit.ly/2yFqheM",
     "Alias": "FireBurn1,FireBurner1,FireBurn 1,FireBurner 1"
@@ -214,7 +214,7 @@
     "MB": "21 MB",
     "ATK": "110",
     "Codes": "S T U",
-    "Description": "Crcks 3 sqrs ahd with fire",
+    "Description": "Cracks 3 squares ahead with fire",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/21/BN6Chip020.png",
     "MoreDetails": "https://bit.ly/2yFqheM",
     "Alias": "FireBurn2,FireBurner2,FireBurn 2,FireBurner 2"
@@ -225,7 +225,7 @@
     "MB": "34 MB",
     "ATK": "150",
     "Codes": "C D E",
-    "Description": "Crcks 3 sqrs ahd with fire",
+    "Description": "Cracks 3 squares ahead with fire",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/c1/BN6Chip021.png",
     "MoreDetails": "https://bit.ly/2yFqheM",
     "Alias": "FireBurn3,FireBurner3,FireBurn 3,FireBurner 3"
@@ -236,7 +236,7 @@
     "MB": "34 MB",
     "ATK": "100",
     "Codes": "P Q R",
-    "Description": "Fires 3sq shotgun blast!",
+    "Description": "Shoot 3 square wide blast!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/ee/BN6Chip022.png",
     "MoreDetails": "https://bit.ly/2MLBJOb",
     "Alias": "WideShoot,Wide Shot,Wide Shoot,WideShot"
@@ -247,7 +247,7 @@
     "MB": "30 MB",
     "ATK": "30",
     "Codes": "A F K",
-    "Description": "Hits enmy w/ arrow use dstnc",
+    "Description": "Shoot arrows at enemy. Use distance for more arrows!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/d/d1/BN6Chip023.png",
     "MoreDetails": "https://bit.ly/2Dpy6Id",
     "Alias": "TrainArrow1,TurnArrow1,TrainArrow 1,TrnArrw 1"
@@ -258,7 +258,7 @@
     "MB": "36 MB",
     "ATK": "40",
     "Codes": "G M Z",
-    "Description": "Hits enmy w/ arrow. Use dstnc",
+    "Description": "Shoot arrows at enemy. Use distance for more arrows!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/31/BN6Chip024.png",
     "MoreDetails": "https://bit.ly/2Dpy6Id",
     "Alias": "TrainArrow2,TurnArrow2,TrainArrow 2,TrnArrw 2"
@@ -269,7 +269,7 @@
     "MB": "42 MB",
     "ATK": "50",
     "Codes": "M S Y",
-    "Description": "Hits enmy w/arrow. Use dstnc",
+    "Description": "Shoot arrows at enemy. Use distance for more arrows!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/c/c5/BN6Chip025.png",
     "MoreDetails": "https://bit.ly/2Dpy6Id",
     "Alias": "TrainArrow3,TurnArrow3,TrainArrow 3,TrnArrw 3"
@@ -313,7 +313,7 @@
     "MB": "7 MB",
     "ATK": "40",
     "Codes": "B R S *",
-    "Description": "Pralyzing electric attack!",
+    "Description": "Paralyzing electric attack!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f5/BN6Chip029.png",
     "MoreDetails": "https://bit.ly/2KjDBMH",
     "Alias": "Billy,ThunderBall,BugDudThunder"
@@ -324,7 +324,7 @@
     "MB": "24 MB",
     "ATK": "120",
     "Codes": "A E Q",
-    "Description": "A piercng thunder attack!",
+    "Description": "A piercing thunder attack!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/d/de/BN6Chip030.png",
     "MoreDetails": "https://bit.ly/338cATA",
     "Alias": "DolThunder1,Thunder1,Thunder 1"
@@ -335,7 +335,7 @@
     "MB": "31 MB",
     "ATK": "150",
     "Codes": "C L P",
-    "Description": "A piercng thunder attack!",
+    "Description": "A piercing thunder attack!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/6/6d/BN6Chip031.png",
     "MoreDetails": "https://bit.ly/338cATA",
     "Alias": "DolThunder2,Thunder2,Thunder 2"
@@ -346,7 +346,7 @@
     "MB": "38 MB",
     "ATK": "180",
     "Codes": "B R V",
-    "Description": "A piercng thunder attack!",
+    "Description": "A piercing thunder attack!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/5/5f/BN6Chip032.png",
     "MoreDetails": "https://bit.ly/338cATA",
     "Alias": "DolThunder3,Thunder3,Thunder 3"
@@ -357,7 +357,7 @@
     "MB": "32 MB",
     "ATK": "100",
     "Codes": "J L S",
-    "Description": "Sprd elec puls that paralyzes",
+    "Description": "Spread elec pulse that paralyzes",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/6/6d/BN6Chip033.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
     "Alias": "ElecPulse1,ElecPuls1,ElcPulse1,Pulse1,Puls1,ElcPuls 1,ElecPulse 1"
@@ -368,7 +368,7 @@
     "MB": "36 MB",
     "ATK": "120",
     "Codes": "A E J",
-    "Description": "Sprd elec pulse. Pul enemy in.",
+    "Description": "Spread elec pulse. Pulls enemy in.",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bc/BN6Chip034.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
     "Alias": "ElecPulse2,ElecPuls2,ElcPulse2,Pulse2,Puls2,ElcPuls 2,ElecPulse 2"
@@ -379,7 +379,7 @@
     "MB": "40 MB",
     "ATK": "140",
     "Codes": "A J S",
-    "Description": "Sprd elec puls. Hit w/HP bug.",
+    "Description": "Spread elec pulse. Gives enemy HP bug.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/13/BN6Chip035.png",
     "MoreDetails": "https://bit.ly/2Du6q53",
     "Alias": "ElecPulse3,ElecPuls3,ElcPulse3,Pulse3,Puls3,ElcPuls 3,ElecPulse 3"
@@ -390,7 +390,7 @@
     "MB": "14 MB",
     "ATK": "50",
     "Codes": "J K L",
-    "Description": "Damages enemies w/corn",
+    "Description": "Damages enemies with corn 3 times",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a9/BN6Chip036.png",
     "MoreDetails": "https://bit.ly/2W30Az2",
     "Alias": "CornShot1,CornShot 1,Cob1,Corn1"
@@ -401,7 +401,7 @@
     "MB": "26 MB",
     "ATK": "60",
     "Codes": "C D E",
-    "Description": "Damages enemies w/corn",
+    "Description": "Damages enemies with corn 3 times",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0d/BN6Chip037.png",
     "MoreDetails": "https://bit.ly/2W30Az2",
     "Alias": "CornShot2,CornShot 2,Cob2,Corn2"
@@ -412,7 +412,7 @@
     "MB": "38 MB",
     "ATK": "70",
     "Codes": "P Q R",
-    "Description": "Damages enemies w/corn",
+    "Description": "Damages enemies with corn 3 times",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/53/BN6Chip038.png",
     "MoreDetails": "https://bit.ly/2W30Az2",
     "Alias": "CornShot3,CornShot 3,Cob3,Corn3"
@@ -423,7 +423,7 @@
     "MB": "21 MB",
     "ATK": "10",
     "Codes": "B G S",
-    "Description": "Bees attk whle hive defending.",
+    "Description": "Bees attack while hive defends. Block attacks for more bees!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c3/BN6Chip039.png",
     "MoreDetails": "https://bit.ly/2IvIEr2",
     "Alias": "RiskyHoney1,RskyHoney1,Bee1,Bees1"
@@ -434,7 +434,7 @@
     "MB": "28 MB",
     "ATK": "15",
     "Codes": "C R V",
-    "Description": "Bees attk whle hive defending",
+    "Description": "Bees attack while hive defends. Block attacks for more bees!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/4/49/BN6Chip040.png",
     "MoreDetails": "https://bit.ly/2IvIEr2",
     "Alias": "RiskyHoney2,RskyHoney2,Bee2,Bees2"
@@ -445,7 +445,7 @@
     "MB": "35 MB",
     "ATK": "20",
     "Codes": "A D M",
-    "Description": "Bees attk whle hive defending",
+    "Description": "Bees attack while hive defends. Block attacks for more bees!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e3/BN6Chip041.png",
     "MoreDetails": "https://bit.ly/2IvIEr2",
     "Alias": "RiskyHoney3,RskyHoney3,Bee3,Bees3"
@@ -456,7 +456,7 @@
     "MB": "14 MB",
     "ATK": "50",
     "Codes": "I K P",
-    "Description": "Send out 2 logs 2pnl fwd",
+    "Description": "Send out 2 logs 2 panel forward",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/39/BN6Chip042.png",
     "MoreDetails": "https://bit.ly/31T62rm",
     "Alias": "RollingLog1,RollLog1,RollLog 1,RollingLog 1"
@@ -467,7 +467,7 @@
     "MB": "26 MB",
     "ATK": "70",
     "Codes": "E Q Z",
-    "Description": "Send out 2 logs 2pnl fwd",
+    "Description": "Send out 2 logs 2 panel forward",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f1/BN6Chip043.png",
     "MoreDetails": "https://bit.ly/31T62rm",
     "Alias": "RollingLog2,RollLog2,RollLog 2,RollingLog 2"
@@ -478,7 +478,7 @@
     "MB": "35 MB",
     "ATK": "90",
     "Codes": "F N W",
-    "Description": "Send out 2 logs 2pnl fwd",
+    "Description": "Send out 2 logs 2 panel forward",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/17/BN6Chip044.png",
     "MoreDetails": "https://bit.ly/31T62rm",
     "Alias": "RollingLog3,RollLog3,RollLog 3,RollingLog 3"
@@ -522,7 +522,7 @@
     "MB": "25 MB",
     "ATK": "130",
     "Codes": "B C D",
-    "Description": "A flying head with 2spc tail",
+    "Description": "Shoots a flying head 3 space forward. Power up with Barriers/Auras!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/d/d2/BN6Chip048.png",
     "MoreDetails": "https://bit.ly/30ewUQQ",
     "Alias": "AuraHead1,AuraHead 1"
@@ -533,7 +533,7 @@
     "MB": "33 MB",
     "ATK": "150",
     "Codes": "D E F",
-    "Description": "A flying head with 2spc tail",
+    "Description": "Shoots a flying head 3 space forward. Power up with Barriers/Auras!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/ce/BN6Chip049.png",
     "MoreDetails": "https://bit.ly/30ewUQQ",
     "Alias": "AuraHead2,AuraHead 2"
@@ -544,7 +544,7 @@
     "MB": "39 MB",
     "ATK": "170",
     "Codes": "F G H",
-    "Description": "A flying head with 2spc tail",
+    "Description": "Shoots a flying head 3 space forward. Power up with Barriers/Auras!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/5/54/BN6Chip050.png",
     "MoreDetails": "https://bit.ly/30ewUQQ",
     "Alias": "AuraHead3,AuraHead 3"
@@ -566,7 +566,7 @@
     "MB": "32 MB",
     "ATK": "70",
     "Codes": "G M W",
-    "Description": "Knocks enmy 2sq away",
+    "Description": "Drill pushes enemy 2 squares away",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/7/7d/BN6Chip052.png",
     "MoreDetails": "https://bit.ly/2JkHpwE",
     "Alias": "DrillArm"
@@ -577,7 +577,7 @@
     "MB": "16 MB",
     "ATK": "20",
     "Codes": "L R T",
-    "Description": "8hit strm 2 squares ahead",
+    "Description": "8 hit storm 2 squares ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/3/34/BN6Chip053.png",
     "MoreDetails": "https://bit.ly/2XOLMYW",
     "Alias": "Cornado"
@@ -588,7 +588,7 @@
     "MB": "30 MB",
     "ATK": "20",
     "Codes": "G S V",
-    "Description": "A static blast 2sq ahead",
+    "Description": "A static blast 2 squares ahead. Power up with bugs!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2d/BN6Chip054.png",
     "MoreDetails": "https://bit.ly/30ifz9Q",
     "Alias": "ksshhhh"
@@ -599,7 +599,7 @@
     "MB": "12 MB",
     "ATK": "30",
     "Codes": "A R T *",
-    "Description": "Fire 9sts at row w/clst enmy",
+    "Description": "Fire 9 shots up and down the row. Follows the enemy!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/10/BN6Chip055.png",
     "MoreDetails": "https://bit.ly/30fLFmH",
     "Alias": "MachineGun1,MachineGun 1,MachGun 1"
@@ -610,7 +610,7 @@
     "MB": "24 MB",
     "ATK": "50",
     "Codes": "E G S",
-    "Description": "Fire 9sts at row w/clst enmy",
+    "Description": "Fire 9 shots up and down the row. Follows the enemy!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/1e/BN6Chip056.png",
     "MoreDetails": "https://bit.ly/30fLFmH",
     "Alias": "MachineGun2,MachineGun 2,MachGun 2"
@@ -621,7 +621,7 @@
     "MB": "36 MB",
     "ATK": "70",
     "Codes": "B F M",
-    "Description": "Fire 9sts at row w/clst enmy",
+    "Description": "Fire 9 shots up and down the row. Follows the enemy!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a1/BN6Chip057.png",
     "MoreDetails": "https://bit.ly/30fLFmH",
     "Alias": "MachineGun3,MachineGun 3,MachGun 3"
@@ -632,7 +632,7 @@
     "MB": "6 MB",
     "ATK": "50",
     "Codes": "B L R *",
-    "Description": "Throws a MiniBomb 3sq ahead",
+    "Description": "Throws a MiniBomb 3 squares ahead",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/1/12/BN6Chip058.png",
     "MoreDetails": "https://bit.ly/2S0wbzW",
     "Alias": "Mini Bomb"
@@ -643,7 +643,7 @@
     "MB": "32 MB",
     "ATK": "140",
     "Codes": "O P V",
-    "Description": "Throws a 9 panl bomb 3panl fwd",
+    "Description": "Throws a 9 panel bomb 3 panels forwards",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/e/e7/BN6Chip059.png",
     "MoreDetails": "https://bit.ly/2S0wbzW",
     "Alias": "Big Bomb"
@@ -654,7 +654,7 @@
     "MB": "11 MB",
     "ATK": "40",
     "Codes": "C K V *",
-    "Description": "Throws a bomb 3sq ahead",
+    "Description": "Throws a 3 hit bomb 3 squares ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/57/BN6Chip060.png",
     "MoreDetails": "https://bit.ly/2xzd6vp",
     "Alias": "EnergyBomb,Energy Bomb,EnergBomb"
@@ -665,7 +665,7 @@
     "MB": "27 MB",
     "ATK": "60",
     "Codes": "G M O *",
-    "Description": "Throws a bomb 3sq ahead",
+    "Description": "Throws a 3 hit bomb 3 squares ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/9/96/BN6Chip061.png",
     "MoreDetails": "https://bit.ly/2xzd6vp",
     "Alias": "MegaEnergyBomb,MegEnergyBomb,Mega Energy Bomb,Mega EnergyBomb"
@@ -676,7 +676,7 @@
     "MB": "30 MB",
     "ATK": "40",
     "Codes": "J Q L *",
-    "Description": "Thrw dlyd stun bomb 3sq fwd",
+    "Description": "Throw delayed stun bomb 3 squares forward",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/7/78/BN6Chip062.png",
     "MoreDetails": "https://bit.ly/2L9dk5g",
     "Alias": "FlashBomb1,FlashBom1,FlashBom 1,FlashBomb 1"
@@ -687,7 +687,7 @@
     "MB": "30 MB",
     "ATK": "70",
     "Codes": "G K R",
-    "Description": "Thrw dlyd stun bomb 3sq fwd",
+    "Description": "Throw delayed stun bomb 3 squares forward",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/e/eb/BN6Chip063.png",
     "MoreDetails": "https://bit.ly/2L9dk5g",
     "Alias": "FlashBomb2,FlashBom2,FlashBom 2,FlashBomb 2"
@@ -698,7 +698,7 @@
     "MB": "38 MB",
     "ATK": "100",
     "Codes": "H P S",
-    "Description": "Thrw dlyd stun bomb 3sq fwd",
+    "Description": "Throw delayed stun bomb 3 squares forward. Also blinds the enemy!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/8a/BN6Chip064.png",
     "MoreDetails": "https://bit.ly/2L9dk5g",
     "Alias": "FlashBomb3, FlashBom3,FlashBom 3,FlashBomb 3"
@@ -709,7 +709,7 @@
     "MB": "32 MB",
     "ATK": "250",
     "Codes": "B F O",
-    "Description": "Thrw shel 3sqr fwd. Fire attk",
+    "Description": "Throw bomb 3 square forward. Hit with Fire to explode!",
     "Image": "https://vignette.wikia.nocookie.net/megaman/images/f/fc/BN6Chip065.png",
     "MoreDetails": "https://bit.ly/2XBDww8",
     "Alias": "BlackBomb,Black Bomb"
@@ -718,9 +718,9 @@
     "Name": "BugBomb",
     "Element": "Null",
     "MB": "24 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "G S V",
-    "Description": "Throws a BugBomb 3sq ahead",
+    "Description": "Throws a BugBomb 3 squares ahead. Gives enemy bugs!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/9/9c/BN6Chip066.png",
     "MoreDetails": "https://bit.ly/2XykeHR",
     "Alias": "Bug Bomb"
@@ -729,9 +729,9 @@
     "Name": "GrasSeed",
     "Element": "Wood",
     "MB": "19 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "A F S *",
-    "Description": "Makes 9sq meadow 3sq ahead",
+    "Description": "Seed makes 9 Grass panels 3 squares ahead",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bf/BN6Chip067.png",
     "MoreDetails": "https://bit.ly/32lJZtJ",
     "Alias": "GrassSeed,Grass Seed"
@@ -740,9 +740,9 @@
     "Name": "IceSeed",
     "Element": "Aqua",
     "MB": "31 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "A L R *",
-    "Description": "Makes 9sq ice field 3sq ahead",
+    "Description": "Seed makes 9 Ice panels 3 squares ahead",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/6/65/BN6Chip068.png",
     "MoreDetails": "https://bit.ly/32lJZtJ",
     "Alias": "Ice Seed"
@@ -751,9 +751,9 @@
     "Name": "PoisSeed",
     "Element": "None",
     "MB": "37 MB",
-    "ATK": "0",
+    "ATK": "--",
     "Codes": "H N P *",
-    "Description": "Makes 9sq poisn swp 3sq ahead",
+    "Description": "Seed makes 9 Poison panels 3 squares ahead",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/81/BN6Chip069.png",
     "MoreDetails": "https://bit.ly/32lJZtJ",
     "Alias": "PoisonSeed,Poison Seed"
@@ -764,7 +764,7 @@
     "MB": "8 MB",
     "ATK": "80",
     "Codes": "H L S *",
-    "Description": "Cuts enmy in front! Range: 1",
+    "Description": "Cuts enemy in front! Range: 1",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/7/70/BN6Chip070.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
     "Alias": "CyberSword,Swrd"
@@ -775,7 +775,7 @@
     "MB": "12 MB",
     "ATK": "80",
     "Codes": "H L S *",
-    "Description": "Cuts enmy in front! Range: 3",
+    "Description": "Cuts enemy in front! Range: 3",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a6/BN6Chip071.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
     "Alias": "WideSword,wide sword"
@@ -786,7 +786,7 @@
     "MB": "25 MB",
     "ATK": "100",
     "Codes": "H L S *",
-    "Description": "Cuts enmy in front! Range: 2",
+    "Description": "Cuts enemy in front! Range: 2",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/60/BN6Chip072.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
     "Alias": "LongSword,long sword"
@@ -797,7 +797,7 @@
     "MB": "38 MB",
     "ATK": "150",
     "Codes": "B R W",
-    "Description": "Cuts enmy in front! Range: 3",
+    "Description": "Cuts enemy in front! Range: 3",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/13/BN6Chip073.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
     "Alias": "WideBlade,wide blade"
@@ -808,7 +808,7 @@
     "MB": "38 MB",
     "ATK": "150",
     "Codes": "B M V",
-    "Description": "Cuts enmy in front! Range: 2",
+    "Description": "Cuts enemy in front! Range: 2",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/3/37/BN6Chip074.png",
     "MoreDetails": "https://bit.ly/2OHu6uQ",
     "Alias": "LongBlade,long blade"
@@ -819,7 +819,7 @@
     "MB": "30 MB",
     "ATK": "140",
     "Codes": "F O Z",
-    "Description": "Cut enmy 3sq fwrd w/fire",
+    "Description": "Cut enemy in front with Fire! Range: 3",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bd/BN6Chip075.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
     "Alias": "FireSword,Fire Sword"
@@ -830,7 +830,7 @@
     "MB": "32 MB",
     "ATK": "160",
     "Codes": "A I Y",
-    "Description": "Cut enmy 3sq fwrd w/aqua",
+    "Description": "Cut enemy in front with Aqua! Range: 3",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/3/32/BN6Chip076.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
     "Alias": "AquaSword,Aqua Sword"
@@ -841,7 +841,7 @@
     "MB": "32 MB",
     "ATK": "120",
     "Codes": "E K N",
-    "Description": "Cut enmy 3sq fwrd w/elec",
+    "Description": "Cut enemy in front with Elec! Range: 3",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/4/44/BN6Chip077.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
     "Alias": "ElecSword,Elec Sword"
@@ -852,7 +852,7 @@
     "MB": "34 MB",
     "ATK": "150",
     "Codes": "H S W",
-    "Description": "Cut enmy 3sq fwrd w/wood",
+    "Description": "Cut enemy in front with Wood! Range: 3",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/d/d7/BN6Chip078.png",
     "MoreDetails": "https://bit.ly/2GQRfoi",
     "Alias": "BambooSword,BambSword,Bamb Sword,Bamboo Sword,WoodSword,WoodSwrd"
@@ -863,7 +863,7 @@
     "MB": "10 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "Windbox blows at enmy area",
+    "Description": "Windbox blows enemy away",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/12/BN6Chip134.png",
     "MoreDetails": "https://bit.ly/2MJknSf",
     "Alias": "WindBox"
@@ -874,7 +874,7 @@
     "MB": "19 MB",
     "ATK": "140",
     "Codes": "F J R *",
-    "Description": "Blow enmy in front! Range: 3",
+    "Description": "Hit enemy in front with pushing rack! Range: 3",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/11/BN6Chip079.png",
     "MoreDetails": "https://bit.ly/2KmSIoF",
     "Alias": "WindRacket"
@@ -885,7 +885,7 @@
     "MB": "28 MB",
     "ATK": "160",
     "Codes": "B L P",
-    "Description": "Use WideSwrd 2sq ahead",
+    "Description": "Jump 2 squares ahead and use WideSwrd",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/b/b5/BN6Chip080.png",
     "MoreDetails": "https://bit.ly/2YN8e0E",
     "Alias": "StepSword,Step Sword"
@@ -896,7 +896,7 @@
     "MB": "28 MB",
     "ATK": "160",
     "Codes": "K V W",
-    "Description": "A magical shifting sword.",
+    "Description": "Hold A and input commands to change the sword!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/3/37/BN6Chip081.png",
     "MoreDetails": "https://bit.ly/2T8hP0Q",
     "Alias": "VarSword,VariableSword,Var"
@@ -907,7 +907,7 @@
     "MB": "52 MB",
     "ATK": "220",
     "Codes": "N",
-    "Description": "A magical shifting sword.",
+    "Description": "Hold A and input commands to change the sword!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/d/de/BN6Chip082.png",
     "MoreDetails": "https://bit.ly/2YQCtba",
     "Alias": "NeoVariable,NeoVariSword,NeoVariableSword,NeoVar"
@@ -918,7 +918,7 @@
     "MB": "35 MB",
     "ATK": "130",
     "Codes": "A M T",
-    "Description": "Slices enemies around",
+    "Description": "Slices enemies around you and gives HP bug",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/d/de/BN6Chip083.png",
     "MoreDetails": "https://bit.ly/2MLUmBB",
     "Alias": "MoonBlade"
@@ -929,7 +929,7 @@
     "MB": "77 MB",
     "ATK": "????",
     "Codes": "M",
-    "Description": "Atk power equals amt of lostHP",
+    "Description": "Attack power equals amount of lost HP. Max: 500",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bf/BN6Chip084.png",
     "MoreDetails": "https://bit.ly/2YGBdYg",
     "Alias": "no u"
@@ -951,7 +951,7 @@
     "MB": "43 MB",
     "ATK": "220",
     "Codes": "J M U",
-    "Description": "Cuts enemy on grass, ice, or volcano panels",
+    "Description": "Cuts enemy on Grass, Ice, or Volcano panels",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f2/BN6Chip086.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
     "Alias": "ElementSword,ElementalSword,ElemSword,Elem Sword"
@@ -962,7 +962,7 @@
     "MB": "50 MB",
     "ATK": "240",
     "Codes": "N R Y",
-    "Description": "Cuts paralyzed enemy or enemy on grass, ice, or volcano panels",
+    "Description": "Cuts paralyzed enemy or enemy on Grass, Ice, or Volcano panels",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/59/BN6Chip087.png",
     "MoreDetails": "https://bit.ly/2YN9gK4",
     "Alias": "AssassinSword,AssSword,AssnSword"
@@ -1006,7 +1006,7 @@
     "MB": "7 MB",
     "ATK": "60",
     "Codes": "A C P *",
-    "Description": "Bounce an attk back at them!",
+    "Description": "Bounce an attack back at them!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/0/01/BN6Chip091.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
     "Alias": "Reflector1,Reflect1,Reflect 1,Reflector 1"
@@ -1017,7 +1017,7 @@
     "MB": "16 MB",
     "ATK": "120",
     "Codes": "B G Y *",
-    "Description": "Bounce an attk back at them!",
+    "Description": "Bounce an attack back at them!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/c/c0/BN6Chip092.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
     "Alias": "Reflector2,Reflect2,Reflect 2,Reflector 2"
@@ -1028,7 +1028,7 @@
     "MB": "25 MB",
     "ATK": "200",
     "Codes": "E F O *",
-    "Description": "Bounce an attk back at them!",
+    "Description": "Bounce an attack back at them!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/d/d9/BN6Chip093.png",
     "MoreDetails": "https://bit.ly/2YVijgx",
     "Alias": "Reflector3,Reflect3,Reflect 3,Reflector 3"
@@ -1039,7 +1039,7 @@
     "MB": "15 MB",
     "ATK": "80",
     "Codes": "E F G",
-    "Description": "Fllw enemy and fire trap wave",
+    "Description": "Fires shockwave that follows the enemy",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/2f/BN6Chip094.png",
     "MoreDetails": "https://bit.ly/2TblkE8",
     "Alias": "WaveArm 1"
@@ -1050,7 +1050,7 @@
     "MB": "22 MB",
     "ATK": "120",
     "Codes": "L M N",
-    "Description": "llw enemy and fire trap wave",
+    "Description": "Fires shockwave that follows the enemy",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/20/BN6Chip095.png",
     "MoreDetails": "https://bit.ly/2TblkE8",
     "Alias": "WaveArm 2"
@@ -1061,7 +1061,7 @@
     "MB": "29 MB",
     "ATK": "160",
     "Codes": "R S T",
-    "Description": "Fllw enemy and fire trap wave",
+    "Description": "Fires shockwave that follows the enemy",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/a/a9/BN6Chip096.png",
     "MoreDetails": "https://bit.ly/2TblkE8",
     "Alias": "WaveArm 3"
@@ -1072,7 +1072,7 @@
     "MB": "30 MB",
     "ATK": "130",
     "Codes": "A G L",
-    "Description": "Attk enmy from rear w/snakarm",
+    "Description": "Attack enemy from behind with SnakeArm",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a8/BN6Chip097.png",
     "MoreDetails": "https://bit.ly/2OEPnoX",
     "Alias": "SandWorm1,SandWorm 1"
@@ -1083,7 +1083,7 @@
     "MB": "34 MB",
     "ATK": "150",
     "Codes": "B R Y",
-    "Description": "Attk enmy from rear w/snakearm",
+    "Description": "Attack enemy from behind with SnakeArm",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/2/2c/BN6Chip098.png",
     "MoreDetails": "https://bit.ly/2OEPnoX",
     "Alias": "SandWorm2,SandWorm 2"
@@ -1094,7 +1094,7 @@
     "MB": "38 MB",
     "ATK": "170",
     "Codes": "H J S",
-    "Description": "Attk enmy from rear w/snakearm",
+    "Description": "Attack enemy from behind with SnakeArm",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/f2/BN6Chip099.png",
     "MoreDetails": "https://bit.ly/2OEPnoX",
     "Alias": "SandWorm3,SandWorm 3"
@@ -1105,7 +1105,7 @@
     "MB": "30 MB",
     "ATK": "160",
     "Codes": "E I P",
-    "Description": "Summon a Nghtmare attack!",
+    "Description": "Summon a Nightmare attack from over a hole!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/82/BN6Chip100.png",
     "MoreDetails": "https://bit.ly/2ZCUtmJ",
     "Alias": "SummonBlack1,SummnBlack1,SummonBlk1,SumnBlk 1,SummonBlack 1"
@@ -1116,7 +1116,7 @@
     "MB": "40 MB",
     "ATK": "200",
     "Codes": "H O V",
-    "Description": "Summon a Nghtmare attack!",
+    "Description": "Summon a Nightmare attack from over a hole!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/28/BN6Chip101.png",
     "MoreDetails": "https://bit.ly/2ZCUtmJ",
     "Alias": "SummonBlack2,SummnBlack2,SummonBlk2,SumnBlk 2,SummonBlack 2"
@@ -1127,7 +1127,7 @@
     "MB": "46 MB",
     "ATK": "260",
     "Codes": "W Y Z",
-    "Description": "Summon a Nghtmare attack!",
+    "Description": "Summon a Nightmare attack from over a hole!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a6/BN6Chip102.png",
     "MoreDetails": "https://bit.ly/2ZCUtmJ",
     "Alias": "SummonBlack3,SummnBlack3,SummonBlk3,SumnBlk 3,SummonBlack 3"
@@ -1138,7 +1138,7 @@
     "MB": "34 MB",
     "ATK": "30",
     "Codes": "H L M",
-    "Description": "Call snke from hole in area.",
+    "Description": "Call snakes from holes in your area.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/84/BN6Chip103.png",
     "MoreDetails": "https://bit.ly/2KoGoTi",
     "Alias": "snek,snack"
@@ -1149,7 +1149,7 @@
     "MB": "69 MB",
     "ATK": "????",
     "Codes": "N",
-    "Description": "Last 2 HP digits = atk pwr",
+    "Description": "Last 2 HP digits = attack power",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/3/31/BN6Chip104.png",
     "MoreDetails": "https://bit.ly/2TaOzqD",
     "Alias": "NumbrBall,NumberBall,NumberBlade,NumberBl,NumberBlumber"
@@ -1193,7 +1193,7 @@
     "MB": "24 MB",
     "ATK": "100",
     "Codes": "H P V",
-    "Description": "Press A to burn a 4pnl sqr",
+    "Description": "Press A to burn a 4 panel square",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/a/a7/BN6Chip108.png",
     "MoreDetails": "https://bit.ly/33bg87L",
     "Alias": "BurnSquare1,BurnSqr 1,BurnSquare 1,BurnerSquare1,BurnerSquare 1"
@@ -1204,7 +1204,7 @@
     "MB": "30 MB",
     "ATK": "120",
     "Codes": "D M T",
-    "Description": "Press A to burn a 4pnl sqr",
+    "Description": "Press A to burn a 4 panel square",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/b/bb/BN6Chip109.png",
     "MoreDetails": "https://bit.ly/33bg87L",
     "Alias": "BurnSquare2,BurnSqr 2,BurnSquare 2,BurnerSquare2,BurnerSquare 2"
@@ -1215,7 +1215,7 @@
     "MB": "36 MB",
     "ATK": "140",
     "Codes": "E O Z",
-    "Description": "Press A to burn a 4pnl sqr",
+    "Description": "Press A to burn a 4 panel square",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/bf/BN6Chip110.png",
     "MoreDetails": "https://bit.ly/33bg87L",
     "Alias": "BurnSquare3,BurnSqr 3,BurnSquare 3,BurnerSquare3,BurnerSquare 3"
@@ -1226,7 +1226,7 @@
     "MB": "73 MB",
     "ATK": "40",
     "Codes": "R",
-    "Description": "Drop many meteor on enmy area",
+    "Description": "Drop 30 meteors on the enemy's area",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/f/fe/BN6Chip111.png",
     "MoreDetails": "https://bit.ly/2MJJgwP",
     "Alias": "ShotStar,ShootingStar,Meteor,Meter"
@@ -1270,7 +1270,7 @@
     "MB": "39 MB",
     "ATK": "150",
     "Codes": "H N T",
-    "Description": "Launch a giant snowball",
+    "Description": "Launch a giant snowball. Gets bigger with objects!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/c0/BN6Chip115.png",
     "MoreDetails": "https://bit.ly/338yDtk",
     "Alias": "BlizzardBal,BlzrdBall,BlizzardBall,BlizBall,BlizzBall"
@@ -1281,7 +1281,7 @@
     "MB": "32 MB",
     "ATK": "100",
     "Codes": "J O W",
-    "Description": "Hit enmy with beam from snsr",
+    "Description": "Hit enemy with beam from sensor",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/f1/BN6Chip116.png",
     "MoreDetails": "https://bit.ly/33dnGqu",
     "Alias": "Killereye1,Killereye,Sensor 1"
@@ -1292,7 +1292,7 @@
     "MB": "35 MB",
     "ATK": "130",
     "Codes": "N U Y",
-    "Description": "Hit enmy with beam from snsr",
+    "Description": "Hit enemy with beam from sensor",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/0/0d/BN6Chip117.png",
     "MoreDetails": "https://bit.ly/33dnGqu",
     "Alias": "Killereye2,DemonEye,Sensor 2"
@@ -1303,7 +1303,7 @@
     "MB": "38 MB",
     "ATK": "160",
     "Codes": "I K Q",
-    "Description": "Hit enmy with beam from snsr",
+    "Description": "Hit enemy with beam from sensor",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/ab/BN6Chip118.png",
     "MoreDetails": "https://bit.ly/33dnGqu",
     "Alias": "Killereye3,Jokereye,Sensor 3"
@@ -1402,7 +1402,7 @@
     "MB": "17 MB",
     "ATK": "140",
     "Codes": "I K Y",
-    "Description": "Hit 3pnl wide in closest enemy area",
+    "Description": "Hit 3 panel wide in closest enemy area",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/5/51/BN6Chip127.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
     "Alias": "GolemHit1,GolmHit 1,GolemHit 1"
@@ -1413,7 +1413,7 @@
     "MB": "27 MB",
     "ATK": "190",
     "Codes": "D P U",
-    "Description": "Hit 3pnl wide in closest enemy area",
+    "Description": "Hit 3 panel wide in closest enemy area",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/33/BN6Chip128.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
     "Alias": "GolemHit2,GolmHit 2,GolemHit 2"
@@ -1424,7 +1424,7 @@
     "MB": "37 MB",
     "ATK": "250",
     "Codes": "H M V",
-    "Description": "Hit 3pnl wide in closest enemy area",
+    "Description": "Hit 3 panel wide in closest enemy area",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/3/3c/BN6Chip129.png",
     "MoreDetails": "https://bit.ly/2M4GvqC",
     "Alias": "GolemHit3,GolmHit 3,GolemHit 3"
@@ -1435,7 +1435,7 @@
     "MB": "90 MB",
     "ATK": "220",
     "Codes": "J",
-    "Description": "Fist Atk on center panel",
+    "Description": "Fist of justice hits center panel",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/ff/BN6Chip130.png",
     "MoreDetails": "https://bit.ly/2MHvknh",
     "Alias": "JusticeOne,JusticeCone,JustOne,Justice"
@@ -1446,7 +1446,7 @@
     "MB": "22 MB",
     "ATK": "50",
     "Codes": "F G R",
-    "Description": "Spits out hurricane attack",
+    "Description": "Spits out hurricane attack. Hit with Wind attack to spin more!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/7/74/BN6Chip131.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
     "Alias": "AirWheel1,AirSpin 1,AirWheel 1"
@@ -1457,7 +1457,7 @@
     "MB": "29 MB",
     "ATK": "50",
     "Codes": "A L T",
-    "Description": "Spits out hurricane attack",
+    "Description": "Spits out hurricane attack. Hit with Wind attack to spin more!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/3/32/BN6Chip132.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
     "Alias": "AirWheel2,AirSpin 2,AirWheel 2"
@@ -1468,7 +1468,7 @@
     "MB": "36 MB",
     "ATK": "50",
     "Codes": "N O T",
-    "Description": "Spits out hurricane attack",
+    "Description": "Spits out hurricane attack. Hit with Wind attack to spin more!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/2/24/BN6Chip133.png",
     "MoreDetails": "https://bit.ly/2YqoLwt",
     "Alias": "AirWheel3,AirSpin 3,AirWheel 3"
@@ -1479,7 +1479,7 @@
     "MB": "10 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "VacuumFn pulls enemy in",
+    "Description": "Vacuum fan pulls enemy in",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/d/df/BN6Chip135.png",
     "MoreDetails": "https://bit.ly/2MJknSf",
     "Alias": "FanBox"
@@ -1501,7 +1501,7 @@
     "MB": "35 MB",
     "ATK": "150",
     "Codes": "P T V",
-    "Description": "Stop sght w/Button and attck",
+    "Description": "Stop sight with A button and attack",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/9f/BN6Chip137.png",
     "MoreDetails": "https://bit.ly/2YpwCKG",
     "Alias": "CircleGun,CircularGun"
@@ -1523,7 +1523,7 @@
     "MB": "18 MB",
     "ATK": "100",
     "Codes": "F K L",
-    "Description": "3pnl fwd Kttl attk Attack+",
+    "Description": "Throw kettle 3 panels forward. Hit it to power it up!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c9/BN6Chip139.png",
     "MoreDetails": "http://bit.ly/2TalDio",
     "Alias": "LilBoiler1,LittleBoiler1,LilBoiler 1"
@@ -1534,7 +1534,7 @@
     "MB": "23 MB",
     "ATK": "140",
     "Codes": "E M V",
-    "Description": "3pnl fwd Kttl attk Attack+",
+    "Description": "Throw kettle 3 panels forward. Hit it to power it up!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/f5/BN6Chip140.png",
     "MoreDetails": "http://bit.ly/2TalDio",
     "Alias": "LilBoiler2,LittleBoiler2,LilBoiler 2"
@@ -1545,7 +1545,7 @@
     "MB": "28 MB",
     "ATK": "180",
     "Codes": "G S Z",
-    "Description": "3pnl fwd Kttl attk Attack+",
+    "Description": "Throw kettle 3 panels forward. Hit it to power it up!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/19/BN6Chip141.png",
     "MoreDetails": "http://bit.ly/2TalDio",
     "Alias": "LilBoiler3,LittleBoiler3,LilBoiler 3"
@@ -1556,7 +1556,7 @@
     "MB": "26 MB",
     "ATK": "10",
     "Codes": "G K R",
-    "Description": "Attk enmy w/flying FgtrPlne.",
+    "Description": "FighterPlane shoots enemy many times",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/0d/BN6Chip142.png",
     "MoreDetails": "http://bit.ly/2GLwMBh",
     "Alias": "AirRaid 1"
@@ -1567,7 +1567,7 @@
     "MB": "32 MB",
     "ATK": "10",
     "Codes": "O T Y",
-    "Description": "Attk enmy w/flying FgtrPlne.",
+    "Description": "FighterPlane shoots enemy many times",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/57/BN6Chip143.png",
     "MoreDetails": "http://bit.ly/2GLwMBh",
     "Alias": "AirRaid 2"
@@ -1578,7 +1578,7 @@
     "MB": "39 MB",
     "ATK": "10",
     "Codes": "N U Z",
-    "Description": "Attk enmy w/flying FgtrPlne.",
+    "Description": "FighterPlane shoots enemy many times",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/5/53/BN6Chip144.png",
     "MoreDetails": "http://bit.ly/2GLwMBh",
     "Alias": "AirRaid 3"
@@ -1622,7 +1622,7 @@
     "MB": "28 MB",
     "ATK": "200",
     "Codes": "A S T",
-    "Description": "Place a mine in enmy area",
+    "Description": "Place a mine in enemy area",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e4/BN6Chip148.png",
     "MoreDetails": "http://bit.ly/2M3rXHG",
     "Alias": "Yours"
@@ -1633,7 +1633,7 @@
     "MB": "20 MB",
     "ATK": "--",
     "Codes": "P S Z *",
-    "Description": "Take no dmage for a while",
+    "Description": "Become invincible with music",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/61/BN6Chip149.png",
     "MoreDetails": "http://bit.ly/31kgffj",
     "Alias": "Trumpy"
@@ -1644,7 +1644,7 @@
     "MB": "20 MB",
     "ATK": "--",
     "Codes": "A S G *",
-    "Description": "Confuses enemies w/music",
+    "Description": "Confuses enemies with music",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/20/BN6Chip150.png",
     "MoreDetails": "http://bit.ly/31kgffj",
     "Alias": "Tuby,N1GP"
@@ -1655,7 +1655,7 @@
     "MB": "20 MB",
     "ATK": "--",
     "Codes": "I O T *",
-    "Description": "Stop enmy feet with music",
+    "Description": "Immobilize enemy with music",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/4/4f/BN6Chip151.png",
     "MoreDetails": "http://bit.ly/31kgffj",
     "Alias": "Tromby"
@@ -1666,7 +1666,7 @@
     "MB": "20 MB",
     "ATK": "--",
     "Codes": "B R W *",
-    "Description": "Blinds enemies w/music",
+    "Description": "Blinds enemies with music",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b0/BN6Chip152.png",
     "MoreDetails": "http://bit.ly/31kgffj",
     "Alias": "Muteant"
@@ -1677,7 +1677,7 @@
     "MB": "39 MB",
     "ATK": "--",
     "Codes": "F N S *",
-    "Description": "Throws VDoll 3sq ahead",
+    "Description": "Throws VDoll 3 squares ahead. Hit to damage the enemey!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/e8/BN6Chip153.png",
     "MoreDetails": "http://bit.ly/2Yv2ZaG",
     "Alias": "V-Doll,VoodooDoll,Voodoo-Doll"
@@ -1809,7 +1809,7 @@
     "MB": "8 MB",
     "ATK": "--",
     "Codes": "B F S *",
-    "Description": "Steals left edge from enmy",
+    "Description": "Steals left edge from enemy",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/7/7d/BN6Chip165.png",
     "MoreDetails": "http://bit.ly/2yJjctz",
     "Alias": "AreaSteal"
@@ -1820,7 +1820,7 @@
     "MB": "24 MB",
     "ATK": "--",
     "Codes": "B M S",
-    "Description": "20 damage for every stolen sq",
+    "Description": "20 damage for every stolen square and get back your area!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2b/BN6Chip166.png",
     "MoreDetails": "http://bit.ly/2Tb05lw",
     "Alias": "GrabBanish,GrabPunish"
@@ -1831,7 +1831,7 @@
     "MB": "50 MB",
     "ATK": "--",
     "Codes": "I Q Z",
-    "Description": "40 damage for every stolen sq",
+    "Description": "40 damage for every stolen square and get back your area!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/4/44/BN6Chip167.png",
     "MoreDetails": "http://bit.ly/2Tb05lw",
     "Alias": "GrabRevenge"
@@ -1864,7 +1864,7 @@
     "MB": "24 MB",
     "ATK": "--",
     "Codes": "A B S *",
-    "Description": "Creates a HolyPanl in front",
+    "Description": "Creates a Holy panel in front",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/f/f3/BN6Chip170.png",
     "MoreDetails": "http://bit.ly/2YLgEKe",
     "Alias": "HolyPanel"
@@ -1875,7 +1875,7 @@
     "MB": "62 MB",
     "ATK": "--",
     "Codes": "Z",
-    "Description": "Chng all own panel to holy",
+    "Description": "Change all own panel to Holy",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/83/BN6Chip171.png",
     "MoreDetails": "http://bit.ly/2YLgEKe",
     "Alias": "Sanctuary"
@@ -1941,7 +1941,7 @@
     "MB": "11 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "Power goes up by 1",
+    "Description": "Buster Attack goes up by 1. Max: 10",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/4/48/BN6Chip177.png",
     "MoreDetails": "http://bit.ly/2T9uD7r",
     "Alias": ""
@@ -2007,7 +2007,7 @@
     "MB": "58 MB",
     "ATK": "--",
     "Codes": "I Q Z",
-    "Description": "Weak against elec atk",
+    "Description": "Regenerating bubble blocks 1 hit. Weak against Elec attack",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b9/BN6Chip183.png",
     "MoreDetails": "http://bit.ly/2YMnxqL",
     "Alias": "BubbleWrap,Wrap"
@@ -2018,7 +2018,7 @@
     "MB": "70 MB",
     "ATK": "--",
     "Codes": "U",
-    "Description": "Repel all attacks under200",
+    "Description": "Repel all attacks under 200",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/ba/BN6Chip184.png",
     "MoreDetails": "http://bit.ly/2YNwGiF",
     "Alias": "LifeAura,DreamAura,Aura200"
@@ -2029,7 +2029,7 @@
     "MB": "14 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "Draw in enmy with mag force",
+    "Description": "Draw in enemy with magnetic force",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/3/3a/BN6Chip185.png",
     "MoreDetails": "http://bit.ly/2KhTpiM",
     "Alias": "MagnetCoil"
@@ -2040,7 +2040,7 @@
     "MB": "25 MB",
     "ATK": "40",
     "Codes": "B G R *",
-    "Description": "Launch an attk with Col. army",
+    "Description": "Launch an attack with Colonel army from obstacles",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/68/BN6Chip186.png",
     "MoreDetails": "http://bit.ly/2ZNjrj6",
     "Alias": "ColonelArmy"
@@ -2051,7 +2051,7 @@
     "MB": "42 MB",
     "ATK": "240",
     "Codes": "G S U *",
-    "Description": "Trap enmy and attk with elem",
+    "Description": "Hit enemy back with their own element!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/b/b9/BN6Chip187.png",
     "MoreDetails": "http://bit.ly/2T9AxFz",
     "Alias": "ElementTrap,ElementalTrap,ElmTrap,AntiElem,AntiElement"
@@ -2073,7 +2073,7 @@
     "MB": "30 MB",
     "ATK": "100",
     "Codes": "G R V *",
-    "Description": "Sets trap and throw stars",
+    "Description": "Blocks one hit then throws a shuriken",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/aa/BN6Chip189.png",
     "MoreDetails": "http://bit.ly/2YMLfHl",
     "Alias": "AntiDamage"
@@ -2084,7 +2084,7 @@
     "MB": "33 MB",
     "ATK": "100",
     "Codes": "A R Z *",
-    "Description": "Retaliate for sword damage",
+    "Description": "Counter sword attack with sonic booms",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/08/BN6Chip190.png",
     "MoreDetails": "http://bit.ly/2YL101v",
     "Alias": ""
@@ -2095,7 +2095,7 @@
     "MB": "37 MB",
     "ATK": "--",
     "Codes": "A F V *",
-    "Description": "Damages enemy in recovery",
+    "Description": "Counter enemy's recovery with damage",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/8c/BN6Chip191.png",
     "MoreDetails": "http://bit.ly/33h7V1O",
     "Alias": "AntiRecovery,AntiHeal,BadMedicine"
@@ -2117,7 +2117,7 @@
     "MB": "60 MB",
     "ATK": "--",
     "Codes": "G L R",
-    "Description": "Attach to NoDim Chip. Remove target's SuperArmor, AirShoes, FloatShoes, any B← power from Customizer or ModCard",
+    "Description": "Attach to a non-dimming Chip. Remove target's SuperArmor, AirShoes, FloatShoes, any B← power from Customizer or ModCard",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/9/96/BN6Chip193.png",
     "MoreDetails": "http://bit.ly/2ZBVTOb",
     "Alias": "Uninstall,Delete"
@@ -2150,7 +2150,7 @@
     "MB": "4 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "+10 for selected atk chip",
+    "Description": "+10 for selected attack chip",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/1f/BN6Chip196.png",
     "MoreDetails": "http://bit.ly/2ZInoG8",
     "Alias": "Attack+10,Atk10"
@@ -2161,7 +2161,7 @@
     "MB": "66 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "+30 for selected atk chip",
+    "Description": "+30 for selected attack chip",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/f5/BN6Chip197.png",
     "MoreDetails": "http://bit.ly/2ZInoG8",
     "Alias": "Attack+30,Atk30"
@@ -2183,7 +2183,7 @@
     "MB": "31 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "+10 for next chip attack",
+    "Description": "Give up front panels for +10/panel for next chip attack",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/d/d9/BN6Chip199.png",
     "MoreDetails": "http://bit.ly/2M46iyW",
     "Alias": "ColourPt,ColourPoint,ColorPoint"
@@ -2194,7 +2194,7 @@
     "MB": "50 MB",
     "ATK": "--",
     "Codes": "*",
-    "Description": "+20 for next chip attack",
+    "Description": "Give up front panels for +20/panel for next chip attack",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/c/c5/BN6Chip200.png",
     "MoreDetails": "http://bit.ly/2M46iyW",
     "Alias": "DoublePoint"
@@ -2205,7 +2205,7 @@
     "MB": "20 MB",
     "ATK": "20",
     "Codes": "R *",
-    "Description": "Attacks enmy, then heals you",
+    "Description": "Attacks enemy, then heals you",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/6/65/BN6MChip001.png",
     "MoreDetails": "http://bit.ly/2yIMrNa",
     "Alias": ""
@@ -2216,7 +2216,7 @@
     "MB": "40 MB",
     "ATK": "40",
     "Codes": "R",
-    "Description": "Attacks enmy, then heals you",
+    "Description": "Attacks enemy, then heals you",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/4/48/BN6MChip002.png",
     "MoreDetails": "http://bit.ly/2yIMrNa",
     "Alias": "RollEX"
@@ -2227,7 +2227,7 @@
     "MB": "60 MB",
     "ATK": "60",
     "Codes": "R",
-    "Description": "Attacks enmy, then heals you",
+    "Description": "Attacks enemy, then heals you",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/e5/BN6MChip003.png",
     "MoreDetails": "http://bit.ly/2yIMrNa",
     "Alias": "RollSP"
@@ -2271,7 +2271,7 @@
     "MB": "42 MB",
     "ATK": "50",
     "Codes": "A *",
-    "Description": "Watr atk! Bhnd 2row power-up",
+    "Description": "Water attack! Power up from back 2 rows.",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/4/41/BN6FMChip007.png",
     "MoreDetails": "http://bit.ly/2MJ63cs",
     "Alias": "AquaMan"
@@ -2282,7 +2282,7 @@
     "MB": "56 MB",
     "ATK": "60",
     "Codes": "A",
-    "Description": "Watr atk! Bhnd 2row power-up",
+    "Description": "Water attack! Power up from back 2 rows.",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/17/BN6FMChip008.png",
     "MoreDetails": "http://bit.ly/2MJ63cs",
     "Alias": "SpoutManEX,AquaManEX"
@@ -2293,7 +2293,7 @@
     "MB": "78 MB",
     "ATK": "120",
     "Codes": "A",
-    "Description": "Watr atk! Bhnd 2row power-up",
+    "Description": "Water attack! Power up from back 2 rows.",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/c/c7/BN6FMChip009.png",
     "MoreDetails": "http://bit.ly/2MJ63cs",
     "Alias": "SpoutManSP,AquaManSP"
@@ -2304,7 +2304,7 @@
     "MB": "40 MB",
     "ATK": "140",
     "Codes": "T *",
-    "Description": "Slice 2sq side, 3sq vertical",
+    "Description": "Slice 2 squares forward, 3 squares vertical",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/2/27/BN6FMChip010.png",
     "MoreDetails": "http://bit.ly/2Ku3Df1",
     "Alias": "TomahawkMan,ThawkMan,Thawk"
@@ -2315,7 +2315,7 @@
     "MB": "60 MB",
     "ATK": "160",
     "Codes": "T",
-    "Description": "Slice 2sq side, 3sq vertical",
+    "Description": "Slice 2 squares forward, 3 squares vertical",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/80/BN6FMChip011.png",
     "MoreDetails": "http://bit.ly/2Ku3Df1",
     "Alias": "TomahawkManEX,ThawkManEX,ThawkEX"
@@ -2326,7 +2326,7 @@
     "MB": "80 MB",
     "ATK": "280",
     "Codes": "T",
-    "Description": "Slice 2sq side, 3sq vertical",
+    "Description": "Slice 2 squares forward, 3 squares vertical",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/7/7c/BN6FMChip012.png",
     "MoreDetails": "http://bit.ly/2Ku3Df1",
     "Alias": "TomahawkManSP,ThawkManSP,ThawkSP"
@@ -2337,7 +2337,7 @@
     "MB": "43 MB",
     "ATK": "70",
     "Codes": "T *",
-    "Description": "Attk 2row from air, then side",
+    "Description": "Attack 2 row from air, then side",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/8/83/BN6FMChip013.png",
     "MoreDetails": "http://bit.ly/33gpCPa",
     "Alias": "Tengu"
@@ -2348,7 +2348,7 @@
     "MB": "61 MB",
     "ATK": "90",
     "Codes": "T",
-    "Description": "Attk 2row from air, then side",
+    "Description": "Attack 2 row from air, then side",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/b/b3/BN6FMChip014.png",
     "MoreDetails": "http://bit.ly/33gpCPa",
     "Alias": "TenguManEX,TenguEX"
@@ -2359,7 +2359,7 @@
     "MB": "74 MB",
     "ATK": "160",
     "Codes": "T",
-    "Description": "Attk 2row from air, then side",
+    "Description": "Attack 2 row from air, then side",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/f/fe/BN6FMChip015.png",
     "MoreDetails": "http://bit.ly/33gpCPa",
     "Alias": "TenguManSP,TenguSP"
@@ -2370,7 +2370,7 @@
     "MB": "41 MB",
     "ATK": "60",
     "Codes": "G *",
-    "Description": "Move fwrd then attk w/ drill",
+    "Description": "Move forward then attacks with drill. Hit the back for falling rocks!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/ef/BN6FMChip016.png",
     "MoreDetails": "http://bit.ly/2Kv52Sp",
     "Alias": "GroundMan"
@@ -2381,7 +2381,7 @@
     "MB": "66 MB",
     "ATK": "70",
     "Codes": "G",
-    "Description": "Move fwrd then attk w/ drill",
+    "Description": "Move forward then attacks with drill. Hit the back for falling rocks!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2d/BN6FMChip017.png",
     "MoreDetails": "http://bit.ly/2Kv52Sp",
     "Alias": "GroundManEX"
@@ -2392,7 +2392,7 @@
     "MB": "85 MB",
     "ATK": "130",
     "Codes": "G",
-    "Description": "Move fwrd then attk w/ drill",
+    "Description": "Move forward then attacks with drill. Hit the back for falling rocks!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a0/BN6FMChip018.png",
     "MoreDetails": "http://bit.ly/2Kv52Sp",
     "Alias": "GroundManSP"
@@ -2403,7 +2403,7 @@
     "MB": "39 MB",
     "ATK": "110",
     "Codes": "D *",
-    "Description": "Attk ahd. Suck in and shoot out",
+    "Description": "Sucks in obstacles and shoots them ahead",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/0/0b/BN6FMChip019.png",
     "MoreDetails": "http://bit.ly/33doRWU",
     "Alias": ""
@@ -2414,7 +2414,7 @@
     "MB": "56 MB",
     "ATK": "130",
     "Codes": "D",
-    "Description": "Attk ahd. Suck in and shoot out",
+    "Description": "Sucks in obstacles and shoots them ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/8f/BN6FMChip020.png",
     "MoreDetails": "http://bit.ly/33doRWU",
     "Alias": ""
@@ -2425,7 +2425,7 @@
     "MB": "74 MB",
     "ATK": "200",
     "Codes": "D",
-    "Description": "Attk ahd. Suck in and shoot out",
+    "Description": "Sucks in obstacles and shoots them ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/1/14/BN6FMChip021.png",
     "MoreDetails": "http://bit.ly/33doRWU",
     "Alias": ""
@@ -2436,7 +2436,7 @@
     "MB": "32 MB",
     "ATK": "100",
     "Codes": "H *",
-    "Description": "Burn with a radial fire attk",
+    "Description": "Burn with a radial fire attack",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/3/3c/BN6GMChip007.png",
     "MoreDetails": "http://bit.ly/2KhfSfT",
     "Alias": ""
@@ -2447,7 +2447,7 @@
     "MB": "55 MB",
     "ATK": "130",
     "Codes": "H",
-    "Description": "Burn with a radial fire attk",
+    "Description": "Burn with a radial fire attack",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/3/3c/BN6GMChip008.png",
     "MoreDetails": "http://bit.ly/2KhfSfT",
     "Alias": ""
@@ -2458,7 +2458,7 @@
     "MB": "70 MB",
     "ATK": "260",
     "Codes": "H",
-    "Description": "Burn with a radial fire attk",
+    "Description": "Burn with a radial fire attack",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/f/fe/BN6GMChip009.png",
     "MoreDetails": "http://bit.ly/2KhfSfT",
     "Alias": ""
@@ -2469,7 +2469,7 @@
     "MB": "38 MB",
     "ATK": "120",
     "Codes": "E *",
-    "Description": "Attk your surrndns with thdr",
+    "Description": "Shocks enemies then shocks obstacles",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/f/f0/BN6GMChip010.png",
     "MoreDetails": "http://bit.ly/2YO4G2r",
     "Alias": ""
@@ -2480,7 +2480,7 @@
     "MB": "52 MB",
     "ATK": "140",
     "Codes": "E",
-    "Description": "Attk your surrndns with thdr",
+    "Description": "Shocks enemies then shocks obstacles",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b8/BN6GMChip011.png",
     "MoreDetails": "http://bit.ly/2YO4G2r",
     "Alias": ""
@@ -2491,7 +2491,7 @@
     "MB": "79 MB",
     "ATK": "210",
     "Codes": "E",
-    "Description": "Attk your surrndns with thdr",
+    "Description": "Shocks enemies then shocks obstacles",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/4/46/BN6GMChip012.png",
     "MoreDetails": "http://bit.ly/2YO4G2r",
     "Alias": ""
@@ -2502,7 +2502,7 @@
     "MB": "42 MB",
     "ATK": "80",
     "Codes": "S *",
-    "Description": "Slash an enmy w/ flyn knfe",
+    "Description": "Throw kunai at enemy then slash them. Hold B to hone in!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/0/0f/BN6GMChip013.png",
     "MoreDetails": "http://bit.ly/2MM1eyT",
     "Alias": ""
@@ -2513,7 +2513,7 @@
     "MB": "65 MB",
     "ATK": "100",
     "Codes": "S",
-    "Description": "Slash an enmy w/ flyn knfe",
+    "Description": "Throw kunai at enemy then slash them. Hold B to hone in!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/8/87/BN6GMChip014.png",
     "MoreDetails": "http://bit.ly/2MM1eyT",
     "Alias": "SlashManEX"
@@ -2524,7 +2524,7 @@
     "MB": "79 MB",
     "ATK": "220",
     "Codes": "S",
-    "Description": "Slash an enmy w/ flyn knfe",
+    "Description": "Throw kunai at enemy then slash them. Hold B to hone in!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/0/05/BN6GMChip015.png",
     "MoreDetails": "http://bit.ly/2MM1eyT",
     "Alias": "SlashManSP"
@@ -2535,7 +2535,7 @@
     "MB": "51 MB",
     "ATK": "120",
     "Codes": "K *",
-    "Description": "Press (A) for 3panl beam attk",
+    "Description": "Press (A) to aim beam attack",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/8/8b/BN6GMChip016.png",
     "MoreDetails": "http://bit.ly/2YpJ2Ce",
     "Alias": "EraserMan,KillerMan"
@@ -2546,7 +2546,7 @@
     "MB": "65 MB",
     "ATK": "140",
     "Codes": "K",
-    "Description": "Press (A) for 3panl beam attk",
+    "Description": "Press (A) to aim beam attack",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/1/1f/BN6GMChip017.png",
     "MoreDetails": "http://bit.ly/2YpJ2Ce",
     "Alias": "EraseManEX,EraserManEX,KillerManEX"
@@ -2557,7 +2557,7 @@
     "MB": "79 MB",
     "ATK": "210",
     "Codes": "K",
-    "Description": "Press (A) for 3panl beam attk",
+    "Description": "Press (A) to aim beam attack",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/c/c8/BN6GMChip018.png",
     "MoreDetails": "http://bit.ly/2YpJ2Ce",
     "Alias": "EraseManSP,EraserManSP,KillerManSP"
@@ -2568,7 +2568,7 @@
     "MB": "42",
     "ATK": "60",
     "Codes": "C *",
-    "Description": "Rush fwd! Open panl hit TrCar",
+    "Description": "Rush forward! Open panels from behind make more TrainCars!",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/6/6e/BN6GMChip019.png",
     "MoreDetails": "http://bit.ly/2YJBLwl",
     "Alias": "ChargeMan"
@@ -2579,7 +2579,7 @@
     "MB": "63 MB",
     "ATK": "70",
     "Codes": "C",
-    "Description": "Rush fwd! Open panl hit TrCar",
+    "Description": "Rush forward! Open panels from behind make more TrainCars!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/d/d1/BN6GMChip020.png",
     "MoreDetails": "http://bit.ly/2YJBLwl",
     "Alias": "ChargeManEX"
@@ -2590,7 +2590,7 @@
     "MB": "81 MB",
     "ATK": "130",
     "Codes": "C",
-    "Description": "Rush fwd! Open panl hit TrCar",
+    "Description": "Rush forward! Open panels from behind make more TrainCars!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/5/56/BN6GMChip021.png",
     "MoreDetails": "http://bit.ly/2YJBLwl",
     "Alias": "ChargeManSP"
@@ -2601,7 +2601,7 @@
     "MB": "30 MB",
     "ATK": "120",
     "Codes": "B *",
-    "Description": "Head fwd and launch blst attk",
+    "Description": "Launch fireballs from behind you",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e6/BN6MChip022.png",
     "MoreDetails": "http://bit.ly/2yHsdU7",
     "Alias": ""
@@ -2612,7 +2612,7 @@
     "MB": "49 MB",
     "ATK": "140",
     "Codes": "B",
-    "Description": "Head fwd and launch blst attk",
+    "Description": "Launch fireballs from behind you",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/0/0d/BN6MChip023.png",
     "MoreDetails": "http://bit.ly/2yHsdU7",
     "Alias": "BlastManEX"
@@ -2623,7 +2623,7 @@
     "MB": "68 MB",
     "ATK": "250",
     "Codes": "B",
-    "Description": "Head fwd and launch blst attk",
+    "Description": "Launch fireballs from behind you",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/9/9c/BN6MChip024.png",
     "MoreDetails": "http://bit.ly/2yHsdU7",
     "Alias": "BlastManSP"
@@ -2634,7 +2634,7 @@
     "MB": "45 MB",
     "ATK": "130",
     "Codes": "D *",
-    "Description": "Snd giant wave acrs area 2pnl",
+    "Description": "Send giant wave across area 2 panel ahead",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/e/e0/BN6MChip025.png",
     "MoreDetails": "http://bit.ly/2MJ7sje",
     "Alias": ""
@@ -2645,7 +2645,7 @@
     "MB": "60 MB",
     "ATK": "150",
     "Codes": "D",
-    "Description": "Snd giant wave acrs area 2pnl",
+    "Description": "Send giant wave across area 2 panel ahead",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/c/cc/BN6MChip026.png",
     "MoreDetails": "http://bit.ly/2MJ7sje",
     "Alias": ""
@@ -2656,7 +2656,7 @@
     "MB": "75 MB",
     "ATK": "270",
     "Codes": "D",
-    "Description": "Snd giant wave acrs area 2pnl",
+    "Description": "Send giant wave across area 2 panel ahead",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/a/a6/BN6MChip027.png",
     "MoreDetails": "http://bit.ly/2MJ7sje",
     "Alias": ""
@@ -2700,7 +2700,7 @@
     "MB": "52 MB",
     "ATK": "100",
     "Codes": "J *",
-    "Description": "Whip 3 panels forward",
+    "Description": "Whip 3 panels forward. Did you know JudgeMan has a Revenge Grab effect where he summons books?",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/1/10/BN6MChip031.png",
     "MoreDetails": "http://bit.ly/31lhWJy",
     "Alias": ""
@@ -2711,7 +2711,7 @@
     "MB": "62 MB",
     "ATK": "120",
     "Codes": "J",
-    "Description": "Whip 3 panels forward",
+    "Description": "Whip 3 panels forward. Did you know JudgeMan has a Revenge Grab effect where he summons books?",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/8/89/BN6MChip032.png",
     "MoreDetails": "http://bit.ly/31lhWJy",
     "Alias": "JudgeManEX"
@@ -2722,7 +2722,7 @@
     "MB": "72 MB",
     "ATK": "190",
     "Codes": "J",
-    "Description": "Whip 3 panels forward",
+    "Description": "Whip 3 panels forward. Did you know JudgeMan has a Revenge Grab effect where he summons books?",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/f/f3/BN6MChip033.png",
     "MoreDetails": "http://bit.ly/31lhWJy",
     "Alias": "JudgeManSP"
@@ -2733,7 +2733,7 @@
     "MB": "50 MB",
     "ATK": "100",
     "Codes": "E *",
-    "Description": "Hit (A) whn col chges elem attk",
+    "Description": "Hit (A) when color changes to pick an elemental attack",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/8/83/BN6MChip034.png",
     "MoreDetails": "http://bit.ly/2YuyPEs",
     "Alias": "ElementMan,ElementalMan,ElemMan"
@@ -2744,7 +2744,7 @@
     "MB": "53 MB",
     "ATK": "120",
     "Codes": "E",
-    "Description": "Hit (A) whn col chges elem attk",
+    "Description": "Hit (A) when color changes to pick an elemental attack",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/5/54/BN6MChip035.png",
     "MoreDetails": "http://bit.ly/2YuyPEs",
     "Alias": "ElementManEX,ElementalManEX,ElemManEX"
@@ -2755,7 +2755,7 @@
     "MB": "66 MB",
     "ATK": "240",
     "Codes": "E",
-    "Description": "Hit (A) whn col chges elem attk",
+    "Description": "Hit (A) when color changes to pick an elemental attack",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/1/18/BN6MChip036.png",
     "MoreDetails": "http://bit.ly/2YuyPEs",
     "Alias": "ElementManSP,ElementalManSP,ElemManSP"
@@ -2766,7 +2766,7 @@
     "MB": "45 MB",
     "ATK": "160",
     "Codes": "C *",
-    "Description": "Arguably the best chip. Cut enmy lines in Z shape",
+    "Description": "Arguably the best chip. Cut enemy lines in Z shape",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/e/ee/BN6MChip037.png",
     "MoreDetails": "http://bit.ly/2M482rY",
     "Alias": "Qnel,Kernel"
@@ -2777,7 +2777,7 @@
     "MB": "70 MB",
     "ATK": "180",
     "Codes": "C",
-    "Description": "Arguably the bestest chip. Cut enmy lines in Z shape",
+    "Description": "Arguably the bestest chip. Cut enemy lines in Z shape",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/0b/BN6MChip038.png",
     "MoreDetails": "http://bit.ly/2M482rY",
     "Alias": "QnelEX,KernelEX"
@@ -2788,7 +2788,7 @@
     "MB": "91 MB",
     "ATK": "300",
     "Codes": "C",
-    "Description": "Arguably the bestestest chip. Cut enmy lines in Z shape",
+    "Description": "Arguably the bestestest chip. Cut enemy lines in Z shape",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/4/49/BN6MChip039.png",
     "MoreDetails": "http://bit.ly/2M482rY",
     "Alias": "QnelSP,KernelSP"
@@ -2799,7 +2799,7 @@
     "MB": "60 MB",
     "ATK": "20",
     "Codes": "H *",
-    "Description": "EXE6 Only. Rain on enmy then lance atk",
+    "Description": "EXE6 Only. Rain on enemy then lance attack from normal panel",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/b/b8/BN6MJChip040.png",
     "MoreDetails": "http://bit.ly/2MIWU3t",
     "Alias": "HackJack,TheCount"
@@ -2810,7 +2810,7 @@
     "MB": "75 MB",
     "ATK": "25",
     "Codes": "H",
-    "Description": "EXE6 Only. Rain on enmy then lance atk",
+    "Description": "EXE6 Only. Rain on enemy then lance attack from normal panel",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/a/a8/BN6MJChip041.png",
     "MoreDetails": "http://bit.ly/2MIWU3t",
     "Alias": "HackJackEX,TheCountEX"
@@ -2821,7 +2821,7 @@
     "MB": "89 MB",
     "ATK": "50",
     "Codes": "H",
-    "Description": "EXE6 Only. Rain on enmy then lance atk",
+    "Description": "EXE6 Only. Rain on enemy then lance attack from normal panel",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/2a/BN6MJChip042.png",
     "MoreDetails": "http://bit.ly/2MIWU3t",
     "Alias": "HackJackSP,TheCountSP"
@@ -2832,7 +2832,7 @@
     "MB": "30 MB",
     "ATK": "130",
     "Codes": "D *",
-    "Description": "EXE6 Only. Hit enmy with bike rdng Djgo",
+    "Description": "EXE6 Only. Hit enemy with Django riding a bike. Input code for slash!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/e/eb/BN6MJChip043.png",
     "MoreDetails": "http://bit.ly/2Kv6tjL",
     "Alias": ""
@@ -2843,7 +2843,7 @@
     "MB": "70 MB",
     "ATK": "180",
     "Codes": "D",
-    "Description": "EXE6 Only. Hit enmy with bike rdng Djgo",
+    "Description": "EXE6 Only. Hit enemy with Django riding a bike. Input code for slash!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/5/55/BN6MJChip044.png",
     "MoreDetails": "http://bit.ly/2Kv6tjL",
     "Alias": "DjangoEX"
@@ -2854,7 +2854,7 @@
     "MB": "90 MB",
     "ATK": "260",
     "Codes": "D",
-    "Description": "EXE6 Only. Hit enmy with bike rdng Djgo",
+    "Description": "EXE6 Only. Hit enemy with Django riding a bike. Input code for slash!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/b/b1/BN6MJChip045.png",
     "MoreDetails": "http://bit.ly/2Kv6tjL",
     "Alias": "DjangoSP"
@@ -2876,7 +2876,7 @@
     "MB": "66 MB",
     "ATK": "--",
     "Codes": "O",
-    "Description": "EXE6 Only. Put Otnko to raise atk pwr",
+    "Description": "EXE6 Only. Put Otenko to raise attack power of chips",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/7/7e/BN5TCSChip019.png",
     "MoreDetails": "http://bit.ly/2KkCoo0",
     "Alias": ""
@@ -2887,7 +2887,7 @@
     "MB": "99 MB",
     "ATK": "320",
     "Codes": "W",
-    "Description": "EXE6 Only. Fang and wing doubl atk frenzy! ",
+    "Description": "EXE6 Only. Fang and wing double attack frenzy!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/9/9a/BN6GJ_DoubleBeast.png",
     "MoreDetails": "http://bit.ly/2MJCXd0",
     "Alias": "DoubleBeast"
@@ -2920,7 +2920,7 @@
     "MB": "95 MB",
     "ATK": "60",
     "Codes": "F",
-    "Description": "Gregar Only. Buster rake wide enmy area",
+    "Description": "Gregar Only. Buster rake wide enemy area",
     "Image": "https://vignette2.wikia.nocookie.net/megaman/images/0/0d/BN6GGChip001.png",
     "MoreDetails": "http://bit.ly/2M19tYl",
     "Alias": ""
@@ -2931,7 +2931,7 @@
     "MB": "92 MB",
     "ATK": "240",
     "Codes": "H",
-    "Description": "Gregar Only. Hook atk 2 sq wide",
+    "Description": "Gregar Only. Hook attack 2 square wide twice!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/3/34/BN6GGChip002.png",
     "MoreDetails": "http://bit.ly/338FJxY",
     "Alias": ""
@@ -2942,7 +2942,7 @@
     "MB": "82 MB",
     "ATK": "260",
     "Codes": "Z",
-    "Description": "Gregar Only. A button power up by 3 swrd",
+    "Description": "Gregar Only. Press (A) to slice three times!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/0/09/BN6GGChip003.png",
     "MoreDetails": "http://bit.ly/2GQqznA",
     "Alias": "DeltaRayEdge,Delta Ray Edge"
@@ -2953,7 +2953,7 @@
     "MB": "90 MB",
     "ATK": "30",
     "Codes": "Q",
-    "Description": "Gregar Only. Smn Col. army in open pnls. Arguably the bestestestest chip.",
+    "Description": "Gregar Only. Summon Colonel army in open panels. Arguably the bestestestest chip.",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/2/25/BN6GGChip004.png",
     "MoreDetails": "http://bit.ly/2GQr7d8",
     "Alias": "ColonelForce,QForce"
@@ -2964,10 +2964,10 @@
     "MB": "80 MB",
     "ATK": "--",
     "Codes": "V",
-    "Description": "Gregar Only. Use Bug Frag with DrkSword!",
+    "Description": "Gregar Only. Use DarkSword with Bug Frags!",
     "Image": "https://vignette3.wikia.nocookie.net/megaman/images/7/75/BN6GGChip005.png",
     "MoreDetails": "http://bit.ly/2YL3kp1",
-    "Alias": "BugRiserSword,BugRiseSword,BugDeathSword,BRS"
+    "Alias": "BugRiserSword,BugRiseSword,BRS"
   },
   {
     "Name": "BassAnly",
@@ -2975,7 +2975,7 @@
     "MB": "95 MB",
     "ATK": "160",
     "Codes": "F",
-    "Description": "Falzar Only. A ring that hits 4 times",
+    "Description": "Falzar Only. Fire off 4 Hellz Rollings!",
     "Image": "https://vignette1.wikia.nocookie.net/megaman/images/9/91/BN6FGChip001.png",
     "MoreDetails": "http://bit.ly/2ZLQep7",
     "Alias": "BassAnomaly"
@@ -2986,7 +2986,7 @@
     "MB": "90 MB",
     "ATK": "100",
     "Codes": "N",
-    "Description": "Falzar Only. Meteors bombard from sky",
+    "Description": "Falzar Only. Fists bombard from the sky!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/7/7a/BN6FGChip002.png",
     "MoreDetails": "http://bit.ly/2H4i0G3",
     "Alias": "MeteorKnuckle,MetKnuckle,MetKnuk"
@@ -3019,10 +3019,10 @@
     "MB": "80 MB",
     "ATK": "--",
     "Codes": "V",
-    "Description": "Falzar Only. Use Bug Frag with DarkThnd!",
+    "Description": "Falzar Only. Use DarkThunder with Bug Frags!",
     "Image": "https://vignette4.wikia.nocookie.net/megaman/images/e/e5/BN6FGChip005.png",
     "MoreDetails": "http://bit.ly/2MOcdHY",
-    "Alias": "BugDeathThunder,BDT,BugRiserThunder,BugDeadThud"
+    "Alias": "BugDeathThunder,BDT,BugDeadThud"
   },
   {
     "Name": "GigaCan1",
@@ -3129,7 +3129,7 @@
     "MB": "--",
     "ATK": "400",
     "Codes": "--",
-    "Description": "Send a powerful wave 3rows fwd",
+    "Description": "Send a powerful wave 3 rows wide",
     "Image": "",
     "MoreDetails": "WaveArm1 E-F-G",
     "Alias": "PwrWave 1,PowerWave1,PowerWave 1"
@@ -3140,7 +3140,7 @@
     "MB": "--",
     "ATK": "500",
     "Codes": "--",
-    "Description": "Send a powerful wave 3rows fwd",
+    "Description": "Send a powerful wave 3 rows wide",
     "Image": "",
     "MoreDetails": "WaveArm2 L-M-N",
     "Alias": "PwrWave 2,PowerWave2,PowerWave 2"
@@ -3151,7 +3151,7 @@
     "MB": "--",
     "ATK": "600",
     "Codes": "--",
-    "Description": "Send a powerful wave 3rows fwd",
+    "Description": "Send a powerful wave 3 rows wide",
     "Image": "",
     "MoreDetails": "WaveArm3 R-S-T",
     "Alias": "PwrWave 3,PowerWave3,PowerWave 3"
@@ -3173,7 +3173,7 @@
     "MB": "--",
     "ATK": "350",
     "Codes": "--",
-    "Description": "Shell atk on 5 right grid rows",
+    "Description": "Shell attack on 5 right grid rows",
     "Image": "",
     "MoreDetails": "IronShl1 J-K-L | IronShl2 C-D-E | IronShl3 L-M-N ",
     "Alias": "ParaShell,ParallelShell,Parallel Shell"
@@ -3184,7 +3184,7 @@
     "MB": "--",
     "ATK": "400",
     "Codes": "--",
-    "Description": "Fire pulse that causes strong bugs!",
+    "Description": "Shoot pulse that stuns & causes strong bugs: Lv2 HP bug in battle & chip select, blind for 20 seconds!",
     "Image": "",
     "MoreDetails": "ElcPuls1 J, ElcPuls2 J, ElcPuls3 J",
     "Alias": "DestroyPulse,DestPulse,a viable PA"
@@ -3206,7 +3206,7 @@
     "MB": "--",
     "ATK": "150",
     "Codes": "--",
-    "Description": "Fire a stream of 5 AuraHeads",
+    "Description": "Shoot a stream of 5 AuraHeads. Pierces Guard",
     "Image": "",
     "MoreDetails": "AuraHed1 B-C-D | AuraHed2 D-E-F | AuraHed3 F-G-H",
     "Alias": "StreamHead,StreamerHead,StrimHead"
@@ -3217,7 +3217,7 @@
     "MB": "--",
     "ATK": "150",
     "Codes": "--",
-    "Description": "Fire 3 consecutive WideShots!",
+    "Description": "Shoot 3 consecutive WideShots!",
     "Image": "",
     "MoreDetails": "WideSht P-Q-R",
     "Alias": "SuperSpread,SuperSpreader,SoupSpread,SuprSpread"
@@ -3239,7 +3239,7 @@
     "MB": "--",
     "ATK": "400",
     "Codes": "--",
-    "Description": "Slices 2sq wide & 3sq vertical!",
+    "Description": "Slices 2 square wide & 3 square vertical!",
     "Image": "",
     "MoreDetails": "Sword, WideSwrd, LongSwrd | Sword *, WideBlde B, LongBlde B",
     "Alias": "LifeSword,DreamSword,DreamSrd,LifeSlice"
@@ -3327,7 +3327,7 @@
     "MB": "--",
     "ATK": "700",
     "Codes": "--",
-    "Description": "Attack 3pnls ahead with BN4 Gigas! Meteors hit 6x for 50 Fire dmg each. Lasers Uninstall and pierce invis. Final explosion for 200 dmg!",
+    "Description": "Attack 3 panels ahead with BN4 Gigas! Meteors hit 6x for 50 Fire dmg each. Lasers Uninstall and pierce invis. Final explosion for 200 dmg!",
     "Image": "",
     "MoreDetails": "Meteors R, Atk+30 *, Uninstll R",
     "Alias": "Sun&Moon,Sun Moon,Sun & Moon,BN4 PA"
@@ -3349,7 +3349,7 @@
     "MB": "--",
     "ATK": "--",
     "Codes": "--",
-    "Description": "Japanese EXE6 only! Attack with MegaMan & Django 2pnl in front! Max dmg = 920",
+    "Description": "Japanese EXE6 only! Attack with MegaMan & Django 2 panel in front! Max dmg = 920",
     "Image": "",
     "MoreDetails": "Django, Django2, Django3",
     "Alias": "CrossOver"

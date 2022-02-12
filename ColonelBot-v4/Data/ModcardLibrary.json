@@ -1,0 +1,1065 @@
+[
+  {
+    "ID": "001",
+    "Name": "Canodumb",
+    "MB": "10 MB",
+    "PositiveAbilities": "Attack+1 \nCharged Shot: MegaCannon\n - Null, 180 AP\n - 120i charge time",
+    "NegativeAbilities": "HP-40",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "002",
+    "Name": "Mollusk",
+    "MB": "16 MB",
+    "PositiveAbilities": "AquaBody \nHP+80 \nFirst: BubbleWrap",
+    "NegativeAbilities": "Attack-1",
+    "MoreInformation": "",
+    "Alias": "Ammonicule,Ammncule"
+  },
+  {
+    "ID": "003",
+    "Name": "ColdBear",
+    "MB": "18 MB",
+    "PositiveAbilities": "AquaBody \nHP+140 \nCharged Shot: IceCube \n(spawns an Aqua element IceCube)\n - 150i charge time",
+    "NegativeAbilities": "Bug: Panel Bug\n(moving has a 25% chance to spawn Ice Panels)",
+    "MoreInformation": "",
+    "Alias": "Cold Bear"
+  },
+  {
+    "ID": "004",
+    "Name": "Miney",
+    "MB": "12 MB",
+    "PositiveAbilities": "Attack+3",
+    "NegativeAbilities": "FloatShoes OFF \nAirShoes OFF",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "005",
+    "Name": "Heady",
+    "MB": "20 MB",
+    "PositiveAbilities": "Charge+4 \nFirst: Barrier100 \nAirShoes ON",
+    "NegativeAbilities": "HP-80",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "006",
+    "Name": "MetFire",
+    "MB": "20 MB",
+    "PositiveAbilities": "FireBody \nNormal Shot: Meteor1 \n - Fire, 30 AP",
+    "NegativeAbilities": "Bug: Warp Bug",
+    "MoreInformation": "",
+    "Alias": "Met Fire"
+  },
+  {
+    "ID": "007",
+    "Name": "KillPlant",
+    "MB": "19 MB",
+    "PositiveAbilities": "WoodBody \nCharged Shot: GrassSeed\n - Wood, 10 AP\n - 70i charge time",
+    "NegativeAbilities": "AirShoes OFF",
+    "MoreInformation": "",
+    "Alias": "KillWeed"
+  },
+  {
+    "ID": "008",
+    "Name": "Shadow",
+    "MB": "06 MB",
+    "PositiveAbilities": "Normal Shot: Sword \n - Sword, 80 AP \nCharged Shot: Invisible \n - 120i duration \n - 140i charge time",
+    "NegativeAbilities": "StatusGuard OFF",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "009",
+    "Name": "Beetle",
+    "MB": "11 MB",
+    "PositiveAbilities": "HP+100 \nNormal Shot: MiniBomb \n - Null, 50 AP",
+    "NegativeAbilities": "Default Charged Shot",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "010",
+    "Name": "Heavy",
+    "MB": "15 MB",
+    "PositiveAbilities": "Attack+1 \nSuperArmor ON",
+    "NegativeAbilities": "Normal Shot Addition disabled",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "011",
+    "Name": "Viney",
+    "MB": "24 MB",
+    "PositiveAbilities": "WoodBody \nStatusGuard ON",
+    "NegativeAbilities": "HP-20% \nB+< disabled",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "012",
+    "Name": "Slimey",
+    "MB": "12 MB",
+    "PositiveAbilities": "AquaBody \nHP+30 \nCharged Shot: PanelGrab \n - Null, 10 AP \n - 150i charge time",
+    "NegativeAbilities": "NormalGauge",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "013",
+    "Name": "Volcano",
+    "MB": "10 MB",
+    "PositiveAbilities": "FireBody \nCharge+4 \nCharged Shot: BlackBomb \n - Null, pseudo-breaking, 100 AP \n - When hit with fire: \n  Fire, 250 AP \n - 130i charge time",
+    "NegativeAbilities": "Bug: Emotion Bug",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "014",
+    "Name": "Numbers",
+    "MB": "17 MB",
+    "PositiveAbilities": "Custom+1 \nMegaFolder+1 \nGigaFolder+1",
+    "NegativeAbilities": "Default Charged Shot \nBug: Custom Screen HP bug \n(level 3, -1 HP per 30i)",
+    "MoreInformation": "",
+    "Alias": "Number"
+  },
+  {
+    "ID": "015",
+    "Name": "MagTect",
+    "MB": "15 MB",
+    "PositiveAbilities": "ElecBody \nFloatShoes ON \nCharged Shot Addition: Magnet \n(enemy is pulled in) (50%)",
+    "NegativeAbilities": "HP-5%",
+    "MoreInformation": "",
+    "Alias": "Mag Tech,Mag Tect,MagTech"
+  },
+  {
+    "ID": "016",
+    "Name": "Spidey",
+    "MB": "08 MB",
+    "PositiveAbilities": "WoodBody \nHP+60",
+    "NegativeAbilities": "Bug: Panel Bug \n (moving has a 25% chance to spawn Grass Panels)",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "017",
+    "Name": "Bomboy",
+    "MB": "14 MB",
+    "PositiveAbilities": "Normal Shot Addition: Small Push \n(pushes struck target 1 panel) (12.5%) \nBug Fix: Panel Bug \nBug Fix: Warp Bug",
+    "NegativeAbilities": "Charged Shot Addition disabled",
+    "MoreInformation": "",
+    "Alias": "Bom Boy"
+  },
+  {
+    "ID": "018",
+    "Name": "WuNote",
+    "MB": "13 MB",
+    "PositiveAbilities": "WoodBody \nHP+90 \nNormal Shot Addition: Grass Panel (50%) \nBug Fix: Damage Bug",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Wu Note"
+  },
+  {
+    "ID": "019",
+    "Name": "Flashy",
+    "MB": "11 MB",
+    "PositiveAbilities": "ElecBody \nHP+5% \nBug Fix: Custom Screen HP Bug",
+    "NegativeAbilities": "Attack-1",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "020",
+    "Name": "EleOgre",
+    "MB": "16 MB",
+    "PositiveAbilities": "ElecBody \nHP+50 \nBug Fix: Emotion Bug \nBug Fix: Color Bug",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Ele Ogre,Elec Ogre"
+  },
+  {
+    "ID": "021",
+    "Name": "OldStove",
+    "MB": "12 MB",
+    "PositiveAbilities": "FireBody \nHP+130 \nCharged Shot: FireBurner \n - Fire, 70 AP \n - 70i charge time",
+    "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i)",
+    "MoreInformation": "",
+    "Alias": "Old Stove"
+  },
+  {
+    "ID": "022",
+    "Name": "Puffy (BN6)",
+    "MB": "11 MB",
+    "PositiveAbilities": "AquaBody \nSpeed+4 \nBug Fix: Buster Bug",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Puffy 6,Puffy BN6,Puffy6"
+  },
+  {
+    "ID": "023",
+    "Name": "Starfish",
+    "MB": "15 MB",
+    "PositiveAbilities": "AquaBody \nCharged Shot Addition: Bubbling (50%)",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Star Fish"
+  },
+  {
+    "ID": "024",
+    "Name": "BigHat",
+    "MB": "08 MB",
+    "PositiveAbilities": "Charged Shot: FlashBomb \n - Null, 40 AP \n - 150i charge time",
+    "NegativeAbilities": "SuperArmor OFF",
+    "MoreInformation": "",
+    "Alias": "Big Hat"
+  },
+  {
+    "ID": "025",
+    "Name": "ScareCrow",
+    "MB": "14 MB",
+    "PositiveAbilities": "ElecBody \nCharged Shot: DollThunder \n - Elec, 120 AP \n - 100i charge time \n - Chip Recovery: 30 HP",
+    "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 12.5% charge)",
+    "MoreInformation": "",
+    "Alias": "Scare Crow"
+  },
+  {
+    "ID": "026",
+    "Name": "FighterPlane",
+    "MB": "20 MB",
+    "PositiveAbilities": "FloatShoes ON \nAirShoes ON",
+    "NegativeAbilities": "HP-10%",
+    "MoreInformation": "",
+    "Alias": "Fighter Plane"
+  },
+  {
+    "ID": "027",
+    "Name": "Cragger",
+    "MB": "19 MB",
+    "PositiveAbilities": "HP+200 \nUnderShirt ON",
+    "NegativeAbilities": "Bug: Damage Bug (being flinched or pushed causes HP bug level 1)",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "028",
+    "Name": "Armadillo",
+    "MB": "12 MB",
+    "PositiveAbilities": "HP+5% \nCharged Shot: Breaking Charged Shot",
+    "NegativeAbilities": "Charge-3",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "029",
+    "Name": "Kettle",
+    "MB": "15 MB",
+    "PositiveAbilities": "Charged Shot: Spreader \n - Null, 30 AP \n - 20i charge time \nB+<: Shield \n - 23i duration \n - 70i cooldown \nChip Recovery: 20 HP \nBug Fix: HP Bug",
+    "NegativeAbilities": "Bug: -40 HP upon entering custom screen",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "030",
+    "Name": "EarthDragon",
+    "MB": "20 MB",
+    "PositiveAbilities": "HP+180 \nMegaFolder+1",
+    "NegativeAbilities": "Default Charged Shot \nBug: Color Bug \n(level 1)",
+    "MoreInformation": "",
+    "Alias": "Earth Dragon"
+  },
+  {
+    "ID": "031",
+    "Name": "NumberMan",
+    "MB": "35 MB",
+    "PositiveAbilities": "Custom+3 \nMegaFolder+1 \nGigaFolder+1",
+    "NegativeAbilities": "HP-20%",
+    "MoreInformation": "",
+    "Alias": "Number Man"
+  },
+  {
+    "ID": "032",
+    "Name": "IceMan",
+    "MB": "25 MB",
+    "PositiveAbilities": "AquaBody \nHP+80 \nCharged Shot: IceSeed \n - Aqua, 10 AP \n - 120i charge time \nBug Fix: Custom Screen HP Bug",
+    "NegativeAbilities": "SuperArmor OFF",
+    "MoreInformation": "",
+    "Alias": "Ice Man,Ice"
+  },
+  {
+    "ID": "033",
+    "Name": "SkullMan",
+    "MB": "30 MB",
+    "PositiveAbilities": "HP+100 \nCharged Shot Addition: HP Bug (level 1) (50%)",
+    "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i) \nBug: Color Bug \n(level 1)",
+    "MoreInformation": "",
+    "Alias": "Skull Man,Skull,:skull:"
+  },
+  {
+    "ID": "034",
+    "Name": "ShadowMan",
+    "MB": "38 MB",
+    "PositiveAbilities": "FloatShoes ON \nCharged Shot: LongSword \n - Sword, 100 AP \n - 60i charge time \nB+<: AntiDamage \n - Sword, 50 AP \n - 32i duration \n - 105i cooldown",
+    "NegativeAbilities": "HP-50",
+    "MoreInformation": "",
+    "Alias": "Shadow Man"
+  },
+  {
+    "ID": "035",
+    "Name": "CutMan",
+    "MB": "32 MB",
+    "PositiveAbilities": "Attack+4 \nCharged Shot: Yo-Yo \n - Sword, 50 AP \n - 70i charge time",
+    "NegativeAbilities": "HP-100",
+    "MoreInformation": "",
+    "Alias": "Cut Man,Cutter Man,Cutter"
+  },
+  {
+    "ID": "036",
+    "Name": "KnightMan",
+    "MB": "45 MB",
+    "PositiveAbilities": "HP+20% \nDoubleAttack \nSuperArmor ON \nUnderShirt ON",
+    "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge)",
+    "MoreInformation": "",
+    "Alias": "Knight Man,Knight"
+  },
+  {
+    "ID": "037",
+    "Name": "ToadMan",
+    "MB": "34 MB",
+    "PositiveAbilities": "AquaBody \nCharged Shot Addition: Paralyze 90i (50%) \nBug Fix: Buster Bug",
+    "NegativeAbilities": "Attack-1 \nCharge-3",
+    "MoreInformation": "",
+    "Alias": "Toad,Toad Man"
+  },
+  {
+    "ID": "038",
+    "Name": "MagnetMan",
+    "MB": "37 MB",
+    "PositiveAbilities": "ElecBody \nHP+240 \nB+<: MagnetField \n - 120i duration \n - immobilizes enemy on the same lane",
+    "NegativeAbilities": "Charged Shot Addition disabled",
+    "MoreInformation": "",
+    "Alias": "Magnet,Magnet Man"
+  },
+  {
+    "ID": "039",
+    "Name": "PlanetMan",
+    "MB": "40 MB",
+    "PositiveAbilities": "WoodBody \nHP+300 \nStatusGuard ON \nNormal Shot: CrackShot \n - Null, 60 AP",
+    "NegativeAbilities": "AirShoes OFF",
+    "MoreInformation": "",
+    "Alias": "Planet Man,Planet,:exe6meta:"
+  },
+  {
+    "ID": "040",
+    "Name": "BeastMan",
+    "MB": "33 MB",
+    "PositiveAbilities": "Speed+4 \nUnderShirt ON \nRush ON \nCharged Shot: StepSword \n - Sword, 160 AP \n - 100i charge time",
+    "NegativeAbilities": "Bug: Warp Bug",
+    "MoreInformation": "",
+    "Alias": "Beast Man"
+  },
+  {
+    "ID": "041",
+    "Name": "DesertMan",
+    "MB": "36 MB",
+    "PositiveAbilities": "HP+160 \nCharge+4 \nBug Fix: Damage Bug",
+    "NegativeAbilities": "AirShoes OFF",
+    "MoreInformation": "",
+    "Alias": "Desert Man,Desert"
+  },
+  {
+    "ID": "042",
+    "Name": "YamatoMan",
+    "MB": "35 MB",
+    "PositiveAbilities": "HP+10% \nAttack+1 \nB+<: Reflect \n - 23i duration \n - 33i cooldown",
+    "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 3, -1 HP per 30i)",
+    "MoreInformation": "",
+    "Alias": "JapanMan,Yamato Man,Japan Man"
+  },
+  {
+    "ID": "043",
+    "Name": "VideoMan",
+    "MB": "32 MB",
+    "PositiveAbilities": "FastGauge \nCharged Shot Addition: Forward Conveyor Panels (50%)",
+    "NegativeAbilities": "HP-10%",
+    "MoreInformation": "",
+    "Alias": "Video Man,Video"
+  },
+  {
+    "ID": "044",
+    "Name": "BurnerMan",
+    "MB": "29 MB",
+    "PositiveAbilities": "FireBody \nHP+120 \nAttack+2",
+    "NegativeAbilities": "Bug: -40 HP upon entering custom screen \nBug: Emotion Bug",
+    "MoreInformation": "",
+    "Alias": "Burner Man,Burner"
+  },
+  {
+    "ID": "045",
+    "Name": "StarMan",
+    "MB": "32 MB",
+    "PositiveAbilities": "MegaFolder+1 \nBug Fix: HP Bug \nBug Fix: Emotion Bug \nBug Fix: Panel Bug",
+    "NegativeAbilities": "Attack-2",
+    "MoreInformation": "",
+    "Alias": "Star,Star Man"
+  },
+  {
+    "ID": "046",
+    "Name": "BlizzardMan",
+    "MB": "30 MB",
+    "PositiveAbilities": "AquaBody \nHP+60 \nCharged Shot: BlizzardBall \n - Aqua, 150 AP \n - 150i charge time",
+    "NegativeAbilities": "FloatShoes OFF",
+    "MoreInformation": "",
+    "Alias": "Blizzard Man,Blizzard"
+  },
+  {
+    "ID": "047",
+    "Name": "LarkMan",
+    "MB": "36 MB",
+    "PositiveAbilities": "AirShoes ON \nBeat ON \nCharged Shot Addition: delete opponent’s next chip (12.5%)",
+    "NegativeAbilities": "Bug: Damage Bug (being flinched or pushed causes confusion for 960i)",
+    "MoreInformation": "",
+    "Alias": "Lark Man,Lark"
+  },
+  {
+    "ID": "048",
+    "Name": "SlashMan",
+    "MB": "31 MB",
+    "PositiveAbilities": "Attack+4 \nCharged Shot: WideSword \n - Sword, 80 AP \n - 60i charge time",
+    "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge)",
+    "MoreInformation": "",
+    "Alias": "Slash,Slash Man"
+  },
+  {
+    "ID": "049",
+    "Name": "EraseMan",
+    "MB": "40 MB",
+    "PositiveAbilities": "MegaFolder+1 \nCharged Shot Addition: Erase Bug \n(Inflicts HP Bug VS PvP opponents) (12.5%)",
+    "NegativeAbilities": "HP-10% \nBug: HP bug \n(level 1, -1 HP per 40i)",
+    "MoreInformation": "",
+    "Alias": "Erase,Erase Man,Killer Man,Killer,EraserMan,Eraser Man"
+  },
+  {
+    "ID": "050",
+    "Name": "GroundMan",
+    "MB": "43 MB",
+    "PositiveAbilities": "HP+25% \nCharged Shot: Drill Arm \n - Breaking, 70 AP \n - 90i charge time",
+    "NegativeAbilities": "Custom-1 \nMegaFolder-1",
+    "MoreInformation": "",
+    "Alias": "Ground Man,Ground"
+  },
+  {
+    "ID": "051",
+    "Name": "DustMan",
+    "MB": "37 MB",
+    "PositiveAbilities": "HP+140 \nNormal Shot Addition: Cracked Panel (50%) \nB+<: Vacuum Fan",
+    "NegativeAbilities": "Bug: Panel Bug \n(moving has a 12.5% chance to spawn Crack Panels)",
+    "MoreInformation": "This is a Pull Back effect similar to tengu B Back",
+    "Alias": "Dust Man,Dust"
+  },
+  {
+    "ID": "052",
+    "Name": "BlastMan",
+    "MB": "28 MB",
+    "PositiveAbilities": "FireBody \nAttack+1 \nFloatShoes ON \nBug Fix: Panel Bug",
+    "NegativeAbilities": "HP-80",
+    "MoreInformation": "",
+    "Alias": "Blast Man,Blast"
+  },
+  {
+    "ID": "053",
+    "Name": "CircusMan",
+    "MB": "43 MB",
+    "PositiveAbilities": "GigaFolder+1 \nTango ON",
+    "NegativeAbilities": "HP-200 \nFirst disabled",
+    "MoreInformation": "",
+    "Alias": "Circus Man,Circus"
+  },
+  {
+    "ID": "054",
+    "Name": "Handy",
+    "MB": "16 MB",
+    "PositiveAbilities": "HP+100 \nCharged Shot: TimeBomb \n - Null, 150 AP \n - 120i charge time",
+    "NegativeAbilities": "Chip Recovery disabled",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "055",
+    "Name": "Puffy (BN1)",
+    "MB": "12 MB",
+    "PositiveAbilities": "AquaBody \nFloatShoes ON \nCharged Shot: BubbleSpread \n - Aqua, 70 AP \n - 70i charge time",
+    "NegativeAbilities": "B+< disabled",
+    "MoreInformation": "",
+    "Alias": "Puffy 1,Puffy BN1,Puffy1"
+  },
+  {
+    "ID": "056",
+    "Name": "Jelly",
+    "MB": "13 MB",
+    "PositiveAbilities": "AquaBody \nHP+120 \nCharge+4",
+    "NegativeAbilities": "SlowGauge",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "057",
+    "Name": "Dynamyte",
+    "MB": "13 MB",
+    "PositiveAbilities": "Speed+4 \nAirShoes ON",
+    "NegativeAbilities": "Bug: -20 HP upon entering custom screen",
+    "MoreInformation": "",
+    "Alias": "Poitton"
+  },
+  {
+    "ID": "058",
+    "Name": "Satella",
+    "MB": "08 MB",
+    "PositiveAbilities": "Speed+4 \nAirShoes ON",
+    "NegativeAbilities": "Bug: -20 HP upon entering custom screen",
+    "MoreInformation": "",
+    "Alias": "Satela"
+  },
+  {
+    "ID": "059",
+    "Name": "Twisty",
+    "MB": "09 MB",
+    "PositiveAbilities": "ElecBody \nHP+80 \nNormal Shot Addition: Cracked Panel (50%)",
+    "NegativeAbilities": "AirShoes OFF \nBug: Panel Bug \n(moving has a 12.5% chance to spawn Hole Panels)",
+    "MoreInformation": "",
+    "Alias": "Remobit,Twisty and Romobit"
+  },
+  {
+    "ID": "060",
+    "Name": "Sparky",
+    "MB": "08 MB",
+    "PositiveAbilities": "ElecBody \nFloatShoes ON \nBug Fix: Color Bug \nBug Fix: Warp Bug ",
+    "NegativeAbilities": "HP-5% ",
+    "MoreInformation": "",
+    "Alias": "Shakey"
+  },
+  {
+    "ID": "061",
+    "Name": "Octon",
+    "MB": "14 MB",
+    "PositiveAbilities": "AquaBody \nHP+50 \nAttack+3 ",
+    "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge) ",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "062",
+    "Name": "ShellGeek",
+    "MB": "08 MB",
+    "PositiveAbilities": "AquaBody \nSpeed+4 \nB+<: Shield \n - 23i duration \n - 70i cooldown",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Shell Geek"
+  },
+  {
+    "ID": "063",
+    "Name": "Magneaker",
+    "MB": "",
+    "PositiveAbilities": "ElecBody \nHP+30 \nCharged Shot Addition: Backward Conveyor Panel (50%)",
+    "NegativeAbilities": "Normal Shot Addition disabled",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "064",
+    "Name": "Metrid",
+    "MB": "15 MB",
+    "PositiveAbilities": "FireBody \nHP+5% \nB+<: Meteor3 \n - Fire, 30 AP",
+    "NegativeAbilities": "Bug: Warp Bug ",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "065",
+    "Name": "Momogra",
+    "MB": "06 MB",
+    "PositiveAbilities": "Rush ON \nCharged Shot: Invisible \n - 120i duration \n - 140i charge time",
+    "NegativeAbilities": "HP-70",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "066",
+    "Name": "Needler",
+    "MB": "10 MB",
+    "PositiveAbilities": "Attack+1 \nSpeed+1 \nCharge+1 \nSuperArmor ON \nBug Fix: Emotion Bug",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "067",
+    "Name": "Twins",
+    "MB": "15 MB",
+    "PositiveAbilities": "HP+100 \nAttack+1 \nChip Recovery: 20 HP",
+    "NegativeAbilities": "Charged Shot Addition disabled",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "068",
+    "Name": "Walla",
+    "MB": "12 MB",
+    "PositiveAbilities": "HP+60 \nCustom+1",
+    "NegativeAbilities": "First disabled",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "069",
+    "Name": "Kilby",
+    "MB": "24 MB",
+    "PositiveAbilities": "Woodbody \nStatusGuard ON \nCharged Shot: Lance \n - Wood, 150 AP \n - 90i charge time",
+    "NegativeAbilities": "HP-20% \nBug: Panel Bug \n(moving has a 25% chance to spawn Grass Panels)",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "070",
+    "Name": "Totem",
+    "MB": "13 MB",
+    "PositiveAbilities": "Firebody \nMegaFolder+1 \nChip recovery: 40 HP",
+    "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 3, -1 HP per 30i)",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "071",
+    "Name": "CannonGuard",
+    "MB": "10 MB",
+    "PositiveAbilities": "Charged Shot: Cannon \n - Null, 40 AP \n - 30i charge time \nB+<: Shield \n - 23i duration \n - 70i cooldown",
+    "NegativeAbilities": "FloatShoes OFF",
+    "MoreInformation": "",
+    "Alias": "Cannon Guard"
+  },
+  {
+    "ID": "072",
+    "Name": "Skarab",
+    "MB": "07 MB",
+    "PositiveAbilities": "Charged Shot Addition: Confusion (50%) \nBug Fix: Custom Screen HP Bug",
+    "NegativeAbilities": "HP-70",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "073",
+    "Name": "Draggin",
+    "MB": "11 MB",
+    "PositiveAbilities": "FireBody \nHP+5%",
+    "NegativeAbilities": "Bug: Color Bug (level 1)",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "074",
+    "Name": "Marina",
+    "MB": "14 MB",
+    "PositiveAbilities": "AquaBody \nHP+90 \nFirst: BubbleWrap",
+    "NegativeAbilities": "SuperArmor OFF",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "075",
+    "Name": "HauntedCandle",
+    "MB": "12 MB",
+    "PositiveAbilities": "FireBody \nHP+130 \nBug Fix: HP Bug",
+    "NegativeAbilities": "Default Charged Shot",
+    "MoreInformation": "",
+    "Alias": "Haunted Candle"
+  },
+  {
+    "ID": "076",
+    "Name": "Gunner",
+    "MB": "11 MB",
+    "PositiveAbilities": "HP+70 \nCharged Shot: MachineGun \n - Cursor, 30 AP \n - 60i charge time",
+    "NegativeAbilities": "UnderShirt OFF",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "077",
+    "Name": "PulseBulb",
+    "MB": "13 MB",
+    "PositiveAbilities": "ElecBody \nCharged Shot: ElecPulse \n - Elec, 100 AP \n - 110i charge time",
+    "NegativeAbilities": "Bug: Emotion Bug",
+    "MoreInformation": "",
+    "Alias": "Pulse Bulb,Elec Pulse,ElecPulse"
+  },
+  {
+    "ID": "078",
+    "Name": "BombCorn",
+    "MB": "16 MB",
+    "PositiveAbilities": "WoodBody \nHP+110 \nCharged Shot: CornShot \n - Wood, 50 AP \n - 50i charge time",
+    "NegativeAbilities": "Bug: Damage Bug (being flinched or pushed causes confusion for 960i)",
+    "MoreInformation": "",
+    "Alias": "Bomb Corn"
+  },
+  {
+    "ID": "079",
+    "Name": "Shrubby",
+    "MB": "06 MB",
+    "PositiveAbilities": "WoodBody \nNormal Shot Addition: Grass Panel (50%) \nBug Fix: damage upon entering custom screen",
+    "NegativeAbilities": "Default Charged Shot",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "080",
+    "Name": "HoneyBomber",
+    "MB": "12 MB",
+    "PositiveAbilities": "WoodBody \nAirShoes ON \nB+<: RiskyHoney \n - Wood, 10 AP \n - 30i duration \n - 60i cooldown",
+    "NegativeAbilities": "HP-10%",
+    "MoreInformation": "",
+    "Alias": "Honey Bomber,Honey"
+  },
+  {
+    "ID": "081",
+    "Name": "NightMare",
+    "MB": "05 MB",
+    "PositiveAbilities": "HP+20",
+    "NegativeAbilities": "Bug: Emotion Bug \nBug: Color Bug \n(level 1)",
+    "MoreInformation": "",
+    "Alias": "Night Mare"
+  },
+  {
+    "ID": "082",
+    "Name": "SnakeArm",
+    "MB": "11 MB",
+    "PositiveAbilities": "Attack+3 \nCharged Shot: SandWorm \n - Null pseudo-break, 130 AP \n - 100i charge time",
+    "NegativeAbilities": "Speed-1 \nCharge-1",
+    "MoreInformation": "",
+    "Alias": "Snake Arm"
+  },
+  {
+    "ID": "083",
+    "Name": "DarkMech",
+    "MB": "22 MB",
+    "PositiveAbilities": "HP+10% \nB+<: MachineSword \n - Sword, 200 AP",
+    "NegativeAbilities": "Bug: HP Bug \n(level 2, -1 HP per 35i)",
+    "MoreInformation": "",
+    "Alias": "Dark Mech"
+  },
+  {
+    "ID": "084",
+    "Name": "StoneMan",
+    "MB": "45 MB",
+    "PositiveAbilities": "HP+360 \nSuperArmor ON",
+    "NegativeAbilities": "Bug: Panel Bug \n(moving has a 12.5% chance to spawn Crack Panels)",
+    "MoreInformation": "",
+    "Alias": "Stone Man"
+  },
+  {
+    "ID": "085",
+    "Name": "ColorMan",
+    "MB": "32 MB",
+    "PositiveAbilities": "HP+210 \nCharged Shot Addition: Confusion (50%)",
+    "NegativeAbilities": "B+< disabled \nBug: Color Bug \n(level 1)",
+    "MoreInformation": "",
+    "Alias": "Color Man,Colour Man,ColourMan"
+  },
+  {
+    "ID": "086",
+    "Name": "SharkMan",
+    "MB": "35 MB",
+    "PositiveAbilities": "AquaBody \nHP+180 \nAttack+2 \nSpeed+2 \nCharge+2",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Shark,Shark Man,:shark: "
+  },
+  {
+    "ID": "087",
+    "Name": "PharaohMan",
+    "MB": "35 MB",
+    "PositiveAbilities": "HP+5% \nGigaFolder+1 \nFloatShoes ON",
+    "NegativeAbilities": "Default Charged Shot",
+    "MoreInformation": "",
+    "Alias": "Pharaoh,Pharaoh man"
+  },
+  {
+    "ID": "088",
+    "Name": "AirMan",
+    "MB": "34 MB",
+    "PositiveAbilities": "HP+150 \nNormal Shot Addition: Big Push \n(pushes struck target down whole row) (12.5%) \nCharged Shot: Tornado \n - Wind, 20 AP \n - 100i charge time \nBug Fix: Buster Bug",
+    "NegativeAbilities": "First disabled",
+    "MoreInformation": "",
+    "Alias": "Air,Air Man"
+  },
+  {
+    "ID": "089",
+    "Name": "FreezeMan",
+    "MB": "30 MB",
+    "PositiveAbilities": "AquaBody \nNormal Shot Addition: Ice Panel (50%) \nFirst: Barrier200",
+    "NegativeAbilities": "HP-5%",
+    "MoreInformation": "",
+    "Alias": "Freeze,Freeze Man,Freezer Man,Freezer,Frieza"
+  },
+  {
+    "ID": "090",
+    "Name": "ThunderMan",
+    "MB": "36 MB",
+    "PositiveAbilities": "ElecBody \nCharged Shot: ElecSword \n - Elec+Sword, 120 AP \n - 90i charge time \nChip Recovery: 10 HP",
+    "NegativeAbilities": "Custom-1 \nBug: HP Bug \n(level 1, -1 HP per 30i)",
+    "MoreInformation": "",
+    "Alias": "Thunder,Thunder Man"
+  },
+  {
+    "ID": "091",
+    "Name": "NapalmMan",
+    "MB": "39 MB",
+    "PositiveAbilities": "FireBody \nAttack+1 \nSpeed+4 \nCharged Shot: BigBomb \n - Null, 140 AP \n - 120i charge time",
+    "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 1, -1 HP per 40i)",
+    "MoreInformation": "",
+    "Alias": "Napalm Man,Napalm,Naplam,NaplamMan"
+  },
+  {
+    "ID": "092",
+    "Name": "PlantMan",
+    "MB": "42 MB",
+    "PositiveAbilities": "WoodBody \nMegaFolder+2 \nStatusGuard ON \nCharged Shot Addition: Grass Panel (50%)",
+    "NegativeAbilities": "HP-80",
+    "MoreInformation": "",
+    "Alias": "Plant Man,Plant"
+  },
+  {
+    "ID": "093",
+    "Name": "MistMan",
+    "MB": "37 MB",
+    "PositiveAbilities": "HP+260 \nNormal Shot Addition: Poison Panel (50%)",
+    "NegativeAbilities": "Chip Recovery disabled",
+    "MoreInformation": "",
+    "Alias": "Mist Man,Mist"
+  },
+  {
+    "ID": "094",
+    "Name": "BowlMan",
+    "MB": "30 MB",
+    "PositiveAbilities": "HP+100 \nCustom+1 \nCharged Shot: Vulcan \n - Null, 20 AP \n - 60i charge time",
+    "NegativeAbilities": "FloatShoes OFF",
+    "MoreInformation": "",
+    "Alias": "Bowl Man,Bowl"
+  },
+  {
+    "ID": "095",
+    "Name": "DarkMan",
+    "MB": "25 MB",
+    "PositiveAbilities": "Charged Shot: Voodoo Doll \n - Null, 10 AP \n - 120i charge time",
+    "NegativeAbilities": "Bug: Warp Bug \nBug: -50 HP upon entering custom screen",
+    "MoreInformation": "",
+    "Alias": "Dark Man,Dark"
+  },
+  {
+    "ID": "096",
+    "Name": "TopMan",
+    "MB": "28 MB",
+    "PositiveAbilities": "HP+10% \nBug Fix: Buster Bug \n(+12.5% charge)",
+    "NegativeAbilities": "Default Charged Shot \nBug: Damage Bug (being flinched or pushed causes HP Bug level 1)",
+    "MoreInformation": "",
+    "Alias": "Top,Top Man"
+  },
+  {
+    "ID": "097",
+    "Name": "KendoMan",
+    "MB": "38 MB",
+    "PositiveAbilities": "HP+20% \nCharged Shot: Bamboo Sword \n - Wood+Sword, 150 AP \n - 70i charge time",
+    "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge)",
+    "MoreInformation": "",
+    "Alias": "Kendo,Kendo Man"
+  },
+  {
+    "ID": "098",
+    "Name": "ColdMan",
+    "MB": "34 MB",
+    "PositiveAbilities": "AquaBody \nCharged Shot Addition: Freeze (50%)",
+    "NegativeAbilities": "Attack-1 \nBug: Panel Bug \n(moving has a 12.5% chance to spawn Ice Panels)",
+    "MoreInformation": "",
+    "Alias": "Cold,Cold Man"
+  },
+  {
+    "ID": "099",
+    "Name": "SearchMan",
+    "MB": "37 MB",
+    "PositiveAbilities": "HP+5% \nChipShuffle ON \nCharged Shot: CircleGun \n - Cursor, 150 AP \n - 150i charge time",
+    "NegativeAbilities": "AirShoes OFF",
+    "MoreInformation": "",
+    "Alias": "Search,Search Man"
+  },
+  {
+    "ID": "100",
+    "Name": "CloudMan",
+    "MB": "40 MB",
+    "PositiveAbilities": "ElecBody \nHP+230 \nCharged Shot: Thunder \n - Elec, 40 AP \n - 100i charge time",
+    "NegativeAbilities": "MegaFolder-1",
+    "MoreInformation": "",
+    "Alias": "Cloud,Cloud Man"
+  },
+  {
+    "ID": "101",
+    "Name": "GridMan",
+    "MB": "48 MB",
+    "PositiveAbilities": "HP+25% \nSuperArmor ON \nUndershirt ON",
+    "NegativeAbilities": "SlowGauge",
+    "MoreInformation": "",
+    "Alias": "Grid,Grid Man"
+  },
+  {
+    "ID": "102",
+    "Name": "ChargeMan",
+    "MB": "31 MB",
+    "PositiveAbilities": "Attack+3 \nCharge+4 \nBug Fix: Panel Bug",
+    "NegativeAbilities": "Default Charged Shot",
+    "MoreInformation": "",
+    "Alias": "Charge,Charge Man"
+  },
+  {
+    "ID": "103",
+    "Name": "TenguMan",
+    "MB": "34 MB",
+    "PositiveAbilities": "AirShoes ON \nBeat ON \nCharged Shot: WindRack \n - Wind, 140 AP \n - 70i charge time",
+    "NegativeAbilities": "Attack-1",
+    "MoreInformation": "",
+    "Alias": "Tengu,Tengu Man"
+  },
+  {
+    "ID": "104",
+    "Name": "DiveMan",
+    "MB": "42 MB",
+    "PositiveAbilities": "AquaBody \nHP+320 \nMegaFolder+1 \nCharged Shot: WideShot \n - Aqua, 100 AP \n - 120i charge time",
+    "NegativeAbilities": "Custom-2",
+    "MoreInformation": "",
+    "Alias": "Dive,Dive Man"
+  },
+  {
+    "ID": "105",
+    "Name": "JudgeMan",
+    "MB": "38 MB",
+    "PositiveAbilities": "Custom+2 \nCharged Shot: GrabBanish \n - Null, 20 AP \n - 170i charge time",
+    "NegativeAbilities": "HP-10% \nNormalGauge",
+    "MoreInformation": "",
+    "Alias": "Judge,Judge Man"
+  },
+  {
+    "ID": "106",
+    "Name": "ElementMan",
+    "MB": "33 MB",
+    "PositiveAbilities": "HP+150 \nNormal Shot Addition: Grass Panel (50%) \nCharged Shot Addition: Ice Panel (100%)",
+    "NegativeAbilities": "Default Charged Shot",
+    "MoreInformation": "",
+    "Alias": "ElemMan,Element Man,Element,Elem"
+  },
+  {
+    "ID": "107",
+    "Name": "Punk",
+    "MB": "50 MB",
+    "PositiveAbilities": "HP+400 \nSuperArmor ON \nCharged Shot Addition: Confusion (50%) \nB+<: Reflect \n - Null, 50 AP \n - 23i duration \n - 33i cooldown",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": ""
+  },
+  {
+    "ID": "108",
+    "Name": "Dark MegaMan",
+    "MB": "80 MB",
+    "PositiveAbilities": "Attack+3 \nNormal Shot Addition: Poison Panel (50%) \nCharged Shot: Dark Sword \n - Sword, 400 AP \n - 170i charge time",
+    "NegativeAbilities": "Bug: Emotion Bug \nBug: HP Bug \n(level 4, -1 HP per 25i)",
+    "MoreInformation": "",
+    "Alias": "Dark Mega,Dark MegaMan,:BadMojo:"
+  },
+  {
+    "ID": "109",
+    "Name": "Soul Battler’s Customization",
+    "MB": "66 MB",
+    "PositiveAbilities": "Attack+4 \nSpeed+4 \nCharge+4 \nSuperArmor ON \nCharged Shot: SuperVulcan \n - Null, 20 AP \n - 150i charge time",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Soul Batter,SoulBattler,Soul Cust,Soul Battler Customization,Soul Battler Cust"
+  },
+  {
+    "ID": "110",
+    "Name": "Famous’s Customization",
+    "MB": "69 MB",
+    "PositiveAbilities": "Custom+3 \nMegaFolder+2 \nGigaFolder+2 \nFirst: LifeAura",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Famous Customization,Famous Cust,Mr Famous,Famous,Famous’ Customisation,Famous’s Customisation,Famous Customisation"
+  },
+  {
+    "ID": "111",
+    "Name": "Bass BX",
+    "MB": "70 MB",
+    "PositiveAbilities": "SuperArmor ON \nFloatShoes ON \nAirShoes ON \nNormal Shot: Triple Buster \n - Null, AP depends on buster’s ATK and caps at 10 \nCharged Shot: Shooting Buster \n - Null, AP depends on buster’s ATK and caps at 50 \n - 70i charge time",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Bass BX,Bass"
+  },
+  {
+    "ID": "112",
+    "Name": "Django",
+    "MB": "52 MB",
+    "PositiveAbilities": "HP+200 \nStatusGuard ON \nUndershirt ON \nCharged Shot: GunDelSol \n - Null, 4 damage per frame \n - 90i charge time",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "Solar Boy,Solar Boy Django,:sun_with_face:"
+  },
+  {
+    "ID": "113",
+    "Name": "Count",
+    "MB": "60 MB",
+    "PositiveAbilities": "MegaFolder+1 \nCharged Shot: BloodRain \n - Null, 20 AP \n - 180i charge time",
+    "NegativeAbilities": "Bug: Color Bug \n(level 2)",
+    "MoreInformation": "",
+    "Alias": "The Count,Vampire,HackJack,Hack Jack,Hacku Jack,HackuJack"
+  },
+  {
+    "ID": "114",
+    "Name": "Mega Man Zero",
+    "MB": "45 MB",
+    "PositiveAbilities": "Normal Shot: Sword \n - Sword, 80 AP \nCharged Shot: Z Saber \n - Sword, 100 AP \n - 130i charge time \n - pressing B + < on third swing sends a Super Sonic Boom \nFastGauge",
+    "NegativeAbilities": "None",
+    "MoreInformation": "",
+    "Alias": "MMZ,MegaMan Zero,MegaMan 0,MegaManZero,MegaMan0"
+  },
+  {
+    "ID": "115",
+    "Name": "Cybeast Gregar",
+    "MB": "70 MB",
+    "PositiveAbilities": "HP+600 \nAttack+4 \nSpeed+4 \nSuperArmor ON",
+    "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 3, -1 HP per 30i)",
+    "MoreInformation": "",
+    "Alias": "Gregar,Gregar Cybeast,Gregar ModCard,Dog"
+  },
+  {
+    "ID": "116",
+    "Name": "Cybeast Falzar",
+    "MB": "70 MB",
+    "PositiveAbilities": "HP+40% \nFloatShoes ON \nAirShoes ON",
+    "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i)",
+    "MoreInformation": "",
+    "Alias": "Falzar,Falzar Beast,Falzar ModCard,Bird,Birb"
+  },
+  {
+    "ID": "117 (GREGAR ONLY)",
+    "Name": "Bass-Cross MegaMan (G)",
+    "MB": "70 MB",
+    "PositiveAbilities": "NormalBody \nHP+200 \nSuperArmor ON \nNormal Shot: Triple Buster \n - Null, AP depends on buster’s ATK and caps at 10 \nCharged Shot: Shooting Buster \n - Null, AP depends on buster’s ATK and caps at 50 \n - 70i charge time",
+    "NegativeAbilities": "MegaFolder-2",
+    "MoreInformation": "Gregar only",
+    "Alias": "Bass Gregar,Gregar Bass,Bass Cross Gregar"
+  },
+  {
+    "ID": "117 (FALZAR ONLY)",
+    "Name": "Bass-Cross MegaMan (F)",
+    "MB": "70 MB",
+    "PositiveAbilities": "NormalBody \nHP+20% \nFloatShoes ON \nNormal Shot: Triple Buster \n - Null, AP depends on buster’s ATK and caps at 10 \nCharged Shot: Hell’s Rolling \n - Null, AP depends on buster’s ATK and caps at 100 \n - 100i charge time",
+    "NegativeAbilities": "MegaFolder-2",
+    "MoreInformation": "Falzar only",
+    "Alias": "Bass Falzar,Falzar Bass,Bass Cross Falzar,Falzar Bass Cross"
+  }
+
+]

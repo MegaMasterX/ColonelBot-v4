@@ -29,7 +29,7 @@ namespace ColonelBot_v4.Services
             _discord = services.GetRequiredService<DiscordSocketClient>();
             _services = services;
 
-            _commands.CommandExecuted += CommandExecutedAsync; 
+            _commands.CommandExecuted += CommandExecutedAsync;
             _commands.Log += LogAsync;
             _discord.MessageReceived += MessageReceivedAsync;
         }
@@ -38,7 +38,7 @@ namespace ColonelBot_v4.Services
         {
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
         }
-    
+
 
         private Task LogAsync(LogMessage log)
         {
@@ -53,9 +53,6 @@ namespace ColonelBot_v4.Services
             if (message.Source != MessageSource.User) return;
             var context = new SocketCommandContext(_discord, message);
 
-            
-
-            
 
             //Save Game Importing
             if (message.Attachments.Count == 1) //The message contains an attachment.
@@ -72,7 +69,7 @@ namespace ColonelBot_v4.Services
                             Client.DownloadFile(new Uri(url), $"{CacheDirectory}{rawMessage.Author.Id}{rawMessage.Attachments.FirstOrDefault<Attachment>().Filename}");
                             Tools.BN6.SaveTool.ProcessSave($"{CacheDirectory}{rawMessage.Author.Id}{rawMessage.Attachments.FirstOrDefault<Attachment>().Filename}", rawMessage.Author.Id, EventModule.GetParticipant(rawMessage.Author).NetbattlerName);
                             EventModule.MarkAsSubmitted(rawMessage.Author);
-                            await rawMessage.DeleteAsync();                            
+                            await rawMessage.DeleteAsync();
                             await context.Channel.SendMessageAsync("Save file accepted.");
                         }
                         else if (rawMessage.Attachments.FirstOrDefault<Attachment>().Filename.ToUpper().Contains("SAV") || rawMessage.Attachments.FirstOrDefault<Attachment>().Filename.ToUpper().Contains(".SG"))
@@ -81,7 +78,6 @@ namespace ColonelBot_v4.Services
                             await context.Channel.SendMessageAsync("", false, EmbedTool.CommandError("I can only accept Save Files that are *.SA1 format. Please upload the correct save file."));
                         }
                     }
-                    
                 }
             }
 
@@ -90,11 +86,10 @@ namespace ColonelBot_v4.Services
             var argPos = 0;
             if (!(message.HasMentionPrefix(_discord.CurrentUser, ref argPos) || message.HasStringPrefix("!", ref argPos))) return;
 
-            
             var result = await _commands.ExecuteAsync(context, argPos, _services);
             if (result.IsSuccess == false)
-            {//The command failed?
-                
+            {
+                //The command failed?
             }
         }
 
@@ -106,8 +101,6 @@ namespace ColonelBot_v4.Services
                 return;
 
             // the command was succesful, we don't care about this result, unless we want to log that a command succeeded.
-            
-
 
             if (result.IsSuccess)
                 return;
@@ -115,13 +108,13 @@ namespace ColonelBot_v4.Services
             {
 		if (result.Error == CommandError.UnmetPrecondition)
 		    await context.Channel.SendMessageAsync("<:NO:528279619699212300> You currently don't have the permissions to execute this command");
-		else if (result.Error == CommandError.ParseFailed)	
+		else if (result.Error == CommandError.ParseFailed)
                     await context.Channel.SendMessageAsync("<:NO:528279619699212300> The command could not be parsed. Please ensure you are calling commands correctly.");
 		else if (result.Error == CommandError.BadArgCount)
                     await context.Channel.SendMessageAsync($"<:NO:528279619699212300> You are not calling the command with the right amount of arguments. Try using `!help <your command>`");
                 else if (result.Error == CommandError.Exception)
 		    await context.Channel.SendMessageAsync($"Command Execution failed due to an uncaught exception: {result.ErrorReason}");
-		else 
+		else
 		    await context.Channel.SendMessageAsync($"<:BarylMeh:297934727682326540> Command Execution failed with following error: {result.ErrorReason}"); //thanks trez
             }
         }
@@ -135,6 +128,5 @@ namespace ColonelBot_v4.Services
                 return false;
         }
 
-        
     }
 }
