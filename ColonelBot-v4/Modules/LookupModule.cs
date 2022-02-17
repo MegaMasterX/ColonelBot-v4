@@ -77,36 +77,7 @@ namespace ColonelBot_v4.Modules
             return selectedChip != null;
         }
 
-        /// <summary>
-        /// This method searches the chip library to see if the Alias matches the user's specification.
-        /// </summary>
-        /// <param name="ChipName"></param>
-        /// <returns>Returns true if an Alias was found, false if not.</returns>
-        public static bool SearchAliases(string ChipName)
-        {
-            Chip selectedChip = null;
-            selectedChip = ChipLibrary.Find(x => x.Alias.ToUpper().Contains(ChipName.ToUpper()));
-            if (selectedChip == null)
-                return false;
-            else
-                return true;
-        }
-
-        /// <summary>
-        /// This method searches for an entire chip name to see if it 1-to-1 matches. 
-        /// </summary>
-        /// <param name="ChipName"></param>
-        /// <returns>Returns True if the chip is identified, False if the chip is not identified.</returns>
-        public static bool SearchChip(string ChipName)
-        {
-            Chip selectedChip = null;
-            selectedChip = ChipLibrary.Find(x => x.Name.ToUpper() == ChipName.ToUpper());
-            if (selectedChip == null)
-                return false;
-            else
-                return true;
-        }
-
+        
         /// <summary>
         /// This method will return a built list of all chips matching the Lookup string criteria.  
         /// 

@@ -31,6 +31,7 @@ namespace ColonelBot_v4.Tools
             RadminCredentialString,               //Added per Mars' request to collapse Radmin to a single mod-editable string. -MMX 6/18/21
             AutomodFilterFileLocation,            //Added to support automod. -MMX 6/24/21
             QuoteReportChannelID,                 //Added per popular request. -MMX 6/25/21
+            ModcardLibraryFileLocation,           //Added for feature update -MMX 2/17/22
         }
 
         /// <summary>
