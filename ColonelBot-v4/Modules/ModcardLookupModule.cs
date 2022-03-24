@@ -37,13 +37,13 @@ namespace ColonelBot_v4.Modules
 
             public static bool TryFindCardByName(string cardName, out ModCard selectedCard)
             {
-                selectedCard = ModcardLibrary.Find(x => x.Name.ToUpperInvariant().Contains(cardName.ToUpperInvariant()));
+                selectedCard = ModcardLibrary.Find(x => x.Name.ToUpperInvariant().Equals(cardName.ToUpperInvariant()));
                 return selectedCard != null;
             }
 
             public static bool TryFindCardByAlias(string cardName, out ModCard selectedCard)
             {
-                selectedCard = ModcardLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(cardName.ToUpperInvariant()));
+                selectedCard = ModcardLibrary.Find(x => x.Alias.ToUpperInvariant().Equals(cardName.ToUpperInvariant()));
                 return selectedCard != null;
             }
 

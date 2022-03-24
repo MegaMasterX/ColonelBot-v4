@@ -128,6 +128,9 @@ namespace ColonelBot_v4.Tools
                 case ConfigurationEntries.QuoteReportChannelID:
                     Result = BotConfiguration.QuoteReportChannelID;
                     break;
+                case ConfigurationEntries.ModcardLibraryFileLocation:
+                    Result = BotConfiguration.ModcardLibraryFileLocation;
+                    break;
                 default:
                     Result = null;
                     break;
