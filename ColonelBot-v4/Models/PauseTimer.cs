@@ -29,7 +29,7 @@ namespace ColonelBot_v4.Models
             //Specify the ping targets.
             pingCaller = caller;
             pingTarget = target;
-
+            dContext = Context;
             ConstructTimer(Seconds);
         }
 
@@ -42,7 +42,7 @@ namespace ColonelBot_v4.Models
         public PauseTimer(int Seconds, IUser caller, SocketCommandContext Context)
         {
             pingCaller = caller;
-
+            dContext = Context;
             ConstructTimer(Seconds);
         }
 
@@ -60,9 +60,9 @@ namespace ColonelBot_v4.Models
         private async void PauseTimerElapsed(object sender, ElapsedEventArgs e)
         {
             if (pingTarget != null)
-                await dContext.Channel.SendMessageAsync($":alarm_clock: Your timer has elapsed, @{pingCaller.Id}, @{pingTarget.Id}!");
+                await dContext.Channel.SendMessageAsync($":alarm_clock: Your timer has elapsed, {pingCaller.Mention}, {pingTarget.Mention}!");
             else
-                await dContext.Channel.SendMessageAsync($":alarm_clock: Your timer has elapsed, @{pingCaller.Id}!");
+                await dContext.Channel.SendMessageAsync($":alarm_clock: Your timer has elapsed, {pingCaller.Mention}!");
 
             DisposeTimer();
         }

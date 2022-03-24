@@ -25,13 +25,23 @@ namespace ColonelBot_v4.Modules
         public async Task CreateGuildTimer(IUser target, [Remainder] string arguments)
         {
             string[] args = arguments.Split(' ');
-            if (args.Length == 2)
-            {//The user has passed Time, Target
-                PauseTimer tmr = new PauseTimer(ParseTime(args[1]), Context.User as IUser, target, Context);
-            }else
-            {//The user has just passed a time.
-                PauseTimer tmr = new PauseTimer(ParseTime(args[0]), Context.User as IUser, Context);
+            try
+            {
+                if (args.Length == 2)
+                {//The user has passed Time, Target
+                    
+                    PauseTimer tmr = new PauseTimer(ParseTime(args[1]), Context.User as IUser, target, Context);
+                }
+                else
+                {//The user has just passed a time.
+                    PauseTimer tmr = new PauseTimer(ParseTime(args[0]), Context.User as IUser, Context);
+                }
             }
+            catch (Exception)
+            { //This is likely due to the caller just doing !timer <elapsed>.
+                    await ReplyAsync("<:NO:528279619699212300> Please use #s or #m (Example: 5s for 5 Seconds or 2m for 2 Minutes) as a time for your timer. Don't forget to tag either yourself or your opponent!\n\nExample: !timer @<user tag> 5s");
+            }
+           
             await ReplyAsync("A timer has been created.");
         }
 
