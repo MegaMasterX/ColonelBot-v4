@@ -235,6 +235,22 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
+        public static Embed ModcardEmbed(ModCard modcard)
+        {
+            EmbedBuilder embed = new EmbedBuilder
+            {
+                Color = new Color(0x773A8F)
+            };
+            embed.AddField("Card Name", modcard.Name, false);
+            embed.AddField("MB", modcard.MB, false);
+            embed.AddField("Positive Abilities", modcard.PositiveAbilities, true);
+            embed.AddField("Negative Abilities", modcard.NegativeAbilities, true);
+            if (modcard.MoreInformation != "")
+                embed.AddField("More Information", modcard.MoreInformation, false);
+
+            return embed.Build();
+        }
+
         /// <summary>
         /// Returns a embed catered to search results from a failed or errored lookup.
         /// </summary>

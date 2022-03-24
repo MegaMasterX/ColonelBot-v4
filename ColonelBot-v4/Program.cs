@@ -50,6 +50,7 @@ namespace ColonelBot_v4
 
 
                 Modules.LookupModule.InitialCache();
+                Modules.ModcardLookupModule.InitializeCache();
 
                 //Token up
                 await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));

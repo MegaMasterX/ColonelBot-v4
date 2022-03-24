@@ -19,17 +19,7 @@ namespace ColonelBot_v4.Modules
 {
     public class InfoModule : ModuleBase<SocketCommandContext>
     {
-        [Command("userinfo")]
-	[Summary
-	("Returns info about the current user, or the user parameter, if one passed.")]	
-        [Alias("user", "whois")]
-        public async Task UserInfoAsync(
-            [Summary("The (optional) user to get info from")]
-            SocketUser user = null)
-        {
-            var userInfo = user ?? Context.Client.CurrentUser;
-            await ReplyAsync($"{userInfo.Username}#{userInfo.Discriminator}");
-        }
+     
 
         [Command("hamachi")]
         [RequireContext(ContextType.Guild)] //Cannot be requested via DM. 
@@ -169,45 +159,6 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync("The previous event winners' setups can be found here.  \n\nhttps://goo.gl/dM8UQQ ");
         }
 
-        Random rnd = new Random(DateTime.Now.Second);
-
-        [Command("hostflip"), Alias("🪙")]
-	public async Task HostflipAsync()
-        {//Untargeted hostflip
-            if (rnd.Next(0, 2) == 1)
-                await ReplyAsync("You are hosting.");
-            else
-                await ReplyAsync("Your opponent is hosting.");
-        }
-
-        [Command("hostflip"), Alias("🪙")]
-	public async Task TargetedHostflipAsync(IUser user)
-        {//Targeted hostflip.
-            if (rnd.Next(0, 2) == 1)
-                await ReplyAsync($"You are hosting, {user.Mention}");
-            else
-                await ReplyAsync($"You are hosting, {Context.User.Mention}");
-        }
-
-
-	[Command("servericon")]
-	public async Task ServerIcon()
-	{
-	    string url = Context.Guild.IconUrl;
-
-	    if (url is null)
-		await ReplyAsync("There is no server icon");
-	    else
-	    {
-		//checks if icon is animated aka last path of url starts with "a_"
-		if (Regex.IsMatch(url,@"\ba_(?!\/)(?:.(?!\/))+$"))
-		{
-		   //replaces all possible file extensions with gif
-		   url = Regex.Replace(url,@"\..{3,4}$",".gif");
-		}
-		await ReplyAsync(url);
-	    }
-	}
 
 	[Group("newmoon")]
 	public class NewMoonInfo : ModuleBase<SocketCommandContext>

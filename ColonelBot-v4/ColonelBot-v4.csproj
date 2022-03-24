@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>ColonelBot_v4</RootNamespace>
     <Authors>MegaMasterX</Authors>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>

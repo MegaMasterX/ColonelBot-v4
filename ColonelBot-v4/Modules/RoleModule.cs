@@ -38,7 +38,7 @@ namespace ColonelBot_v4.Modules
 
         }
 
-        [Command("unmoon"), Alias("unm"), RequireContext(ContextType.Guild)]
+        [Command("unmoon"), Alias("unm", "unlegs"), RequireContext(ContextType.Guild)]
         public async Task UnmoonAsync()
         {
             var caller = Context.User as IGuildUser;
