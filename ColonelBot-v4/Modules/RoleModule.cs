@@ -31,10 +31,15 @@ namespace ColonelBot_v4.Modules
         {
             //Method to moon-up the caller.
             var caller = Context.User as IGuildUser;
-            var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
-            var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
-            await AddMoonBattle(caller, role);
-            await ReplyAsync($"You are now ready to MOON BATTLE, {username}!");
+            if (HasRole("MOON BATTLER", caller, Context.Guild))
+            {
+                var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
+                var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
+                await AddMoonBattle(caller, role);
+                await ReplyAsync($"You are now ready to MOON BATTLE, {username}!");
+            }else
+                await ReplyAsync("You are not permitted to call this command.");
+            
 
         }
 
@@ -42,10 +47,14 @@ namespace ColonelBot_v4.Modules
         public async Task UnmoonAsync()
         {
             var caller = Context.User as IGuildUser;
-            var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
-            var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
-            await RemoveMoonbattle(caller, role);
-            await ReplyAsync("You are no longer available to MOON BATTLE.");
+            if (HasRole("MOON BATTLER", caller, Context.Guild))
+            {
+                var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
+                var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
+                await RemoveMoonbattle(caller, role);
+                await ReplyAsync("You are no longer available to MOON BATTLE.");
+            }else
+                await ReplyAsync("You are not permitted to call this command.");
         }
 
         
@@ -168,6 +177,18 @@ namespace ColonelBot_v4.Modules
 
             return ResponseText; //Task 60
             
+        }
+
+        ///<summary>
+        /// Checks to see if the Guild User has a role RoleName.
+        ///</summary
+        public static bool HasRole(string RoleName, IGuildUser caller, SocketGuild guild)
+        {
+            SocketRole role = GetRole(RoleName, guild);
+            if (caller.RoleIds.Contains(role.Id))
+                return true;
+            else
+                return false;
         }
 
         public static SocketRole GetRole(string RoleName, SocketGuild guild)
