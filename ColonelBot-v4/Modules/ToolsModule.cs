@@ -24,25 +24,34 @@ namespace ColonelBot_v4.Modules
         [RequireContext(ContextType.Guild)]
         public async Task CreateGuildTimer(IUser target, [Remainder] string arguments)
         {
-            string[] args = arguments.Split(' ');
-            try
+            if (arguments.Contains("everyone") || arguments.Contains("here"))
             {
-                if (args.Length == 2)
-                {//The user has passed Time, Target
-                    
-                    PauseTimer tmr = new PauseTimer(ParseTime(args[1]), Context.User as IUser, target, Context);
+                await ReplyAsync("<:NO:528279619699212300>");
+            }else
+            {
+                string[] args = arguments.Split(' ');
+                try
+                {
+                    if (args.Length == 2)
+                    {//The user has passed Time, Target
+
+                        PauseTimer tmr = new PauseTimer(ParseTime(args[1]), Context.User as IUser, target, Context);
+                        await ReplyAsync("A timer has been created.");
+                    }
+                    else
+                    {//The user has just passed a time.
+                        PauseTimer tmr = new PauseTimer(ParseTime(args[0]), Context.User as IUser, Context);
+                        await ReplyAsync("A timer has been created.");
+                    }
                 }
-                else
-                {//The user has just passed a time.
-                    PauseTimer tmr = new PauseTimer(ParseTime(args[0]), Context.User as IUser, Context);
-                }
-            }
-            catch (Exception)
-            { //This is likely due to the caller just doing !timer <elapsed>.
+                catch (Exception)
+                { //This is likely due to the caller just doing !timer <elapsed>.
                     await ReplyAsync("<:NO:528279619699212300> Please use #s or #m (Example: 5s for 5 Seconds or 2m for 2 Minutes) as a time for your timer. Don't forget to tag either yourself or your opponent!\n\nExample: !timer @<user tag> 5s");
+                }
+
+                
             }
-           
-            await ReplyAsync("A timer has been created.");
+            
         }
 
         /// <summary>
@@ -96,8 +105,11 @@ namespace ColonelBot_v4.Modules
         /// <returns></returns>
         private int ParseTime(string TimeMessage)
         {
+            int MinuteCount = Convert.ToInt16(TimeMessage.Remove(TimeMessage.Length - 1, 1));
+            if (MinuteCount > 5)
+                MinuteCount = 5; //Cap the minutes at 5 per request
             if (TimeMessage.ToLower().Contains('m'))
-                return Convert.ToInt16(TimeMessage.Remove(TimeMessage.Length - 1, 1)) * 60;
+                return Convert.ToInt16(MinuteCount) * 60;
             else if (TimeMessage.ToLower().Contains('s'))
                 return Convert.ToInt16(TimeMessage.Remove(TimeMessage.Length - 1, 1));
             else
