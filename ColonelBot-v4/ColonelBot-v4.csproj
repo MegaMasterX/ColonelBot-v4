@@ -24,7 +24,10 @@
   <ItemGroup>
       <Content Include=".\Data\ChipLibrary.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+      </Content>
+      <Content Include=".\Data\ModcardLibrary.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
   </ItemGroup>
 
 </Project>
