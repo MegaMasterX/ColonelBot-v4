@@ -258,7 +258,7 @@
     "PositiveAbilities": "Charged Shot: Spreader \n - Null, 30 AP \n - 20i charge time \nB+<: Shield \n - 23i duration \n - 70i cooldown \nChip Recovery: 20 HP \nBug Fix: HP Bug",
     "NegativeAbilities": "Bug: -40 HP upon entering custom screen",
     "MoreInformation": "",
-    "Alias": ""
+    "Alias": "Coffee,CoffeePot,AwfullyHotCoffeePot"
   },
   {
     "ID": "030",
@@ -507,10 +507,10 @@
     "ID": "057",
     "Name": "Dynamyte",
     "MB": "13 MB",
-    "PositiveAbilities": "Speed+4 \nAirShoes ON",
-    "NegativeAbilities": "Bug: -20 HP upon entering custom screen",
+    "PositiveAbilities": "WoodBody \nFirst: Barrier10 \nUnderShirt ON \nBug Fix: Damage Bug",
+    "NegativeAbilities": "HP-40",
     "MoreInformation": "",
-    "Alias": "Poitton"
+    "Alias": "Poitton,Dynamite"
   },
   {
     "ID": "058",
@@ -978,7 +978,7 @@
     "PositiveAbilities": "Attack+4 \nSpeed+4 \nCharge+4 \nSuperArmor ON \nCharged Shot: SuperVulcan \n - Null, 20 AP \n - 150i charge time",
     "NegativeAbilities": "None",
     "MoreInformation": "",
-    "Alias": "Soul Batter,SoulBattler,Soul Cust,Soul Battler Customization,Soul Battler Cust"
+    "Alias": "SoulBatter,SoulBattler,Soul Cust,SoulCust,Soul Battler Customization,Soul Battler Cust"
   },
   {
     "ID": "110",
