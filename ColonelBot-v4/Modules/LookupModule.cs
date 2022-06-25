@@ -88,17 +88,24 @@ namespace ColonelBot_v4.Modules
         /// <returns></returns>
         private static string ObtainSuggestions(string lookupString)
         {
-            string result = "Chip not found. Perhaps you meant: ";
-            string Criteria = lookupString.Remove(3);
-            string verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
-            
+            string suggestion = "Chip not found. Perhaps you meant: ";
+            string failure = "Chip not found.";
+            string result = suggestion;
+            string Criteria = lookupString
+            string verOrClass = lookupString
+            if (lookupString.Length > 4){
+                Criteria = lookupString.Remove(3);
+            }
+            if (lookupString.Length > 2){
+                string verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
+            }
             List<Chip> FindResults = ChipLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
             foreach (Chip chp in FindResults)
             {
                 result += $"{chp.Name}   ";
             }
 
-            if (result == "Chip not found.Perhaps you meant: ")
+            if (result == suggestion)
             {// The fuzzy search did not return a result, check the aliases.
                 List<Chip> AliasResults = ChipLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
                 foreach (Chip item in AliasResults)
@@ -111,6 +118,10 @@ namespace ColonelBot_v4.Modules
                             result += $"{item.Name}   ";
                     }
                 }
+            }
+            if (result == suggestion)
+            {// No fuzzy results were found in the aliases either. Change the return string.
+                result = failure
             }
             return result;
         }
