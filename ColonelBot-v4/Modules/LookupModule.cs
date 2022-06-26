@@ -71,6 +71,7 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="AliasName"></param>
         /// <returns>Returns a Chip model of the instance that matches the chip found in the Library.</returns>
+        const string lookupfailure = "Chip not found.";
         public static bool TryFindChipByAlias(string chipName, out Chip selectedChip)
         {
             selectedChip = ChipLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
@@ -89,7 +90,6 @@ namespace ColonelBot_v4.Modules
         private static string ObtainSuggestions(string lookupString)
         {
             string suggestion = "Chip not found. Perhaps you meant: ";
-            string failure = "Chip not found.";
             string result = suggestion;
             string Criteria = lookupString
             string verOrClass = lookupString
@@ -121,7 +121,7 @@ namespace ColonelBot_v4.Modules
             }
             if (result == suggestion)
             {// No fuzzy results were found in the aliases either. Change the return string.
-                result = failure
+                result = lookupfailure
             }
             return result;
         }
@@ -131,6 +131,7 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="CodeLookup"></param>
         /// <returns></returns>
+        const string NoCodeFound = "No chips could be found with the specified code. Please try again with a proper letter.";
         private static string ObtainCodeResults(string CodeLookup)
         {
             string result = "";
@@ -142,7 +143,7 @@ namespace ColonelBot_v4.Modules
                 result += $"{item.Name}   ";
             }
             if (result == "")
-                result = "No chips could be found with the specified code. Please try again with a proper letter.";
+                result = NoCodeFound;
             return result;
         }
         /// <summary>
