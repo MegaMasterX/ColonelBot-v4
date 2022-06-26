@@ -15,7 +15,7 @@ namespace ColonelBot_v4.Modules
     public class RoleModule : ModuleBase<SocketCommandContext>
     {
 
-        [Command("available"), Alias("atb","🦞","🐱"), RequireContext(ContextType.Guild)]
+        [Command("available"), Alias("atb","🦞","🐱","<:EguchiHype:596812876434374667>"), RequireContext(ContextType.Guild)]
         public async Task GoATB()
         {
             var caller = Context.User as IGuildUser;
