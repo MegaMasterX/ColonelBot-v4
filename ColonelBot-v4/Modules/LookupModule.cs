@@ -71,7 +71,7 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="AliasName"></param>
         /// <returns>Returns a Chip model of the instance that matches the chip found in the Library.</returns>
-        const string lookupfailure = "Chip not found.";
+        const string lookupFailure = "Chip not found.";
         public static bool TryFindChipByAlias(string chipName, out Chip selectedChip)
         {
             selectedChip = ChipLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
@@ -121,7 +121,7 @@ namespace ColonelBot_v4.Modules
             }
             if (result == suggestion)
             {// No fuzzy results were found in the aliases either. Change the return string.
-                result = lookupfailure
+                result = lookupFailure
             }
             return result;
         }
