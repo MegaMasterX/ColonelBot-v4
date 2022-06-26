@@ -72,6 +72,7 @@ namespace ColonelBot_v4.Modules
         /// <param name="AliasName"></param>
         /// <returns>Returns a Chip model of the instance that matches the chip found in the Library.</returns>
         const string lookupFailure = "Chip not found.";
+        const string fuzzySuggestion = "Chip not found. Perhaps you meant: ";
         public static bool TryFindChipByAlias(string chipName, out Chip selectedChip)
         {
             selectedChip = ChipLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
@@ -89,8 +90,7 @@ namespace ColonelBot_v4.Modules
         /// <returns></returns>
         private static string ObtainSuggestions(string lookupString)
         {
-            string suggestion = "Chip not found. Perhaps you meant: ";
-            string result = suggestion;
+            string result = fuzzySuggestion;
             string Criteria = lookupString;
             string verOrClass = lookupString;
             if (lookupString.Length > 4){
@@ -105,7 +105,7 @@ namespace ColonelBot_v4.Modules
                 result += $"{chp.Name}   ";
             }
 
-            if (result == suggestion)
+            if (result == fuzzySuggestion)
             {// The fuzzy search did not return a result, check the aliases.
                 List<Chip> AliasResults = ChipLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
                 foreach (Chip item in AliasResults)
@@ -119,9 +119,9 @@ namespace ColonelBot_v4.Modules
                     }
                 }
             }
-            if (result == suggestion)
+            if (result == fuzzySuggestion)
             {// No fuzzy results were found in the aliases either. Change the return string.
-                result = lookupFailure
+                result = lookupFailure;
             }
             return result;
         }
