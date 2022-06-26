@@ -91,8 +91,8 @@ namespace ColonelBot_v4.Modules
         {
             string suggestion = "Chip not found. Perhaps you meant: ";
             string result = suggestion;
-            string Criteria = lookupString
-            string verOrClass = lookupString
+            string Criteria = lookupString;
+            string verOrClass = lookupString;
             if (lookupString.Length > 4){
                 Criteria = lookupString.Remove(3);
             }
