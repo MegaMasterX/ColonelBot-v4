@@ -90,7 +90,7 @@ namespace ColonelBot_v4.Modules
         private static string ObtainSuggestions(string lookupString)
         {
             string result = lookupFailure + $" Perhaps you meant: ";
-            int oglength = result.Length;
+            int ogLength = result.Length;
             string Criteria = lookupString;
             string verOrClass = lookupString;
             if (lookupString.Length > 4){
@@ -105,7 +105,7 @@ namespace ColonelBot_v4.Modules
                 result += $"{chp.Name}   ";
             }
 
-            if (result.Length == oglength)
+            if (result.Length == ogLength)
             {// The fuzzy search did not return a result, check the aliases.
                 List<Chip> AliasResults = ChipLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
                 foreach (Chip item in AliasResults)
@@ -119,7 +119,7 @@ namespace ColonelBot_v4.Modules
                     }
                 }
             }
-            if (result.Length == oglength)
+            if (result.Length == ogLength)
             {// No fuzzy results were found in the aliases either. Change the return string.
                 result = lookupFailure;
             }
