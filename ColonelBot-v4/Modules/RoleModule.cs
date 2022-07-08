@@ -15,7 +15,7 @@ namespace ColonelBot_v4.Modules
     public class RoleModule : ModuleBase<SocketCommandContext>
     {
 
-        [Command("available"), Alias("atb","🦞"), RequireContext(ContextType.Guild)]
+        [Command("available"), Alias("atb","🦞","🐱","<:EguchiHype:596812876434374667>"), RequireContext(ContextType.Guild)]
         public async Task GoATB()
         {
             var caller = Context.User as IGuildUser;
@@ -26,7 +26,7 @@ namespace ColonelBot_v4.Modules
             await ReplyAsync($"You are now Available to Battle, {username}");
         }
 
-        [Command("atm"), Alias("lmb","legs","moontime","🌙","🌑","🌕"), RequireContext(ContextType.Guild)]
+        [Command("atm"), Alias("lmb","legs","moontime","🌙","🌑","🌕","🌚","<:MegaLegPose:965794241727066112>","<:RegalRisen:972553613815717959>"), RequireContext(ContextType.Guild)]
         public async Task ItsMoonTimeAsync()
         {
             //Method to moon-up the caller.
@@ -43,7 +43,7 @@ namespace ColonelBot_v4.Modules
 
         }
 
-        [Command("unmoon"), Alias("unm", "unlegs"), RequireContext(ContextType.Guild)]
+        [Command("unmoon"), Alias("unm", "unlegs","🌞","☀️","<:MegaBedLegPose:965794604689530880>",,"<:RegalSleep:972553613815717959>"), RequireContext(ContextType.Guild)]
         public async Task UnmoonAsync()
         {
             var caller = Context.User as IGuildUser;
@@ -58,7 +58,7 @@ namespace ColonelBot_v4.Modules
         }
 
         
-        [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail", "<:shrimpy:595465516286738463>"), RequireContext(ContextType.Guild)]
+        [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail", "<:shrimpy:595465516286738463>","🐦","🐔"), RequireContext(ContextType.Guild)]
         public async Task RemoveATB()
         {
             var caller = Context.User as IGuildUser;

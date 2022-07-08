@@ -71,6 +71,7 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="AliasName"></param>
         /// <returns>Returns a Chip model of the instance that matches the chip found in the Library.</returns>
+        const string lookupFailure = "Chip not found.";
         public static bool TryFindChipByAlias(string chipName, out Chip selectedChip)
         {
             selectedChip = ChipLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
@@ -88,17 +89,23 @@ namespace ColonelBot_v4.Modules
         /// <returns></returns>
         private static string ObtainSuggestions(string lookupString)
         {
-            string result = "Chip not found. Perhaps you meant: ";
-            string Criteria = lookupString.Remove(3);
-            string verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
-            
+            string result = lookupFailure + $" Perhaps you meant: ";
+            int ogLength = result.Length;
+            string Criteria = lookupString;
+            string verOrClass = lookupString;
+            if (lookupString.Length > 4){
+                Criteria = lookupString.Remove(3);
+            }
+            if (lookupString.Length > 2){
+                string verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
+            }
             List<Chip> FindResults = ChipLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
             foreach (Chip chp in FindResults)
             {
                 result += $"{chp.Name}   ";
             }
 
-            if (result == "Chip not found.Perhaps you meant: ")
+            if (result.Length == ogLength)
             {// The fuzzy search did not return a result, check the aliases.
                 List<Chip> AliasResults = ChipLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
                 foreach (Chip item in AliasResults)
@@ -112,6 +119,10 @@ namespace ColonelBot_v4.Modules
                     }
                 }
             }
+            if (result.Length == ogLength)
+            {// No fuzzy results were found in the aliases either. Change the return string.
+                result = lookupFailure;
+            }
             return result;
         }
 
@@ -120,6 +131,7 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="CodeLookup"></param>
         /// <returns></returns>
+        const string NoCodeFound = "No chips could be found with the specified code. Please try again with a proper letter.";
         private static string ObtainCodeResults(string CodeLookup)
         {
             string result = "";
@@ -131,7 +143,7 @@ namespace ColonelBot_v4.Modules
                 result += $"{item.Name}   ";
             }
             if (result == "")
-                result = "No chips could be found with the specified code. Please try again with a proper letter.";
+                result = NoCodeFound;
             return result;
         }
         /// <summary>

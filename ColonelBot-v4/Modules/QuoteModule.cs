@@ -49,7 +49,7 @@ namespace ColonelBot_v4.Modules
             //3. Respond with said quote.
             if (selectedQuote != null)
                 if (selectedQuote.QuoteAuthorNickname == null)
-                    await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by Library Export: {selectedQuote.QuoteContents}");
+                    await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()}: {selectedQuote.QuoteContents}");
                 else
                     await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
             else
@@ -68,7 +68,10 @@ namespace ColonelBot_v4.Modules
             Quote selectedQuote = MasterQuoteList[rnd.Next(0, MasterQuoteList.Count)];
 
             //3. Respond with said quote.
-            await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
+            if (selectedQuote.QuoteAuthorNickname == null)
+                await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()}: {selectedQuote.QuoteContents}");
+            else
+                await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
 
         }
 
@@ -85,7 +88,8 @@ namespace ColonelBot_v4.Modules
                     MasterQuoteList.RemoveAt(i); //Remove the quote from the library.
                     WriteQuoteList(); //Write the list to the JSON.
                     await ReplyAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} removed from the library by a moderator."));
-                }
+                } else  // The Quote ID is not located.
+                    await ReplyAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} does not exist in the library."));
             }
         }
     
