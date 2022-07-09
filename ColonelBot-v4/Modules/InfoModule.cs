@@ -111,7 +111,7 @@ namespace ColonelBot_v4.Modules
         [Command("uninstall")]
         public async Task UninstallInformAsync()
         {
-            await ReplyAsync("Uninstall removes only the following programs: SuperArmor, AirShoes, FloatShoes, any B← power from Customizer or ModCard.");
+            await ReplyAsync("Uninstall removes only the following programs: SuperArmor, AirShoes, FloatShoes, any B← power from NaviCustomizer or ModCards.");
 
         }
 
