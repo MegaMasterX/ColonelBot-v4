@@ -197,9 +197,9 @@ namespace ColonelBot_v4.Tools
 
 	    embed.AddField("Notice","The N1 Grand Prix cannot provide ROMs. We strongly suggest ripping your own ROM from a physical cart provided that it complies with your country's copyright laws. The N1GP Discord Community and its administrators are not responsible for any action taken by you as a result of participation.");
             embed.AddField("NetBattler Resource Folder", $"This resource folder contains all the saves, patches, and various software you will need to get started with netbattling. \n{drivelink}");
-            embed.AddField("How To Netbattle Online [Video Guides]", "These will show you how to import your save file, netbattle as a host, and netbattle as a Client.  \nhttp://bit.ly/2htNN8W");
-            embed.AddField("Netbattle 101", "Overview of version differences and game mechanics for new and returning Netbattlers that need a refresher. Includes text guide of how to setup online play. \nhttps://docs.google.com/document/d/1AjvxhqfcMCg6H6o8683emQ7pmUq2ffGo0ogBPd84e00/");
-	    embed.AddField("Netbattle EX/Advanced Guides", "In-depth collection of guides with chip functionality, frame data, detailed game mechanic explanations as well as Japanese version exclusive e-reader+ information. \nhttps://docs.google.com/document/d/1Io4EU7S5lYtZS7bmgnfLBOl97umbMRodZEbXgFxTzdI");
+            embed.AddField("How To Netbattle Online [Video Guide]", "This will show you how to set up Tango, import the save files, and connect with others for pvp.  \nhttps://youtu.be/tOyxdYO1Gac");
+            embed.AddField("Netbattle 101", "Overview of version differences and game mechanics in BN6 for new and returning Netbattlers that need a refresher. \nhttps://docs.google.com/document/d/1AjvxhqfcMCg6H6o8683emQ7pmUq2ffGo0ogBPd84e00/");
+	    embed.AddField("Netbattle EX/Advanced Guides", "In-depth collection of BN6 guides with chip functionality, frame data, detailed game mechanic explanations as well as Japanese version exclusive e-reader+ information. \nhttps://docs.google.com/document/d/1Io4EU7S5lYtZS7bmgnfLBOl97umbMRodZEbXgFxTzdI");
             embed.AddField("N1GP Central Document", "Access everything above and more through the central doc, a complete collection of all guides and resources provided by our community. \nhttp://central.n1gp.net/");
 	    return embed.Build();
         }
