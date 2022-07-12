@@ -97,7 +97,7 @@ namespace ColonelBot_v4.Modules
                 Criteria = lookupString.Remove(3);
             }
             if (lookupString.Length > 2){
-                string verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
+                verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
             }
             List<Chip> FindResults = ChipLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
             foreach (Chip chp in FindResults)

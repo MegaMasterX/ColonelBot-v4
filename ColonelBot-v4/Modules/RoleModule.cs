@@ -43,7 +43,7 @@ namespace ColonelBot_v4.Modules
 
         }
 
-        [Command("unmoon"), Alias("unm", "unlegs","🌞","☀️","<:MegaBedLegPose:965794604689530880>",,"<:RegalSleep:972553613815717959>"), RequireContext(ContextType.Guild)]
+        [Command("unmoon"), Alias("unm", "unlegs","🌞","☀️","<:MegaBedLegPose:965794604689530880>","<:RegalSleep:972553613815717959>"), RequireContext(ContextType.Guild)]
         public async Task UnmoonAsync()
         {
             var caller = Context.User as IGuildUser;
