@@ -139,6 +139,7 @@ namespace ColonelBot_v4.Modules
                 List<string> rejects = new List<string>();
                 List<ulong> IDs = new List<ulong>();
 
+                // this assumes that a message containing a list of user @mentions will contain the mentions in the plaintext format of <@88809261060075520> when interpreted as a string
                 // parse param string, populate IDs with results
                 string dirty = param.Replace("@!","@")
 
