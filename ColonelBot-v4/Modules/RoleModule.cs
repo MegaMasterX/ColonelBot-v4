@@ -93,6 +93,130 @@ namespace ColonelBot_v4.Modules
             await ToggleRole(caller, role);
         }
         
+        [Group("moonrole")]
+        [RequireUserPermission(GuildPermission.ManageRoles)]
+        public class MoonRoleModule : ModuleBase<SocketCommandContext>
+        {
+            SocketRole moonrole = GetRole("MOON BATTLER", Context.Guild);
+
+            [Command("add"), RequireContext(ContextType.Guild)]
+            public async Task MoonRoleAdd([Remainder] string Mentions)
+            {
+                int option = 0;
+                string status = MoonRoleShared(option, Mentions);
+                await ReplyAsync(status);
+            }
+
+            [Command("remove"), Alias("del", "delete"), RequireContext(ContextType.Guild)]
+            public async Task MoonRoleRemove([Remainder] string Mentions)
+            {
+                int choice = 1;
+                string status = MoonRoleShared(option, Mentions);
+                await ReplyAsync(status);
+            }
+
+            public async Task<string> MoonRoleShared(int choice, string param)
+            {
+                var userlist = ParseMoonList(param);
+
+                // if I could get it to return the rejects, this is where I would construct a string with sections of the original parameter that did not return valid users.
+                // potential reasons for failed matches could be:
+                //  - typo/junk text
+                //  - user is not in the server
+                //  - I'm bad at writing code to parse strings
+                string return1 = "";
+
+                string return2 = IterateMoonList(choice, userlist);
+                return return1 + return2;
+            }
+
+
+            public static List<SocketGuildUser> ParseMoonList(string param)
+            {   // Iterate through the parameter and isolate each recognizable User Mention, return a table that can pass individual `IUser target` params
+                // also return a table of string snippets that failed to represent a User 
+                
+                List<SocketGuildUser> valid = new List<SocketGuildUser>();
+                List<string> rejects = new List<string>();
+                List<ulong> IDs = new List<ulong>();
+
+                // parse param string, populate IDs with results
+                string dirty = param.Replace("@!","@")
+
+                // need to get each instance of contiguous numbers proceeding "<@"
+                // I tried working with string indexes but I only managed to stub my toe.
+                // each instance of contiguous numbers should be added to IDs
+
+
+                foreach (var id in IDs) {
+                    var ii = Context.Guild.GetUser(id);
+                    // we need to verify that this returned a real user ID
+                    // and that the user is in the server
+                    if (){
+                        valid.Add(ii);
+                    }
+                    
+                }
+
+                //return new Tuple<struct,struct>(valid,rejects);
+                return valid;
+            }
+
+            public async Task<string> IterateMoonList(int choice, SocketGuildUser users, SocketRole role)
+            { // Iterate through the table of valid User Mentions
+                int countcount = 0;
+                int successcount = 0;
+                int skipcount = 0;
+                bool skipbool = false;
+                string skipped = "";
+                string results = "";
+                string phrase1 = "";
+                string phrase2 = "";
+                if (choice == 0){
+                    phrase1 = "applied role to";
+                    phrase2 = "have";
+                }else{
+                    phrase1 = "removed role from";
+                    phrase2 = "don't have";
+                }
+                // I'm probably not using the item type correctly yet. This is currently passing SocketGuildUser and the existing examples pass IUser
+                foreach (var item in users)
+                {
+                    // I suspect there's some sort of rate limit that this loop needs to be mindful of. Currently I don't know what to do about that.
+                    countcount += 1;
+                    skipbool = false;
+                    if (choice == 0){
+                        if !(HasRole(role, item, Context.Guild)){
+                            await item.AddRoleAsync(role, null);
+                        }else{
+                            skipbool = true;
+                        }
+                    }
+                    else{
+                        if (HasRole(role, item, Context.Guild)){
+                            await item.RemoveRoleAsync(role, null);
+                        }else{
+                            skipbool = true;
+                        }
+                    }
+                    if (skipbool == false){ successcount += 1;}
+                    else{
+                        skipcount += 1;
+                        skipped += $"{item.Mention} ";
+                    }
+                }
+
+                // Basic results, say how many usernames were recognized, how many users had their role status changed.
+                results += $"Recognized {countcount} users, {phrase1} {successcount} users.\n"
+
+                // If users were skipped, say how many and @mention the specific users.
+                if (skipcount > 0){
+                    results += $"{skipcount} users already {phrase2} the role: {skipped} \n";
+                }
+
+                return results;
+            }
+        }
+
         public async Task<Embed> ToggleRole(IGuildUser caller, SocketRole role)
         {
             string RoleResponseText = "";
