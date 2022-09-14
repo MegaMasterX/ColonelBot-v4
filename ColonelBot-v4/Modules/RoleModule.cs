@@ -77,7 +77,7 @@ namespace ColonelBot_v4.Modules
             await ToggleRole(caller, role);
         }
 
-        [Command("license"), Alias("licence")]
+        [Command("license"), Alias("licence", "loicence", "loicense")]
         public async Task ToggleLicenseRole()
         {//Toggles the Netbattler role when called - adding it if it's not present or removing it if it is.
             var caller = Context.User as IGuildUser;
