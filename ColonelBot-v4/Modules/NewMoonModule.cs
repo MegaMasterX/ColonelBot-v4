@@ -45,7 +45,7 @@ namespace ColonelBot_v4.Modules
 
         [Command("nomoon")]
         [RequireContext(ContextType.Guild)]
-        public async Task NoMoon([Remainder] string msg)
+        public async Task NoMoon()
         {
             await ReplyAsync($"<:BarylMeh:297934727682326540> Removing MOON BATTLER from <<ALL>> users. This may take a moment due to Discord rate limiting.");
             var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
