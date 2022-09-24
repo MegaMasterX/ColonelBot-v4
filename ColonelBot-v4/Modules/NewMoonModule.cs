@@ -32,29 +32,40 @@ namespace ColonelBot_v4.Modules
         [RequireContext(ContextType.Guild)]
         public async Task AddMoon([Remainder] string msg)
         {
-            await ReplyAsync($"<:BarylMeh:297934727682326540> Beginning to add MOON BATTLERS. This may take a moment due to Discord rate limiting.");
-            var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
-            foreach (var item in Context.Message.MentionedUsers)
+            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
             {
-                SocketGuildUser target = Context.Guild.GetUser(item.Id);
-                await target.AddRoleAsync(role);
-                await ReplyAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
-            }
+                await ReplyAsync($"<:BarylMeh:297934727682326540> Beginning to add MOON BATTLERS. This may take a moment due to Discord rate limiting.");
+                var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
+                foreach (var item in Context.Message.MentionedUsers)
+                {
+                    SocketGuildUser target = Context.Guild.GetUser(item.Id);
+                    await target.AddRoleAsync(role);
+                    await ReplyAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
+                }
+            } else
+                await ReplyAsync($"You are not authorized to perform this command.");
+            
 
         }
 
-        [Command("nomoon")]
+        [Command("nomoon"), Alias("remoonve")]
         [RequireContext(ContextType.Guild)]
         public async Task NoMoon()
         {
-            await ReplyAsync($"<:BarylMeh:297934727682326540> Removing MOON BATTLER from <<ALL>> users. This may take a moment due to Discord rate limiting.");
-            var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
-            foreach (var item in role.Members)
+            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
             {
-                SocketGuildUser target = Context.Guild.GetUser(item.Id);
-                await target.RemoveRoleAsync(role);
-                await ReplyAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
+
+                await ReplyAsync($"<:BarylMeh:297934727682326540> Removing MOON BATTLER from <<ALL>> users. This may take a moment due to Discord rate limiting.");
+                var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
+                foreach (var item in role.Members)
+                {
+                    SocketGuildUser target = Context.Guild.GetUser(item.Id);
+                    await target.RemoveRoleAsync(role);
+                    await ReplyAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
+                }
             }
+            else
+                await ReplyAsync($"You are not authorized to eradicate all of the MOON BATTLERS.");
 
         }
 
