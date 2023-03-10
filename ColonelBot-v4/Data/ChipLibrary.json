@@ -3032,7 +3032,7 @@
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
     "Image": "",
-    "MoreDetails": "Cannon A-B-C https://wiki.n1gp.net/Giga_Cannon_program_advance_series_(BN6)",
+    "MoreDetails": "Cannon A-B-C \nhttps://wiki.n1gp.net/Giga_Cannon_program_advance_series_(BN6)",
     "Alias": "GigaCan 1,GigaCannon1,GigaCannon 1"
   },
   {
@@ -3043,7 +3043,7 @@
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
     "Image": "",
-    "MoreDetails": "HiCannon L-M-N https://wiki.n1gp.net/Giga_Cannon_program_advance_series_(BN6)",
+    "MoreDetails": "HiCannon L-M-N \nhttps://wiki.n1gp.net/Giga_Cannon_program_advance_series_(BN6)",
     "Alias": "GigaCan 2,GigaCannon2,GigaCannon 2"
   },
   {
@@ -3054,7 +3054,7 @@
     "Codes": "--",
     "Description": "Giga lvl cannon attack!",
     "Image": "",
-    "MoreDetails": "M-Cannon R-S-T https://wiki.n1gp.net/Giga_Cannon_program_advance_series_(BN6)",
+    "MoreDetails": "M-Cannon R-S-T \nhttps://wiki.n1gp.net/Giga_Cannon_program_advance_series_(BN6)",
     "Alias": "GigaCan 3,GigaCannon3,GigaCannon 3"
   },
   {
@@ -3065,7 +3065,7 @@
     "Codes": "--",
     "Description": "Burns and cracks one panel ahead and the following 2x3 panels.",
     "Image": "",
-    "MoreDetails": "FireBrn1 F-G-H https://wiki.n1gp.net/Wide_Burner_program_advance_series_(BN6)",
+    "MoreDetails": "FireBrn1 F-G-H \nhttps://wiki.n1gp.net/Wide_Burner_program_advance_series_(BN6)",
     "Alias": "WideBurn1,WideBurn 1"
   },
   {
@@ -3076,7 +3076,7 @@
     "Codes": "--",
     "Description": "Burns and cracks one panel ahead and the following 2x3 panels.",
     "Image": "",
-    "MoreDetails": "FireBrn2 S-T-U https://wiki.n1gp.net/Wide_Burner_program_advance_series_(BN6)",
+    "MoreDetails": "FireBrn2 S-T-U \nhttps://wiki.n1gp.net/Wide_Burner_program_advance_series_(BN6)",
     "Alias": "WideBurn2,WideBurn 2"
   },
   {
@@ -3087,7 +3087,7 @@
     "Codes": "--",
     "Description": "Burns and cracks one panel ahead and the following 2x3 panels.",
     "Image": "",
-    "MoreDetails": "FireBrn3 C-D-E https://wiki.n1gp.net/Wide_Burner_program_advance_series_(BN6)",
+    "MoreDetails": "FireBrn3 C-D-E \nhttps://wiki.n1gp.net/Wide_Burner_program_advance_series_(BN6)",
     "Alias": "WideBurn3,WideBurn 3"
   },
   {
@@ -3098,7 +3098,7 @@
     "Codes": "--",
     "Description": "Launch 2 flaming hooks!",
     "Image": "",
-    "MoreDetails": "FireHit1 D-E-F https://wiki.n1gp.net/Flame_Hook_program_advance_series_(BN6)",
+    "MoreDetails": "FireHit1 D-E-F \nhttps://wiki.n1gp.net/Flame_Hook_program_advance_series_(BN6)",
     "Alias": "FlameHook1,FlameHook 1"
   },
   {
@@ -3109,7 +3109,7 @@
     "Codes": "--",
     "Description": "Launch 2 flaming hooks!",
     "Image": "",
-    "MoreDetails": "FireHit2 R-S-T https://wiki.n1gp.net/Flame_Hook_program_advance_series_(BN6)",
+    "MoreDetails": "FireHit2 R-S-T \nhttps://wiki.n1gp.net/Flame_Hook_program_advance_series_(BN6)",
     "Alias": "FlameHook2,FlameHook 2"
   },
   {
@@ -3120,7 +3120,7 @@
     "Codes": "--",
     "Description": "Launch 2 flaming hooks!",
     "Image": "",
-    "MoreDetails": "FireHit3 A-B-C https://wiki.n1gp.net/Flame_Hook_program_advance_series_(BN6)",
+    "MoreDetails": "FireHit3 A-B-C \nhttps://wiki.n1gp.net/Flame_Hook_program_advance_series_(BN6)",
     "Alias": "FlameHook3,FlameHook 3"
   },
   {
@@ -3131,7 +3131,7 @@
     "Codes": "--",
     "Description": "Send a powerful wave 3 rows wide",
     "Image": "",
-    "MoreDetails": "WaveArm1 E-F-G https://wiki.n1gp.net/Power_Wave_program_advance_series_(BN6)",
+    "MoreDetails": "WaveArm1 E-F-G \nhttps://wiki.n1gp.net/Power_Wave_program_advance_series_(BN6)",
     "Alias": "PwrWave 1,PowerWave1,PowerWave 1"
   },
   {
@@ -3142,7 +3142,7 @@
     "Codes": "--",
     "Description": "Send a powerful wave 3 rows wide",
     "Image": "",
-    "MoreDetails": "WaveArm2 L-M-N https://wiki.n1gp.net/Power_Wave_program_advance_series_(BN6)",
+    "MoreDetails": "WaveArm2 L-M-N \nhttps://wiki.n1gp.net/Power_Wave_program_advance_series_(BN6)",
     "Alias": "PwrWave 2,PowerWave2,PowerWave 2"
   },
   {
@@ -3153,7 +3153,7 @@
     "Codes": "--",
     "Description": "Send a powerful wave 3 rows wide",
     "Image": "",
-    "MoreDetails": "WaveArm3 R-S-T https://wiki.n1gp.net/Power_Wave_program_advance_series_(BN6)",
+    "MoreDetails": "WaveArm3 R-S-T \nhttps://wiki.n1gp.net/Power_Wave_program_advance_series_(BN6)",
     "Alias": "PwrWave 3,PowerWave3,PowerWave 3"
   },
   {
@@ -3164,7 +3164,7 @@
     "Codes": "--",
     "Description": "Explosive corn 3x3 in front! Targets random panels",
     "Image": "",
-    "MoreDetails": "CornSht1 J-K-L | CornSht2 C-D-E | CornSht3 P-Q-R https://wiki.n1gp.net/Corn_Fiesta_(BN6)",
+    "MoreDetails": "CornSht1 J-K-L | CornSht2 C-D-E | CornSht3 P-Q-R \nhttps://wiki.n1gp.net/Corn_Fiesta_(BN6)",
     "Alias": "CornFiesta,Fiesta,CornParty,CobFiesta,:Cornfetti:"
   },
   {
@@ -3175,7 +3175,7 @@
     "Codes": "--",
     "Description": "Shell attack on 5 right grid rows",
     "Image": "",
-    "MoreDetails": "IronShl1 J-K-L | IronShl2 C-D-E | IronShl3 L-M-N https://wiki.n1gp.net/Parallel_Shell_(BN6) ",
+    "MoreDetails": "IronShl1 J-K-L | IronShl2 C-D-E | IronShl3 L-M-N \nhttps://wiki.n1gp.net/Parallel_Shell_(BN6) ",
     "Alias": "ParaShell,ParallelShell,Parallel Shell"
   },
   {
@@ -3186,7 +3186,7 @@
     "Codes": "--",
     "Description": "Shoot pulse that stuns & causes strong bugs: Lv2 HP bug in battle & chip select, blind for 20 seconds!",
     "Image": "",
-    "MoreDetails": "ElcPuls1 J, ElcPuls2 J, ElcPuls3 J https://wiki.n1gp.net/Destroy_Pulse_(BN6)",
+    "MoreDetails": "ElcPuls1 J, ElcPuls2 J, ElcPuls3 J \nhttps://wiki.n1gp.net/Destroy_Pulse_(BN6)",
     "Alias": "DestroyPulse,DestPulse,a viable PA"
   },
   {
@@ -3197,7 +3197,7 @@
     "Codes": "--",
     "Description": "Set TimeBomb+ in enemy area! Has 200HP",
     "Image": "",
-    "MoreDetails": "TimeBom1 F-G-H | TimeBom2 C-D-E | TimeBom3 L-M-N https://wiki.n1gp.net/Time_Bomb_%2B_(BN6)",
+    "MoreDetails": "TimeBom1 F-G-H | TimeBom2 C-D-E | TimeBom3 L-M-N \nhttps://wiki.n1gp.net/Time_Bomb_%2B_(BN6)",
     "Alias": "TimeBomb +,TimeBomb+,TimeBomb +,TimeBombPlus,TimeBomb Plus,TimeBomb++,TimeBomb Plus Ultra"
   },
   {
@@ -3208,7 +3208,7 @@
     "Codes": "--",
     "Description": "Shoot a stream of 5 AuraHeads. Pierces Guard",
     "Image": "",
-    "MoreDetails": "AuraHed1 B-C-D | AuraHed2 D-E-F | AuraHed3 F-G-H https://wiki.n1gp.net/Stream_Head_(BN6)",
+    "MoreDetails": "AuraHed1 B-C-D | AuraHed2 D-E-F | AuraHed3 F-G-H \nhttps://wiki.n1gp.net/Stream_Head_(BN6)",
     "Alias": "StreamHead,StreamerHead,StrimHead"
   },
   {
@@ -3219,7 +3219,7 @@
     "Codes": "--",
     "Description": "Shoot 3 consecutive WideShots!",
     "Image": "",
-    "MoreDetails": "WideSht P-Q-R https://wiki.n1gp.net/SuperSpread_(BN6)",
+    "MoreDetails": "WideSht P-Q-R \nhttps://wiki.n1gp.net/SuperSpread_(BN6)",
     "Alias": "SuperSpread,SuperSpreader,SoupSpread,SuprSpread"
   },
   {
@@ -3230,7 +3230,7 @@
     "Codes": "--",
     "Description": "Secondary explosion after hit (can hit up to 10x)",
     "Image": "",
-    "MoreDetails": "Spreader1 L-M-N | Spreader2 A-B-C | Spreader3 Q-R-S https://wiki.n1gp.net/Hyper_Burst_(BN6)",
+    "MoreDetails": "Spreader1 L-M-N | Spreader2 A-B-C | Spreader3 Q-R-S \nhttps://wiki.n1gp.net/Hyper_Burst_(BN6)",
     "Alias": "HBurst,H_Burst,HyperBurst,Hyper Burst,Hyper-Burst,HypeBurst"
   },
   {
@@ -3241,7 +3241,7 @@
     "Codes": "--",
     "Description": "Slices 2 square wide & 3 square vertical!",
     "Image": "",
-    "MoreDetails": "Sword, WideSwrd, LongSwrd | Sword *, WideBlde B, LongBlde B https://wiki.n1gp.net/Life_Sword_(BN6)",
+    "MoreDetails": "Sword, WideSwrd, LongSwrd | Sword *, WideBlde B, LongBlde B \nhttps://wiki.n1gp.net/Life_Sword_(BN6)",
     "Alias": "LifeSword,DreamSword,DreamSrd,LifeSlice"
   },
   {
@@ -3252,7 +3252,7 @@
     "Codes": "--",
     "Description": "Auto-targets row of the closest enemy, can hit 6 times",
     "Image": "",
-    "MoreDetails": "YoYo L-M-N https://wiki.n1gp.net/Great_Yo-Yo_(BN6)",
+    "MoreDetails": "YoYo L-M-N \nhttps://wiki.n1gp.net/Great_Yo-Yo_(BN6)",
     "Alias": "GreatYoYo,Great YoYo,GreatYo-Yo,Great Yo-Yo,Good YoYo,Nice YoYo,Terrific YoYo,Perfect YoYo,Amazing YoYo"
   },
   {
@@ -3263,7 +3263,7 @@
     "Codes": "--",
     "Description": "Bouncing hockey attack",
     "Image": "",
-    "MoreDetails": "AirHocky L-M-N https://wiki.n1gp.net/Pit_Hockey_(BN6)",
+    "MoreDetails": "AirHocky L-M-N \nhttps://wiki.n1gp.net/Pit_Hockey_(BN6)",
     "Alias": "PitHockey"
   },
   {
@@ -3274,7 +3274,7 @@
     "Codes": "--",
     "Description": "Places a poison Pharaoh in front. Has 100HP",
     "Image": "",
-    "MoreDetails": "PoisSeed *, PoisSeed *, Anubis P https://wiki.n1gp.net/Poison_Pharaoh_(BN6)",
+    "MoreDetails": "PoisSeed *, PoisSeed *, Anubis P \nhttps://wiki.n1gp.net/Poison_Pharaoh_(BN6)",
     "Alias": "PoisonPharaoh,PoisPharaoh"
   },
   {
@@ -3285,7 +3285,7 @@
     "Codes": "--",
     "Description": "Throw many star attacks when hit",
     "Image": "",
-    "MoreDetails": "AntiNavi, AntiSword, AntiDmg https://wiki.n1gp.net/Body_Guard_(BN6)",
+    "MoreDetails": "AntiNavi, AntiSword, AntiDmg \nhttps://wiki.n1gp.net/Body_Guard_(BN6)",
     "Alias": "BodyGuard,BodyGaurd"
   },
   {
@@ -3296,7 +3296,7 @@
     "Codes": "--",
     "Description": "Attack with BN1's Protoman for 10 hits!",
     "Image": "",
-    "MoreDetails": "WideBlade B, LongBlade B, ProtoManSP B https://wiki.n1gp.net/Double_Hero_(BN6)",
+    "MoreDetails": "WideBlade B, LongBlade B, ProtoManSP B \nhttps://wiki.n1gp.net/Double_Hero_(BN6)",
     "Alias": "DoubleHero,Double Hero,BN1 PA"
   },
   {
@@ -3307,7 +3307,7 @@
     "Codes": "--",
     "Description": "BN2's GospelBreath & Bass's DarkSword!",
     "Image": "",
-    "MoreDetails": "VDoll *, VDoll *, Bass[Anly] F https://wiki.n1gp.net/Darkness_(BN6)",
+    "MoreDetails": "VDoll *, VDoll *, Bass[Anly] F \nhttps://wiki.n1gp.net/Darkness_(BN6)",
     "Alias": "Gospel,Bass PA,BN2 PA"
   },
   {
@@ -3318,7 +3318,7 @@
     "Codes": "--",
     "Description": "BN3's stylish barrage! Hits 6x max. Elemental damage depends on version.",
     "Image": "",
-    "MoreDetails": "FireHit3 A, AquaNdl3 A, ElcPuls3 A, RskyHny3 A https://wiki.n1gp.net/Master_Cross_(BN6)",
+    "MoreDetails": "FireHit3 A, AquaNdl3 A, ElcPuls3 A, RskyHny3 A \nhttps://wiki.n1gp.net/Master_Cross_(BN6)",
     "Alias": "MasterCross,MasterStyle,MisterCross,MrCross,BN3 PA"
   },
   {
@@ -3329,7 +3329,7 @@
     "Codes": "--",
     "Description": "Attack 3 panels ahead with BN4 Gigas! Meteors hit 6x for 50 Fire dmg each. Lasers Uninstall and pierce invis. Final explosion for 200 dmg!",
     "Image": "",
-    "MoreDetails": "Meteors R, Atk+30 *, Uninstll R https://wiki.n1gp.net/Sun_and_Moon_(BN6)",
+    "MoreDetails": "Meteors R, Atk+30 *, Uninstll R \nhttps://wiki.n1gp.net/Sun_and_Moon_(BN6)",
     "Alias": "Sun&Moon,Sun Moon,Sun & Moon,BN4 PA"
   },
   {
@@ -3340,7 +3340,7 @@
     "Codes": "--",
     "Description": "Double attack with BN5's Colonel and ProtoMan! Can hit up to 3x when in same row.",
     "Image": "",
-    "MoreDetails": "ProtoMnSP B, AntiNavi *, Colonel * | ColonelSP C, AntiNavi *, ProtoMan * https://wiki.n1gp.net/Twin_Leaders_(BN6)",
+    "MoreDetails": "ProtoMnSP B, AntiNavi *, Colonel * | ColonelSP C, AntiNavi *, ProtoMan * \nhttps://wiki.n1gp.net/Twin_Leaders_(BN6)",
     "Alias": "TwinLeaders,Twin Leaders,BN5 PA"
   },
   {
@@ -3351,7 +3351,7 @@
     "Codes": "--",
     "Description": "Japanese EXE6 only! Attack with MegaMan & Django 2 panel in front! Max dmg = 920",
     "Image": "",
-    "MoreDetails": "Django, Django2, Django3 https://wiki.n1gp.net/Cross_Over_(BN6)",
+    "MoreDetails": "Django, Django2, Django3 \nhttps://wiki.n1gp.net/Cross_Over_(BN6)",
     "Alias": "CrossOver"
   },
   {
