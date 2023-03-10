@@ -5,7 +5,7 @@
     "MB": "10 MB",
     "PositiveAbilities": "Attack+1 \nCharged Shot: MegaCannon\n - Null, 180 AP\n - 120i charge time",
     "NegativeAbilities": "HP-40",
-    "MoreInformation": "https://wiki.n1gp.net/Canodumb_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Canodumb_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -14,7 +14,7 @@
     "MB": "16 MB",
     "PositiveAbilities": "AquaBody \nHP+80 \nFirst: BubbleWrap",
     "NegativeAbilities": "Attack-1",
-    "MoreInformation": "https://wiki.n1gp.net/Ammonicule_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Ammonicule_(Patch_card)_(BN6)",
     "Alias": "Ammonicule,Ammncule"
   },
   {
@@ -23,7 +23,7 @@
     "MB": "18 MB",
     "PositiveAbilities": "AquaBody \nHP+140 \nCharged Shot: IceCube \n(spawns an Aqua element IceCube)\n - 150i charge time",
     "NegativeAbilities": "Bug: Panel Bug\n(moving has a 25% chance to spawn Ice Panels)",
-    "MoreInformation": "https://wiki.n1gp.net/Cold_Bear_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Cold_Bear_(Patch_card)_(BN6)",
     "Alias": "Cold Bear"
   },
   {
@@ -32,7 +32,7 @@
     "MB": "12 MB",
     "PositiveAbilities": "Attack+3",
     "NegativeAbilities": "FloatShoes OFF \nAirShoes OFF",
-    "MoreInformation": "https://wiki.n1gp.net/Miney_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Miney_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -41,7 +41,7 @@
     "MB": "20 MB",
     "PositiveAbilities": "Charge+4 \nFirst: Barrier100 \nAirShoes ON",
     "NegativeAbilities": "HP-80",
-    "MoreInformation": "https://wiki.n1gp.net/Megalian_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Megalian_(Patch_card)_(BN6)",
     "Alias": "Megalian"
   },
   {
@@ -50,7 +50,7 @@
     "MB": "20 MB",
     "PositiveAbilities": "FireBody \nNormal Shot: Meteor1 \n - Fire, 30 AP",
     "NegativeAbilities": "Bug: Warp Bug",
-    "MoreInformation": "https://wiki.n1gp.net/MetFire_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/MetFire_(Patch_card)_(BN6)",
     "Alias": "Met Fire,MettFire"
   },
   {
@@ -59,7 +59,7 @@
     "MB": "19 MB",
     "PositiveAbilities": "WoodBody \nCharged Shot: GrassSeed\n - Wood, 10 AP\n - 70i charge time",
     "NegativeAbilities": "AirShoes OFF",
-    "MoreInformation": "https://wiki.n1gp.net/Kill_Plant_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Kill_Plant_(Patch_card)_(BN6)",
     "Alias": "KillWeed,KilPlant"
   },
   {
@@ -68,7 +68,7 @@
     "MB": "06 MB",
     "PositiveAbilities": "Normal Shot: Sword \n - Sword, 80 AP \nCharged Shot: Invisible \n - 120i duration \n - 140i charge time",
     "NegativeAbilities": "StatusGuard OFF",
-    "MoreInformation": "https://wiki.n1gp.net/Shadow_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Shadow_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -77,7 +77,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "HP+100 \nNormal Shot: MiniBomb \n - Null, 50 AP",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "https://wiki.n1gp.net/Beetle_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Beetle_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -86,7 +86,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "Attack+1 \nSuperArmor ON",
     "NegativeAbilities": "Normal Shot Addition disabled",
-    "MoreInformation": "https://wiki.n1gp.net/Heavy_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Heavy_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -95,7 +95,7 @@
     "MB": "24 MB",
     "PositiveAbilities": "WoodBody \nStatusGuard ON",
     "NegativeAbilities": "HP-20% \nB+< disabled",
-    "MoreInformation": "https://wiki.n1gp.net/Viney_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Viney_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -104,7 +104,7 @@
     "MB": "12 MB",
     "PositiveAbilities": "AquaBody \nHP+30 \nCharged Shot: PanelGrab \n - Null, 10 AP \n - 150i charge time",
     "NegativeAbilities": "NormalGauge",
-    "MoreInformation": "https://wiki.n1gp.net/Slimey_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Slimey_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -113,7 +113,7 @@
     "MB": "10 MB",
     "PositiveAbilities": "FireBody \nCharge+4 \nCharged Shot: BlackBomb \n - Null, pseudo-breaking, 100 AP \n - When hit with fire: \n  Fire, 250 AP \n - 130i charge time",
     "NegativeAbilities": "Bug: Emotion Bug",
-    "MoreInformation": "https://wiki.n1gp.net/Volcano_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Volcano_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -122,7 +122,7 @@
     "MB": "17 MB",
     "PositiveAbilities": "Custom+1 \nMegaFolder+1 \nGigaFolder+1",
     "NegativeAbilities": "Default Charged Shot \nBug: Custom Screen HP bug \n(level 3, -1 HP per 30i)",
-    "MoreInformation": "https://wiki.n1gp.net/Number_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Number_(Patch_card)_(BN6)",
     "Alias": "Number"
   },
   {
@@ -131,7 +131,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "ElecBody \nFloatShoes ON \nCharged Shot Addition: Magnet \n(enemy is pulled in) (50%)",
     "NegativeAbilities": "HP-5%",
-    "MoreInformation": "https://wiki.n1gp.net/Magtect_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Magtect_(Patch_card)_(BN6)",
     "Alias": "Mag Tech,Mag Tect,MagTech"
   },
   {
@@ -140,7 +140,7 @@
     "MB": "08 MB",
     "PositiveAbilities": "WoodBody \nHP+60",
     "NegativeAbilities": "Bug: Panel Bug \n (moving has a 25% chance to spawn Grass Panels)",
-    "MoreInformation": "https://wiki.n1gp.net/Spidy_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Spidy_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -149,7 +149,7 @@
     "MB": "14 MB",
     "PositiveAbilities": "Normal Shot Addition: Small Push \n(pushes struck target 1 panel) (12.5%) \nBug Fix: Panel Bug \nBug Fix: Warp Bug",
     "NegativeAbilities": "Charged Shot Addition disabled",
-    "MoreInformation": "https://wiki.n1gp.net/Bomboy_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Bomboy_(Patch_card)_(BN6)",
     "Alias": "Bom Boy"
   },
   {
@@ -158,7 +158,7 @@
     "MB": "13 MB",
     "PositiveAbilities": "WoodBody \nHP+90 \nNormal Shot Addition: Grass Panel (50%) \nBug Fix: Damage Bug",
     "NegativeAbilities": "None",
-    "MoreInformation": "https://wiki.n1gp.net/WuNote_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/WuNote_(Patch_card)_(BN6)",
     "Alias": "Wu Note"
   },
   {
@@ -167,7 +167,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "ElecBody \nHP+5% \nBug Fix: Custom Screen HP Bug",
     "NegativeAbilities": "Attack-1",
-    "MoreInformation": "https://wiki.n1gp.net/Flashy_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Flashy_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -176,7 +176,7 @@
     "MB": "16 MB",
     "PositiveAbilities": "ElecBody \nHP+50 \nBug Fix: Emotion Bug \nBug Fix: Color Bug",
     "NegativeAbilities": "None",
-    "MoreInformation": "https://wiki.n1gp.net/Eleogre_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Eleogre_(Patch_card)_(BN6)",
     "Alias": "Ele Ogre,Elec Ogre"
   },
   {
@@ -185,7 +185,7 @@
     "MB": "12 MB",
     "PositiveAbilities": "FireBody \nHP+130 \nCharged Shot: FireBurner \n - Fire, 70 AP \n - 70i charge time",
     "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i)",
-    "MoreInformation": "https://wiki.n1gp.net/Old_Stove_(mod_card)_(BN6)",
+    "MoreInformation": "https://wiki.n1gp.net/Old_Stove_(Patch_card)_(BN6)",
     "Alias": "Old Stove,OldStov"
   },
   {
