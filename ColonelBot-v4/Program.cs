@@ -37,7 +37,16 @@ namespace ColonelBot_v4
                 var config = new DiscordSocketConfig
                 {
                     AlwaysDownloadUsers = true,
-                    MessageCacheSize = 200
+                    MessageCacheSize = 200,
+                    GatewayIntents = GatewayIntents.GuildEmojis | 
+                        GatewayIntents.DirectMessages | 
+                        GatewayIntents.MessageContent | 
+                        GatewayIntents.GuildIntegrations | 
+                        GatewayIntents.GuildMessages |
+                        GatewayIntents.GuildMembers |
+                        GatewayIntents.Guilds |
+                        GatewayIntents.GuildPresences |
+                        GatewayIntents.GuildMessageReactions
                 };
 
                 _discord = client;
