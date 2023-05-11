@@ -107,7 +107,7 @@ namespace ColonelBot_v4
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        private async Task LogLeave(SocketGuildUser user)
+        private async Task LogLeave(SocketGuild guild, SocketUser user)
         {
             await BotTools.GetReportingChannel(_discord).SendMessageAsync("", embed: EmbedTool.UserLeaveLog(user));
         }

@@ -210,7 +210,7 @@ namespace ColonelBot_v4.Modules
                         QuotesPendingApproval.Remove(targetQuote);
                         MasterQuoteList.Add(targetQuote);
                         WriteQuoteList();
-                        discordclient.ReactionAdded -= ListenForQuoteApproval;
+                        //discordclient.ReactionAdded -= ListenForQuoteApproval;
 
                     }
 
@@ -220,14 +220,14 @@ namespace ColonelBot_v4.Modules
                         string QuoteID = QuoteData[2].Split(' ')[2]; //Pulls the quote ID from the 2nd line.
                                                                      //await ReplyAsync($"Quote {QuoteID} was denied by a moderator (Method 2)");
                         await arg2.DeleteMessageAsync(msg); //Delete the message in the Colonel Quote Audit Channel. You already have the ID.
-                        discordclient.ReactionAdded -= ListenForQuoteApproval;
+                        //discordclient.ReactionAdded -= ListenForQuoteApproval;
                     }
 
                 }
             }
             catch (Exception)
             {
-                discordclient.ReactionAdded -= ListenForQuoteApproval;
+                //discordclient.ReactionAdded -= ListenForQuoteApproval;
             }
            
             
@@ -306,7 +306,7 @@ namespace ColonelBot_v4.Modules
             await sent.AddReactionAsync(ChonkboiR);
             await sent.AddReactionAsync(declineEmote);
             discordclient = context.Client;
-            context.Client.ReactionAdded += ListenForQuoteApproval;
+            //context.Client.ReactionAdded += ListenForQuoteApproval;
         }
 
         
