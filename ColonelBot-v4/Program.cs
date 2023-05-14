@@ -14,6 +14,7 @@ using Discord.API;
 using ColonelBot_v4.Services;
 using ColonelBot_v4.Tools;
 using ColonelBot_v4.Modules;
+using Discord.Interactions;
 
 //ColonelBot v4 
 //Developed by MegaMasterX for the N1 Grand Prix MMBN Community
@@ -23,79 +24,82 @@ namespace ColonelBot_v4
 {
     public class Program
     {
-        static void Main(string[] args)
-            => new Program().MainAsync().GetAwaiter().GetResult();
 
+        private readonly IConfiguration _configuration;
+        private readonly IServiceProvider _services;
         public DiscordSocketClient _discord;
 
-        public async Task MainAsync()
+        public Program()
         {
-            await SetupDirectories();
-            using (var services = ConfigureServices())
-            {
-                var client = services.GetRequiredService<DiscordSocketClient>();
-                var config = new DiscordSocketConfig
-                {
-                    AlwaysDownloadUsers = true,
-                    MessageCacheSize = 200,
-                    GatewayIntents = GatewayIntents.GuildEmojis | 
-                        GatewayIntents.DirectMessages | 
-                        GatewayIntents.MessageContent | 
-                        GatewayIntents.GuildIntegrations | 
+            //The configuration for botconfig.json should be mandantory in the future.
+            _configuration = new ConfigurationBuilder()
+                .AddJsonFile("botconfig.json", optional: true)
+                .Build();
+
+            _services = new ServiceCollection()
+               .AddSingleton(_configuration)
+               .AddSingleton(_socketConfig)
+               .AddSingleton<DiscordSocketClient>()
+               .AddSingleton(x => new InteractionService(x.GetRequiredService<DiscordSocketClient>()))
+               .AddSingleton<InteractionHandler>()
+               .AddSingleton<ImageService>()
+               .BuildServiceProvider();
+        }
+
+        private readonly DiscordSocketConfig _socketConfig = new()
+        {
+            AlwaysDownloadUsers = true,
+            MessageCacheSize = 200,
+            GatewayIntents = GatewayIntents.GuildEmojis |
+                        GatewayIntents.DirectMessages |
+                        GatewayIntents.MessageContent |
+                        GatewayIntents.GuildIntegrations |
                         GatewayIntents.GuildMessages |
                         GatewayIntents.GuildMembers |
                         GatewayIntents.Guilds |
-                        GatewayIntents.GuildPresences |
                         GatewayIntents.GuildMessageReactions
-                };
+        };
 
-                _discord = client;
-                client.Log += LogAsync;
-                services.GetRequiredService<CommandService>().Log += LogAsync;
+        static void Main(string[] args)
+            => new Program().MainAsync()
+                .GetAwaiter()
+                .GetResult();
 
-                client.UserJoined += LogJoin;
-                client.UserLeft += LogLeave;
-
-
-
-                Modules.LookupModule.InitialCache();
-                Modules.ModcardLookupModule.InitializeCache();
-
-                //Token up
-                await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
-                await client.StartAsync();
-                //await services.GetRequiredService<ServerGuardService>().InitializeAsync();
-                await services.GetRequiredService<CommandHandlingService>().InitializeAsync();
-
-                await Task.Delay(-1);
-            }
-
-        }
-
-
-
-        private ServiceProvider ConfigureServices()
+        public async Task MainAsync()
         {
-            return new ServiceCollection()
-                // Base
-                // First two are part of discord.net
-                .AddSingleton<DiscordSocketClient>()
-                .AddSingleton<CommandService>()
-                .AddSingleton<CommandHandlingService>()
-                .AddSingleton<HttpClient>()
-                //.AddSingleton<ServerGuardService>()
-                .AddSingleton<ImageService>()
-                .AddSingleton(new DiscordSocketConfig { AlwaysDownloadUsers = true })
-                .BuildServiceProvider();
+            //Verify the directories required for the bot to run are active.
+            await SetupDirectories();
+
+          
+            var client = _services.GetRequiredService<DiscordSocketClient>();
+
+            _discord = client;
+            client.Log += LogAsync;
+            client.UserJoined += LogJoin;
+            client.UserLeft += LogLeave;
+
+            //Initialize the cache for various lookup modules.
+            Modules.LookupModule.InitialCache();
+            Modules.ModcardLookupModule.InitializeCache();
+
+            //Token up
+            await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
+            await client.StartAsync();
+
+            await _services.GetRequiredService<InteractionHandler>().InitializeAsync();
+            await Task.Delay(-1);
+
         }
 
-	private async Task SetupDirectories()
-	{
-	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon"));
-	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data"));
-	    await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}EuRandom"));
-        await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache"));
-    }
+	    private async Task SetupDirectories()
+	    {
+	        await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}NewMoon"));
+	        await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Data"));
+	        await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}EuRandom"));
+            await Task.Run(() =>  Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache"));
+        }
+
+        
 
         private Task LogAsync(LogMessage log)
         {

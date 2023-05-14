@@ -3,43 +3,49 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using Discord;
-using Discord.Commands;
+using Discord.Interactions;
 using System.Threading.Tasks;
 using ColonelBot_v4.Models;
 using ColonelBot_v4.Tools;
 using Newtonsoft.Json;
+using Discord.Interactions;
 
 namespace ColonelBot_v4.Modules
 {
-    public class LookupModule : ModuleBase<SocketCommandContext>
+    public class LookupModule : InteractionModuleBase<SocketInteractionContext>
     {
-
         static List<Chip> ChipLibrary;
-
-        [Group("lookup")]
-        public class LookupSpecificGame : ModuleBase<SocketCommandContext>
+        public InteractionService commands { get; set; }
+        private InteractionHandler _handler;
+        public LookupModule(InteractionHandler handler)
         {
-            [Command]
-            public async Task LookupDefaultAsync([Remainder] string rndr)
+            _handler = handler;
+        }
+
+        [Group("lookup", "Searches for a specific chip or patchcard. If not found, a fuzzy search is done.")]
+        public class LookupSpecificGame : InteractionModuleBase<SocketInteractionContext>
+        {
+            [SlashCommand("chip", "Looks up a chip with the specified name")]
+            public async Task LookupDefaultAsync(string ChipName)
             {//!lookup <chipname> - 
                 Chip locatedChip;
 		
-		if (rndr.Length == 1) {
-		    await ReplyAsync(ObtainCodeResults(rndr));
-		}else if (TryFindChipByName(rndr, out locatedChip))
+		    if (ChipName.Length == 1) {
+		        await RespondAsync(ObtainCodeResults(ChipName));
+		    }else if (TryFindChipByName(ChipName, out locatedChip))
                 {
-                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
-                }else if (TryFindChipByAlias(rndr, out locatedChip))
+                    await RespondAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
+                }else if (TryFindChipByAlias(ChipName, out locatedChip))
                 {
-                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
+                    await RespondAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
                 }else
-                    await ReplyAsync(ObtainSuggestions(rndr));
+                    await RespondAsync(ObtainSuggestions(ChipName));
             }
 
-            [Command("code"), Priority(1)] //!lookup code <specified>
-            public async Task LookupChipsByCode([Remainder] string remainder)
+            [SlashCommand("code", "Lookup all chips with the specified code.")] //!lookup code <specified>
+            public async Task LookupChipsByCode(string code)
             {
-                await ReplyAsync(ObtainCodeResults(remainder)); //You don't have to worry about trimming here, the lookup method only gets the first char.
+                await RespondAsync(ObtainCodeResults(code)); //You don't have to worry about trimming here, the lookup method only gets the first char.
             }
 
         }
