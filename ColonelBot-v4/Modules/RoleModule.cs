@@ -200,6 +200,15 @@ namespace ColonelBot_v4.Modules
                 return false;
         }
 
+        public static bool UserHasRole(string RoleName, IGuildUser caller, IGuild guild)
+        {
+            IRole role = GetRole(RoleName, guild);
+            if (caller.RoleIds.Contains(role.Id))
+                return true;
+            else
+                return false;
+        }
+
         public static SocketRole GetRole(string RoleName, SocketGuild guild)
         {
             
