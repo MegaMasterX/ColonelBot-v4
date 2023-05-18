@@ -191,11 +191,36 @@ namespace ColonelBot_v4.Modules
                 return false;
         }
 
+        public static bool UserHasRole(ulong RoleID, IGuildUser caller, IGuild guild)
+        {
+            IRole role = GetRole(RoleID, guild);
+            if (caller.RoleIds.Contains(role.Id))
+                return true;
+            else
+                return false;
+        }
+
         public static SocketRole GetRole(string RoleName, SocketGuild guild)
         {
             
             var role = guild.Roles.SingleOrDefault(r => r.Name.ToUpper() == RoleName.ToUpper());
             return role;
         }
+
+        public static IRole GetRole(string RoleName, IGuild guild)
+        {
+
+            var role = guild.Roles.SingleOrDefault(r => r.Name.ToUpperInvariant() == RoleName.ToUpperInvariant());
+            return role;
+
+        }
+
+        public static IRole GetRole(ulong RoleID, IGuild guild)
+        {
+            var role = guild.Roles.SingleOrDefault(r => r.Id == RoleID);
+            return role;
+        }
+
+        //PROD_TODO: Clean up Legacy role commands after the module conversion is done.
     }
 }
