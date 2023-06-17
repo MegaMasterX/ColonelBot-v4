@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Linq;
 
 using Discord;
-using Discord.Commands;
+using Discord.Interactions;
 using Discord.WebSocket;
 
 using ColonelBot_v4.Tools;
@@ -12,10 +12,10 @@ using ColonelBot_v4.Tools;
 
 namespace ColonelBot_v4.Modules
 {
-    public class RoleModule : ModuleBase<SocketCommandContext>
+    public class RoleModule : InteractionModuleBase<SocketInteractionContext>
     {
 
-        [Command("available"), Alias("atb","🦞","🐱","<:EguchiHype:596812876434374667>"), RequireContext(ContextType.Guild)]
+        [SlashCommand("atb", "Marks you as Available to Battle!")]
         public async Task GoATB()
         {
             var caller = Context.User as IGuildUser;
@@ -23,10 +23,10 @@ namespace ColonelBot_v4.Modules
             var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
             var role = GetRole("Available to Battle", Context.Guild);
             await AddATB(caller, role);
-            await ReplyAsync($"You are now Available to Battle, {username}");
+            await RespondAsync($"You are now Available to Battle, {username}");
         }
 
-        [Command("atm"), Alias("lmb","legs","moontime","🌙","🌑","🌕","🌚","<:MegaLegPose:965794241727066112>","<:RegalRisen:972553613815717959>"), RequireContext(ContextType.Guild)]
+        [SlashCommand("atm", "Marks you as Available to MOON BATTLE."), RequireContext(ContextType.Guild)]
         public async Task ItsMoonTimeAsync()
         {
             //Method to moon-up the caller.
@@ -36,14 +36,14 @@ namespace ColonelBot_v4.Modules
                 var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
                 var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
                 await AddMoonBattle(caller, role);
-                await ReplyAsync($"You are now ready to MOON BATTLE, {username}!");
+                await RespondAsync($"You are now ready to MOON BATTLE, {username}!");
             }else
-                await ReplyAsync("You are not permitted to call this command.");
+                await RespondAsync("You are not permitted to call this command.");
             
 
         }
 
-        [Command("unmoon"), Alias("unm", "unlegs","🌞","☀️","<:MegaBedLegPose:965794604689530880>","<:RegalSleep:972553613815717959>"), RequireContext(ContextType.Guild)]
+        [SlashCommand("unmoon", "Removes your Available to MOON BATTLE role."), RequireContext(ContextType.Guild)]
         public async Task UnmoonAsync()
         {
             var caller = Context.User as IGuildUser;
@@ -52,13 +52,13 @@ namespace ColonelBot_v4.Modules
                 var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
                 var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
                 await RemoveMoonbattle(caller, role);
-                await ReplyAsync("You are no longer available to MOON BATTLE.");
+                await RespondAsync("You are no longer available to MOON BATTLE.");
             }else
-                await ReplyAsync("You are not permitted to call this command.");
+                await RespondAsync("You are not permitted to call this command.");
         }
 
         
-        [Command("unavailable"), Alias("unav","notatb","🦐","unatb","unavail", "<:shrimpy:595465516286738463>","🐦","🐔"), RequireContext(ContextType.Guild)]
+        [SlashCommand("unav", "Removes you from Available to Battle!"), RequireContext(ContextType.Guild)]
         public async Task RemoveATB()
         {
             var caller = Context.User as IGuildUser;
@@ -66,32 +66,18 @@ namespace ColonelBot_v4.Modules
             var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); // prepare username
             var role = GetRole("AVAILABLE TO BATTLE", Context.Guild);
             await RemoveATB(caller, role);
-            await ReplyAsync($"You are no longer Available to Battle, {username}");
+            await RespondAsync($"You are no longer Available to Battle, {username}");
         }
 
-        [Command("linkcable"), Alias("legacybattler")]
-        public async Task ToggleLegacy()
-        {
-            var caller = Context.User as IGuildUser;
-            var role = GetRole("Legacy Battler", Context.Guild);
-            await ToggleRole(caller, role);
-        }
-
-        [Command("license"), Alias("licence")]
+        [SlashCommand("license", "Adds the License role to you, marking you as an official Netbattler!")]
         public async Task ToggleLicenseRole()
         {//Toggles the Netbattler role when called - adding it if it's not present or removing it if it is.
             var caller = Context.User as IGuildUser;
             var role = GetRole("Netbattler", Context.Guild);
             await ToggleRole(caller, role);
+            await RespondAsync("Added License to you.");
         }
 
-        [Command("deckmaster")]
-        public async Task ToggleDeckmasterRole()
-        {//Toggles the Deckmaster Role
-            var caller = Context.User as IGuildUser;
-            var role = GetRole("Deckmaster", Context.Guild);
-            await ToggleRole(caller, role);
-        }
         
         public async Task<Embed> ToggleRole(IGuildUser caller, SocketRole role)
         {
