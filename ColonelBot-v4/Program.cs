@@ -80,7 +80,7 @@ namespace ColonelBot_v4
 
             //Initialize the cache for various lookup modules.
             Modules.LookupModule.InitialCache();
-            Modules.ModcardLookupModule.InitializeCache();
+            //Modules.ModcardLookupModule.InitializeCache();
 
             //Token up
             await client.LoginAsync(TokenType.Bot, BotTools.GetSettingString(BotTools.ConfigurationEntries.BotToken));
