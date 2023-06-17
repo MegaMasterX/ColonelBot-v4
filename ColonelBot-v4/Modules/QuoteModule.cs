@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 using Discord;
-using Discord.Commands;
+using Discord.Interactions;
 
 using ColonelBot_v4.Models;
 using ColonelBot_v4.Tools;  
@@ -19,16 +19,16 @@ using Discord.Rest;
 
 namespace ColonelBot_v4.Modules
 {
-    [Group("quote")] // !quote...
-    public class QuoteModule : ModuleBase<SocketCommandContext>
+    [Group("quote", "Obtain a quote from the N1GP Meme Vault:tm:")] // !quote...
+    public class QuoteModule : InteractionModuleBase<SocketInteractionContext>
     {
         List<Quote> MasterQuoteList;
         Random rnd = new Random();
         DiscordSocketClient discordclient;
         public List<Quote> QuotesPendingApproval = new List<Quote>();
 
-        [Command]
-        public async Task QuoteSpecificAsync([Remainder] uint quoteID)
+        [SlashCommand("","")]
+        public async Task QuoteSpecificAsync(uint QuoteID)
         {
             //1. Update the local list for Quotes.
             ResyncQuotesList();
@@ -37,11 +37,11 @@ namespace ColonelBot_v4.Modules
             Quote selectedQuote = null;
             try
             {
-                selectedQuote = MasterQuoteList.Find(x => x.QuoteID == quoteID);
+                selectedQuote = MasterQuoteList.Find(x => x.QuoteID == QuoteID);
             }
             catch (Exception ex)
             {
-                await ReplyAsync(ex.Message);
+                await RespondAsync(ex.Message);
                 throw;
             }
 
@@ -49,15 +49,15 @@ namespace ColonelBot_v4.Modules
             //3. Respond with said quote.
             if (selectedQuote != null)
                 if (selectedQuote.QuoteAuthorNickname == null)
-                    await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()}: {selectedQuote.QuoteContents}");
+                    await RespondAsync($"Quote { selectedQuote.QuoteID.ToString()}: {selectedQuote.QuoteContents}");
                 else
-                    await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
+                    await RespondAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
             else
-                await ReplyAsync("", embed: EmbedTool.ChannelMessage("The quote you specified is not in the library."));
+                await RespondAsync("", embed: EmbedTool.ChannelMessage("The quote you specified is not in the library."));
         }
 
 
-        [Command, Alias("random")]
+        [SlashCommand("","")]
         public async Task QuoteRandomAsync()
         {
             //1. Update the local list for Quotes.
@@ -69,15 +69,15 @@ namespace ColonelBot_v4.Modules
 
             //3. Respond with said quote.
             if (selectedQuote.QuoteAuthorNickname == null)
-                await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()}: {selectedQuote.QuoteContents}");
+                await RespondAsync($"Quote { selectedQuote.QuoteID.ToString()}: {selectedQuote.QuoteContents}");
             else
-                await ReplyAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
+                await RespondAsync($"Quote { selectedQuote.QuoteID.ToString()} by {selectedQuote.QuoteAuthorNickname}: {selectedQuote.QuoteContents}");
 
         }
 
-       [Command("admin remove"), Alias("admin delete")]
-       [RequireUserPermission(GuildPermission.ViewAuditLog)] //Admin-only.
-       public async Task AdminQuoteRemove([Remainder]int QuoteID)
+       [SlashCommand("admin-remove", "Admin Only, Forcefully removes a quote from the library")]
+       [ModeratorOnly] //Admin-only.
+       public async Task AdminQuoteRemove(int QuoteID)
        {
             ResyncQuotesList();
             for (int i = 0; i < MasterQuoteList.Count; i++)
@@ -87,17 +87,17 @@ namespace ColonelBot_v4.Modules
                     
                     MasterQuoteList.RemoveAt(i); //Remove the quote from the library.
                     WriteQuoteList(); //Write the list to the JSON.
-                    await ReplyAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} removed from the library by a moderator."));
+                    await RespondAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} removed from the library by a moderator."));
                 } else  // The Quote ID is not located.
-                    await ReplyAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} does not exist in the library."));
+                    await RespondAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} does not exist in the library."));
             }
         }
     
 
 
-       [Command("remove"), Alias("delete")]
+        [SlashCommand("remove", "Removes a quote from the library if you're the author.")]
         [RequireContext(ContextType.Guild)]
-        public async Task RemoveQuoteAsync([Remainder]int quoteid)
+        public async Task RemoveQuoteAsync(int QuoteID)
         {
             //1. Pull down the deserialized list.
             ResyncQuotesList();
@@ -106,7 +106,7 @@ namespace ColonelBot_v4.Modules
             bool QuoteExists = false; //False by default
             for (int i = 0; i < MasterQuoteList.Count; i++)
             {
-                if (MasterQuoteList[i].QuoteID == quoteid)
+                if (MasterQuoteList[i].QuoteID == QuoteID)
                 {//The Quote ID is located. 
                     QuoteExists = true;
                     if (MasterQuoteList[i].QuoteAuthor == Context.User.Id)
@@ -115,22 +115,22 @@ namespace ColonelBot_v4.Modules
                         WriteQuoteList(); //Write the list to the JSON.
                         QuoteExists = true; //Quote was found and deleted.
                     } else //The requestor is not the author of the quote.
-                        await ReplyAsync("", embed: EmbedTool.ChannelMessage("You are not the author of the quote."));
+                        await RespondAsync("", embed: EmbedTool.ChannelMessage("You are not the author of the quote."));
                 }
             }
 
             //3. Respond based on what was or wasn't found.
             if (QuoteExists == false)
-                await ReplyAsync("", embed: EmbedTool.ChannelMessage("The quote does not exist in the library."));
+                await RespondAsync("", embed: EmbedTool.ChannelMessage("The quote does not exist in the library."));
             else
-                await ReplyAsync("", embed: EmbedTool.ChannelMessage($"Quote {quoteid.ToString()} removed from the library."));
+                await RespondAsync("", embed: EmbedTool.ChannelMessage($"Quote {QuoteID.ToString()} removed from the library."));
             
         }
 
 
-        [Command("add")]
+        [SlashCommand("add", "Adds a quote to the library")]
         [RequireContext(ContextType.Guild)] //Quotes cannot be added via DM.
-        public async Task AddQuoteAsync([Remainder] string quote)
+        public async Task AddQuoteAsync(string QuoteContents)
         {
 
             //1. Pull down the deserialized list of Quotes into an array for easier handling.
@@ -152,16 +152,16 @@ namespace ColonelBot_v4.Modules
 
 
             //3. Sanitize the quote to remove @ tags and add escape characters for anything that would need it.
-            quote = quote.Replace('@', ' ');                                                                                            //Remove @ tags, preventing the bot and users from calling @everyone or @roles
+            QuoteContents = QuoteContents.Replace('@', ' ');                                                                                            //Remove @ tags, preventing the bot and users from calling @everyone or @roles
             //TODO: Build a regex to sanitize the quote before adding it to the list. 
 
 
             //4. [Rewrite] Reply with a message informing the caller that its been sent for moderator review and approval.
             await ReplyAsync("Your e-mail has been sent!");                                                                           //Reply to the caller letting them know the quote was sent off for approval.
-            QuotesPendingApproval.Add(new Quote(Context.User.Id, Context.User.Username.Replace('@', ' '), LastID, quote));             //Place the quote in the approval queue.
+            QuotesPendingApproval.Add(new Quote(Context.User.Id, Context.User.Username.Replace('@', ' '), LastID, QuoteContents));             //Place the quote in the approval queue.
                                                                                                                                        //5. Send a mesage to the channel and request that it be added
 
-            await SendQuoteForApprovalAsync(Context, Context.User, quote, LastID);                                                      //Place the Approval Quote in the appropriate channel.
+            await SendQuoteForApprovalAsync(Context, Context.User, QuoteContents, LastID);                                                      //Place the Approval Quote in the appropriate channel.
 
             
 
@@ -287,7 +287,7 @@ namespace ColonelBot_v4.Modules
         /// This method asynchronously sends a message to the quote approval chat channel.
         /// </summary>
         /// <returns></returns>
-        private async Task SendQuoteForApprovalAsync(SocketCommandContext context, SocketUser caller, string QuoteContents, int QuoteID)
+        private async Task SendQuoteForApprovalAsync(SocketInteractionContext context, SocketUser caller, string QuoteContents, int QuoteID)
 
         {
             SocketTextChannel chan = context.Guild.GetTextChannel(ulong.Parse(BotTools.GetSettingString(BotTools.ConfigurationEntries.QuoteReportChannelID)));
