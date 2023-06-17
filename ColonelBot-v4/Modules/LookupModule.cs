@@ -15,14 +15,17 @@ namespace ColonelBot_v4.Modules
     public class LookupModule : InteractionModuleBase<SocketInteractionContext>
     {
         static List<Chip> ChipLibrary;
+        static List<ModCard> ModcardLibrary;
         public InteractionService commands { get; set; }
         private InteractionHandler _handler;
         public LookupModule(InteractionHandler handler)
         {
             _handler = handler;
+            ModcardLibrary = JsonConvert.DeserializeObject<List<ModCard>>(File.ReadAllText(BotTools.GetSettingString(BotTools.ConfigurationEntries.ModcardLibraryFileLocation)));
+            Console.WriteLine("Modcard Library Initailized.");
         }
 
-        [Group("lookup", "Searches for a specific chip or patchcard. If not found, a fuzzy search is done.")]
+        [Group("lookup", "Searches for a specific chip or patch card. If not found, a fuzzy search is done.")]
         public class LookupSpecificGame : InteractionModuleBase<SocketInteractionContext>
         {
             [SlashCommand("chip", "Looks up a chip with the specified name")]
@@ -47,6 +50,59 @@ namespace ColonelBot_v4.Modules
             {
                 await RespondAsync(ObtainCodeResults(code)); //You don't have to worry about trimming here, the lookup method only gets the first char.
             }
+
+            [SlashCommand("patchcard", "Looks up a Patch Card")]
+            public async Task LookupModcardAsync(string PatchcardName)
+            {
+                ModCard selectedCard;
+                if (TryFindCardByName(PatchcardName, out selectedCard))
+                    await RespondAsync("", embed: EmbedTool.ModcardEmbed(selectedCard));
+                else if (TryFindCardByAlias(PatchcardName, out selectedCard))
+                    await RespondAsync("", embed: EmbedTool.ModcardEmbed(selectedCard));
+                else
+                    await RespondAsync(ObtainSuggestions(PatchcardName));
+            }
+
+            public static bool TryFindCardByName(string cardName, out ModCard selectedCard)
+            {
+                selectedCard = ModcardLibrary.Find(x => x.Name.ToUpperInvariant().Equals(cardName.ToUpperInvariant()));
+                return selectedCard != null;
+            }
+
+            public static bool TryFindCardByAlias(string cardName, out ModCard selectedCard)
+            {
+                selectedCard = ModcardLibrary.Find(x => x.Alias.ToUpperInvariant().Equals(cardName.ToUpperInvariant()));
+                return selectedCard != null;
+            }
+
+            public static string ObtainSuggestions(string lookupString)
+            {
+                string result = "Modcard not found. Perhaps you meant: ";
+                string Criteria = lookupString.Remove(3);
+                List<ModCard> SearchResults = ModcardLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
+                foreach (ModCard item in SearchResults)
+                {
+                    result += $"{item.Name}     ";
+                }
+
+                if (result == "Modcard not found. Perhaps you meant: ")
+                {
+                    List<ModCard> AliasResults = ModcardLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
+                    foreach (ModCard item in AliasResults)
+                    {
+                        string[] Aliases = item.Alias.Split(',');
+                        for (int i = 0; i < Aliases.Length; i++)
+                        {
+                            if (Aliases[i].ToUpper().StartsWith(Criteria.ToUpper()))
+                                result += $"{item.Name}    ";
+                        }
+                    }
+                }
+
+                return result;
+
+            }
+
 
         }
 
