@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Timers;
 using Discord;
-using Discord.Commands;
+using Discord.Interactions;
 using Discord.WebSocket;
 
 /// <summary>
@@ -14,7 +14,7 @@ namespace ColonelBot_v4.Models
     public class PauseTimer
     {
         private IUser pingCaller, pingTarget;
-        SocketCommandContext dContext;
+        SocketInteractionContext dContext;
         Timer pTimer;
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace ColonelBot_v4.Models
         /// <param name="caller">The SocketGuildUser that called the command.</param>
         /// <param name="target">The SocketGuildUser that will be pinged as well.</param>
         /// <param name="Context">The SocketCommandContext containing the chat channel and other tomfoolery.</param>
-        public PauseTimer (int Seconds, IUser caller, IUser target, SocketCommandContext Context)
+        public PauseTimer (int Seconds, IUser caller, IUser target, SocketInteractionContext Context)
         {
             //Specify the ping targets.
             pingCaller = caller;
@@ -39,7 +39,7 @@ namespace ColonelBot_v4.Models
         /// <param name="Seconds"></param>
         /// <param name="caller"></param>
         /// <param name="Context"></param>
-        public PauseTimer(int Seconds, IUser caller, SocketCommandContext Context)
+        public PauseTimer(int Seconds, IUser caller, SocketInteractionContext Context)
         {
             pingCaller = caller;
             dContext = Context;

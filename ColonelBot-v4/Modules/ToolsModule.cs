@@ -4,14 +4,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Discord;
-using Discord.Commands;
+using Discord.Interactions;
 
 using ColonelBot_v4.Models;
 using System.Text.RegularExpressions;
 
 namespace ColonelBot_v4.Modules
 {
-    public class ToolsModule : ModuleBase<SocketCommandContext>
+    public class ToolsModule : InteractionModuleBase<SocketInteractionContext>
     {
         Random rnd = new Random(DateTime.Now.Second);
 
@@ -20,33 +20,34 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         /// <param name="arguments"></param>
         /// <returns></returns>
-        [Command("timer"), Alias("p")]
+        [SlashCommand("timer", "Creates a timer that pings you when it expires. Use <num><m/s> for mins/seconds. Ex. 5m, 30s")]
         [RequireContext(ContextType.Guild)]
-        public async Task CreateGuildTimer(IUser target, [Remainder] string arguments)
+        public async Task CreateGuildTimer(string Time, IUser target = null)
         {
-            if (arguments.Contains("everyone") || arguments.Contains("here"))
+            if (Time.Contains("everyone") || Time.Contains("here"))
             {
-                await ReplyAsync("<:NO:528279619699212300>");
+                await RespondAsync("<:NO:528279619699212300>");
             }else
             {
-                string[] args = arguments.Split(' ');
+                string[] args = Time.Split(' ');
+                
                 try
                 {
-                    if (args.Length == 2)
+                    if (target == null)
                     {//The user has passed Time, Target
 
-                        PauseTimer tmr = new PauseTimer(ParseTime(args[1]), Context.User as IUser, target, Context);
-                        await ReplyAsync("A timer has been created.");
+                        PauseTimer tmr = new PauseTimer(ParseTime(args[0]), Context.User as IUser, target, Context as SocketInteractionContext);
+                        await RespondAsync("A timer has been created.");
                     }
                     else
                     {//The user has just passed a time.
-                        PauseTimer tmr = new PauseTimer(ParseTime(args[0]), Context.User as IUser, Context);
-                        await ReplyAsync("A timer has been created.");
+                        PauseTimer tmr = new PauseTimer(ParseTime(args[1]), Context.User as IUser, Context as SocketInteractionContext);
+                        await RespondAsync("A timer has been created.");
                     }
                 }
                 catch (Exception)
                 { //This is likely due to the caller just doing !timer <elapsed>.
-                    await ReplyAsync("<:NO:528279619699212300> Please use #s or #m (Example: 5s for 5 Seconds or 2m for 2 Minutes) as a time for your timer. Don't forget to tag either yourself or your opponent!\n\nExample: !timer @<user tag> 5s");
+                    await RespondAsync("<:NO:528279619699212300> Please use #s or #m (Example: 5s for 5 Seconds or 2m for 2 Minutes) as a time for your timer. Don't forget to tag either yourself or your opponent!\n\nExample: !timer @<user tag> 5s");
                 }
 
                 
@@ -58,13 +59,14 @@ namespace ColonelBot_v4.Modules
         /// Obtains the server icon for some reason?
         /// </summary>
         /// <returns></returns>
-        [Command("servericon")]
+        [SlashCommand("servericon", "Utility Command. Pulls the server icon. Mod only.")]
+        [RequireUserPermission(GuildPermission.ManageGuild)]
         public async Task ServerIcon()
         {
             string url = Context.Guild.IconUrl;
 
             if (url is null)
-                await ReplyAsync("There is no server icon");
+                await RespondAsync("There is no server icon");
             else
             {
                 //checks if icon is animated aka last path of url starts with "a_"
@@ -73,28 +75,18 @@ namespace ColonelBot_v4.Modules
                     //replaces all possible file extensions with gif
                     url = Regex.Replace(url, @"\..{3,4}$", ".gif");
                 }
-                await ReplyAsync(url);
+                await RespondAsync(url);
             }
         }
 
-        [Command("hostflip")]
+        [SlashCommand("hostflip", "Effectively flips a coin to determine a host.")]
         public async Task HostflipAsync()
         {//Untargeted hostflip
             if (rnd.Next(0, 2) == 1)
-                await ReplyAsync("You are hosting.");
+                await RespondAsync("You are hosting.");
             else
-                await ReplyAsync("Your opponent is hosting.");
+                await RespondAsync("Your opponent is hosting.");
         }
-
-        [Command("hostflip"), Alias("🪙")]
-        public async Task TargetedHostflipAsync(IUser user)
-        {//Targeted hostflip.
-            if (rnd.Next(0, 2) == 1)
-                await ReplyAsync($"You are hosting, {user.Mention}");
-            else
-                await ReplyAsync($"You are hosting, {Context.User.Mention}");
-        }
-
 
 
         #region Support Methods
