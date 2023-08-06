@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.IO.Compression;
 using System.Text;
-using Discord.Commands;
+using Discord.Interactions;
 using Discord;
 using Discord.WebSocket;
 
@@ -24,31 +24,28 @@ using System.Net;
 
 namespace ColonelBot_v4.Modules
 {
-    
-    public class NewMoonModule : ModuleBase<SocketCommandContext>
+    [Group("newmoon", "Commands in association with MOON events.")]
+    public class NewMoonModule : InteractionModuleBase<SocketInteractionContext>
     {
 
-        [Command("addmoon")]
-        [RequireContext(ContextType.Guild)]
-        public async Task AddMoon([Remainder] string msg)
+        [MessageCommand("addmoon"), RequireContext(ContextType.Guild), EventOrganizerEnabled]
+        public async Task AddMoon(IMessage msg)
         {
-            if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
+            
+            await RespondAsync($"<:BarylMeh:297934727682326540> Beginning to add MOON BATTLERS. This may take a moment due to Discord rate limiting.");
+            var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
+                
+            foreach (var item in msg.MentionedUserIds)
             {
-                await ReplyAsync($"<:BarylMeh:297934727682326540> Beginning to add MOON BATTLERS. This may take a moment due to Discord rate limiting.");
-                var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
-                foreach (var item in Context.Message.MentionedUsers)
-                {
-                    SocketGuildUser target = Context.Guild.GetUser(item.Id);
-                    await target.AddRoleAsync(role);
-                    await ReplyAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
-                }
-            } else
-                await ReplyAsync($"You are not authorized to perform this command.");
+                SocketGuildUser target = Context.Guild.GetUser(item);
+                await target.AddRoleAsync(role);
+                await RespondAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
+            }
             
 
         }
 
-        [Command("nomoon"), Alias("remoonve")]
+        [SlashCommand("nomoon", "Event Command. Removes Moon Battler from all current Moon Users."), RequireContext(ContextType.Guild), EventOrganizerEnabled]
         [RequireContext(ContextType.Guild)]
         public async Task NoMoon()
         {
@@ -61,15 +58,15 @@ namespace ColonelBot_v4.Modules
                 {
                     SocketGuildUser target = Context.Guild.GetUser(item.Id);
                     await target.RemoveRoleAsync(role);
-                    await ReplyAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
+                    await RespondAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
                 }
             }
             else
-                await ReplyAsync($"You are not authorized to eradicate all of the MOON BATTLERS.");
+                await RespondAsync($"You are not authorized to eradicate all of the MOON BATTLERS.");
 
         }
 
-        [Command("newmoon getavatars", RunMode=RunMode.Async)]
+        [SlashCommand("getavatars", "Event Organizers Only. Obtains all user avatars."), EventOrganizerEnabled]
         [RequireContext(ContextType.Guild)]
         public async Task GetAllNewMoonParticipantAvatarsAsync()
         {
@@ -92,7 +89,7 @@ namespace ColonelBot_v4.Modules
                     }
 
                 }
-                await ReplyAsync("Downloading user avatars. This may take a moment.");
+                await RespondAsync("Downloading user avatars. This may take a moment.");
                 for (int i = 0; i < MoonbattlerAvatarURLs.Count; i++)
                 {
 		     bool retry = false;
@@ -109,7 +106,7 @@ namespace ColonelBot_v4.Modules
 			    {
 				counter--;
 				retry = true;
-				await ReplyAsync($"{ex.Message} On Image {MoonbattlerAvatarURLs[i]} by user{MoonbattlerUsernames[i]}. {counter} Attempts left.");
+				await RespondAsync($"{ex.Message} On Image {MoonbattlerAvatarURLs[i]} by user{MoonbattlerUsernames[i]}. {counter} Attempts left.");
 				Thread.Sleep(1000);
 				if(counter == 0) {
 					retry = false;
@@ -120,7 +117,7 @@ namespace ColonelBot_v4.Modules
                     
                 }
 
-                await ReplyAsync("Download completed. You have email.");
+                await RespondAsync("Download completed. You have email.");
                 string ZIPTarget = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}MoonBattlerMugshots.zip";
 
                 ZipFile.CreateFromDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache", $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip");
@@ -148,11 +145,7 @@ namespace ColonelBot_v4.Modules
 
         private bool IsEventOrganizer(IGuildUser caller, SocketGuild TargetServer)
         {
-            SocketRole role = BotTools.GetRole("Event Organizer", TargetServer);
-            if (caller.RoleIds.Contains(role.Id))
-                return true; //The user is an event organizer.
-            else
-                return false; //The user is not an event organizer.
+            return true; //We're returning here because the Attribute will handle the permission checks.
         }
 
 

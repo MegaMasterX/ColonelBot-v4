@@ -27,7 +27,7 @@ namespace ColonelBot_v4.Modules
         DiscordSocketClient discordclient;
         public List<Quote> QuotesPendingApproval = new List<Quote>();
 
-        [SlashCommand("","")]
+        [SlashCommand("specific","Pulls a specific quote by ID.")]
         public async Task QuoteSpecificAsync(uint QuoteID)
         {
             //1. Update the local list for Quotes.
@@ -57,7 +57,7 @@ namespace ColonelBot_v4.Modules
         }
 
 
-        [SlashCommand("","")]
+        [SlashCommand("random","Gets a random quote.")]
         public async Task QuoteRandomAsync()
         {
             //1. Update the local list for Quotes.
@@ -157,7 +157,7 @@ namespace ColonelBot_v4.Modules
 
 
             //4. [Rewrite] Reply with a message informing the caller that its been sent for moderator review and approval.
-            await ReplyAsync("Your e-mail has been sent!");                                                                           //Reply to the caller letting them know the quote was sent off for approval.
+            await RespondAsync("Your e-mail has been sent!");                                                                           //Reply to the caller letting them know the quote was sent off for approval.
             QuotesPendingApproval.Add(new Quote(Context.User.Id, Context.User.Username.Replace('@', ' '), LastID, QuoteContents));             //Place the quote in the approval queue.
                                                                                                                                        //5. Send a mesage to the channel and request that it be added
 
@@ -203,7 +203,7 @@ namespace ColonelBot_v4.Modules
                             Quote targetQuote = QuotesPendingApproval.Find(x => x.QuoteID == Convert.ToInt32(QuoteID));
                             //Add the quote to the list based on the last ID of the actual quote library.
                             targetQuote.QuoteID = MasterQuoteList[MasterQuoteList.Count - 1].QuoteID + 1;
-                            await ReplyAsync($"Yes! A new Quote ({QuoteID}) is born!\nID: {targetQuote.QuoteID}\n\n{targetQuote.QuoteContents}");
+                            await RespondAsync($"Yes! A new Quote ({QuoteID}) is born!\nID: {targetQuote.QuoteID}\n\n{targetQuote.QuoteContents}");
                         await arg2.DeleteMessageAsync(msg); //Delete the message in the Colonel Quote Audit Channel. You already have the ID.
                                                             //Time to add the quote.
                        
