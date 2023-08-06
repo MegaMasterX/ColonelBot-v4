@@ -24,7 +24,7 @@ using System.Net;
 
 namespace ColonelBot_v4.Modules
 {
-    [Group("newmoon", "Commands in association with MOON events.")]
+    [Group("newmoon-admin", "Commands in association with MOON events."), EventOrganizerEnabled]
     public class NewMoonModule : InteractionModuleBase<SocketInteractionContext>
     {
 

@@ -59,8 +59,7 @@ namespace ColonelBot_v4.Modules
         /// Obtains the server icon for some reason?
         /// </summary>
         /// <returns></returns>
-        [SlashCommand("servericon", "Utility Command. Pulls the server icon. Mod only.")]
-        [RequireUserPermission(GuildPermission.ManageGuild)]
+        [SlashCommand("servericon", "Utility Command. Pulls the server icon. Mod only."), ModeratorOnly]
         public async Task ServerIcon()
         {
             string url = Context.Guild.IconUrl;
