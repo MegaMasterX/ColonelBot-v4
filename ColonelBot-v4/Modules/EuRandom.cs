@@ -41,7 +41,6 @@ namespace ColonelBot_v4.Modules
         }
 
         [SlashCommand("add", "Event Organizer Only. Adds a setup (or setups) to the pool of Eurandom saves."), EventOrganizerEnabled]
-        [RequireUserPermission(GuildPermission.ManageGuild)] //Supporter+ only.
         public async Task EuRandomUpdateAsync(string text)
         {
             //append a new line just in case 
@@ -68,7 +67,6 @@ namespace ColonelBot_v4.Modules
         }
 
         [SlashCommand("list", "Event Organizer Only. Lists all of the configured Eurandom setups."), EventOrganizerEnabled]
-        [RequireUserPermission(GuildPermission.ManageGuild)] //Supporter+ only.
         public async Task EuRandomListAllAsync()
         {
             if (!File.Exists(eurandomPath)) 

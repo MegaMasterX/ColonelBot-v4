@@ -21,7 +21,7 @@ namespace ColonelBot_v4.Modules
     [Group("eurandomdx", "Commands in association with Random Battle events.")]
     public class RandomBattleModule : InteractionModuleBase<SocketInteractionContext>
     {
-        string eurandomPath = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}EuRandom{Path.DirectorySeparatorChar}SetupsLinks";
+        string eurandomPath = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}EuRandomDX{Path.DirectorySeparatorChar}SetupsLinks";
 
 
         [SlashCommand("getsave", "Obtains a Eurandom DX setup from the available saves!")]
@@ -42,7 +42,6 @@ namespace ColonelBot_v4.Modules
         }
 
         [SlashCommand("add", "Event Organizer Only. Adds a setup (or setups) to the pool of Eurandom DX saves."), EventOrganizerEnabled]
-        [RequireUserPermission(GuildPermission.ManageGuild)] //Supporter+ only.
         public async Task EuRandomUpdateAsync(string text)
         {
             //append a new line just in case 
@@ -69,7 +68,6 @@ namespace ColonelBot_v4.Modules
         }
 
         [SlashCommand("list", "Event Organizer Only. Lists all of the configured Eurandom DX setups."), EventOrganizerEnabled]
-        [RequireUserPermission(GuildPermission.ManageGuild)] //Supporter+ only.
         public async Task EuRandomListAllAsync()
         {
             if (!File.Exists(eurandomPath))
