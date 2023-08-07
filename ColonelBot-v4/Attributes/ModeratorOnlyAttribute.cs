@@ -12,9 +12,9 @@ public class ModeratorOnlyAttribute : PreconditionAttribute
 {
     public override async Task<PreconditionResult> CheckRequirementsAsync(IInteractionContext context, ICommandInfo commandInfo, IServiceProvider services)
     {
-        ulong modrole = 132109612118704128;
+        //ulong modrole = 132109612118704128;
 
-        if (RoleModule.UserHasRole(modrole, context.User as IGuildUser, context.Guild))
+        if (RoleModule.UserHasRole("Moderators", context.User as IGuildUser, context.Guild))
             return await Task.FromResult(PreconditionResult.FromSuccess());
         else
             return await Task.FromResult(PreconditionResult.FromError("You must be a Moderator to use this command."));

@@ -44,20 +44,24 @@ namespace ColonelBot_v4.Modules
         [SlashCommand("add", "Event Organizer Only. Adds a setup (or setups) to the pool of Eurandom DX saves."), EventOrganizerEnabled]
         public async Task EuRandomUpdateAsync(string text)
         {
-            //append a new line just in case 
-            string outtext = text + Environment.NewLine;
-            //remove empty lines and also strip added line if it was unnecessary; should catch both \r\n and \n
-            string resultString = Regex.Replace(outtext, $"^\\s+$[\n]*", string.Empty, RegexOptions.Multiline);
-            // check for duplication
-            string[] lines = text.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-            if (File.Exists(eurandomPath))
+            if (!text.Contains(Environment.NewLine))
             {
-                string[] presentLines = File.ReadAllLines(eurandomPath);
-                lines = Array.FindAll(lines, s => !presentLines.Contains(s));
+                //append a new line just in case 
+                string outtext = text + Environment.NewLine;
+                //remove empty lines and also strip added line if it was unnecessary; should catch both \r\n and \n
+                string resultString = Regex.Replace(outtext, $"^\\s+$[\n]*", string.Empty, RegexOptions.Multiline);
+                // check for duplication
+                string[] lines = text.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+                if (File.Exists(eurandomPath))
+                {
+                    string[] presentLines = File.ReadAllLines(eurandomPath);
+                    lines = Array.FindAll(lines, s => !presentLines.Contains(s));
+                }
+                //apppend to file
+                File.AppendAllLines(eurandomPath, lines);
+                await RespondAsync("Added all new setups!");
             }
-            //apppend to file
-            File.AppendAllLines(eurandomPath, lines);
-            await RespondAsync("Added all new setups!");
+            
         }
 
         [SlashCommand("clearall", "Event Organizer Only. Clears all of the Eurandom DX Setups"), EventOrganizerEnabled]
@@ -77,7 +81,8 @@ namespace ColonelBot_v4.Modules
             else
             {
                 string text = File.ReadAllText(eurandomPath);
-                await RespondAsync(text);
+                await ReplyAsync(text);
+                await RespondAsync("Responded with list.");
             }
         }
     }
