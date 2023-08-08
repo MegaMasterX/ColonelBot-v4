@@ -58,11 +58,7 @@ namespace ColonelBot_v4.Modules
             await RespondAsync(CommandConfig.Instance.GetResponse("victors"));
         }
 
-		[SlashCommand("newmoon", "Obtains information on the current NEW MOON cycle.")]
-		public async Task GetNewmoonInfoAsync()
-		{
-            await RespondAsync(CommandConfig.Instance.GetResponse("newmoon"));
-        }
+		
 
 
 			//This needs to be changed to a UserCommand.

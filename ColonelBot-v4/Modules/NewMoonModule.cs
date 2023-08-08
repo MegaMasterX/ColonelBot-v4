@@ -24,29 +24,49 @@ using System.Net;
 
 namespace ColonelBot_v4.Modules
 {
+    public class NewMoonInfoModule : InteractionModuleBase<SocketInteractionContext>
+    {
+        [SlashCommand("newmoon", "Obtains information on the current NEW MOON cycle.")]
+        public async Task GetNewmoonInfoAsync()
+        {
+            await RespondAsync(CommandConfig.Instance.GetResponse("newmoon"));
+        }
+
+        
+
+    }
+
     [Group("newmoon-admin", "Commands in association with MOON events."), EventOrganizerEnabled]
     public class NewMoonModule : InteractionModuleBase<SocketInteractionContext>
     {
 
+        [MessageCommand("update-info-command"), EventOrganizerEnabled]
+        public async Task UpdateNewmoonString(IMessage msg)
+        {
+            CommandConfig.Instance.UpdateUserCommand("newmoon", msg.Content);
+            await RespondAsync($"The Newmoon command has been updated! It now reads:\n\n{msg.Content}");
+        }
+
+
         [MessageCommand("addmoon"), RequireContext(ContextType.Guild), EventOrganizerEnabled]
         public async Task AddMoon(IMessage msg)
         {
-            
+
             await RespondAsync($"<:BarylMeh:297934727682326540> Beginning to add MOON BATTLERS. This may take a moment due to Discord rate limiting.");
             var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
-                
+
             foreach (var item in msg.MentionedUserIds)
             {
                 SocketGuildUser target = Context.Guild.GetUser(item);
                 await target.AddRoleAsync(role);
                 await RespondAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
             }
-            
+
 
         }
 
+
         [SlashCommand("nomoon", "Event Command. Removes Moon Battler from all current Moon Users."), RequireContext(ContextType.Guild), EventOrganizerEnabled]
-        [RequireContext(ContextType.Guild)]
         public async Task NoMoon()
         {
             if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
