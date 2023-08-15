@@ -36,7 +36,7 @@ namespace ColonelBot_v4.Modules
                 Random r = new Random();
                 int randomLineNumber = r.Next(0, lines.Length);
                 string setupLink = lines[randomLineNumber];
-                await RespondAsync($"[Here's your Eurandom Setup!]({setupLink})");
+                await RespondAsync($"[Here's your Eurandom Setup!]({setupLink})\nYour NetNavi is: {GetRandomEurandomNavi()}.\nGood luck!");
                 
                 
             }
@@ -46,39 +46,6 @@ namespace ColonelBot_v4.Modules
         public async Task EuRandomUpdateAsync(string txt)
         {
             await Context.Interaction.RespondWithModalAsync<EurandomSetupAddModal>("Setups_Provided");
-
-            //if (!text.Contains(Environment.NewLine))
-            //{//Is this single line? If so, just go ahead and normally add the save.
-            // //append a new line just in case 
-            //    string outtext = text + Environment.NewLine;
-            //    //remove empty lines and also strip added line if it was unnecessary; should catch both \r\n and \n
-            //    string resultString = Regex.Replace(outtext, $"^\\s+$[\n]*", string.Empty, RegexOptions.Multiline);
-            //    // check for duplication
-            //    string[] lines = text.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-            //    if (File.Exists(eurandomPath))
-            //    {
-            //        string[] presentLines = File.ReadAllLines(eurandomPath);
-            //        lines = Array.FindAll(lines, s => !presentLines.Contains(s));
-            //    }
-            //    //apppend to file
-            //    File.AppendAllLines(eurandomPath, lines);
-            //    await ReplyAsync("Added a new setup!");
-            //}
-            //else
-            //{
-            //    string parseText = text;
-            //    string[] lines = parseText.Split(Environment.NewLine);
-            //    if (File.Exists(eurandomPath))
-            //    {
-            //        string[] presentLines = File.ReadAllLines(eurandomPath);
-            //        lines = Array.FindAll(lines, s => !presentLines.Contains(s));
-            //    }
-            //    //apppend to file
-            //    File.AppendAllLines(eurandomPath, lines);
-            //    await ReplyAsync($"Added {lines.Count()} new setups.");
-            //}
-
-
         }
 
         [ModalInteraction("Setups_Provided")]
@@ -122,6 +89,18 @@ namespace ColonelBot_v4.Modules
                 string text = File.ReadAllText(eurandomPath);
                 await RespondAsync(text);
             }
+        }
+
+
+        /// <summary>
+        /// Helper method - returns a random MMBN 4.5 Navi for Eurandoms.
+        /// </summary>
+        /// <returns></returns>
+        private string GetRandomEurandomNavi()
+        {
+            Random rnd = new Random(DateTime.Now.Millisecond);
+            return Enums.EXE4_5Navis[rnd.Next(0, Enums.EXE4_5Navis.Count - 1)];
+
         }
     }
 }
