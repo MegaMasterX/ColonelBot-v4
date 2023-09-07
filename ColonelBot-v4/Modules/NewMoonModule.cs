@@ -59,7 +59,7 @@ namespace ColonelBot_v4.Modules
             {
                 SocketGuildUser target = Context.Guild.GetUser(item);
                 await target.AddRoleAsync(role);
-                await RespondAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
+                await ReplyAsync($"Added Moon role to: {target.Username.Replace('@', ' ')}");
             }
 
 
@@ -72,13 +72,13 @@ namespace ColonelBot_v4.Modules
             if (IsEventOrganizer(Context.User as IGuildUser, Context.Guild))
             {
 
-                await ReplyAsync($"<:BarylMeh:297934727682326540> Removing MOON BATTLER from <<ALL>> users. This may take a moment due to Discord rate limiting.");
+                await RespondAsync($"<:BarylMeh:297934727682326540> Removing MOON BATTLER from <<ALL>> users. This may take a moment due to Discord rate limiting.");
                 var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
                 foreach (var item in role.Members)
                 {
                     SocketGuildUser target = Context.Guild.GetUser(item.Id);
                     await target.RemoveRoleAsync(role);
-                    await RespondAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
+                    await ReplyAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
                 }
             }
             else

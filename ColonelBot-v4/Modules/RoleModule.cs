@@ -26,7 +26,7 @@ namespace ColonelBot_v4.Modules
             await RespondAsync($"You are now Available to Battle, {username}");
         }
 
-        [SlashCommand("atm", "Marks you as Available to MOON BATTLE."), RequireContext(ContextType.Guild)]
+        [SlashCommand("legs", "Marks you as Available to MOON BATTLE."), RequireContext(ContextType.Guild)]
         public async Task ItsMoonTimeAsync()
         {
             //Method to moon-up the caller.
@@ -43,7 +43,7 @@ namespace ColonelBot_v4.Modules
 
         }
 
-        [SlashCommand("unmoon", "Removes your Available to MOON BATTLE role."), RequireContext(ContextType.Guild)]
+        [SlashCommand("unlegs", "Removes your Available to MOON BATTLE role."), RequireContext(ContextType.Guild)]
         public async Task UnmoonAsync()
         {
             var caller = Context.User as IGuildUser;
