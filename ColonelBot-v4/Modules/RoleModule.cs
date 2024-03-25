@@ -46,15 +46,15 @@ namespace ColonelBot_v4.Modules
         [SlashCommand("unlegs", "Removes your Available to MOON BATTLE role."), RequireContext(ContextType.Guild)]
         public async Task UnmoonAsync()
         {
+            //Changing this to be able to remove the role regardless of MOON BATTLER status, but only respond if they're moon battlers.
             var caller = Context.User as IGuildUser;
+            var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
+            await RemoveMoonbattle(caller, role);
+
             if (HasRole("MOON BATTLER", caller, Context.Guild))
             {
-                var username = (caller.Nickname ?? caller.Username).Replace("@", "(at)"); 
-                var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
-                await RemoveMoonbattle(caller, role);
                 await RespondAsync("You are no longer available to MOON BATTLE.");
-            }else
-                await RespondAsync("You are not permitted to call this command.");
+            }
         }
 
         
