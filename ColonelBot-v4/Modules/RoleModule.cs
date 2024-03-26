@@ -54,6 +54,9 @@ namespace ColonelBot_v4.Modules
             if (HasRole("MOON BATTLER", caller, Context.Guild))
             {
                 await RespondAsync("You are no longer available to MOON BATTLE.");
+            }else
+            {
+                await RespondAsync("Leg's MOON BATTLE removed.");
             }
         }
 
