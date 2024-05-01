@@ -109,45 +109,47 @@ namespace ColonelBot_v4.Modules
                     }
 
                 }
+                //We can only reply once in the context of a slashcommand.
                 await RespondAsync("Downloading user avatars. This may take a moment.");
+
                 for (int i = 0; i < MoonbattlerAvatarURLs.Count; i++)
                 {
-		     bool retry = false;
-		     int counter = 3;
-		     do{
-                     // Try to catch all failures
-			    retry = false;
-			    try
-			    {
-				client.DownloadFile(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
+                    bool retry = false;
+                    int counter = 3;
+                    do{
+                            // Try to catch all failures
+                        retry = false;
+                        try
+                        {
+                            client.DownloadFile(new Uri(MoonbattlerAvatarURLs[i]), $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}{MoonbattlerUsernames[i]}.png");
 
-			    }
-			    catch (Exception ex)
-			    {
-				counter--;
-				retry = true;
-				await RespondAsync($"{ex.Message} On Image {MoonbattlerAvatarURLs[i]} by user{MoonbattlerUsernames[i]}. {counter} Attempts left.");
-				Thread.Sleep(1000);
-				if(counter == 0) {
-					retry = false;
-					counter =3;
-				}
-			    }
-		     }while(retry);
-                    
-                }
+                        }
+                        catch (Exception ex)
+                        {
+                            counter--;
+                            retry = true;
+                            await ReplyAsync($"{ex.Message} On Image {MoonbattlerAvatarURLs[i]} by user{MoonbattlerUsernames[i]}. {counter} Attempts left.");
+                            Thread.Sleep(1000);
+                            if (counter == 0) {
+                                retry = false;
+                                counter =3;
+                            }
+                        }
+                    }while(retry);
+                            
+                        }
 
-                await RespondAsync("Download completed. You have email.");
-                string ZIPTarget = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}MoonBattlerMugshots.zip";
+                            await ReplyAsync("Download completed. You have email.");
+                            string ZIPTarget = $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache{Path.DirectorySeparatorChar}MoonBattlerMugshots.zip";
 
-                ZipFile.CreateFromDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache", $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip");
+                            ZipFile.CreateFromDirectory($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}Cache", $"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip");
 
-                await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip", "");
+                            await Context.User.SendFileAsync($"{Directory.GetCurrentDirectory()}{Path.DirectorySeparatorChar}MoonbattlerMugshots.zip", "");
 
-                //string ThumbnailURL = usr.GetAvatarUrl();
+                            //string ThumbnailURL = usr.GetAvatarUrl();
 
+                    }
             }
-        }
 
         private void CleanupCache()
         {
