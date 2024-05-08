@@ -16,7 +16,6 @@ public class ChipLibrary
     public static ChipLibrary Instance {
         get { 
             if (instance == null) {
-                Console.WriteLine("Instance was null");
                 instance = new ChipLibrary();
                 
             }
@@ -31,7 +30,6 @@ public class ChipLibrary
         if (Library.Count == 0)
         {
             //The library isn't initialized, lol.
-            Console.WriteLine("Chip library initialized via constructor.");
             InitializeLibrary();
         }
     }

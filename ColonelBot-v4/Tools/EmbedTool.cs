@@ -234,7 +234,7 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
-        public static Embed ModcardEmbed(ModCard modcard)
+        public static Embed ModcardEmbed(PatchCard modcard)
         {
             EmbedBuilder embed = new EmbedBuilder
             {
