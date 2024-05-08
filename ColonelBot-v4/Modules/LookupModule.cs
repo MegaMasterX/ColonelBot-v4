@@ -23,7 +23,6 @@ namespace ColonelBot_v4.Modules
         {
             _handler = handler;
             
-            Console.WriteLine("Modcard Library Initailized.");
         }
 
         [Group("lookup", "Searches for a specific chip or patch card. If not found, a fuzzy search is done.")]

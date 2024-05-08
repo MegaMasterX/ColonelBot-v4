@@ -9,7 +9,7 @@ using ColonelBot_v4.Tools;
 
 public class PatchCardLibrary
 {
-    public List<PatchCard> Library;
+    public List<PatchCard> Library = new List<PatchCard>();
 
     private static PatchCardLibrary instance;
     public static PatchCardLibrary Instance {
