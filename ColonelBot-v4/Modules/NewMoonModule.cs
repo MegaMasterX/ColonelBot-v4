@@ -98,7 +98,9 @@ namespace ColonelBot_v4.Modules
                 List<SocketGuildUser> users = Context.Guild.Users.ToList<SocketGuildUser>();
                 List<string> MoonbattlerAvatarURLs = new List<string>();
                 List<string> MoonbattlerUsernames = new List<string>();
+#pragma warning disable SYSLIB0014 // Type or member is obsolete
                 WebClient client = new WebClient();
+#pragma warning restore SYSLIB0014 // Type or member is obsolete
                 foreach (var item in users)
                 {
                     if (item.Roles.Contains(RoleModule.GetRole("MOON BATTLER", Context.Guild)))

@@ -14,7 +14,6 @@ using System.Linq;
 
 
 using ColonelBot_v4.Tools;
-using Discord.Interactions;
 
 namespace ColonelBot_v4.Modules
 {
