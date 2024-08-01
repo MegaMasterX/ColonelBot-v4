@@ -9,12 +9,19 @@ using Discord.Commands;
 
 using ColonelBot_v4.Services;
 using ColonelBot_v4.Tools;
+using Discord.Interactions;
 
 namespace ColonelBot_v4.Modules
 {
-    public class MemeModule : ModuleBase<SocketCommandContext>
+    public class MemeModule : InteractionModuleBase<SocketInteractionContext>
     {
-        public ImageService ImageService { get; set; } //DI handles this.
+        public InteractionService commands { get; set; }
+        private InteractionHandler _handler;
+
+        public MemeModule(InteractionHandler handler)
+        {
+            _handler = handler;
+        }
 
         /*
         Example of a image command:
@@ -33,10 +40,10 @@ namespace ColonelBot_v4.Modules
         /// <summary>
         /// Shows a sad meme.
         /// </summary>
-        [Command("sad")]
+        [SlashCommand("sad", "makes colonelbot sad")]
         public async Task SadMeme()
         {
-            await ReplyAsync("sad");
+            await RespondAsync("sad");
         }
 
     }

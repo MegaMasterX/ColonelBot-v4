@@ -3,50 +3,112 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using Discord;
-using Discord.Commands;
+using Discord.Interactions;
 using System.Threading.Tasks;
 using ColonelBot_v4.Models;
 using ColonelBot_v4.Tools;
 using Newtonsoft.Json;
+using Discord.Interactions;
+using System.Linq;
+using Microsoft.Extensions.Options;
 
 namespace ColonelBot_v4.Modules
 {
-    public class LookupModule : ModuleBase<SocketCommandContext>
+    public class LookupModule : InteractionModuleBase<SocketInteractionContext>
     {
 
-        static List<Chip> ChipLibrary;
-
-        [Group("lookup")]
-        public class LookupSpecificGame : ModuleBase<SocketCommandContext>
+        public InteractionService commands { get; set; }
+        private InteractionHandler _handler;
+        public LookupModule(InteractionHandler handler)
         {
-            [Command]
-            public async Task LookupDefaultAsync([Remainder] string rndr)
+            _handler = handler;
+            
+        }
+
+        [Group("lookup", "Searches for a specific chip or patch card. If not found, a fuzzy search is done.")]
+        public class LookupSpecificGame : InteractionModuleBase<SocketInteractionContext>
+        {
+            [SlashCommand("chip", "Looks up a chip with the specified name")]
+            public async Task LookupDefaultAsync([Autocomplete(typeof(ChipLookupAutoCompleteHandler))] string ChipName)
             {//!lookup <chipname> - 
                 Chip locatedChip;
 		
-		if (rndr.Length == 1) {
-		    await ReplyAsync(ObtainCodeResults(rndr));
-		}else if (TryFindChipByName(rndr, out locatedChip))
+		    if (ChipName.Length == 1) {
+		        await RespondAsync(ObtainCodeResults(ChipName));
+		    }else if (TryFindChipByName(ChipName, out locatedChip))
                 {
-                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
-                }else if (TryFindChipByAlias(rndr, out locatedChip))
+                    await RespondAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
+                }else if (TryFindChipByAlias(ChipName, out locatedChip))
                 {
-                    await ReplyAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
+                    await RespondAsync("", embed: EmbedTool.ChipEmbed(locatedChip));
                 }else
-                    await ReplyAsync(ObtainSuggestions(rndr));
+                    await RespondAsync(ObtainSuggestions(ChipName));
             }
 
-            [Command("code"), Priority(1)] //!lookup code <specified>
-            public async Task LookupChipsByCode([Remainder] string remainder)
+            [SlashCommand("code", "Lookup all chips with the specified code.")] //!lookup code <specified>
+            public async Task LookupChipsByCode(string code)
             {
-                await ReplyAsync(ObtainCodeResults(remainder)); //You don't have to worry about trimming here, the lookup method only gets the first char.
+                await RespondAsync(ObtainCodeResults(code)); //You don't have to worry about trimming here, the lookup method only gets the first char.
             }
+
+            [SlashCommand("patchcard", "Looks up a Patch Card")]
+            public async Task LookupPatchCardAsync(string PatchcardName)
+            {
+                PatchCard selectedCard;
+                if (TryFindCardByName(PatchcardName, out selectedCard))
+                    await RespondAsync("", embed: EmbedTool.ModcardEmbed(selectedCard));
+                else if (TryFindCardByAlias(PatchcardName, out selectedCard))
+                    await RespondAsync("", embed: EmbedTool.ModcardEmbed(selectedCard));
+                else
+                    await RespondAsync(ObtainSuggestions(PatchcardName));
+            }
+
+            public static bool TryFindCardByName(string cardName, out PatchCard selectedCard)
+            {
+                selectedCard = PatchCardLibrary.Instance.Library.Find(x => x.Name.ToUpperInvariant().Equals(cardName.ToUpperInvariant()));
+                return selectedCard != null;
+            }
+
+            public static bool TryFindCardByAlias(string cardName, out PatchCard selectedCard)
+            {
+                selectedCard = PatchCardLibrary.Instance.Library.Find(x => x.Alias.ToUpperInvariant().Equals(cardName.ToUpperInvariant()));
+                return selectedCard != null;
+            }
+
+            public static string ObtainSuggestions(string lookupString)
+            {
+                string result = "Patch Card not found. Perhaps you meant: ";
+                string Criteria = lookupString.Remove(3);
+                List<PatchCard> SearchResults = PatchCardLibrary.Instance.Library.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
+                foreach (PatchCard item in SearchResults)
+                {
+                    result += $"{item.Name}     ";
+                }
+
+                if (result == "Patch Card not found. Perhaps you meant: ")
+                {
+                    List<PatchCard> AliasResults = PatchCardLibrary.Instance.Library.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
+                    foreach (PatchCard item in AliasResults)
+                    {
+                        string[] Aliases = item.Alias.Split(',');
+                        for (int i = 0; i < Aliases.Length; i++)
+                        {
+                            if (Aliases[i].ToUpper().StartsWith(Criteria.ToUpper()))
+                                result += $"{item.Name}    ";
+                        }
+                    }
+                }
+
+                return result;
+
+            }
+
 
         }
 
          public static bool TryFindChipByName(string chipName, out Chip selectedChip)
          {
-            selectedChip = ChipLibrary.Find(x => x.Name.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
+            selectedChip = ChipLibrary.Instance.Library.Find(x => x.Name.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
             return selectedChip != null;
          }
 
@@ -59,7 +121,7 @@ namespace ColonelBot_v4.Modules
         {
            
             Chip selectedChip = null;
-            selectedChip = ChipLibrary.Find(x => x.Name.ToUpper() == ChipName.ToUpper());
+            selectedChip = ChipLibrary.Instance.Library.Find(x => x.Name.ToUpper() == ChipName.ToUpper());
             if (selectedChip == null)
                 return null;
             else
@@ -74,57 +136,12 @@ namespace ColonelBot_v4.Modules
         const string lookupFailure = "Chip not found.";
         public static bool TryFindChipByAlias(string chipName, out Chip selectedChip)
         {
-            selectedChip = ChipLibrary.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
+            selectedChip = ChipLibrary.Instance.Library.Find(x => x.Alias.ToUpperInvariant().Contains(chipName.ToUpperInvariant()));
             return selectedChip != null;
         }
 
         
-        /// <summary>
-        /// This method will return a built list of all chips matching the Lookup string criteria.  
-        /// 
-        /// Lookups, if not found, will obtain a list of chips containing the first 4 characters. It will also look up the 
-        /// Aliases (Assnswrd for AssassinSword, for example.)
-        /// </summary>
-        /// <param name="lookupString">The string specified by the user to use for lookup.</param>
-        /// <returns></returns>
-        private static string ObtainSuggestions(string lookupString)
-        {
-            string result = lookupFailure + $" Perhaps you meant: ";
-            int ogLength = result.Length;
-            string Criteria = lookupString;
-            string verOrClass = lookupString;
-            if (lookupString.Length > 4){
-                Criteria = lookupString.Remove(3);
-            }
-            if (lookupString.Length > 2){
-                verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
-            }
-            List<Chip> FindResults = ChipLibrary.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
-            foreach (Chip chp in FindResults)
-            {
-                result += $"{chp.Name}   ";
-            }
-
-            if (result.Length == ogLength)
-            {// The fuzzy search did not return a result, check the aliases.
-                List<Chip> AliasResults = ChipLibrary.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
-                foreach (Chip item in AliasResults)
-                {
-                    //The chips' aliases will be seperated with ", "
-                    string[] Aliases = item.Alias.Split(',');
-                    for (int i = 0; i < Aliases.Length; i++)
-                    {
-                        if (Aliases[i].StartsWith(Criteria.ToUpper()))
-                            result += $"{item.Name}   ";
-                    }
-                }
-            }
-            if (result.Length == ogLength)
-            {// No fuzzy results were found in the aliases either. Change the return string.
-                result = lookupFailure;
-            }
-            return result;
-        }
+        
 
         /// <summary>
         /// Returns all chips that contain the specified chip code. 
@@ -137,7 +154,7 @@ namespace ColonelBot_v4.Modules
             string result = "";
             StringBuilder Results = new StringBuilder();
             List<Chip> CodeResults = new List<Chip>();
-            CodeResults = ChipLibrary.FindAll(x => x.Codes.Contains(CodeLookup.ToUpper().ToCharArray()[0]));
+            CodeResults = ChipLibrary.Instance.Library.FindAll(x => x.Codes.Contains(CodeLookup.ToUpper().ToCharArray()[0]));
             foreach (Chip item in CodeResults)
             {
                 result += $"{item.Name}   ";
@@ -151,8 +168,85 @@ namespace ColonelBot_v4.Modules
         /// </summary>
         public static void InitialCache()
         {
-            ChipLibrary = JsonConvert.DeserializeObject<List<Chip>>(File.ReadAllText(BotTools.GetSettingString(BotTools.ConfigurationEntries.ChipLibraryFileLocation)));
-            Console.WriteLine("Chip Library Initialized.");
+            
+        }
+    }
+
+    public class ChipLookupAutoCompleteHandler : AutocompleteHandler
+    {
+        public override async Task<AutocompletionResult> GenerateSuggestionsAsync(IInteractionContext context, IAutocompleteInteraction autocompleteInteraction, IParameterInfo parameter, IServiceProvider services)
+        {
+            var interactionData = context.Interaction.Data;
+            string targetOption = ((Discord.WebSocket.SocketAutocompleteInteractionData)context.Interaction.Data).Options.Last().Value.ToString();
+
+
+            string[] results = ObtainSuggestions(targetOption);
+            if (results.Count() != 0)
+            {
+                List<AutocompleteResult> acResults = new List<AutocompleteResult>();
+                foreach (var suggestion in results)
+                {
+                    acResults.Add(new AutocompleteResult(suggestion, suggestion));
+                }
+
+                return AutocompletionResult.FromSuccess(acResults.Take(25)); //Discord limiatation.
+
+            }
+            else
+            {
+                return AutocompletionResult.FromError(InteractionCommandError.Unsuccessful, "Chip not found.");
+            }
+        }
+
+        /// <summary>
+        /// This method will return a built list of all chips matching the Lookup string criteria.  
+        /// 
+        /// Lookups, if not found, will obtain a list of chips containing the first 4 characters. It will also look up the 
+        /// Aliases (Assnswrd for AssassinSword, for example.)
+        /// </summary>
+        /// <param name="lookupString">The string specified by the user to use for lookup.</param>
+        /// <returns></returns>
+        public static string[] ObtainSuggestions(string lookupString)
+        {
+            List<string> results = new List<string>();
+            
+            string Criteria = lookupString;
+            string verOrClass = lookupString;
+
+            if (lookupString.Length > 4){
+                Criteria = lookupString.Remove(3);
+            }
+            if (lookupString.Length > 2){
+                verOrClass = lookupString.Remove(0, lookupString.Length - 2); //This trims all but the last 2 chars to obtain the version or class of chip (2, EX, SP etc)
+            }
+            
+            List<Chip> FindResults = ChipLibrary.Instance.Library.FindAll(x => x.Name.ToUpper().StartsWith(Criteria.ToUpper()));
+            
+            foreach (Chip chp in FindResults)
+            {
+                results.Add(chp.Name); //+= $"{chp.Name}   ";
+
+            }
+
+            if (results.Count() == 0)
+            {// The fuzzy search did not return a result, check the aliases.
+                List<Chip> AliasResults = ChipLibrary.Instance.Library.FindAll(x => x.Alias.ToUpper().Contains(Criteria.ToUpper()));
+                foreach (Chip item in AliasResults)
+                {
+                    //The chips' aliases will be seperated with ", "
+                    string[] Aliases = item.Alias.Split(',');
+                    for (int i = 0; i < Aliases.Length; i++)
+                    {
+                        if (Aliases[i].StartsWith(Criteria.ToUpper()))
+                            results.Add(item.Name); // += $"{item.Name}   ";
+                    }
+                }
+            }
+            if (results.Count() == 0)
+            {// No fuzzy results were found in the aliases either. Change the return string.
+                //An error will be returned by the autocomplete component.
+            }
+            return results.ToArray();
         }
     }
 }

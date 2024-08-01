@@ -5,7 +5,7 @@
     "MB": "10 MB",
     "PositiveAbilities": "Attack+1 \nCharged Shot: MegaCannon\n - Null, 180 AP\n - 120i charge time",
     "NegativeAbilities": "HP-40",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Canodumb_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -14,7 +14,7 @@
     "MB": "16 MB",
     "PositiveAbilities": "AquaBody \nHP+80 \nFirst: BubbleWrap",
     "NegativeAbilities": "Attack-1",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Ammonicule_(Patch_card)_(BN6)",
     "Alias": "Ammonicule,Ammncule"
   },
   {
@@ -23,7 +23,7 @@
     "MB": "18 MB",
     "PositiveAbilities": "AquaBody \nHP+140 \nCharged Shot: IceCube \n(spawns an Aqua element IceCube)\n - 150i charge time",
     "NegativeAbilities": "Bug: Panel Bug\n(moving has a 25% chance to spawn Ice Panels)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Cold_Bear_(Patch_card)_(BN6)",
     "Alias": "Cold Bear"
   },
   {
@@ -32,7 +32,7 @@
     "MB": "12 MB",
     "PositiveAbilities": "Attack+3",
     "NegativeAbilities": "FloatShoes OFF \nAirShoes OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Miney_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -41,8 +41,8 @@
     "MB": "20 MB",
     "PositiveAbilities": "Charge+4 \nFirst: Barrier100 \nAirShoes ON",
     "NegativeAbilities": "HP-80",
-    "MoreInformation": "",
-    "Alias": ""
+    "MoreInformation": "https://wiki.n1gp.net/Megalian_(Patch_card)_(BN6)",
+    "Alias": "Megalian"
   },
   {
     "ID": "006",
@@ -50,8 +50,8 @@
     "MB": "20 MB",
     "PositiveAbilities": "FireBody \nNormal Shot: Meteor1 \n - Fire, 30 AP",
     "NegativeAbilities": "Bug: Warp Bug",
-    "MoreInformation": "",
-    "Alias": "Met Fire"
+    "MoreInformation": "https://wiki.n1gp.net/MetFire_(Patch_card)_(BN6)",
+    "Alias": "Met Fire,MettFire"
   },
   {
     "ID": "007",
@@ -59,8 +59,8 @@
     "MB": "19 MB",
     "PositiveAbilities": "WoodBody \nCharged Shot: GrassSeed\n - Wood, 10 AP\n - 70i charge time",
     "NegativeAbilities": "AirShoes OFF",
-    "MoreInformation": "",
-    "Alias": "KillWeed"
+    "MoreInformation": "https://wiki.n1gp.net/Kill_Plant_(Patch_card)_(BN6)",
+    "Alias": "KillWeed,KilPlant"
   },
   {
     "ID": "008",
@@ -68,7 +68,7 @@
     "MB": "06 MB",
     "PositiveAbilities": "Normal Shot: Sword \n - Sword, 80 AP \nCharged Shot: Invisible \n - 120i duration \n - 140i charge time",
     "NegativeAbilities": "StatusGuard OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Shadow_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -77,7 +77,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "HP+100 \nNormal Shot: MiniBomb \n - Null, 50 AP",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Beetle_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -86,7 +86,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "Attack+1 \nSuperArmor ON",
     "NegativeAbilities": "Normal Shot Addition disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Heavy_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -95,7 +95,7 @@
     "MB": "24 MB",
     "PositiveAbilities": "WoodBody \nStatusGuard ON",
     "NegativeAbilities": "HP-20% \nB+< disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Viney_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -104,7 +104,7 @@
     "MB": "12 MB",
     "PositiveAbilities": "AquaBody \nHP+30 \nCharged Shot: PanelGrab \n - Null, 10 AP \n - 150i charge time",
     "NegativeAbilities": "NormalGauge",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Slimey_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -113,7 +113,7 @@
     "MB": "10 MB",
     "PositiveAbilities": "FireBody \nCharge+4 \nCharged Shot: BlackBomb \n - Null, pseudo-breaking, 100 AP \n - When hit with fire: \n  Fire, 250 AP \n - 130i charge time",
     "NegativeAbilities": "Bug: Emotion Bug",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Volcano_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -122,7 +122,7 @@
     "MB": "17 MB",
     "PositiveAbilities": "Custom+1 \nMegaFolder+1 \nGigaFolder+1",
     "NegativeAbilities": "Default Charged Shot \nBug: Custom Screen HP bug \n(level 3, -1 HP per 30i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Number_(Patch_card)_(BN6)",
     "Alias": "Number"
   },
   {
@@ -131,7 +131,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "ElecBody \nFloatShoes ON \nCharged Shot Addition: Magnet \n(enemy is pulled in) (50%)",
     "NegativeAbilities": "HP-5%",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Magtect_(Patch_card)_(BN6)",
     "Alias": "Mag Tech,Mag Tect,MagTech"
   },
   {
@@ -140,7 +140,7 @@
     "MB": "08 MB",
     "PositiveAbilities": "WoodBody \nHP+60",
     "NegativeAbilities": "Bug: Panel Bug \n (moving has a 25% chance to spawn Grass Panels)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Spidy_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -149,7 +149,7 @@
     "MB": "14 MB",
     "PositiveAbilities": "Normal Shot Addition: Small Push \n(pushes struck target 1 panel) (12.5%) \nBug Fix: Panel Bug \nBug Fix: Warp Bug",
     "NegativeAbilities": "Charged Shot Addition disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Bomboy_(Patch_card)_(BN6)",
     "Alias": "Bom Boy"
   },
   {
@@ -158,7 +158,7 @@
     "MB": "13 MB",
     "PositiveAbilities": "WoodBody \nHP+90 \nNormal Shot Addition: Grass Panel (50%) \nBug Fix: Damage Bug",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/WuNote_(Patch_card)_(BN6)",
     "Alias": "Wu Note"
   },
   {
@@ -167,7 +167,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "ElecBody \nHP+5% \nBug Fix: Custom Screen HP Bug",
     "NegativeAbilities": "Attack-1",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Flashy_(Patch_card)_(BN6)",
     "Alias": ""
   },
   {
@@ -176,7 +176,7 @@
     "MB": "16 MB",
     "PositiveAbilities": "ElecBody \nHP+50 \nBug Fix: Emotion Bug \nBug Fix: Color Bug",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Eleogre_(Patch_card)_(BN6)",
     "Alias": "Ele Ogre,Elec Ogre"
   },
   {
@@ -185,8 +185,8 @@
     "MB": "12 MB",
     "PositiveAbilities": "FireBody \nHP+130 \nCharged Shot: FireBurner \n - Fire, 70 AP \n - 70i charge time",
     "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i)",
-    "MoreInformation": "",
-    "Alias": "Old Stove"
+    "MoreInformation": "https://wiki.n1gp.net/Old_Stove_(Patch_card)_(BN6)",
+    "Alias": "Old Stove,OldStov"
   },
   {
     "ID": "022",
@@ -194,8 +194,8 @@
     "MB": "11 MB",
     "PositiveAbilities": "AquaBody \nSpeed+4 \nBug Fix: Buster Bug",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
-    "Alias": "Puffy 6,Puffy BN6,Puffy6"
+    "MoreInformation": "https://wiki.n1gp.net/Puffy_(BN6)_(Patch_Card)_(BN6)",
+    "Alias": "Puffy 6,Puffy BN6,Puffy6,BN6Puffy,BN6 Puffy"
   },
   {
     "ID": "023",
@@ -203,7 +203,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "AquaBody \nCharged Shot Addition: Bubbling (50%)",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Starfish_(Patch_Card)_(BN6)",
     "Alias": "Star Fish"
   },
   {
@@ -212,7 +212,7 @@
     "MB": "08 MB",
     "PositiveAbilities": "Charged Shot: FlashBomb \n - Null, 40 AP \n - 150i charge time",
     "NegativeAbilities": "SuperArmor OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Big_Hat_(Patch_Card)_(BN6)",
     "Alias": "Big Hat"
   },
   {
@@ -221,8 +221,8 @@
     "MB": "14 MB",
     "PositiveAbilities": "ElecBody \nCharged Shot: DollThunder \n - Elec, 120 AP \n - 100i charge time \n - Chip Recovery: 30 HP",
     "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 12.5% charge)",
-    "MoreInformation": "",
-    "Alias": "Scare Crow"
+    "MoreInformation": "https://wiki.n1gp.net/Scare_Crow_(Patch_Card)_(BN6)",
+    "Alias": "Scare Crow,ScarCrow"
   },
   {
     "ID": "026",
@@ -230,8 +230,8 @@
     "MB": "20 MB",
     "PositiveAbilities": "FloatShoes ON \nAirShoes ON",
     "NegativeAbilities": "HP-10%",
-    "MoreInformation": "",
-    "Alias": "Fighter Plane"
+    "MoreInformation": "https://wiki.n1gp.net/Fighter_Plane_(Patch_Card)_(BN6)",
+    "Alias": "Fighter Plane,FgtrPlne"
   },
   {
     "ID": "027",
@@ -239,7 +239,7 @@
     "MB": "19 MB",
     "PositiveAbilities": "HP+200 \nUnderShirt ON",
     "NegativeAbilities": "Bug: Damage Bug (being flinched or pushed causes HP bug level 1)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Cragger_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -248,8 +248,8 @@
     "MB": "12 MB",
     "PositiveAbilities": "HP+5% \nCharged Shot: Breaking Charged Shot",
     "NegativeAbilities": "Charge-3",
-    "MoreInformation": "",
-    "Alias": ""
+    "MoreInformation": "https://wiki.n1gp.net/Armadill_(Patch_Card)_(BN6)",
+    "Alias": "Armadill"
   },
   {
     "ID": "029",
@@ -257,7 +257,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "Charged Shot: Spreader \n - Null, 30 AP \n - 20i charge time \nB+<: Shield \n - 23i duration \n - 70i cooldown \nChip Recovery: 20 HP \nBug Fix: HP Bug",
     "NegativeAbilities": "Bug: -40 HP upon entering custom screen",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Kettle_(Patch_Card)_(BN6)",
     "Alias": "Coffee,CoffeePot,AwfullyHotCoffeePot"
   },
   {
@@ -266,8 +266,8 @@
     "MB": "20 MB",
     "PositiveAbilities": "HP+180 \nMegaFolder+1",
     "NegativeAbilities": "Default Charged Shot \nBug: Color Bug \n(level 1)",
-    "MoreInformation": "",
-    "Alias": "Earth Dragon"
+    "MoreInformation": "https://wiki.n1gp.net/Earth_Dragon_(Patch_Card)_(BN6)",
+    "Alias": "Earth Dragon,ErthDrgn"
   },
   {
     "ID": "031",
@@ -275,7 +275,7 @@
     "MB": "35 MB",
     "PositiveAbilities": "Custom+3 \nMegaFolder+1 \nGigaFolder+1",
     "NegativeAbilities": "HP-20%",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/NumberMan_(Patch_Card)_(BN6)",
     "Alias": "Number Man"
   },
   {
@@ -284,7 +284,7 @@
     "MB": "25 MB",
     "PositiveAbilities": "AquaBody \nHP+80 \nCharged Shot: IceSeed \n - Aqua, 10 AP \n - 120i charge time \nBug Fix: Custom Screen HP Bug",
     "NegativeAbilities": "SuperArmor OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/IceMan_(Patch_Card)_(BN6)",
     "Alias": "Ice Man,Ice"
   },
   {
@@ -293,7 +293,7 @@
     "MB": "30 MB",
     "PositiveAbilities": "HP+100 \nCharged Shot Addition: HP Bug (level 1) (50%)",
     "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i) \nBug: Color Bug \n(level 1)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/SkullMan_(Patch_Card)_(BN6)",
     "Alias": "Skull Man,Skull,:skull:"
   },
   {
@@ -302,7 +302,7 @@
     "MB": "38 MB",
     "PositiveAbilities": "FloatShoes ON \nCharged Shot: LongSword \n - Sword, 100 AP \n - 60i charge time \nB+<: AntiDamage \n - Sword, 50 AP \n - 32i duration \n - 105i cooldown",
     "NegativeAbilities": "HP-50",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/ShadowMan_(Patch_Card)_(BN6)",
     "Alias": "Shadow Man"
   },
   {
@@ -311,7 +311,7 @@
     "MB": "32 MB",
     "PositiveAbilities": "Attack+4 \nCharged Shot: Yo-Yo \n - Sword, 50 AP \n - 70i charge time",
     "NegativeAbilities": "HP-100",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/CutMan_(Patch_Card)_(BN6)",
     "Alias": "Cut Man,Cutter Man,Cutter"
   },
   {
@@ -320,8 +320,8 @@
     "MB": "45 MB",
     "PositiveAbilities": "HP+20% \nDoubleAttack \nSuperArmor ON \nUnderShirt ON",
     "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge)",
-    "MoreInformation": "",
-    "Alias": "Knight Man,Knight"
+    "MoreInformation": "https://wiki.n1gp.net/KnightMan_(Patch_Card)_(BN6)",
+    "Alias": "Knight Man,Knight,KnigtMan"
   },
   {
     "ID": "037",
@@ -329,7 +329,7 @@
     "MB": "34 MB",
     "PositiveAbilities": "AquaBody \nCharged Shot Addition: Paralyze 90i (50%) \nBug Fix: Buster Bug",
     "NegativeAbilities": "Attack-1 \nCharge-3",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/ToadMan_(Patch_Card)_(BN6)",
     "Alias": "Toad,Toad Man"
   },
   {
@@ -338,8 +338,8 @@
     "MB": "37 MB",
     "PositiveAbilities": "ElecBody \nHP+240 \nB+<: MagnetField \n - 120i duration \n - immobilizes enemy on the same lane",
     "NegativeAbilities": "Charged Shot Addition disabled",
-    "MoreInformation": "",
-    "Alias": "Magnet,Magnet Man"
+    "MoreInformation": "https://wiki.n1gp.net/MagnetMan_(Patch_Card)_(BN6)",
+    "Alias": "Magnet,Magnet Man,KnigtMan"
   },
   {
     "ID": "039",
@@ -347,8 +347,8 @@
     "MB": "40 MB",
     "PositiveAbilities": "WoodBody \nHP+300 \nStatusGuard ON \nNormal Shot: CrackShot \n - Null, 60 AP",
     "NegativeAbilities": "AirShoes OFF",
-    "MoreInformation": "",
-    "Alias": "Planet Man,Planet,:exe6meta:"
+    "MoreInformation": "https://wiki.n1gp.net/PlanetMan_(Patch_Card)_(BN6)",
+    "Alias": "Planet Man,Planet,:exe6meta:,PlanetMn"
   },
   {
     "ID": "040",
@@ -356,7 +356,7 @@
     "MB": "33 MB",
     "PositiveAbilities": "Speed+4 \nUnderShirt ON \nRush ON \nCharged Shot: StepSword \n - Sword, 160 AP \n - 100i charge time",
     "NegativeAbilities": "Bug: Warp Bug",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/BeastMan_(Patch_Card)_(BN6)",
     "Alias": "Beast Man"
   },
   {
@@ -365,8 +365,8 @@
     "MB": "36 MB",
     "PositiveAbilities": "HP+160 \nCharge+4 \nBug Fix: Damage Bug",
     "NegativeAbilities": "AirShoes OFF",
-    "MoreInformation": "",
-    "Alias": "Desert Man,Desert"
+    "MoreInformation": "https://wiki.n1gp.net/DesertMan_(Patch_Card)_(BN6)",
+    "Alias": "Desert Man,Desert,DesertMn"
   },
   {
     "ID": "042",
@@ -374,8 +374,8 @@
     "MB": "35 MB",
     "PositiveAbilities": "HP+10% \nAttack+1 \nB+<: Reflect \n - 23i duration \n - 33i cooldown",
     "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 3, -1 HP per 30i)",
-    "MoreInformation": "",
-    "Alias": "JapanMan,Yamato Man,Japan Man"
+    "MoreInformation": "https://wiki.n1gp.net/YamatoMan_(Patch_Card)_(BN6)",
+    "Alias": "JapanMan,Yamato Man,Japan Man,YamatoMn"
   },
   {
     "ID": "043",
@@ -383,7 +383,7 @@
     "MB": "32 MB",
     "PositiveAbilities": "FastGauge \nCharged Shot Addition: Forward Conveyor Panels (50%)",
     "NegativeAbilities": "HP-10%",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/VideoMan_(Patch_Card)_(BN6)",
     "Alias": "Video Man,Video"
   },
   {
@@ -392,8 +392,8 @@
     "MB": "29 MB",
     "PositiveAbilities": "FireBody \nHP+120 \nAttack+2",
     "NegativeAbilities": "Bug: -40 HP upon entering custom screen \nBug: Emotion Bug",
-    "MoreInformation": "",
-    "Alias": "Burner Man,Burner"
+    "MoreInformation": "https://wiki.n1gp.net/BurnerMan_(Patch_Card)_(BN6)",
+    "Alias": "Burner Man,Burner,BurnrMan"
   },
   {
     "ID": "045",
@@ -401,7 +401,7 @@
     "MB": "32 MB",
     "PositiveAbilities": "MegaFolder+1 \nBug Fix: HP Bug \nBug Fix: Emotion Bug \nBug Fix: Panel Bug",
     "NegativeAbilities": "Attack-2",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/StarMan_(Patch_Card)_(BN6)",
     "Alias": "Star,Star Man"
   },
   {
@@ -410,8 +410,8 @@
     "MB": "30 MB",
     "PositiveAbilities": "AquaBody \nHP+60 \nCharged Shot: BlizzardBall \n - Aqua, 150 AP \n - 150i charge time",
     "NegativeAbilities": "FloatShoes OFF",
-    "MoreInformation": "",
-    "Alias": "Blizzard Man,Blizzard"
+    "MoreInformation": "https://wiki.n1gp.net/BlizzardMan_(Patch_Card)_(BN6)",
+    "Alias": "Blizzard Man,Blizzard,BlizMan"
   },
   {
     "ID": "047",
@@ -419,7 +419,7 @@
     "MB": "36 MB",
     "PositiveAbilities": "AirShoes ON \nBeat ON \nCharged Shot Addition: delete opponent’s next chip (12.5%)",
     "NegativeAbilities": "Bug: Damage Bug (being flinched or pushed causes confusion for 960i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/LarkMan_(Patch_Card)_(BN6)",
     "Alias": "Lark Man,Lark"
   },
   {
@@ -428,7 +428,7 @@
     "MB": "31 MB",
     "PositiveAbilities": "Attack+4 \nCharged Shot: WideSword \n - Sword, 80 AP \n - 60i charge time",
     "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/SlashMan_(Patch_Card)_(BN6)",
     "Alias": "Slash,Slash Man"
   },
   {
@@ -437,7 +437,7 @@
     "MB": "40 MB",
     "PositiveAbilities": "MegaFolder+1 \nCharged Shot Addition: Erase Bug \n(Inflicts HP Bug VS PvP opponents) (12.5%)",
     "NegativeAbilities": "HP-10% \nBug: HP bug \n(level 1, -1 HP per 40i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/EraseMan_(Patch_Card)_(BN6)",
     "Alias": "Erase,Erase Man,Killer Man,Killer,EraserMan,Eraser Man"
   },
   {
@@ -446,8 +446,8 @@
     "MB": "43 MB",
     "PositiveAbilities": "HP+25% \nCharged Shot: Drill Arm \n - Breaking, 70 AP \n - 90i charge time",
     "NegativeAbilities": "Custom-1 \nMegaFolder-1",
-    "MoreInformation": "",
-    "Alias": "Ground Man,Ground"
+    "MoreInformation": "https://wiki.n1gp.net/GroundMan_(Patch_Card)_(BN6)",
+    "Alias": "Ground Man,Ground,GrndMan"
   },
   {
     "ID": "051",
@@ -455,7 +455,7 @@
     "MB": "37 MB",
     "PositiveAbilities": "HP+140 \nNormal Shot Addition: Cracked Panel (50%) \nB+<: Vacuum Fan",
     "NegativeAbilities": "Bug: Panel Bug \n(moving has a 12.5% chance to spawn Crack Panels)",
-    "MoreInformation": "This is a Pull Back effect similar to tengu B Back",
+    "MoreInformation": "This is a Pull Back effect similar to tengu B Back \nhttps://wiki.n1gp.net/DustMan_(Patch_Card)_(BN6)",
     "Alias": "Dust Man,Dust"
   },
   {
@@ -464,7 +464,7 @@
     "MB": "28 MB",
     "PositiveAbilities": "FireBody \nAttack+1 \nFloatShoes ON \nBug Fix: Panel Bug",
     "NegativeAbilities": "HP-80",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/BlastMan_(Patch_Card)_(BN6)",
     "Alias": "Blast Man,Blast"
   },
   {
@@ -473,8 +473,8 @@
     "MB": "43 MB",
     "PositiveAbilities": "GigaFolder+1 \nTango ON",
     "NegativeAbilities": "HP-200 \nFirst disabled",
-    "MoreInformation": "",
-    "Alias": "Circus Man,Circus"
+    "MoreInformation": "https://wiki.n1gp.net/CircusMan_(Patch_Card)_(BN6)",
+    "Alias": "Circus Man,Circus,CrcusMan"
   },
   {
     "ID": "054",
@@ -482,7 +482,7 @@
     "MB": "16 MB",
     "PositiveAbilities": "HP+100 \nCharged Shot: TimeBomb \n - Null, 150 AP \n - 120i charge time",
     "NegativeAbilities": "Chip Recovery disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Handy_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -491,8 +491,8 @@
     "MB": "12 MB",
     "PositiveAbilities": "AquaBody \nFloatShoes ON \nCharged Shot: BubbleSpread \n - Aqua, 70 AP \n - 70i charge time",
     "NegativeAbilities": "B+< disabled",
-    "MoreInformation": "",
-    "Alias": "Puffy 1,Puffy BN1,Puffy1"
+    "MoreInformation": "https://wiki.n1gp.net/Puffy_(BN1)_(Patch_Card)_(BN6)",
+    "Alias": "Puffy 1,Puffy BN1,Puffy1,BN1Puffy"
   },
   {
     "ID": "056",
@@ -500,7 +500,7 @@
     "MB": "13 MB",
     "PositiveAbilities": "AquaBody \nHP+120 \nCharge+4",
     "NegativeAbilities": "SlowGauge",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Jelly_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -509,7 +509,7 @@
     "MB": "13 MB",
     "PositiveAbilities": "WoodBody \nFirst: Barrier10 \nUnderShirt ON \nBug Fix: Damage Bug",
     "NegativeAbilities": "HP-40",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Poitton_(Patch_Card)_(BN6)",
     "Alias": "Poitton,Dynamite"
   },
   {
@@ -518,7 +518,7 @@
     "MB": "08 MB",
     "PositiveAbilities": "Speed+4 \nAirShoes ON",
     "NegativeAbilities": "Bug: -20 HP upon entering custom screen",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Satella_(Patch_Card)_(BN6)",
     "Alias": "Satela"
   },
   {
@@ -527,8 +527,8 @@
     "MB": "09 MB",
     "PositiveAbilities": "ElecBody \nHP+80 \nNormal Shot Addition: Cracked Panel (50%)",
     "NegativeAbilities": "AirShoes OFF \nBug: Panel Bug \n(moving has a 12.5% chance to spawn Hole Panels)",
-    "MoreInformation": "",
-    "Alias": "Remobit,Twisty and Romobit"
+    "MoreInformation": "https://wiki.n1gp.net/Twisty_%26_Remote_Bit_(Patch_Card)_(BN6)",
+    "Alias": "Remobit,Twisty and Romobit,Twisty and Remobit,Twisty and Remote Bit"
   },
   {
     "ID": "060",
@@ -536,7 +536,7 @@
     "MB": "08 MB",
     "PositiveAbilities": "ElecBody \nFloatShoes ON \nBug Fix: Color Bug \nBug Fix: Warp Bug ",
     "NegativeAbilities": "HP-5% ",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Sparky_(Patch_Card)_(BN6)",
     "Alias": "Shakey"
   },
   {
@@ -545,7 +545,7 @@
     "MB": "14 MB",
     "PositiveAbilities": "AquaBody \nHP+50 \nAttack+3 ",
     "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge) ",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Octon_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -554,8 +554,8 @@
     "MB": "08 MB",
     "PositiveAbilities": "AquaBody \nSpeed+4 \nB+<: Shield \n - 23i duration \n - 70i cooldown",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
-    "Alias": "Shell Geek"
+    "MoreInformation": "https://wiki.n1gp.net/Shellgeek_(Patch_Card)_(BN6)",
+    "Alias": "Shell Geek,ShelGeek"
   },
   {
     "ID": "063",
@@ -563,8 +563,8 @@
     "MB": "",
     "PositiveAbilities": "ElecBody \nHP+30 \nCharged Shot Addition: Backward Conveyor Panel (50%)",
     "NegativeAbilities": "Normal Shot Addition disabled",
-    "MoreInformation": "",
-    "Alias": ""
+    "MoreInformation": "https://wiki.n1gp.net/Magneaker_(Patch_Card)_(BN6)",
+    "Alias": "Magneakr"
   },
   {
     "ID": "064",
@@ -572,7 +572,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "FireBody \nHP+5% \nB+<: Meteor3 \n - Fire, 30 AP",
     "NegativeAbilities": "Bug: Warp Bug ",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Metrid_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -581,7 +581,7 @@
     "MB": "06 MB",
     "PositiveAbilities": "Rush ON \nCharged Shot: Invisible \n - 120i duration \n - 140i charge time",
     "NegativeAbilities": "HP-70",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Momogra_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -590,7 +590,7 @@
     "MB": "10 MB",
     "PositiveAbilities": "Attack+1 \nSpeed+1 \nCharge+1 \nSuperArmor ON \nBug Fix: Emotion Bug",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "Needler",
     "Alias": ""
   },
   {
@@ -599,7 +599,7 @@
     "MB": "15 MB",
     "PositiveAbilities": "HP+100 \nAttack+1 \nChip Recovery: 20 HP",
     "NegativeAbilities": "Charged Shot Addition disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Twins_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -608,7 +608,7 @@
     "MB": "12 MB",
     "PositiveAbilities": "HP+60 \nCustom+1",
     "NegativeAbilities": "First disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Walla_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -617,7 +617,7 @@
     "MB": "24 MB",
     "PositiveAbilities": "Woodbody \nStatusGuard ON \nCharged Shot: Lance \n - Wood, 150 AP \n - 90i charge time",
     "NegativeAbilities": "HP-20% \nBug: Panel Bug \n(moving has a 25% chance to spawn Grass Panels)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Kilby_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -626,7 +626,7 @@
     "MB": "13 MB",
     "PositiveAbilities": "Firebody \nMegaFolder+1 \nChip recovery: 40 HP",
     "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 3, -1 HP per 30i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Totem_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -635,8 +635,8 @@
     "MB": "10 MB",
     "PositiveAbilities": "Charged Shot: Cannon \n - Null, 40 AP \n - 30i charge time \nB+<: Shield \n - 23i duration \n - 70i cooldown",
     "NegativeAbilities": "FloatShoes OFF",
-    "MoreInformation": "",
-    "Alias": "Cannon Guard"
+    "MoreInformation": "https://wiki.n1gp.net/CanGuard_(Patch_Card)_(BN6)",
+    "Alias": "Cannon Guard,CanGuard"
   },
   {
     "ID": "072",
@@ -644,7 +644,7 @@
     "MB": "07 MB",
     "PositiveAbilities": "Charged Shot Addition: Confusion (50%) \nBug Fix: Custom Screen HP Bug",
     "NegativeAbilities": "HP-70",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Skarab_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -653,7 +653,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "FireBody \nHP+5%",
     "NegativeAbilities": "Bug: Color Bug (level 1)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Draggin_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -662,7 +662,7 @@
     "MB": "14 MB",
     "PositiveAbilities": "AquaBody \nHP+90 \nFirst: BubbleWrap",
     "NegativeAbilities": "SuperArmor OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Marina_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -671,8 +671,8 @@
     "MB": "12 MB",
     "PositiveAbilities": "FireBody \nHP+130 \nBug Fix: HP Bug",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "",
-    "Alias": "Haunted Candle"
+    "MoreInformation": "https://wiki.n1gp.net/Haunted_Candle_(Patch_Card)_(BN6)",
+    "Alias": "Haunted Candle,HntdCndl"
   },
   {
     "ID": "076",
@@ -680,7 +680,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "HP+70 \nCharged Shot: MachineGun \n - Cursor, 30 AP \n - 60i charge time",
     "NegativeAbilities": "UnderShirt OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Gunner_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -689,7 +689,7 @@
     "MB": "13 MB",
     "PositiveAbilities": "ElecBody \nCharged Shot: ElecPulse \n - Elec, 100 AP \n - 110i charge time",
     "NegativeAbilities": "Bug: Emotion Bug",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Pulse_Bulb_(Patch_Card)_(BN6)",
     "Alias": "Pulse Bulb,Elec Pulse,ElecPulse"
   },
   {
@@ -698,7 +698,7 @@
     "MB": "16 MB",
     "PositiveAbilities": "WoodBody \nHP+110 \nCharged Shot: CornShot \n - Wood, 50 AP \n - 50i charge time",
     "NegativeAbilities": "Bug: Damage Bug (being flinched or pushed causes confusion for 960i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Bomb_Corn_(Patch_Card)_(BN6)",
     "Alias": "Bomb Corn"
   },
   {
@@ -707,7 +707,7 @@
     "MB": "06 MB",
     "PositiveAbilities": "WoodBody \nNormal Shot Addition: Grass Panel (50%) \nBug Fix: damage upon entering custom screen",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Shrubby_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -716,8 +716,8 @@
     "MB": "12 MB",
     "PositiveAbilities": "WoodBody \nAirShoes ON \nB+<: RiskyHoney \n - Wood, 10 AP \n - 30i duration \n - 60i cooldown",
     "NegativeAbilities": "HP-10%",
-    "MoreInformation": "",
-    "Alias": "Honey Bomber,Honey"
+    "MoreInformation": "https://wiki.n1gp.net/Honey_Bomber_(Patch_Card)_(BN6)",
+    "Alias": "Honey Bomber,Honey,HonyBomr"
   },
   {
     "ID": "081",
@@ -725,8 +725,8 @@
     "MB": "05 MB",
     "PositiveAbilities": "HP+20",
     "NegativeAbilities": "Bug: Emotion Bug \nBug: Color Bug \n(level 1)",
-    "MoreInformation": "",
-    "Alias": "Night Mare"
+    "MoreInformation": "https://wiki.n1gp.net/Nightmare_(Patch_Card)_(BN6)",
+    "Alias": "Night Mare,NghtMare"
   },
   {
     "ID": "082",
@@ -734,7 +734,7 @@
     "MB": "11 MB",
     "PositiveAbilities": "Attack+3 \nCharged Shot: SandWorm \n - Null pseudo-break, 130 AP \n - 100i charge time",
     "NegativeAbilities": "Speed-1 \nCharge-1",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Snake_Arm_(Patch_Card)_(BN6)",
     "Alias": "Snake Arm"
   },
   {
@@ -743,7 +743,7 @@
     "MB": "22 MB",
     "PositiveAbilities": "HP+10% \nB+<: MachineSword \n - Sword, 200 AP",
     "NegativeAbilities": "Bug: HP Bug \n(level 2, -1 HP per 35i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Dark_Mech_(Patch_Card)_(BN6)",
     "Alias": "Dark Mech"
   },
   {
@@ -752,7 +752,7 @@
     "MB": "45 MB",
     "PositiveAbilities": "HP+360 \nSuperArmor ON",
     "NegativeAbilities": "Bug: Panel Bug \n(moving has a 12.5% chance to spawn Crack Panels)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/StoneMan_(Patch_Card)_(BN6)",
     "Alias": "Stone Man"
   },
   {
@@ -761,7 +761,7 @@
     "MB": "32 MB",
     "PositiveAbilities": "HP+210 \nCharged Shot Addition: Confusion (50%)",
     "NegativeAbilities": "B+< disabled \nBug: Color Bug \n(level 1)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/ColorMan_(Patch_Card)_(BN6)",
     "Alias": "Color Man,Colour Man,ColourMan"
   },
   {
@@ -770,7 +770,7 @@
     "MB": "35 MB",
     "PositiveAbilities": "AquaBody \nHP+180 \nAttack+2 \nSpeed+2 \nCharge+2",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/SharkMan_(Patch_Card)_(BN6)",
     "Alias": "Shark,Shark Man,:shark: "
   },
   {
@@ -779,8 +779,8 @@
     "MB": "35 MB",
     "PositiveAbilities": "HP+5% \nGigaFolder+1 \nFloatShoes ON",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "",
-    "Alias": "Pharaoh,Pharaoh man"
+    "MoreInformation": "https://wiki.n1gp.net/PharaohMan_(Patch_Card)_(BN6)",
+    "Alias": "Pharaoh,Pharaoh man,PharoMan"
   },
   {
     "ID": "088",
@@ -788,7 +788,7 @@
     "MB": "34 MB",
     "PositiveAbilities": "HP+150 \nNormal Shot Addition: Big Push \n(pushes struck target down whole row) (12.5%) \nCharged Shot: Tornado \n - Wind, 20 AP \n - 100i charge time \nBug Fix: Buster Bug",
     "NegativeAbilities": "First disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/AirMan_(Patch_Card)_(BN6)",
     "Alias": "Air,Air Man"
   },
   {
@@ -797,7 +797,7 @@
     "MB": "30 MB",
     "PositiveAbilities": "AquaBody \nNormal Shot Addition: Ice Panel (50%) \nFirst: Barrier200",
     "NegativeAbilities": "HP-5%",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/FreezeMan_(Patch_Card)_(BN6)",
     "Alias": "Freeze,Freeze Man,Freezer Man,Freezer,Frieza"
   },
   {
@@ -806,8 +806,8 @@
     "MB": "36 MB",
     "PositiveAbilities": "ElecBody \nCharged Shot: ElecSword \n - Elec+Sword, 120 AP \n - 90i charge time \nChip Recovery: 10 HP",
     "NegativeAbilities": "Custom-1 \nBug: HP Bug \n(level 1, -1 HP per 30i)",
-    "MoreInformation": "",
-    "Alias": "Thunder,Thunder Man"
+    "MoreInformation": "https://wiki.n1gp.net/ThunderMan_(Patch_Card)_(BN6)",
+    "Alias": "Thunder,Thunder Man,ThunMan"
   },
   {
     "ID": "091",
@@ -815,8 +815,8 @@
     "MB": "39 MB",
     "PositiveAbilities": "FireBody \nAttack+1 \nSpeed+4 \nCharged Shot: BigBomb \n - Null, 140 AP \n - 120i charge time",
     "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 1, -1 HP per 40i)",
-    "MoreInformation": "",
-    "Alias": "Napalm Man,Napalm,Naplam,NaplamMan"
+    "MoreInformation": "https://wiki.n1gp.net/NapalmMan_(Patch_Card)_(BN6)",
+    "Alias": "Napalm Man,Napalm,Naplam,NaplamMan,NapalmMn"
   },
   {
     "ID": "092",
@@ -824,7 +824,7 @@
     "MB": "42 MB",
     "PositiveAbilities": "WoodBody \nMegaFolder+2 \nStatusGuard ON \nCharged Shot Addition: Grass Panel (50%)",
     "NegativeAbilities": "HP-80",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/PlantMan_(Patch_Card)_(BN6)",
     "Alias": "Plant Man,Plant"
   },
   {
@@ -833,7 +833,7 @@
     "MB": "37 MB",
     "PositiveAbilities": "HP+260 \nNormal Shot Addition: Poison Panel (50%)",
     "NegativeAbilities": "Chip Recovery disabled",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/MistMan_(Patch_Card)_(BN6)",
     "Alias": "Mist Man,Mist"
   },
   {
@@ -842,7 +842,7 @@
     "MB": "30 MB",
     "PositiveAbilities": "HP+100 \nCustom+1 \nCharged Shot: Vulcan \n - Null, 20 AP \n - 60i charge time",
     "NegativeAbilities": "FloatShoes OFF",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/BowlMan_(Patch_Card)_(BN6)",
     "Alias": "Bowl Man,Bowl"
   },
   {
@@ -851,7 +851,7 @@
     "MB": "25 MB",
     "PositiveAbilities": "Charged Shot: Voodoo Doll \n - Null, 10 AP \n - 120i charge time",
     "NegativeAbilities": "Bug: Warp Bug \nBug: -50 HP upon entering custom screen",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/DarkMan_(Patch_Card)_(BN6)",
     "Alias": "Dark Man,Dark"
   },
   {
@@ -860,7 +860,7 @@
     "MB": "28 MB",
     "PositiveAbilities": "HP+10% \nBug Fix: Buster Bug \n(+12.5% charge)",
     "NegativeAbilities": "Default Charged Shot \nBug: Damage Bug (being flinched or pushed causes HP Bug level 1)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/TopMan_(Patch_Card)_(BN6)",
     "Alias": "Top,Top Man"
   },
   {
@@ -869,7 +869,7 @@
     "MB": "38 MB",
     "PositiveAbilities": "HP+20% \nCharged Shot: Bamboo Sword \n - Wood+Sword, 150 AP \n - 70i charge time",
     "NegativeAbilities": "Bug: Buster Bug \n(25% misfire; 6.25% charge)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/KendoMan_(Patch_Card)_(BN6)",
     "Alias": "Kendo,Kendo Man"
   },
   {
@@ -878,7 +878,7 @@
     "MB": "34 MB",
     "PositiveAbilities": "AquaBody \nCharged Shot Addition: Freeze (50%)",
     "NegativeAbilities": "Attack-1 \nBug: Panel Bug \n(moving has a 12.5% chance to spawn Ice Panels)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/ColdMan_(Patch_Card)_(BN6)",
     "Alias": "Cold,Cold Man"
   },
   {
@@ -887,8 +887,8 @@
     "MB": "37 MB",
     "PositiveAbilities": "HP+5% \nChipShuffle ON \nCharged Shot: CircleGun \n - Cursor, 150 AP \n - 150i charge time",
     "NegativeAbilities": "AirShoes OFF",
-    "MoreInformation": "",
-    "Alias": "Search,Search Man"
+    "MoreInformation": "https://wiki.n1gp.net/SearchMan_(Patch_Card)_(BN6)",
+    "Alias": "Search,Search Man,SearchMn"
   },
   {
     "ID": "100",
@@ -896,7 +896,7 @@
     "MB": "40 MB",
     "PositiveAbilities": "ElecBody \nHP+230 \nCharged Shot: Thunder \n - Elec, 40 AP \n - 100i charge time",
     "NegativeAbilities": "MegaFolder-1",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/CloudMan_(Patch_Card)_(BN6)",
     "Alias": "Cloud,Cloud Man"
   },
   {
@@ -905,7 +905,7 @@
     "MB": "48 MB",
     "PositiveAbilities": "HP+25% \nSuperArmor ON \nUndershirt ON",
     "NegativeAbilities": "SlowGauge",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/GridMan_(Patch_Card)_(BN6)",
     "Alias": "Grid,Grid Man"
   },
   {
@@ -914,8 +914,8 @@
     "MB": "31 MB",
     "PositiveAbilities": "Attack+3 \nCharge+4 \nBug Fix: Panel Bug",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "",
-    "Alias": "Charge,Charge Man"
+    "MoreInformation": "https://wiki.n1gp.net/ChargeMan_(Patch_Card)_(BN6)",
+    "Alias": "Charge,Charge Man,ChrgeMan"
   },
   {
     "ID": "103",
@@ -923,7 +923,7 @@
     "MB": "34 MB",
     "PositiveAbilities": "AirShoes ON \nBeat ON \nCharged Shot: WindRack \n - Wind, 140 AP \n - 70i charge time",
     "NegativeAbilities": "Attack-1",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/TenguMan_(Patch_Card)_(BN6)",
     "Alias": "Tengu,Tengu Man"
   },
   {
@@ -932,7 +932,7 @@
     "MB": "42 MB",
     "PositiveAbilities": "AquaBody \nHP+320 \nMegaFolder+1 \nCharged Shot: WideShot \n - Aqua, 100 AP \n - 120i charge time",
     "NegativeAbilities": "Custom-2",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/DiveMan_(Patch_Card)_(BN6)",
     "Alias": "Dive,Dive Man"
   },
   {
@@ -941,7 +941,7 @@
     "MB": "38 MB",
     "PositiveAbilities": "Custom+2 \nCharged Shot: GrabBanish \n - Null, 20 AP \n - 170i charge time",
     "NegativeAbilities": "HP-10% \nNormalGauge",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/JudgeMan_(Patch_Card)_(BN6)",
     "Alias": "Judge,Judge Man"
   },
   {
@@ -950,8 +950,8 @@
     "MB": "33 MB",
     "PositiveAbilities": "HP+150 \nNormal Shot Addition: Grass Panel (50%) \nCharged Shot Addition: Ice Panel (100%)",
     "NegativeAbilities": "Default Charged Shot",
-    "MoreInformation": "",
-    "Alias": "ElemMan,Element Man,Element,Elem"
+    "MoreInformation": "https://wiki.n1gp.net/ElementMan_(Patch_Card)_(BN6)",
+    "Alias": "ElemMan,Element Man,Element,Elem,ElmntMan"
   },
   {
     "ID": "107",
@@ -959,7 +959,7 @@
     "MB": "50 MB",
     "PositiveAbilities": "HP+400 \nSuperArmor ON \nCharged Shot Addition: Confusion (50%) \nB+<: Reflect \n - Null, 50 AP \n - 23i duration \n - 33i cooldown",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Punk_(Patch_Card)_(BN6)",
     "Alias": ""
   },
   {
@@ -968,8 +968,8 @@
     "MB": "80 MB",
     "PositiveAbilities": "Attack+3 \nNormal Shot Addition: Poison Panel (50%) \nCharged Shot: Dark Sword \n - Sword, 400 AP \n - 170i charge time",
     "NegativeAbilities": "Bug: Emotion Bug \nBug: HP Bug \n(level 4, -1 HP per 25i)",
-    "MoreInformation": "",
-    "Alias": "Dark Mega,Dark MegaMan,:BadMojo:"
+    "MoreInformation": "https://wiki.n1gp.net/Dark_MegaMan_(Patch_Card)_(BN6)",
+    "Alias": "Dark Mega,Dark MegaMan,:BadMojo:,DarkMega"
   },
   {
     "ID": "109",
@@ -977,7 +977,7 @@
     "MB": "66 MB",
     "PositiveAbilities": "Attack+4 \nSpeed+4 \nCharge+4 \nSuperArmor ON \nCharged Shot: SuperVulcan \n - Null, 20 AP \n - 150i charge time",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Soul_Battler%27s_Customization_(Patch_Card)_(BN6)",
     "Alias": "SoulBatter,SoulBattler,Soul Cust,SoulCust,Soul Battler Customization,Soul Battler Cust"
   },
   {
@@ -986,7 +986,7 @@
     "MB": "69 MB",
     "PositiveAbilities": "Custom+3 \nMegaFolder+2 \nGigaFolder+2 \nFirst: LifeAura",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Famous%27_Customization_(Patch_Card)_(BN6)",
     "Alias": "Famous Customization,Famous Cust,Mr Famous,Famous,Famous’ Customisation,Famous’s Customisation,Famous Customisation"
   },
   {
@@ -995,8 +995,8 @@
     "MB": "70 MB",
     "PositiveAbilities": "SuperArmor ON \nFloatShoes ON \nAirShoes ON \nNormal Shot: Triple Buster \n - Null, AP depends on buster’s ATK and caps at 10 \nCharged Shot: Shooting Buster \n - Null, AP depends on buster’s ATK and caps at 50 \n - 70i charge time",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
-    "Alias": "Bass BX,Bass"
+    "MoreInformation": "https://wiki.n1gp.net/Bass_BX_(Patch_Card)_(BN6)",
+    "Alias": "Bass BX,Bass,FishBX"
   },
   {
     "ID": "112",
@@ -1004,8 +1004,8 @@
     "MB": "52 MB",
     "PositiveAbilities": "HP+200 \nStatusGuard ON \nUndershirt ON \nCharged Shot: GunDelSol \n - Null, 4 damage per frame \n - 90i charge time",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
-    "Alias": "Solar Boy,Solar Boy Django,:sun_with_face:"
+    "MoreInformation": "https://wiki.n1gp.net/Django_(Patch_Card)_(BN6)",
+    "Alias": "Solar Boy,Solar Boy Django,:sun_with_face:,:django:"
   },
   {
     "ID": "113",
@@ -1013,7 +1013,7 @@
     "MB": "60 MB",
     "PositiveAbilities": "MegaFolder+1 \nCharged Shot: BloodRain \n - Null, 20 AP \n - 180i charge time",
     "NegativeAbilities": "Bug: Color Bug \n(level 2)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Count_(Patch_Card)_(BN6)",
     "Alias": "The Count,Vampire,HackJack,Hack Jack,Hacku Jack,HackuJack"
   },
   {
@@ -1022,8 +1022,8 @@
     "MB": "45 MB",
     "PositiveAbilities": "Normal Shot: Sword \n - Sword, 80 AP \nCharged Shot: Z Saber \n - Sword, 100 AP \n - 130i charge time \n - pressing B + < on third swing sends a Super Sonic Boom \nFastGauge",
     "NegativeAbilities": "None",
-    "MoreInformation": "",
-    "Alias": "MMZ,MegaMan Zero,MegaMan 0,MegaManZero,MegaMan0"
+    "MoreInformation": "https://wiki.n1gp.net/Mega_Man_Zero_(Patch_Card)_(BN6)",
+    "Alias": "MMZ,MegaMan Zero,MegaMan 0,MegaManZero,MegaMan0,MM-Zero,ZeroGuy"
   },
   {
     "ID": "115",
@@ -1031,7 +1031,7 @@
     "MB": "70 MB",
     "PositiveAbilities": "HP+600 \nAttack+4 \nSpeed+4 \nSuperArmor ON",
     "NegativeAbilities": "Bug: Custom Screen HP Bug \n(level 3, -1 HP per 30i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Gregar_(Patch_Card)_(BN6)",
     "Alias": "Gregar,Gregar Cybeast,Gregar ModCard,Dog"
   },
   {
@@ -1040,7 +1040,7 @@
     "MB": "70 MB",
     "PositiveAbilities": "HP+40% \nFloatShoes ON \nAirShoes ON",
     "NegativeAbilities": "Bug: HP Bug \n(level 1, -1 HP per 40i)",
-    "MoreInformation": "",
+    "MoreInformation": "https://wiki.n1gp.net/Falzar_(Patch_Card)_(BN6)",
     "Alias": "Falzar,Falzar Beast,Falzar ModCard,Bird,Birb"
   },
   {
@@ -1049,8 +1049,8 @@
     "MB": "70 MB",
     "PositiveAbilities": "NormalBody \nHP+200 \nSuperArmor ON \nNormal Shot: Triple Buster \n - Null, AP depends on buster’s ATK and caps at 10 \nCharged Shot: Shooting Buster \n - Null, AP depends on buster’s ATK and caps at 50 \n - 70i charge time",
     "NegativeAbilities": "MegaFolder-2",
-    "MoreInformation": "Gregar only",
-    "Alias": "Bass Gregar,Gregar Bass,Bass Cross Gregar"
+    "MoreInformation": "Gregar only \nhttps://wiki.n1gp.net/Bass_Cross_MegaMan_(Patch_Card)_(BN6)",
+    "Alias": "Bass Gregar,Gregar Bass,Bass Cross Gregar,FishDog"
   },
   {
     "ID": "117 (FALZAR ONLY)",
@@ -1058,8 +1058,8 @@
     "MB": "70 MB",
     "PositiveAbilities": "NormalBody \nHP+20% \nFloatShoes ON \nNormal Shot: Triple Buster \n - Null, AP depends on buster’s ATK and caps at 10 \nCharged Shot: Hell’s Rolling \n - Null, AP depends on buster’s ATK and caps at 100 \n - 100i charge time",
     "NegativeAbilities": "MegaFolder-2",
-    "MoreInformation": "Falzar only",
-    "Alias": "Bass Falzar,Falzar Bass,Bass Cross Falzar,Falzar Bass Cross"
+    "MoreInformation": "Falzar only \nhttps://wiki.n1gp.net/Bass_Cross_MegaMan_(Patch_Card)_(BN6)",
+    "Alias": "Bass Falzar,Falzar Bass,Bass Cross Falzar,Falzar Bass Cross,FishBird"
   }
 
 ]

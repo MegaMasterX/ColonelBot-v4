@@ -172,7 +172,7 @@ namespace ColonelBot_v4.Tools
         /// </summary>
         /// <param name="user"></param>
         /// <returns>Embed</returns>
-        public static Embed UserLeaveLog(SocketGuildUser user)
+        public static Embed UserLeaveLog(SocketUser user)
         {
             EmbedBuilder embed = new EmbedBuilder
             {
@@ -182,8 +182,7 @@ namespace ColonelBot_v4.Tools
             embed.AddField("Account Name", user.Username);
             embed.AddField("User ID", user.Id.ToString());
             embed.ThumbnailUrl = user.GetAvatarUrl();
-            if (user.Nickname != null)
-                embed.AddField("Nickname", user.Nickname);
+            
 
             return embed.Build();
         }
@@ -235,7 +234,7 @@ namespace ColonelBot_v4.Tools
             return embed.Build();
         }
 
-        public static Embed ModcardEmbed(ModCard modcard)
+        public static Embed ModcardEmbed(PatchCard modcard)
         {
             EmbedBuilder embed = new EmbedBuilder
             {
