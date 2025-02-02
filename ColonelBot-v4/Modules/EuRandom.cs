@@ -42,6 +42,12 @@ namespace ColonelBot_v4.Modules
             }
         }
 
+        [SlashCommand("roll", "Obtain an identifier that corresponds to a eurandom setup.")]
+        public async Task EurandomRoll()
+        {
+            await RespondAsync($"You rolled `{GetRandomEurandomIdentifier()}`!  Good luck.");
+        }
+
         [SlashCommand("add", "Add setups to Eurandom. Organizer only."), EventOrganizerEnabled]
         public async Task EuRandomUpdateAsync(string txt)
         {
@@ -100,6 +106,13 @@ namespace ColonelBot_v4.Modules
         {
             Random rnd = new Random(DateTime.Now.Millisecond);
             return Enums.EXE4_5Navis[rnd.Next(0, Enums.EXE4_5Navis.Count - 1)];
+
+        }
+
+        private string GetRandomEurandomIdentifier()
+        {
+            Random rnd = new Random(DateTime.Now.Millisecond);
+            return Enums.SupportedEurandomSetups[rnd.Next(0, Enums.SupportedEurandomSetups.Count - 1)];
 
         }
     }
