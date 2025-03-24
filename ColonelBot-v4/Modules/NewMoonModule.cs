@@ -29,7 +29,16 @@ namespace ColonelBot_v4.Modules
         [SlashCommand("newmoon", "Obtains information on the current NEW MOON cycle.")]
         public async Task GetNewmoonInfoAsync()
         {
-            await RespondAsync(CommandConfig.Instance.GetResponse("newmoon"));
+            //We are deviating slightly from established slashcommand functionality here based on N1GP Administration request.
+            
+            //We get the command response from either the MessageCommand (update-info-command) or /updatecommand targeting newmoon.
+            string data = CommandConfig.Instance.GetResponse("newmoon");
+            //We then DM it to the caller.
+            await Context.User.SendMessageAsync(data);
+
+            //Then respond with the expected static message.
+            //Per administration, this is not to be editable. https://discord.com/channels/132102389455912960/256865775070085131/1353829614367146035
+            await RespondAsync($"NEW MOON is a community-focused weekly roundrobin tournament series by the N1GP. Up to date information has been sent to you.");
         }
 
         
