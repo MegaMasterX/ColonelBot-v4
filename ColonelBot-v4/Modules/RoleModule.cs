@@ -51,6 +51,8 @@ namespace ColonelBot_v4.Modules
             var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
             await RemoveMoonbattle(caller, role);
 
+            //TODO: Change this to work regardless, and verify if the role was actually removed by checking the context user's roles to respond rather than if they have the Moon battler role.
+
             if (HasRole("MOON BATTLER", caller, Context.Guild))
             {
                 await RespondAsync("You are no longer available to MOON BATTLE.");
@@ -202,6 +204,12 @@ namespace ColonelBot_v4.Modules
         {
             
             var role = guild.Roles.SingleOrDefault(r => r.Name.ToUpper() == RoleName.ToUpper());
+            return role;
+        }
+
+        public static SocketRole GetRole(ulong RoleID, SocketGuild guild)
+        {
+            var role = guild.Roles.SingleOrDefault(r => r.Id == RoleID);
             return role;
         }
 
