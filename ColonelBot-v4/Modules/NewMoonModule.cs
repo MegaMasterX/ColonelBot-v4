@@ -83,11 +83,21 @@ namespace ColonelBot_v4.Modules
 
                 await RespondAsync($"<:BarylMeh:297934727682326540> Removing MOON BATTLER from <<ALL>> users. This may take a moment due to Discord rate limiting.");
                 var role = RoleModule.GetRole("MOON BATTLER", Context.Guild);
+                var atmRole = RoleModule.GetRole("Leg's MOON BATTLE!", Context.Guild);
+
                 foreach (var item in role.Members)
                 {
                     SocketGuildUser target = Context.Guild.GetUser(item.Id);
                     await target.RemoveRoleAsync(role);
                     await ReplyAsync($"Removed Moon role from: {target.Username.Replace('@', ' ')}");
+                }
+
+                //We go ahead and clean up all legs users here too.
+                foreach (var item in atmRole.Members)
+                {
+                    SocketGuildUser target = Context.Guild.GetUser(item.Id);
+                    await target.RemoveRoleAsync(atmRole);
+                    await ReplyAsync($"Removed the legs off of: {target.Username.Replace('@', ' ')}");
                 }
             }
             else
@@ -118,7 +128,6 @@ namespace ColonelBot_v4.Modules
                         MoonbattlerUsernames.Add($"{item.Username} - {item.Nickname}");
                         
                     }
-
                 }
                 //We can only reply once in the context of a slashcommand.
                 await RespondAsync("Downloading user avatars. This may take a moment.");
