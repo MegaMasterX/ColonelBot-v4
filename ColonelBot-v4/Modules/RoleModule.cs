@@ -48,18 +48,14 @@ namespace ColonelBot_v4.Modules
         {
             //Changing this to be able to remove the role regardless of MOON BATTLER status, but only respond if they're moon battlers.
             var caller = Context.User as IGuildUser;
-            var role = GetRole("Leg's MOON BATTLE!", Context.Guild);
-            await RemoveMoonbattle(caller, role);
-
-            //TODO: Change this to work regardless, and verify if the role was actually removed by checking the context user's roles to respond rather than if they have the Moon battler role.
-
-            if (HasRole("MOON BATTLER", caller, Context.Guild))
-            {
+            
+            if (HasRole("MOON BATTLER", caller, Context.Guild) && HasRole("Leg's MOON BATTLE!", caller, Context.Guild))
+            {//The user is a moon battler and has legs
+                var role = GetRole("Leg's MOON BATTLE!", Context.Guild); //We remove their legs.
                 await RespondAsync("You are no longer available to MOON BATTLE.");
-            }else
-            {
-                await RespondAsync("Leg's MOON BATTLE removed.");
             }
+            
+            
         }
 
         
