@@ -1,6 +1,9 @@
 # ColonelBot-v4
 4th Revision of the N1 Grand Prix Discord community bot - ColonelBot!
 
+>[!WARNING]
+>This repository is no longer maintained or monitored on Github and is only present here for archival purposes.  Create PRs and Issues at the new hosting location: https://lab.megamasterx.dev/MegaMasterX/ColonelBot-v4.
+
 This bot is meant to support the N1 Grand Prix Competitive MegaMan Battle Network discord community.  This bot is maintained by MegaMasterX#6321 and has multiple contirbutors from the community.
 
 ColonelBot is intended for use only with the N1GP Discord Community and, as such, will not function on other Discord servers. 
